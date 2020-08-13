@@ -59,6 +59,18 @@
 \renewcommand{\headrulewidth}{.01pt} % remove lines as well
 \renewcommand{\footrulewidth}{.01pt}
 
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+
+\numberwithin{problem}{chapter}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
 \title{\bfseries Techniques in Olympiad Inequalities}
 \author{Masum Billal\and Samin Riasat}
 
@@ -72,10 +84,10 @@
 	\begin{refsection}
 		\subfile{basics.tex}
 		\subfile{intro.tex}
-		\subfile{powermean.tex}
 		\subfile{cs.tex}
 		\subfile{rearrangement.tex}
 		\subfile{majorization.tex}
+		\subfile{powermean.tex}
 		\printbibliography
 	\end{refsection}
 	
