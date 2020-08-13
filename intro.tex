@@ -2,4 +2,31 @@
 
 \begin{document}
 	\section{Introduction}\label{sec:intro}% power mean, cauchy schwarz
+	Let us start with the most fundamental inequality.
+		\begin{align}
+			x^2
+				& \geq0\label{eqn:mother}
+		\end{align}
+	The first author calls it the mother of all inequality. Equality occurs if and only if $x=0$. We can extend it for $n$ variables.
+		\begin{align}
+			x_1^2+\ldots+x_n^2
+				& \geq0\label{eqn:extendedmother}
+		\end{align}
+	Equality occurs if $x_i=0$ for all $1\leq i\leq n$. We can immediately get some results substituting $x$ with appropriate expressions. Substituting $x$ with $a-b$, we get
+		\begin{align*}
+			(a-b)^2
+				& \geq0\\
+			a^2+b^2
+				& \geq2ab
+		\end{align*}
+	This is true for any real numbers $a,b$ and equality occurs if $a=b$. If $a,b$ are positive, then replacing $a$ and $b$ by $\sqrt{a}$ and $\sqrt{b}$ respectively, we get
+		\begin{align*}
+			a+b
+				& \geq2\sqrt{ab}\\
+			\iff\sqrt{\dfrac{a}{b}}+\sqrt{\dfrac{b}{a}}
+				& \geq2\\
+			\iff x+\dfrac{1}{x}
+				& \geq2
+		\end{align*}
+	where $x=\dfrac{a}{b}$.
 \end{document}
