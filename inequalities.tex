@@ -1,0 +1,149 @@
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{subfiles, pdfrender, enumerate, fancyhdr}
+\usepackage{csquotes, xcolor}
+%\usepackage{baskervillef}
+\usepackage[baskerville]{newtxmath}
+
+%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+\usepackage[backend=biber,style=alphabetic,natbib=true,sorting=ynt,]{biblatex}
+
+
+\usepackage[
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black,
+	pdfstartview=,
+	pdfencoding=auto,
+]{hyperref}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{.1in}
+\setlength{\evensidemargin}{.1in}
+\setlength{\topmargin}{-.1in}
+\setlength{\textheight}{8.4in}
+
+
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{.1in}
+\setlength{\evensidemargin}{.1in}
+\setlength{\topmargin}{-.1in}
+\setlength{\textheight}{8.4in}
+
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+
+\newenvironment{dedication}
+{\clearpage           % we want a new page
+	\thispagestyle{empty}% no header and footer
+	\vspace*{\stretch{1}}% some space at the top
+	%\slshape% the text is in italics
+	\raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+	\vspace{\stretch{3}} % space at bottom is three times that at the top
+	\clearpage           % finish off the page
+}
+
+
+%\fancypagestyle{main}{
+\pagestyle{fancyplain}
+\fancyhf{}
+%\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}
+\setlength{\headheight}{52pt}
+
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[RO]{\textit{\nouppercase{\rightmark}}}
+\fancyhead[LO, RE]{Masum Billal \& Samin Riasat}
+\fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
+\fancyfoot[LE, RO]{Page\ \thepage}
+%\lfoot{\sc Masum Billal}
+%\rfoot{Page\ \thepage}
+\renewcommand{\headrulewidth}{.01pt} % remove lines as well
+\renewcommand{\footrulewidth}{.01pt}
+%}
+
+\title{\bfseries Techniques for Olympiad Inequalities}
+\author{Masum Billal\and Samin Riasat}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	\tableofcontents
+	\mainmatter
+	
+	\begin{refsection}
+		\subfile{basics.tex}
+		\printbibliography
+	\end{refsection}
+	
+	\begin{refsection}
+		\subfile{buffalo.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{substitution.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{engel.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{reverse.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{homonorm.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{sos.tex}
+		\printbibliography
+	\end{refsection}
+	
+	\begin{refsection}
+		\subfile{uvw.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{mv.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{sv.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{dumbassing.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{ev.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{problems.tex}
+		\printbibliography
+	\end{refsection}
+
+	\begin{refsection}
+		\subfile{exercises.tex}
+		\printbibliography
+	\end{refsection}
+	\backmatter
+\end{document}
