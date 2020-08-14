@@ -44,5 +44,98 @@
 			\sqrt{ab}
 				& \geq\dfrac{2}{\frac{1}{a}+\frac{1}{b}}
 		\end{align*}
-	$\dfrac{2ab}{a+b}$ is the \textit{harmonic mean} of $a$ and $b$. S, this form of the inequality states that the geometric mean is larger than the harmonic mean. In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in $\S$ \ref{sec:powermean}.
+	$\dfrac{2ab}{a+b}$ is the \textit{harmonic mean} of $a$ and $b$. S, this form of the inequality states that the geometric mean is larger than the harmonic mean. In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \hyperref[sec:powermean]{$\S\S$\ref*{sec:powermean}}.
+	
+	Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in inequality \ref{eqn:extendedmother},
+		\begin{align*}
+			(a-b)^2+(b-c)^2+(c-a)^2
+				& \geq0\\
+			\iff a^2+b^2+c^2-ab-bc-ca
+				& \geq0\\
+			\iff a^2+b^2+c^2
+				& \geq ab+bc+ca
+		\end{align*}
+	We could prove this using $a^2+b^2\geq2ab$ repeatedly.
+		\begin{align*}
+			a^2+b^2
+				& \geq2ab\\
+			b^2+c^2
+				& \geq2bc\\
+			c^2+a^2
+				& \geq2ca\\
+			2(a^2+b^2+c^2)
+				& \geq2(ab+bc+ca)\\
+			a^2+b^2+c^2-ab-bc-ca
+				& \geq0
+		\end{align*}
+	Multiplying both sides by $(a+b+c)$ and using the fact $a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)$,
+		\begin{align*}
+			a^3+b^3+c^3-3abc
+				& \geq0\\
+			a^3+b^3+c^3
+				& \geq3abc
+		\end{align*}
+	
+		\begin{theorem}[Nesbitt's inequality]\label{thm:nesbitt}
+			Let $a,b,c$ be real positive numbers. Then
+				\begin{align*}
+					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
+						& \geq\dfrac{3}{2}
+				\end{align*}
+			and equality occurs if and only $a=b=c$.
+		\end{theorem}
+	
+		\begin{proof}
+			First, we will try to \textit{familiarize} the expression on the left side.
+				\begin{align*}
+					S
+						& = \dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\\
+						& = \dfrac{a+b+c}{b+c}-1+\dfrac{a+b+c}{c+a}-1+\dfrac{a+b+c}{a+b}-1\\
+						& = (a+b+c)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\\
+						& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3
+				\end{align*}
+			Setting $x=a+b,y=b+c,z=c+a$,
+				\begin{align*}
+					S
+						& = \dfrac{1}{2}(x+y+z)\left(\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}\right)-3\\
+						& = \dfrac{1}{2}\left(1+\dfrac{x}{y}+\dfrac{x}{z}+\dfrac{y}{x}+1+\dfrac{y}{z}+\dfrac{z}{x}+\dfrac{z}{y}+1\right)-3\\
+						& = \dfrac{3}{2}+\dfrac{1}{2}\left(\dfrac{x}{y}+\dfrac{y}{x}+\dfrac{y}{z}+\dfrac{z}{y}+\dfrac{z}{x}+\dfrac{x}{z}\right)-3\\
+						& = \dfrac{3}{2}+\dfrac{1}{2}\left(u+\dfrac{1}{u}+v+\dfrac{1}{v}+w+\dfrac{1}{w}\right)-3
+				\end{align*}
+			where $u=\dfrac{x}{y},v=\dfrac{y}{z},w=\dfrac{z}{x}$. Evidently, $u+\frac{1}{u}\geq2,v+\frac{1}{v}\geq2,w+\frac{1}{w}\geq2$ and we have
+				\begin{align*}
+					S
+						& \geq\dfrac{3}{2}+\dfrac{1}{2}(2+2+2)-3
+				\end{align*}
+			Thus, $S\geq\frac{3}{2}$. Equality occurs if $u=1,v=1,z=1$ or $x=y=z$ or $a=b=c$.
+		\end{proof}
+	We have already showed that $a+b\geq2\sqrt{ab}$ which is a special case of the arithmetic-geometric mean inequality.
+		\begin{align*}
+			a_1+\ldots+a_n
+				& \geq\sqrt{a_1\cdots a_n}
+		\end{align*}
+		Let us consider the following question. We are given four positive real numbers $a,b,c,d$ such that $S=a+b=c+d$. Which of the products between $ab$ and $cd$ is the smaller one?
+		\begin{align*}
+			4ab
+				& = (a+b)^2-(a-b)^2\\
+				& = S^2-(a-b)^2\\
+			4cd
+				& = (c+d)^2-(c-d)^2\\
+				& = S^2-(c-d)^2
+		\end{align*}
+	As we can see here, the sign in $4ab?4cd$ ($?$ to be replaced by one of $>,<,\geq,\leq$) will be dictated by which of the differences $a-b,c-d$ is smaller. Since $x^2\geq0$, if $(a-b)^2<(c-d)^2$, we have $4ab>4cd$. Now, consider the product $a_1\cdots a_n$. We want to see how the product changes as $a_i$ varies with respect to $\bar{a}=\frac{a_1+\ldots+a_n}{n}$.
+	
+	If all the $a_i$ are equal to each other, then we have nothing to check. Otherwise, there are at least two positive integers $i$ and $j$ such that $a_i$ and $a_j$ are not equal to $\bar{a}$. Moreover, one of them is greater than $\bar{a}$ and the other is smaller than $\bar{a}$ because all of them cannot be greater (or smaller) than $\bar{a}$. Without loss of generality, assume that $a_1,a_2$ are those two numbers and $a_1=\bar{a}-h,a_2=\bar{a}+k$. Now, consider two other positive numbers $c$ and $d$ which keeps the sum fixed, for example $c=\bar{a},d=\bar{a}+k-h$. We have
+		\begin{align*}
+			cd
+				& = \bar{a}(\bar{a}+k-h)\\
+				& = \bar{a}^2+\bar{a}k-\bar{a}h\\
+			a_1a_2
+				& = (\bar{a}-h)(\bar{a}+k)\\
+				& = \bar{a}^2+\bar{a}k-\bar{a}h-hk\\
+				& = cd-hk < cd\\
+			a_1a_2\cdots a_n
+				& < cd\cdots a_n
+		\end{align*}
+	This basically tells us that we can increase the product further if there are other $a_i$ which are not equal to $\bar{a}$ and the product is maximum when all $a_i$ is equal to $\bar{a}$.
 \end{document}

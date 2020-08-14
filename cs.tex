@@ -2,4 +2,94 @@
 
 \begin{document}
 	\section{Cauchy-Schwarz Inequality}\label{sec:cs}
+	\textit{Cauchy-Schwarz} inequality also known as \textit{Cauchy-Bunyakovsky-Schwarz} inequality is among the most important results for solving problems.
+		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]
+			Let $n$ be a positive integer and $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
+				\begin{align*}
+					(a_1^2+\ldots+a_n^2)(b_1^+\ldots+b_n^2)
+						& \geq(a_1b_1+\ldots+a_nb_n)^2\\
+					\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)
+						& \geq\left(\sum_{i=1}^na_ib_i\right)^2
+				\end{align*}
+			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
+		\end{theorem}
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. We will start with a proof that is probably the most elegant one.
+		\begin{proof}[Proof by vector]
+			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
+				\begin{align*}
+					\|\mathbf{a}\|
+						& = \sqrt{a_1^2+\ldots+a_n^2}\\
+					\|\mathbf{b}\|
+						& = \sqrt{b_1^2+\ldots+b_n^2}
+				\end{align*}
+			If $\theta$ is the minimum angle between them, from the rule of \textit{dot product} we get
+				\begin{align*}
+					\mathbf{a}\cdot\mathbf{b}
+						& = a_1b_1+\ldots+a_nb_n\\
+					\|\mathbf{a}\|\cdot\|\mathbf{b}\|\cdot\cos\theta
+						& = a_1b_1+\ldots+a_nb_n\\
+					\cos{\theta}
+						& = \dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{a_1^2+\ldots+a_n^2}\sqrt{b_1^2+\ldots+b_n^2}}
+				\end{align*}
+			Since $-1\leq\cos\theta\leq1$, after squaring we get
+				\begin{align*}
+					\cos^2\theta
+						& \leq1\\
+					\left(\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{a_1^2+\ldots+a_n^2}\sqrt{b_1^2+\ldots+b_n^2}}\right)^2
+						& \leq1\\
+					\iff (a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
+						& \geq(a_1b_1+\ldots+a_nb_n)^2
+				\end{align*}
+			Equality occurs if and only $\cos\theta=1$ or when $\mathbf{a}$ and $\mathbf{b}$ are parallel. In other words, when we have
+				\begin{align*}
+					\dfrac{a_1}{b_1}& = \ldots=\dfrac{a_n}{b_n}
+				\end{align*}
+		\end{proof}
+	
+		\begin{proof}[Classical proof]
+			Consider the quadratic polynomial
+				\begin{align*}
+					P(x)
+						& = \sum_{i=1}^n(a_ix-b_i)^2\\
+						& = x^2\sum_{i=1}^na_i^2-2x\sum_{i=1}^na_ib_i+\sum_{i=1}^nb_i^2\\
+						& = Ax^2-Bx+C
+				\end{align*}
+			where $A=\sum_{i=1}^na_i^2,B=2\sum_{i=1}^na_ib_i,C=\sum_{i=1}^nb_i^2$. Setting $x_i\to a_ix-b_i$ in \hyperref[eqn:extendedmother]{$\ddagger$\ref{eqn:extendedmother}}, we see that $P(x)\geq0$. Then the discriminant of $P$ must be $\leq0$.
+				\begin{align*}
+					B^2-4AC
+						& \leq0\\
+					4(a_1b_1+\ldots+a_nb_n)^2-4(a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
+						& \leq0\\
+					\iff (a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
+						& \geq(a_1b_1+\ldots+a_nb_n)^2
+				\end{align*}
+			Equality occurs if and only if $P(x)=0$ for some $x$. Then
+				\begin{align*}
+					x
+						& = \dfrac{b_1}{a_1}=\cdots=\dfrac{b_n}{a_n}
+				\end{align*}
+		\end{proof}
+	
+		\begin{proof}[Proof by arithmetic-geometric mean]
+			We use the notations from the proof above. Note the following.
+				\begin{align*}
+					\dfrac{a_1^2}{A}+\dfrac{b_1^2}{B}
+						& \geq2\dfrac{a_1b_1}{\sqrt{AB}}\\
+					\vdots\\
+					\dfrac{a_n^2}{A}+\dfrac{b_n^2}{B}
+						& \geq2\dfrac{a_nb_n}{\sqrt{AB}}
+				\end{align*}
+			Summing them together,
+				\begin{align*}
+					\dfrac{a_1^2}{A}+\dfrac{b_1^2}{B}+\ldots+\dfrac{a_n^2}{A}+\dfrac{b_1^2}{B}
+						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
+					\dfrac{a_1^2+\ldots+a_n^2}{A}+\dfrac{b_1^2+\ldots+b_n^2}{B}
+						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
+					2
+						& \geq\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
+					AB
+						& \geq\left(a_1b_1+\ldots+a_nb_n\right)^2
+				\end{align*}
+			Again, equality holds if and only if $\frac{a_i}{A}=\frac{b_i}{B}$ or $\frac{a_i}{b_i}=\frac{A}{B}=c$, a constant for all $i$.
+		\end{proof}
 \end{document}
