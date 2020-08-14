@@ -13,7 +13,9 @@
 				\end{align*}
 			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
 		\end{theorem}
+	
 	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. We will start with a proof that is probably the most elegant one.
+	
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
@@ -71,7 +73,7 @@
 		\end{proof}
 	
 		\begin{proof}[Proof by arithmetic-geometric mean]
-			We use the notations from the proof above. Note the following.
+			We use the notations from the proof above. If $A=0$ or $B=0$, then the inequality is an identity. So, assume that $A,B\neq0$. Note the following.
 				\begin{align*}
 					\dfrac{a_1^2}{A}+\dfrac{b_1^2}{B}
 						& \geq2\dfrac{a_1b_1}{\sqrt{AB}}\\
@@ -91,5 +93,25 @@
 						& \geq\left(a_1b_1+\ldots+a_nb_n\right)^2
 				\end{align*}
 			Again, equality holds if and only if $\frac{a_i}{A}=\frac{b_i}{B}$ or $\frac{a_i}{b_i}=\frac{A}{B}=c$, a constant for all $i$.
+		\end{proof}
+	
+		\begin{proof}[Proof using the mother of inequality]
+			Let $x_i=\frac{a_i}{A},y_i=\frac{b_i}{B}$ for $1\leq i\leq n$. We have
+				\begin{align*}
+					\sum_{i=1}^nx_i^2
+						& = \sum_{i=1}^ny_i^2=1
+				\end{align*}
+			Rewrite the inequality as
+				\begin{align*}
+					x_1y_1+\ldots+x_ny_n
+						& \leq1\\
+					\iff2(x_1y_1+\ldots+x_ny_n)
+						& \leq2\\
+					\iff2(x_1y_1+\ldots+x_ny_n)
+						& \leq x_1^2+\ldots+x_n^2+y_1^2+\ldots+y_n^2\\
+					\iff(x_i-y_i)^2+\ldots+(x_n-y_n)^2
+						& \geq0
+				\end{align*}
+			This is obviously true.
 		\end{proof}
 \end{document}
