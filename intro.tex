@@ -44,7 +44,12 @@
 			\sqrt{ab}
 				& \geq\dfrac{2}{\frac{1}{a}+\frac{1}{b}}
 		\end{align*}
-	$\dfrac{2ab}{a+b}$ is the \textit{harmonic mean} of $a$ and $b$. S, this form of the inequality states that the geometric mean is larger than the harmonic mean. In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \hyperref[sec:powermean]{$\S\S$\ref*{sec:powermean}}.
+	$\dfrac{2ab}{a+b}$ is the \textit{harmonic mean} of $a$ and $b$. So, this form of the inequality states that the geometric mean is larger than the harmonic mean. This can be extended for three variables.
+		\begin{align*}
+			\dfrac{a+b+c}{3}
+				& \geq\dfrac{3}{\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}}
+		\end{align*}
+	In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \hyperref[sec:powermean]{$\S\S$\ref*{sec:powermean}}.
 	
 	Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in inequality \ref{eqn:extendedmother},
 		\begin{align*}
@@ -75,6 +80,11 @@
 			a^3+b^3+c^3
 				& \geq3abc
 		\end{align*}
+	Replacing $a^3,b^3,c^3$ by $u,v,w$,
+		\begin{align}
+			u+v+w
+				& \geq3\sqrt[3]{uvw}\label{ineq:amgm3}
+		\end{align}
 	
 		\begin{theorem}[Nesbitt's inequality]\label{thm:nesbitt}
 			Let $a,b,c$ be real positive numbers. Then
@@ -85,15 +95,15 @@
 			and equality occurs if and only $a=b=c$.
 		\end{theorem}
 	
-		\begin{proof}
+		\begin{proof}[Classical proof]
 			First, we will try to \textit{familiarize} the expression on the left side.
-				\begin{align*}
+				\begin{align}
 					S
-						& = \dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\\
-						& = \dfrac{a+b+c}{b+c}-1+\dfrac{a+b+c}{c+a}-1+\dfrac{a+b+c}{a+b}-1\\
-						& = (a+b+c)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\\
-						& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3
-				\end{align*}
+						& = \dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\nonumber\\
+						& = \dfrac{a+b+c}{b+c}-1+\dfrac{a+b+c}{c+a}-1+\dfrac{a+b+c}{a+b}-1\nonumber\\
+						& = (a+b+c)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\nonumber\\
+						& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\label{ineq:nesbittf}
+				\end{align}
 			Setting $x=a+b,y=b+c,z=c+a$,
 				\begin{align*}
 					S
@@ -108,6 +118,35 @@
 						& \geq\dfrac{3}{2}+\dfrac{1}{2}(2+2+2)-3
 				\end{align*}
 			Thus, $S\geq\frac{3}{2}$. Equality occurs if $u=1,v=1,z=1$ or $x=y=z$ or $a=b=c$.
+		\end{proof}
+	
+		\begin{proof}[Proof by arithmetic-harmonic mean inequality]
+			We write the arithmetic-harmonic mean inequality for $u,v,w$ as below.
+				\begin{align*}
+					\dfrac{u+v+w}{3}
+						& \geq\dfrac{3}{\dfrac{1}{u}+\dfrac{1}{v}+\dfrac{1}{v}}\\
+					\iff(u+v+w)\left(\dfrac{1}{u}+\dfrac{1}{v}+\dfrac{1}{w}\right)
+						& \geq9
+				\end{align*}
+			Using this on \hyperref[ineq:nesbittf]{inequality $\ddagger$\ref{ineq:nesbittf}},
+				\begin{align*}
+					S
+						& \geq\dfrac{1}{2}\cdot9-2
+				\end{align*}
+		\end{proof}
+	
+		\begin{proof}[Another proof]
+			Using \hyperref[ineq:amgm3]{inequality $\ddagger$\ref{ineq:amgm3}},
+				\begin{align*}
+					(a+b)+(b+c)+(c+a)
+						& \geq3\sqrt[3]{(a+b)(b+c)(c+a)}\\
+					\dfrac{1}{a+b}+\dfrac{1}{b+c}+\dfrac{1}{c+a}
+						& \geq3\sqrt[3]{\dfrac{1}{(a+b)(b+c)(c+a)}}\\
+					S
+						& \geq\dfrac{1}{2}\cdot3\sqrt[3]{(a+b)(b+c)(c+a)}\cdot3\sqrt[3]{\dfrac{1}{(a+b)(b+c)(c+a)}}-2\\
+						& \geq\dfrac{9}{2}-2=\dfrac{3}{2}
+				\end{align*}
+			This again proves the inequality.
 		\end{proof}
 	We have already showed that $a+b\geq2\sqrt{ab}$ which is a special case of the arithmetic-geometric mean inequality.
 		\begin{align*}
