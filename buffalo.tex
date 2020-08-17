@@ -24,7 +24,7 @@
 				& = a_{n-1}+c{n-1}\\
 				& = a_1+c_1+\ldots+c_{n-1}
 		\end{align*}
-	Out of these two forms, the latter is actually a consequence of the former one and is usually the more used one. We will see a few problems that implement this technique.
+	where $c_1,\ldots,c_{n-1}\geq0$. Out of these two forms, the latter is actually a consequence of the former one and is usually the more used one. We will see a few problems that implement this technique.
 		\begin{problem}
 			Prove that for two non-negative reals $x,y$
 				\begin{align*}
@@ -62,4 +62,16 @@
 						& \geq\dfrac{4}{xy+yz+zx}
 				\end{align*}
 		\end{problem}
+	
+		\begin{solution}
+			The expression on the left is symmetric on $x,y,z$. Without loss of generality, assume that $x\leq y\leq z$ and $y=x+a,z=x+a+b$.
+				\begin{align*}
+					\dfrac{1}{a^2}+\dfrac{1}{b^2}+\dfrac{1}{(a+b)^2}
+						& \geq\dfrac{4}{x(x+a)+(x+a)(x+a+b)+(x+a+b)x}\\
+						& = \dfrac{4}{x^2+xa+x^2+2ax+a^2+bx+ab+x^2+xa+bx}\\
+					\iff \dfrac{a^2+b^2+(a+b)^2}{a^2b^2(a+b)^2}
+						& \geq \dfrac{4}{3x^2+4xa+2xb+ab+a^2}
+				\end{align*}
+			
+		\end{solution}
 \end{document}
