@@ -2,7 +2,7 @@
 
 \begin{document}
 	\chapter{The Buffalo Way}\label{ch:buffalo}% https://artofproblemsolving.com/community/c6h522084
-	\textit{The buffalo way} is a \textit{bashing} method of solving inequality problems. It usually exploits symmetry and involves tedious calculations, so it is not always elegant. It is a useful tool nonetheless. The idea is to assume something like $a\leq b\leq c$ without losing any generality, specially when there is symmetry. In general, we want to assume that
+	\textit{The buffalo way} is a \textit{bashing} method of solving inequality problems. It usually exploits symmetry and involves tedious calculations, so it is not always elegant. Nonetheless it is a useful tool. The idea is to assume something like $a\leq b\leq c$ without losing any generality, specially when there is symmetry. In general, we want to assume that
 		\begin{align*}
 			a_1
 				& \leq a_2\leq\cdots\leq a_n\\
@@ -69,9 +69,21 @@
 					\dfrac{1}{a^2}+\dfrac{1}{b^2}+\dfrac{1}{(a+b)^2}
 						& \geq\dfrac{4}{x(x+a)+(x+a)(x+a+b)+(x+a+b)x}\\
 						& = \dfrac{4}{x^2+xa+x^2+2ax+a^2+bx+ab+x^2+xa+bx}\\
-					\iff \dfrac{a^2+b^2+(a+b)^2}{a^2b^2(a+b)^2}
 						& \geq \dfrac{4}{3x^2+4xa+2xb+ab+a^2}
 				\end{align*}
-			
+			Note that there is no $x$ on the left side of the inequality. So, we can use $x>0$ to get rid of it.
+				\begin{align*}
+					3x^2+4xa+2xb+ab+a^2
+						& > ab+a^2\\
+					\dfrac{4}{3x^2+4xa+2xb+ab+a^2}
+						& <\dfrac{4}{ab+a^2}
+				\end{align*}
+			So, we are done if we can prove the following.
+				\begin{align*}
+					\dfrac{1}{a^2}+\dfrac{1}{b^2}+\dfrac{1}{(a+b)^2}
+						& \geq\dfrac{4}{ab+a^2}\\
+						& = \dfrac{4}{a(b+a)}
+				\end{align*}
+			This is not a trivial inequality. 
 		\end{solution}
 \end{document}

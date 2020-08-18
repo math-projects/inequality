@@ -6,7 +6,7 @@
 %\usepackage{baskervillef}
 \usepackage[baskerville]{newtxmath}
 
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=ynt,]{biblatex}
 
 
@@ -38,15 +38,14 @@
 \DeclareMathOperator{\ord}{ord}
 
 \newenvironment{dedication}
-{\clearpage           % we want a new page
-	\thispagestyle{empty}% no header and footer
-	\vspace*{\stretch{1}}% some space at the top
-	%\slshape% the text is in italics
-	\raggedleft          % flush to the right margin
+{\clearpage           
+	\thispagestyle{empty}
+	\vspace*{\stretch{1}}
+	\raggedleft         
 }
-{\par % end the paragraph
-	\vspace{\stretch{3}} % space at bottom is three times that at the top
-	\clearpage           % finish off the page
+{\par 
+	\vspace{\stretch{3}} 
+	\clearpage           
 }
 
 \pagestyle{fancyplain}
@@ -56,7 +55,7 @@
 \fancyhead[LO, RE]{Masum Billal, Samin Riasat}
 \fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}
-\renewcommand{\headrulewidth}{.01pt} % remove lines as well
+\renewcommand{\headrulewidth}{.01pt}
 \renewcommand{\footrulewidth}{.01pt}
 
 \newtheorem{theorem}{Theorem}
