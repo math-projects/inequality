@@ -2,7 +2,7 @@
 
 \begin{document}
 	\chapter{The Buffalo Way}\label{ch:buffalo}% https://artofproblemsolving.com/community/c6h522084
-	\textit{The buffalo way} is a \textit{bashing} method of solving inequality problems. It usually exploits symmetry and involves tedious calculations, so it is not always elegant. Nonetheless it is a useful tool. The idea is to assume something like $a\leq b\leq c$ without losing any generality, specially when there is symmetry. In general, we want to assume that
+	\textit{The buffalo way} is a \textit{bashing} method of solving inequality problems. It usually exploits symmetry or cyclic property and involves tedious calculations, so it is not always elegant. Nonetheless it is a useful tool. The idea is to assume something like $a\leq b\leq c$ without losing any generality, specially when there is symmetry. In general, we want to assume that
 		\begin{align*}
 			a_1
 				& \leq a_2\leq\cdots\leq a_n\\
@@ -19,9 +19,9 @@
 			a_3
 				& = a_2+c_2\\
 				& = a_1+c_1+c_2\\
-				& = \vdots\\
+				& \vdots\\
 			a_n
-				& = a_{n-1}+c{n-1}\\
+				& = a_{n-1}+c_{n-1}\\
 				& = a_1+c_1+\ldots+c_{n-1}
 		\end{align*}
 	where $c_1,\ldots,c_{n-1}\geq0$. Out of these two forms, the latter is actually a consequence of the former one and is usually the more used one. We will see a few problems that implement this technique.
@@ -47,13 +47,41 @@
 				\end{align*}
 			which is evident.
 		\end{solution}
-	In order to understand why we said this method can be tedious, try the proving the case $n=3$ of arithmetic-geometric mean inequality with this technique.
+	Try proving the case $n=3$ of arithmetic-geometric mean inequality with this technique. You will understand why we said this is often a tedious technique.
 		\begin{problem}
 			\begin{align*}
 				x+y+z
 					& \geq3\sqrt[3]{xyz}
 			\end{align*}
 		\end{problem}
+	We will prove Nesbitt's inequality using the first form of the buffalo way.
+		\begin{proof}[Proof of Nesbitt's inequality by the buffalo way]
+			Let $x\leq y\leq z$ and $y=x+a,z=y+b$ with $a\geq0,b\geq0$. We are required to prove that
+				\begin{align*}
+					\dfrac{x}{y+z}+\dfrac{y}{z+x}+\dfrac{z}{x+y}
+						& \geq\dfrac{3}{2}
+				\end{align*}
+			Let us express each variable as a parameter of a single variable.
+				\begin{align*}
+					\dfrac{y-a}{2y+b}+\dfrac{y}{2y+b-a}+\dfrac{y+b}{2y-a}
+						& \geq\dfrac{3}{2}\\
+					\iff\dfrac{y-a}{2y+b}-\dfrac{1}{2}+\dfrac{y}{2y+b-a}-\dfrac{1}{2}+\dfrac{y+b}{2y-a}-\dfrac{1}{2}
+						& \geq0\\
+					\iff\dfrac{1}{2}\left(\dfrac{2y-2a-2y-b}{2y+b}+\dfrac{2y-2y-b+a}{2y+b-a}+\dfrac{2y+2b-2y+a}{2y-a}\right)
+						& \geq0\\
+					\iff-\dfrac{2a+b}{2y+b}+\dfrac{a-b}{2y+b-a}+\dfrac{2b+a}{2y-a}
+						& \geq0
+				\end{align*}
+			The last inequality actually holds because of the following:
+				\begin{align*}
+					\dfrac{2b+a}{2y-a}+\dfrac{a-b}{2y+b-a}-\dfrac{2a+b}{2y+b}
+						& \geq\dfrac{2b+a}{2y+b-a}+\dfrac{a-b}{2y+b-a}-\dfrac{2a+b}{2y+b}\\
+						& \geq\dfrac{2a+2b}{2y+b-a}-\dfrac{2a+b}{2y+b}\\
+						& \geq\dfrac{2a+2b}{2y+b}-\dfrac{2a+b}{2y+b}\\
+						& = \dfrac{a}{2y+b}
+				\end{align*}
+			which is obviously at least $0$. Here, we have used the facts that $\frac{1}{x}\geq\frac{1}{y}$ implies $\frac{1}{x-u}\geq\frac{1}{y}$ and $\frac{1}{x}\geq\frac{1}{y+v}$ for $u,v\geq0$.
+		\end{proof}
 	The next inequality is a nice application of the buffalo way.
 		\begin{problem}
 			Let $x,y,z>0$ be real numbers such that no two are equal. Show that,
@@ -84,6 +112,22 @@
 						& \geq\dfrac{4}{ab+a^2}\\
 						& = \dfrac{4}{a(b+a)}
 				\end{align*}
-			This is not a trivial inequality. 
+			This is not a trivial inequality. We have to show that this actually holds.
+				\begin{align*}
+					\dfrac{1}{a^2}+\dfrac{1}{b^2}-\dfrac{2}{a(b+a)}+\dfrac{1}{(a+b)^2}
+						& \geq\dfrac{2}{a(b+a)}\\
+					\iff\dfrac{1}{b^2}+\left(\dfrac{1}{a}-\dfrac{1}{a+b}\right)^2
+						& \geq\dfrac{2}{a(a+b)}\\
+					\iff\dfrac{1}{b^2}+\left(\dfrac{b}{a(a+b)}\right)^2
+						& \geq\dfrac{2}{a(a+b)}\\
+					\iff\dfrac{1}{b^2}+\dfrac{b^2}{a^2(a+b)^2}
+						& \geq\dfrac{2}{a(a+b)}
+				\end{align*}
+			The last inequality is true by arithmetic-geometric mean inequality since
+				\begin{align*}
+					\dfrac{1}{b^2}+\dfrac{b^2}{a^2(a+b)^2}
+						& \geq2\sqrt{\dfrac{1}{b^2}\cdot\dfrac{b^2}{a^2(a+b)^2}}\\
+						& = \dfrac{2}{a(a+b)}
+				\end{align*}
 		\end{solution}
 \end{document}
