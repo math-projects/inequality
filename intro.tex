@@ -85,6 +85,36 @@
 			u+v+w
 				& \geq3\sqrt[3]{uvw}\label{ineq:amgm3}
 		\end{align}
+	Before we go into any theory or method of solving problems, here are some basic tactics which are used very often for solving problems. Let $x,y,z>0$ be real numbers.
+		\begin{enumerate}[(i)]
+			\item If $\dfrac{1}{x}\geq\dfrac{1}{y}$, then $\dfrac{1}{x-a}\geq\geq\dfrac{1}{y}$ for $a\geq0$. Similarly, $\dfrac{1}{x}\geq\dfrac{1}{y-b}$ for $b\geq0$. They are true because $x-a\leq x$ implies $\dfrac{1}{x-a}\geq\dfrac{1}{x}$ and $y+b\geq y$ implies $\dfrac{1}{y+b}\leq\dfrac{1}{y}$.
+			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \hyperref[ch:buffalo]{chapter $\S$\ref{ch:buffalo}}.
+			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \textit{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
+			\item See if you can get an \textit{if and only if} way of proving an inequality. We will do this very often. If we can use if and only if (or \textit{iff}), then we are free to prove either the if part or the only if part.
+			\item Check if you can get some familiar expressions with some basic manipulations such as making the numerator or denominator equal. For example, see the transformation in \hyperref[eqn:nesbittf]{equation $\ddagger$\ref{eqn:nesbittf}}. This often helps us get a clue on what to do with the inequality.
+			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality. Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \hyperref[ch:subs]{chapter $\S$\ref{ch:subs}}.
+			\item Check if the inequality holds even if you put some restrictions on it. For example, you may be allowed to assume that one of the variables is $1$ due to some scaling. We will talk about this in \hyperref[ch:homonorm]{chapter $\S$\ref{ch:homonorm}}.
+			\item Can you reduce the number of variables without any assumption? See a proof of Nesbitt's inequality below where it is enough to prove the inequality for reduced number of variables.
+		\end{enumerate}
+	For demonstration purposes, let us prove $a^2+b^2+c^2\geq ab+bc+ca$ again exploiting symmetry. Note that if we let
+		\begin{align*}
+			f(a,b,c)
+				& = a^2+b^2+c^2-ab-bc-ca
+		\end{align*}
+	then $f(a,b,c)$ is \textit{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
+		\begin{align*}
+			a^2+b^2+c^2
+				& \geq ab+bc+ca\\
+			a(a-b)+b(b-c)-c(a-c)
+				& \geq0\\
+			a(a-b)+b(b-c)-c(a-b+b-c)
+				& \geq0\\
+			a(a-b)+b(b-c)-c(a-b)-c(b-c)
+				& \geq0\\
+			(a-c)(a-b)+(b-c)^2
+				& \geq0
+		\end{align*}
+	The last inequality immediately follows from the assumption that $a-c\geq0,a-b\geq0,(b-c)^2\geq0$. Also, note that we did not actually require the condition $a\geq b\geq c$. Just assuming $a=\max(a,b,c)$ was enough in this case to claim that the inequality holds. 
 	
 		\begin{theorem}[Nesbitt's inequality]\label{thm:nesbitt}
 			Let $a,b,c$ be real positive numbers. Then
@@ -136,6 +166,33 @@
 				\end{align*}
 		\end{proof}
 	
+		\begin{proof}[Variable reduction proof]
+			Let us clear the denominators in the original inequality.
+				\begin{align*}
+					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
+						& \geq\dfrac{3}{2}\\
+					\iff2(a^3+b^3+c^3)
+						& \geq a^2b+ab^2+b^2c+bc^2+c^2a+ca^2
+				\end{align*}
+			Notice the cyclic nature in the expression on the right side. There are $6$ terms on the right side and if we count each of $a^3,b^3,c^3$ twice, there are $6$ terms on the left side as well. So rearranging the inequality above as below
+				\begin{align*}
+					(a^3+b^3)+(b^3+c^3)+(c^3+a^3)
+						& \geq (a^2b+ab^2)+(b^2c+bc^2)+(c^2a+ca^2)
+				\end{align*}
+			tells us that if we can prove $x^3+y^3\geq x^2y+xy^2$, we will be done if we simply sum them up for $(x,y)=(a,b),(b,c),(c,a)$. Here, we reduced the inequality from $3$ variables to $2$. And fortunately, this inequality is a lot easier to prove.
+				\begin{align*}
+					x^3+y^3
+						& \geq x^2y+xy^2\\
+					\iff x(x^2-y^2)-y(x^2-y^2)
+						& \geq0\\
+					\iff (x-y)(x^2-y^2)
+						& \geq0\\
+					\iff(x-y)^2(x+y)
+						& \geq0
+				\end{align*}
+			The last inequality is evidently true.
+		\end{proof}
+	
 		\begin{proof}[Another proof]
 			Using \hyperref[ineq:amgm3]{inequality $\ddagger$\ref{ineq:amgm3}},
 				\begin{align*}
@@ -181,60 +238,4 @@
 				& < cd\cdots a_n
 		\end{align*}
 	This basically tells us that we can increase the product further if there are other $a_i$ which are not equal to $\bar{a}$ and the product is maximum when all $a_i$ is equal to $\bar{a}$.
-	
-	Before we go into any theory or method of solving problems, here are some basic tactics which are used very often for solving problems. Let $x,y,z>0$ be real numbers.
-		\begin{enumerate}[(i)]
-			\item If $\dfrac{1}{x}\geq\dfrac{1}{y}$, then $\dfrac{1}{x-a}\geq\geq\dfrac{1}{y}$ for $a\geq0$. Similarly, $\dfrac{1}{x}\geq\dfrac{1}{y-b}$ for $b\geq0$. They are true because $x-a\leq x$ implies $\dfrac{1}{x-a}\geq\dfrac{1}{x}$ and $y+b\geq y$ implies $\dfrac{1}{y+b}\leq\dfrac{1}{y}$.
-			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \hyperref[ch:buffalo]{chapter $\S$\ref{ch:buffalo}}.
-			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \textit{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
-			\item Check if you can get some familiar expressions with some basic manipulations such as making the numerator or denominator equal. For example, see the transformation in \hyperref[eqn:nesbittf]{equation $\ddagger$\ref{eqn:nesbittf}}. This often helps us get a clue on what to do with the inequality.
-			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality. Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \hyperref[ch:subs]{chapter $\S$\ref{ch:subs}}.
-			\item Check if the inequality holds even if you put some restrictions on it. For example, you may be allowed to assume that one of the variables is $1$ due to some scaling. We will talk about this in \hyperref[ch:homonorm]{chapter $\S$\ref{ch:homonorm}}.
-			\item Can you reduce the number of variables without any assumption? See another proof of Nesbitt's inequality below.
-		\end{enumerate}
-	For demonstration purposes, let us prove $a^2+b^2+c^2\geq ab+bc+ca$ exploiting symmetry. Note that if we let
-		\begin{align*}
-			f(a,b,c)
-				& = a^2+b^2+c^2-ab-bc-ca
-		\end{align*}
-	then $f(a,b,c)$ is \textit{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
-		\begin{align*}
-			a^2+b^2+c^2
-				& \geq ab+bc+ca\\
-			a(a-b)+b(b-c)-c(a-c)
-				& \geq0\\
-			a(a-b)+b(b-c)-c(a-b+b-c)
-				& \geq0\\
-			a(a-b)+b(b-c)-c(a-b)-c(b-c)
-				& \geq0\\
-			(a-c)(a-b)+(b-c)^2
-				& \geq0
-		\end{align*}
-	The last inequality immediately follows from the assumption that $a-c\geq0,a-b\geq0,(b-c)^2\geq0$. Also, note that we did not actually require the condition $a\geq b\geq c$. Just assuming $a=\max(a,b,c)$ was enough in this case to claim that the inequality holds. Like we mentioned above, we will prove Nesbitt's inequality once again.
-		\begin{proof}[Proof of Nesbitt's inequality with variable reduction]
-			Let us clear the denominators in the original inequality.
-				\begin{align*}
-					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
-						& \geq\dfrac{3}{2}\\
-					\iff2(a^3+b^3+c^3)
-						& \geq a^2b+ab^2+b^2c+bc^2+c^2a+ca^2
-				\end{align*}
-			Notice the cyclic nature in the expression on the right side. There are $6$ terms on the right side and if we count each of $a^3,b^3,c^3$ twice, there are $6$ terms on the left side as well. So rearranging the inequality above as below
-				\begin{align*}
-					(a^3+b^3)+(b^3+c^3)+(c^3+a^3)
-						& \geq (a^2b+ab^2)+(b^2c+bc^2)+(c^2a+ca^2)
-				\end{align*}
-			tells us that if we can prove $x^3+y^3\geq x^2y+xy^2$, we will be done if we simply sum them up for $(x,y)=(a,b),(b,c),(c,a)$. Here, we reduced the inequality from $3$ variables to $2$. And fortunately, this inequality is a lot easier to prove.
-				\begin{align*}
-					x^3+y^3
-						& \geq x^2y+xy^2\\
-					\iff x(x^2-y^2)-y(x^2-y^2)
-						& \geq0\\
-					\iff (x-y)(x^2-y^2)
-						& \geq0\\
-					\iff(x-y)^2(x+y)
-						& \geq0
-				\end{align*}
-			The last inequality is evidently true.
-		\end{proof}
 \end{document}
