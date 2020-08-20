@@ -6,7 +6,7 @@
 		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]
 			Let $n$ be a positive integer and $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align*}
-					(a_1^2+\ldots+a_n^2)(b_1^+\ldots+b_n^2)
+					(a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
 						& \geq(a_1b_1+\ldots+a_nb_n)^2\\
 					\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)
 						& \geq\left(\sum_{i=1}^na_ib_i\right)^2
@@ -14,7 +14,7 @@
 			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
 		\end{theorem}
 	
-	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. We will start with a proof that is probably the most elegant one.
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{chapter $\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one.
 	
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
@@ -56,7 +56,7 @@
 						& = x^2\sum_{i=1}^na_i^2-2x\sum_{i=1}^na_ib_i+\sum_{i=1}^nb_i^2\\
 						& = Ax^2-Bx+C
 				\end{align*}
-			where $A=\sum_{i=1}^na_i^2,B=2\sum_{i=1}^na_ib_i,C=\sum_{i=1}^nb_i^2$. Setting $x_i\to a_ix-b_i$ in \hyperref[eqn:extendedmother]{$\ddagger$\ref{eqn:extendedmother}}, we see that $P(x)\geq0$. Then the discriminant of $P$ must be $\leq0$.
+			where $A=\sum_{i=1}^na_i^2,B=2\sum_{i=1}^na_ib_i,C=\sum_{i=1}^nb_i^2$. Setting $x_i\to a_ix-b_i$ in \hyperref[ineq:extendedmother]{inequality $\ddagger$\ref{ineq:extendedmother}}, we see that $P(x)\geq0$. Then the discriminant of $P$ must be $\leq0$.
 				\begin{align*}
 					B^2-4AC
 						& \leq0\\
@@ -88,7 +88,7 @@
 					\dfrac{a_1^2+\ldots+a_n^2}{A}+\dfrac{b_1^2+\ldots+b_n^2}{B}
 						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
 					2
-						& \geq\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
+						& 2\geq\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
 					AB
 						& \geq\left(a_1b_1+\ldots+a_nb_n\right)^2
 				\end{align*}
@@ -127,7 +127,7 @@
 					S_n
 						& = D_n^2-A_nB_n
 				\end{align*}
-			We want to show that $S_n\geq0$. See the following.
+			We want to show that $S_n\leq0$. See the following.
 				\begin{align*}
 					D_{n+1}^2-D_n^2
 						& = (D_n+a_{n+1}b_{n+1})^2-D_n^2\\
