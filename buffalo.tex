@@ -55,11 +55,27 @@
 			\end{align*}
 		\end{problem}
 	Let us also prove the following using buffalo way.
-		\begin{align*}
-			a^2+b^2+c^2
-				& \geq ab+bc+ca
-		\end{align*}
-	We will prove Nesbitt's inequality using the first form of the buffalo way.
+		\begin{problem}
+			Let $a,b,c>0$ be real numbers. Prove that
+				\begin{align*}
+					a^2+b^2+c^2
+						& \geq ab+bc+ca
+				\end{align*}
+		\end{problem}
+	
+		\begin{proof}
+			Assume that $a\leq b\leq c$ and $b=a+x,c=a+x+y$.
+				\begin{align*}
+					a^2+(a+x)^2+(a+x+b)^2
+						& \geq a(a+x)+(a+x)(a+x+b)+(a+x+b)a\\
+					\iff 3a^2+2x^2+b^2+4ax+2bx+2ab
+						& \geq 3a^2+x^2+4ax+2ab+2bx\\
+					\iff x^2+b^2
+						& \geq0
+				\end{align*}
+			This is again true.
+		\end{proof}
+	Now, we will prove Nesbitt's inequality using the first form of the buffalo way.
 		\begin{proof}[Proof of Nesbitt's inequality by the buffalo way]
 			Let $x\leq y\leq z$ and $y=x+a,z=y+b$ with $a\geq0,b\geq0$. We are required to prove that
 				\begin{align*}
