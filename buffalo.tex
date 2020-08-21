@@ -63,7 +63,7 @@
 				\end{align*}
 		\end{problem}
 	
-		\begin{proof}
+		\begin{solution}
 			Assume that $a\leq b\leq c$ and $b=a+x,c=a+x+y$ where $x,y\geq0$.
 				\begin{align*}
 					a^2+(a+x)^2+(a+x+y)^2
@@ -74,7 +74,30 @@
 						& \geq0
 				\end{align*}
 			This is again true.
-		\end{proof}
+		\end{solution}
+	
+		\begin{problem}
+			Let $a,b,c\geq0$ be real numbers such that $a\leq b\leq c$. Prove that
+				\begin{align*}
+					(a+b)(c+a)^2
+						& \geq6abc
+				\end{align*}
+		\end{problem}
+	
+		\begin{solution}
+			Since $a\leq b\leq c$, let $b=a+x,c=a+x+y$.
+				\begin{align*}
+					(2a+x)(2a+x+y)^2
+						& \geq6a(a+x)(a+x+y)\\
+					\iff(2a+x)(4a^2+x^2+y^2+4ax+4ay+2xy)
+						& \geq6a(a^2+2ax+x^2+ay+xy)\\
+					\iff8a^3+12a^2x+8a^2y+6ax^2+8axy+2ay^2+x^3+2ax^2+xy^2
+						& \geq6a^3+12a^2+6ax^2+6a^2y+6axy\\
+					\iff 2a^3+2a^2y+2axy+2ay^2+x^3+2x^2y+xy^2
+						& \geq0
+				\end{align*}
+			This evidently true.
+		\end{solution}
 	Now, we will prove Nesbitt's inequality using the first form of the buffalo way.
 		\begin{proof}[Proof of Nesbitt's inequality by the buffalo way]
 			Let $x\leq y\leq z$ and $y=x+a,z=y+b$ with $a\geq0,b\geq0$. We are required to prove that
