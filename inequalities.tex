@@ -7,18 +7,18 @@
 \usepackage[baskerville]{newtxmath}
 
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
-\usepackage[backend=biber,style=alphabetic,natbib=true,sorting=ynt,]{biblatex}
-
-
 \usepackage[
-	colorlinks,
-	citecolor=black,
-	filecolor=black,
-	linkcolor=black,
-	urlcolor=black,
-	pdfstartview=,
-	pdfencoding=auto,
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+pdfstartview=,
+pdfencoding=auto,
 ]{hyperref}
+
+\usepackage[backend=biber,style=alphabetic,sorting=ynt,]{biblatex}
+
 
 \setlength{\textwidth}{6.5in}
 \setlength{\oddsidemargin}{.1in}
@@ -49,8 +49,8 @@
 }
 
 \titleformat{\chapter}{\vspace{.3 in}\centering\Huge\bfseries}{$\S$\Huge\thechapter.}{1em}{}
-\titleformat{\section}{\vspace{.2 in}\centering\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
-\titleformat{\subsection}{\vspace{.1 in}\centering\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
+\titleformat{\section}{\vspace{.2 in}\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
+\titleformat{\subsection}{\vspace{.1 in}\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -80,6 +80,8 @@
 
 \title{\bfseries Techniques in Olympiad Inequalities}
 \author{Masum Billal\and Samin Riasat}
+
+\bibliography{ref.bib}
 
 \begin{document}
 	\frontmatter

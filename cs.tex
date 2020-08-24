@@ -3,19 +3,46 @@
 \begin{document}
 	\section{Cauchy-Schwarz Inequality}\label{sec:cs}
 	\textit{Cauchy-Schwarz} inequality also known as \textit{Cauchy-Bunyakovsky-Schwarz} inequality is among the most important results for solving problems.
-		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]
+		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]\label{thm:cs}
 			Let $n$ be a positive integer and $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
-				\begin{align*}
+				\begin{align}
 					(a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
-						& \geq(a_1b_1+\ldots+a_nb_n)^2\\
+						& \geq(a_1b_1+\ldots+a_nb_n)^2\label{ineq:cs}\\
 					\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)
-						& \geq\left(\sum_{i=1}^na_ib_i\right)^2
-				\end{align*}
+						& \geq\left(\sum_{i=1}^na_ib_i\right)^2\nonumber
+				\end{align}
 			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
 		\end{theorem}
+	The reason why it is also called Cauchy-Bunyakovsky-Schwarz inequality is that the analog of this inequality for integrals
+		\begin{align}
+			\left(\int_{a}^{b}f(x)g(x)dx\right)^2
+				& \leq\left(\int_{a}^{b}f^2(x)dx\right)\cdot\left(\int_{a}^{b}g^2(x)dx\right)\label{ineq:cbs}
+		\end{align}
+	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846}. \textcite[Page $10$]{steele_2010} 
 	
-	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{chapter $\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one.
-	
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of vectors as a list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \textit{inner product} of $a$ and $b$ defined by
+		\begin{align*}
+			\langle \mathbf{a},\mathbf{b}\rangle
+				& = a_1b_1+\ldots+a_nb_n
+		\end{align*}
+	Then the theorem can be stated as
+		\begin{align*}
+			\langle \mathbf{a},\mathbf{b}\rangle^2
+				& \leq\langle\mathbf{a},\mathbf{a}\rangle\cdot\langle\mathbf{b},\mathbf{b}\rangle
+		\end{align*}
+	The inner product has some interesting properties. Note that the mother of inequality in \ref{ineq:extendedmother} can be  stated as
+		\begin{align*}
+			\langle\mathbf{x},\mathbf{x}\rangle
+				& \geq0
+		\end{align*}
+	for any $\mathbf{x}=(x_1,\ldots,x_n)$ where $x_i$ is a real number. Similarly, define $\mathbf{y}=(y_1,\ldots,y_n)$. Then we have the following.
+		\begin{enumerate}[(i)]\label{list:innerprops}
+			\item $\langle\mathbf{x},\mathbf{x}\rangle=0$ if and only if $\mathbf{x}=\mathbf{0}$ i.e. $\mathbf{x}=(0,\ldots,0)$.
+			\item For any real number $\alpha$, $\langle\alpha\mathbf{x},\mathbf{y}\rangle=\alpha\langle\mathbf{x},\mathbf{y}\rangle$.
+			\item $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
+			\item For $\mathbf{z}=(z_1,\ldots,z_n)$, $\langle\mathbf{x},\mathbf{y}+\mathbf{z}\rangle=\langle\mathbf{x},\mathbf{y}\rangle+\langle\mathbf{x},\mathbf{z}\rangle$.
+		\end{enumerate}
+	We can now show the proofs.
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
@@ -56,7 +83,7 @@
 						& = x^2\sum_{i=1}^na_i^2-2x\sum_{i=1}^na_ib_i+\sum_{i=1}^nb_i^2\\
 						& = Ax^2-Bx+C
 				\end{align*}
-			where $A=\sum_{i=1}^na_i^2,B=2\sum_{i=1}^na_ib_i,C=\sum_{i=1}^nb_i^2$. Setting $x_i\to a_ix-b_i$ in \hyperref[ineq:extendedmother]{inequality $\ddagger$\ref{ineq:extendedmother}}, we see that $P(x)\geq0$. Then the discriminant of $P$ must be $\leq0$.
+			where $A=\sum_{i=1}^na_i^2,B=2\sum_{i=1}^na_ib_i,C=\sum_{i=1}^nb_i^2$. Setting $x_i\to a_ix-b_i$ in \ref{ineq:extendedmother}, we see that $P(x)\geq0$. Then the discriminant of $P$ must be $\leq0$.
 				\begin{align*}
 					B^2-4AC
 						& \leq0\\
@@ -87,8 +114,8 @@
 						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
 					\dfrac{a_1^2+\ldots+a_n^2}{A}+\dfrac{b_1^2+\ldots+b_n^2}{B}
 						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
-					2
-						& 2\geq\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
+					1+1
+						& \geq2\dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{AB}}\\
 					AB
 						& \geq\left(a_1b_1+\ldots+a_nb_n\right)^2
 				\end{align*}
