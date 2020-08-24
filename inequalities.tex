@@ -2,7 +2,7 @@
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, pdfrender, enumerate, fancyhdr}
-\usepackage{csquotes, xcolor}
+\usepackage{csquotes, xcolor, titlesec}
 %\usepackage{baskervillef}
 \usepackage[baskerville]{newtxmath}
 
@@ -48,15 +48,23 @@
 	\clearpage           
 }
 
+\titleformat{\chapter}{\vspace{.3 in}\centering\Huge\bfseries}{$\S$\Huge\thechapter.}{1em}{}
+\titleformat{\section}{\vspace{.2 in}\centering\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
+\titleformat{\subsection}{\vspace{.1 in}\centering\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
+
+\renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
+
+
 \pagestyle{fancyplain}
 \fancyhf{}
 \setlength{\headheight}{52pt}
 \fancyhead[RO]{\textit{\nouppercase{\rightmark}}}
-\fancyhead[LO, RE]{Masum Billal, Samin Riasat}
+\fancyhead[LO, RE]{\textit{Masum Billal, Samin Riasat}}
 \fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}
 \renewcommand{\headrulewidth}{.01pt}
 \renewcommand{\footrulewidth}{.01pt}
+\renewcommand{\chaptermark}[1]{\markboth{$\S$\thechapter.\ #1}{}}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
