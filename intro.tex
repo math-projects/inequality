@@ -12,7 +12,7 @@
 			x_1^2+\ldots+x_n^2
 				& \geq0\label{ineq:extendedmother}
 		\end{align}
-	Equality occurs if $x_i=0$ for all $1\leq i\leq n$. We can immediately get some results substituting $x$ with appropriate expressions. Substituting $x$ with $a-b$, we get
+	Equality occurs if $x_i=0$ for all $1\leq i\leq n$. We immediately get some useful results substituting $x$ with appropriate expressions. Substituting $x$ with $a-b$, we get
 		\begin{align*}
 			(a-b)^2
 				& \geq0\\
@@ -28,9 +28,19 @@
 			\iff x+\dfrac{1}{x}
 				& \geq2
 		\end{align*}
-	where $x=\dfrac{a}{b}$.
-	
-	Note that we can also write the first inequality as
+	where $x=\dfrac{a}{b}$. This can be generalized to the following result.
+		\begin{theorem}[Arithmetic-Geometric Inequality]\label{thm:amgm}
+			Let $a_1,\ldots,a_n$ be positive real numbers. Then
+				\begin{align*}
+					\dfrac{a_1+\ldots+a_n}{n}
+						& \geq\sqrt[n]{a_1\cdots a_n}\\
+					\iff a_1+\ldots+a_n
+						& \geq n\sqrt[n]{a_1\cdots a_n}\\
+					\iff \left(\dfrac{a_1+\ldots+a_n}{n}\right)^n
+						& \geq a_1\cdots a_n
+				\end{align*}
+		\end{theorem}
+	We will prove this result later in \hyperref[sec:powermean]{$\S\S$\ref{sec:powermean}}. Note that we can also write the first inequality as
 		\begin{align*}
 			\dfrac{a+b}{2}
 				& \geq\sqrt{ab}
@@ -50,7 +60,86 @@
 				& \geq\dfrac{3}{\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}}
 		\end{align*}
 	In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \hyperref[sec:powermean]{$\S\S$\ref*{sec:powermean}}.
+		\begin{problem}
+			If $a$ is a real number greater than one, prove that $\log{a}+\log_{a}{e}\geq2$.
+		\end{problem}
+	Throughout the book, if the base of logarithm is unspecified, then $\log{a}$ shall mean $\log_{e}{a}$. Also, try the next problem in a similar manner.
+		\begin{problem}
+			Prove the inequality
+				\begin{align*}
+					\dfrac{x^2}{1+x^4}
+						& \leq\dfrac{1}{2}
+				\end{align*}
+		\end{problem}
+	Recall from the definition of $e$ that
+		\begin{align*}
+			e^x
+				& = 1+x+\dfrac{x^2}{2!}+\dfrac{x^3}{3!}+\ldots\\
+				& = \sum_{i\geq0}\dfrac{x^i}{i!}
+		\end{align*}
+	You may also know from elementary differentiation that
+		\begin{align*}
+			\lim\limits_{n\to\infty}\left(1+\dfrac{1}{n}\right)^n
+				& = e
+		\end{align*}
+	In other words, if $x_n=\left(1+\frac{1}{n}\right)^n$, then $x_n$ converges to $e$. However, we also have the relation that $x_n\leq x_{n+1}$. While we can prove this using induction, we will show a better proof with arithmetic-geometric mean inequality here.
+		\begin{problem}
+			Let $x_n=\left(1+\frac{1}{n}\right)^n$. Prove that $x_n\leq x_{n+1}$.
+		\end{problem}
 	
+		\begin{solution}
+			Apply the arithmetic-geometric mean inequality for $a_1=1,a_2=1+\frac{1}{n},\ldots,a_{n+1}=1+\frac{1}{n}$,
+				\begin{align*}
+					1+\left(1+\dfrac{1}{n}\right)+\ldots+\left(1+\dfrac{1}{n}\right)
+						& \geq(n+1)\sqrt[n+1]{1\cdot\left(1+\dfrac{1}{n}\right)\cdots\left(1+\dfrac{1}{n}\right)}\\
+					n+2
+						& \geq(n+1)\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
+					1+\dfrac{1}{n+1}
+						& \geq\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
+					\left(1+\dfrac{1}{n+1}\right)^{n+1}
+						& \geq\left(1+\dfrac{1}{n}\right)^n
+				\end{align*}
+		\end{solution}
+	Note that we can generalize the idea used in the problem above.
+		\begin{problem}
+			For positive real numbers $x,y$ show that
+				\begin{align*}
+					\left(\dfrac{x+ny}{n+1}\right)^{n+1}
+						& \geq xy^n
+				\end{align*}
+			Equality occurs only for $x=y$.
+		\end{problem}
+	Similarly, we can show the following.
+		\begin{problem}
+			Let $y_n=\left(1+\frac{1}{n}\right)^{n+1}$. Show that $y_n\geq y_{n+1}$.
+		\end{problem}
+	So $y_n$ is decreasing. Using the two problems above, show that $2<e<4$. In fact, we can prove the following using elementary means
+		\begin{align*}
+			\lim\limits_{n\to\infty}y_n
+				& = \lim\limits_{n\to\infty}x_n=e
+		\end{align*}
+	
+		\begin{problem}
+			For a positive integer $n$, show that
+				\begin{align*}
+					\left(\dfrac{n+1}{2}\right)^n
+						& \geq n!
+				\end{align*}
+			Equality occurs only for $n=1$.
+		\end{problem}
+	
+		\begin{solution}
+			We use arithmetic-geometric inequality for $1,2,\ldots,n$.
+				\begin{align*}
+					1+\ldots+n
+						& \geq n\sqrt[n]{1\cdots n}\\
+					\dfrac{n(n+1)}{2}\\
+						& \geq n\sqrt[n]{n!}\\
+					\dfrac{n+1}{2}
+						& \geq\sqrt[n]{n!}
+				\end{align*}
+			Equality occurs if and only if $1=\ldots=n$ which is possible only when $n=1$.
+		\end{solution}
 	Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in \hyperref[ineq:extendedmother]{\ref{ineq:extendedmother}},
 		\begin{align*}
 			(a-b)^2+(b-c)^2+(c-a)^2
@@ -115,7 +204,6 @@
 				& \geq0
 		\end{align*}
 	The last inequality immediately follows from the assumption that $a-c\geq0,a-b\geq0,(b-c)^2\geq0$. Also, note that we did not actually require the condition $a\geq b\geq c$. Just assuming $a=\max(a,b,c)$ was enough in this case to claim that the inequality holds. 
-	
 		\begin{theorem}[Nesbitt's inequality]\label{thm:nesbitt}
 			Let $a,b,c$ be real positive numbers. Then
 				\begin{align*}
@@ -209,12 +297,7 @@
 				\end{align*}
 			This again proves the inequality.
 		\end{proof}
-	We have already showed that $a+b\geq2\sqrt{ab}$ which is a special case of the arithmetic-geometric mean inequality.
-		\begin{align*}
-			a_1+\ldots+a_n
-				& \geq\sqrt{a_1\cdots a_n}
-		\end{align*}
-		Let us consider the following question. We are given four positive real numbers $a,b,c,d$ such that $S=a+b=c+d$. Which of the products between $ab$ and $cd$ is the smaller one?
+	We have already showed that $a+b\geq2\sqrt{ab}$ which is a special case of the arithmetic-geometric mean inequality. Let us consider the following question. We are given four positive real numbers $a,b,c,d$ such that $S=a+b=c+d$. Which of the products between $ab$ and $cd$ is the smaller one?
 		\begin{align*}
 			4ab
 				& = (a+b)^2-(a-b)^2\\
@@ -238,4 +321,30 @@
 				& < cd\cdots a_n
 		\end{align*}
 	This basically tells us that we can increase the product further if there are other $a_i$ which are not equal to $\bar{a}$ and the product is maximum when all $a_i$ is equal to $\bar{a}$.
+		\begin{problem}
+			Show that for a positive integer $n$,
+				\begin{align*}
+					n!
+						& > \left(\dfrac{n}{4}\right)^n
+				\end{align*}
+		\end{problem}
+	We can easily prove this with induction. This can be improved to $n!>\left(\dfrac{n}{3}\right)^n$. In fact, we can prove the following.
+		\begin{align*}
+			n!
+				& > \left(\dfrac{n}{e}\right)^n
+		\end{align*}
+	This is another nice result. For example, setting $n=2019$,
+		\begin{align*}
+			2019!
+				& > 673^{2019}
+		\end{align*}
+	We can even bound $n!$ from both sides with the next result.
+		\begin{problem}
+			For a positive integer $n$, prove the inequality
+				\begin{align*}
+					e\left(\dfrac{n+1}{e}\right)^{n+1}
+						& > n!>\left(\dfrac{n}{e}\right)^n
+				\end{align*}
+		\end{problem}
+	Equality is not possible because on both sides we have non-integers.
 \end{document}
