@@ -3,22 +3,62 @@
 \begin{document}
 	\chapter{Engel Form of Cauchy-Schwarz}\label{ch:engel}
 	We mentioned earlier that there is a particular case of Cauchy-Schwarz inequality which is very useful for solving problems. It is known as \textit{Engel form of Cauchy-Schwarz}. Some people also call it \textit{Titu's lemma} or \textit{T2's lemma}. This name became popular among the USA students who attended the IMO training camp after a lecture given by Titu Andreescu at Math Olympiad Summer Program (MOSP) at Georgetown University in June, $2001$. Even though it is a direct consequence of Cauchy-Schwarz inequality, it can be proven independently as well. Moreover, Cauchy-Schwarz inequality can be proven using this result as well.
-		\begin{theorem}[Engel form of Cauchy-Schwarz]
+		\begin{theorem}[Engel form of Cauchy-Schwarz]\label{thm:engel}
 			Let $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align}
-					\dfrac{a_1^2}{b_1^2}+\ldots+\dfrac{a_n^2}{b_n^2}
-						& \geq\left(\dfrac{a_1+\ldots+a_n}{b_1+\ldots+b_n}\right)^2\label{ineq:engel}
+					\dfrac{a_1^2}{x_1}+\ldots+\dfrac{a_n^2}{x_1}
+						& \geq\dfrac{(a_1+\ldots+a_n)^2}{x_1+\ldots+x_n}\label{ineq:engel}
 				\end{align}
 		\end{theorem}
+	
+		\begin{proof}[Proof by Cauchy-Schwarz]
+			Use Cauchy-Schwarz inequality on $a_1,\ldots,a_n,\sqrt{x_1},\ldots,\sqrt{x_n}$. We get
+				\begin{align*}
+					(a_1^2+\ldots)
+				\end{align*}
+		\end{proof}
 	
 		\begin{proof}
 			We will use induction to prove \ref{ineq:engel}. The inequality is trivial for $n=1$. For $n=2$,
 				\begin{align*}
-					\dfrac{a^2}{x^2}+\dfrac{b^2}{y^2}
-						& \geq\dfrac{(a+b)^2}{(x+y)^2}\\
-					\iff\dfrac{a^2y^2+b^2x^2}{x^2y^2}
-						& \geq\dfrac{(a+b)^2}{(x+y)^2}\\
-					\iff
+					\dfrac{a^2}{x}+\dfrac{b^2}{y}
+						& \geq\dfrac{(a+b)^2}{x+y}\\
+					\iff\dfrac{a^2y+b^2x}{xy}
+						& \geq\dfrac{a^2+2ab+b^2}{x+y}\\
+					\iff a^2xy+b^2x^2+a^2y^2+b^2xy
+						& \geq a^2xy+2abxy+b^2xy\\
+					\iff (ay-bx)^2
+						& \geq0
 				\end{align*}
+			This is obviously true. Now, assume that the claim is true for 
 		\end{proof}
+	We get a very useful result as a corollary of this result.
+		\begin{theorem}
+			Let $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
+				\begin{align*}
+					\dfrac{a_1^2}{b_1^2}+\ldots+\dfrac{a_n^2}{b_n^2}
+						& \geq\left(\dfrac{a_1+\ldots+a_n}{b_1+\ldots+b_n}\right)^2
+				\end{align*}
+		\end{theorem}
+	
+		\begin{proof}
+			By \autoref{thm:engel},
+				\begin{align*}
+					\dfrac{a_1^2}{b_1^2}+\ldots+\dfrac{a_n^2}{b_n^2}
+						& \geq\dfrac{(a_1+\ldots+a_n)^2}{b_1^2+\ldots+b_n^2}\\
+						& \geq\dfrac{(a_1+\ldots+a_n)^2}{(b_1+\ldots+b_n)^2}
+				\end{align*}
+			The last inequality follows from the fact that $b_1^2+\ldots+b_n^2\leq(b_1+\ldots+b_n)^2$.
+		\end{proof}
+	To demonstrate the power of the results above, we will start with a proof of Nesbitt's inequality.
+		\begin{align*}
+			S
+				& = \dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
+				& = \dfrac{a^2}{ab+ca}+\dfrac{b^2}{bc+ab}+\dfrac{c^2}{ca+bc}\\
+				& \geq\dfrac{(a+b+c)^2}{ab+ca+bc+ab+ca+bc}\\
+				& = \dfrac{(a+b+c)^2}{2(ab+bc+ca)}\\
+				& = \dfrac{a^2+b^2+c^2+2(ab+bc+ca)}{ab+bc+ca}\\
+				& = \dfrac{a^2+b^2+c^2}{2(ab+bc+ca)}+1
+		\end{align*}
+	Recall that $a^2+b^2+c^2\geq ab+bc+ca$, so we have $S\geq\frac{1}{2}+1$.
 \end{document}
