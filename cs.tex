@@ -18,9 +18,9 @@
 			\left(\int_{a}^{b}f(x)g(x)dx\right)^2
 				& \leq\left(\int_{a}^{b}f^2(x)dx\right)\cdot\left(\int_{a}^{b}g^2(x)dx\right)\label{ineq:cbs}
 		\end{align}
-	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846}. This \textit{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \textit{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
+	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \textit{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \textit{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
 	
-	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of vectors as a list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \textit{inner product} of $a$ and $b$ defined by
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of vectors as a list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \textit{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
 		\begin{align*}
 			\langle \mathbf{a},\mathbf{b}\rangle
 				& = a_1b_1+\ldots+a_nb_n
@@ -179,4 +179,10 @@
 				\end{align*}
 			This proves the inequality.
 		\end{proof}
+	The fact above also proves the \textit{Lagrange Identity}.
+		\begin{align*}
+			\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)-\left(\sum_{i=1}^na_ib_i\right)^2
+				& = \sum_{1\leq i< j\leq n}(a_ib_j-a_jb_i)^2
+		\end{align*}
+	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand.
 \end{document}
