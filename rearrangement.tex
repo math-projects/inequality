@@ -2,4 +2,50 @@
 
 \begin{document}
 	\section{Rearrangement and Chebyshev Inequality}\label{sec:rearragement}
+	First, we will see what similarly sorted sequences are.
+		\begin{definition}
+			Two sequences $(a_n)$ and $(b_n)$ are \textit{similarly sorted} if and only for any $i$ and $j$, we have
+				\begin{align*}
+					(a_i-a_j)(b_i-b_j)
+						& \geq0
+				\end{align*}
+			$(a_n)$ and $(b_n)$ are \textit{oppositely sorted} if the inequality is reversed.
+		\end{definition}
+	
+		\begin{theorem}[Chebyshev inequality]
+			Let $(a_n)$ and $(b_n)$ be two similarly sorted sequences. Then
+				\begin{align*}
+					\left(\dfrac{1}{n}\sum_{i=1}^na_i\right)\cdot\left(\dfrac{1}{n}\sum_{i=1}^nb_i\right)
+						& \leq\dfrac{1}{n}\sum_{i=1}^na_ib_i
+				\end{align*}
+		\end{theorem}
+	\textcite{SASSER1967} shows the following result that gives a necessary and sufficient condition for Chebyshev inequality to hold for two sequences $(a_n)$ and $(b_n)$.
+		\begin{theorem}[Sasser's theorem]
+			
+		\end{theorem}
+	\textcite{Seitz1936} proved the following result which combines Cauchy-Schwarz and Chebyshev inequality.
+		\begin{theorem}[Seitz inequality]
+			Let $(x_n),(y_n),(z_n),(u_n)$ be sequences of real numbers and $a_{ij}$ be a real number for $1\leq i,j\leq n$. If for all $i<j$ and $r<s$, the conditions
+				\begin{align*}
+					\begin{vmatrix}
+						x_i & x_j\\
+						y_i & y_j
+					\end{vmatrix}\cdot
+					\begin{vmatrix}
+						z_r & z_s\\
+						u_r & u_s
+					\end{vmatrix}
+						& \geq0\mbox{ and}\\
+					\begin{vmatrix}
+						a_{ri} & a_{rj}\\
+						a_{si} & a_{sj}
+					\end{vmatrix}
+						& \geq0
+				\end{align*}
+			hold, then we have
+				\begin{align*}
+					\dfrac{\sum_{i,j=1}^na_{ij}x_iz_j}{\sum_{i,j=1}^na_{ij}x_iu_j}
+						& \geq\dfrac{\sum_{i,j=1}^na_{ij}y_iz_j}{\sum_{i,j=1}^ny_iu_j}
+				\end{align*}
+		\end{theorem}
 \end{document}
