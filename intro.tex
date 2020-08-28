@@ -40,7 +40,11 @@
 						& \geq a_1\cdots a_n
 				\end{align*}
 		\end{theorem}
-	We will prove this result later in \hyperref[sec:powermean]{$\S\S$\ref{sec:powermean}}. Note that we can also write the first inequality as
+	We will show a classical proof of this result here. The proof is due to \textcite{cauchy_1821}. Later in \hyperref[sec:powermean]{$\S\S$\ref{sec:powermean}}, \hyperref[sec:mazorization]{$\S\S$\ref{sec:mazorization}} we will show more proofs.
+		\begin{proof}
+			
+		\end{proof}
+	Note the following.
 		\begin{align*}
 			\dfrac{a+b}{2}
 				& \geq\sqrt{ab}
@@ -347,4 +351,65 @@
 				\end{align*}
 		\end{problem}
 	Equality is not possible because on both sides we have non-integers.
+		\begin{definition}
+			A function $f$ is \textit{non-decreasing} (\textit{increasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\geq0$ ($(a-b)(f(a)-f(b))>0$). Similarly, $f$ is \textit{non-increasing} (\textit{decreasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\leq0$ ($(a-b)(f(a)-f(b))<0$). If either of these two conditions apply for $f$, then $f$ is a \textit{monotone function}. We say that $f$ is \textit{monotonic}.
+		\end{definition}
+	Note that the slope between any two points $(a,f(a))$ and $(b,f(b))$ is $m=\frac{f(a)-f(b)}{a-b}$ and the quantity we have used for the definition is
+		\begin{align*}
+			(a-b)(f(a)-f(b))
+				& = (a-b)^2\dfrac{f(a)-f(b)}{f(a)-f(b)}\\
+				& = (a-b)^2m
+		\end{align*}
+	So, the sign of this quantity is the same as the sign of the slope $m$.
+		\begin{definition}
+			A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
+		\end{definition}
+	
+		\begin{theorem}[Abel's Inequality]
+			Let $(a_n)$ and $(b_n)$ be two sequences of real numbers such that $b_1\geq \ldots\geq b_n\geq0$. For $1\leq k\leq n$, define
+				\begin{align*}
+					s_k
+						& = a_1+\ldots+a_k\\
+					m
+						& = \min_{1\leq i\leq n}(s_i)\\
+					M
+						& = \max_{1\leq i\leq n}(s_i)
+				\end{align*}
+			Then we have
+				\begin{align*}
+					mb_1
+						& \leq a_1b_1+\ldots+a_nb_n\leq  Mb_1
+				\end{align*}
+		\end{theorem}
+	\section{Practice Section}
+	Try the following problems as warm up exercises.
+		\begin{problem}
+			For real numbers $x,y$, prove that
+				\begin{align*}
+					|x+y|
+						& \leq|x|+|y|\\
+					||x|-|y||
+						& \leq|x+y|\\
+					(|x|-|y|)^2
+						& \leq|x^2-y^2|
+				\end{align*}
+			When does equality occur in the last inequality?
+		\end{problem}
+	
+		\begin{problem}
+			Prove Jordan's inequality
+				\begin{align*}
+					\dfrac{2}{\pi}
+						& \leq\dfrac{\sin{\theta}}{\theta}<1
+				\end{align*}
+			for $0<|\theta|<\frac{\pi}{2}$.
+		\end{problem}
+	
+		\begin{problem}
+			Prove Redheffer's inequality.
+				\begin{align*}
+					\dfrac{\sin{\theta}}{\theta}
+						& \geq\dfrac{\pi^2-\theta^2}{\pi^2+\theta^2}
+				\end{align*}
+		\end{problem}
 \end{document}
