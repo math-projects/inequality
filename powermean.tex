@@ -36,12 +36,22 @@
 			M_0
 				& = \lim\limits_{r\to0}\left(\dfrac{a_1^r+\ldots+a_n^r}{n}\right)^{\dfrac{1}{r}}
 		\end{align*}
+	Note that if we use the inner product notation with $\mathbf{a}=(a_1,\ldots,a_n)$, then
+		\begin{align*}
+			M_r(\mathbf{a})
+				& = \dfrac{\|\mathbf{a}\|_{r}}{\sqrt[r]{n}}
+		\end{align*}
 	
 		\begin{theorem}[Power mean inequality]
 			If $r,s$ are real numbers such that $r\leq s$, then for $n$ real numbers $a_1,\ldots,a_n$,
 				\begin{align*}
 					\min(a_1,\ldots,a_n)
 						& \leq M_r\leq M_s\leq\max(a_1,\ldots,a_n)
+				\end{align*}
+			With the inner product notation,
+				\begin{align*}
+					\min_{1\leq i\leq n}a_i
+						& \leq M_r(\mathbf{a})\leq M_s(\mathbf{a})\leq\max_{1\leq i\leq n}(a_i)
 				\end{align*}
 		\end{theorem}
 \end{document}

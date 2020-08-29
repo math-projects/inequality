@@ -200,7 +200,9 @@
 			\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)-\left(\sum_{i=1}^na_ib_i\right)^2
 				& = \sum_{1\leq i< j\leq n}(a_ib_j-a_jb_i)^2
 		\end{align*}
-	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
+	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the \textit{Lagrange inequality} but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
+	
+	Gram's inequality is a very nice generalization of Cauchy-Schwarz.
 		\begin{theorem}[Gram's inequality]
 			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be $n$ tuples. Then
 				\begin{align*}
@@ -217,4 +219,15 @@
 						& = 0
 				\end{align*}
 		\end{theorem}
+	This result is very intuitive to say the least. Note that we get Cauchy-Schwarz inequality for $n=2$ since
+		\begin{align*}
+			\begin{vmatrix}
+				\langle\mathbf{x},\mathbf{x}\rangle & \langle\mathbf{x},\mathbf{y}\rangle\\
+				\langle\mathbf{y},\mathbf{x}\rangle & \langle\mathbf{y},\mathbf{y}\rangle
+			\end{vmatrix}
+				& \geq0\\
+			\iff\langle\mathbf{x},\mathbf{x}\rangle\cdot\langle\mathbf{y},\mathbf{y}\rangle-\langle\mathbf{x},\mathbf{y}\rangle\cdot\langle\mathbf{y},\mathbf{x}\rangle
+				& \geq0
+		\end{align*}
+	implies Cauchy-Schwarz inequality due to the fact $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
 \end{document}
