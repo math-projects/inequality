@@ -42,7 +42,23 @@
 			\item $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
 			\item For $\mathbf{z}=(z_1,\ldots,z_n)$, $\langle\mathbf{x},\mathbf{y}+\mathbf{z}\rangle=\langle\mathbf{x},\mathbf{y}\rangle+\langle\mathbf{x},\mathbf{z}\rangle$.
 		\end{enumerate}
-	We can now show the proofs.
+	Let us generalize this notation further. Let $m$ be a positive integer. Then for $\mathbf{x}=(x_1,\ldots,x_n)$, define
+		\begin{align*}
+			\|\mathbf{x}\|_m
+				& = \langle\underbrace{\mathbf{x},\ldots,\mathbf{x}}_{m\mbox{ times}}\rangle^{\frac{1}{m}}\\
+				& = \sqrt[m]{x_1^m+\ldots+x_n^m}
+		\end{align*}
+	For $m=2$, we will simply write $\|\mathbf{x}\|$ instead of $\|\mathbf{x}\|_2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write Cauchy-Schwarz inequality in a more compact form.
+		\begin{align*}
+			\|\mathbf{a}\|\cdot\|\mathbf{b}\|
+				& \geq\langle\mathbf{a},\mathbf{b}\rangle
+		\end{align*}
+	This notion can be further generalized for arbitrary real numbers. For a real number $p$, define
+		\begin{align*}
+			\|\mathbf{x}\|_p
+				& = \sqrt[p]{x_1^p+\ldots+x_n^p}
+		\end{align*}
+	This is often called the $L-p$ \textit{norm} for the vector $\mathbf{x}$. These notations will help us shorten some long inequalities later. We will now show the proofs.
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
@@ -184,5 +200,21 @@
 			\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)-\left(\sum_{i=1}^na_ib_i\right)^2
 				& = \sum_{1\leq i< j\leq n}(a_ib_j-a_jb_i)^2
 		\end{align*}
-	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand.
+	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
+		\begin{theorem}[Gram's inequality]
+			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be $n$ tuples. Then
+				\begin{align*}
+					\begin{vmatrix}
+						\langle \mathbf{x}_1,\mathbf{x}_1\rangle & \ldots & \langle \mathbf{x}_1,\mathbf{x}_n\rangle\\
+						& \ldots & \\
+						\langle \mathbf{x}_n,\mathbf{x}_1\rangle & \ldots & \langle \mathbf{x}_n,\mathbf{x}_n\rangle
+					\end{vmatrix}
+						& \geq0
+				\end{align*}
+			Equality occurs if and only if there are real numbers $a_1,\ldots,a_n$ such that all of them are not zero at the same time and
+				\begin{align*}
+					a_1\mathbf{x}_1+\ldots+a_n\mathbf{x}_n
+						& = 0
+				\end{align*}
+		\end{theorem}
 \end{document}
