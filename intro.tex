@@ -381,6 +381,32 @@
 						& \leq a_1b_1+\ldots+a_nb_n\leq  Mb_1
 				\end{align*}
 		\end{theorem}
+	
+		\begin{proof}
+			Write the sum $a_1b_1+\ldots+a_nb_n$ as the following.
+				\begin{align*}
+					a_1b_1+\ldots+a_nb_n
+						& = s_1b_1+(s_2-s_1)b_2+\ldots+(s_n-s_{n-1})b_n\\
+						& = s_1(b_1-b_2)+s_2(b_2-b_3)+\ldots+s_{n-1}(b_{n-1}-b_n)+s_nb_n
+				\end{align*}
+			Using $m\leq s_i\leq M$,
+				\begin{align*}
+					m(b_1-b_2)
+						& \leq s_1(b_1-b_2) \leq M(b_1-b_2)\\
+						& \vdots\\
+					m(b_{n-1}-b_{n})
+						& \leq s_{n-1}(b_{n-1}-b_n)\leq M(b_{n-1}-b_n)
+				\end{align*}
+			We additionally have $mb_n\leq s_nb_n\leq Mb_n$. Summing these inequalities together,
+				\begin{align*}
+					m(b_1-b_2+b_2-b_3+\ldots+b_{n-1}-b_n)+mb_n
+						& \leq s_1(b_1-b_2)+s_2(b_2-b_3)+\ldots+s_{n-1}(b_{n-1}-b_n)+s_nb_n\\
+						& \leq M(b_1-b_2+b_2-b_3+\ldots+b_{n-1}-b_n)+Mb_n\\
+					mb_1
+						& \leq a_1b_1+\ldots+a_nb_n\leq Mb_1
+				\end{align*}
+			This proves the inequality.
+		\end{proof}
 	% What about Aczel's inequality?
 	\section{Practice Section}
 	Try the following problems as warm up exercises.
