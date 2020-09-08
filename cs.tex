@@ -2,7 +2,7 @@
 
 \begin{document}
 	\section{Cauchy-Schwarz Inequality}\label{sec:cs}
-	\textit{Cauchy-Schwarz} inequality also known as \textit{Cauchy-Bunyakovsky-Schwarz} inequality is among the most important results for solving problems.
+	\index{Cauchy-Schwarz}\emph{Cauchy-Schwarz} inequality also known as \emph{Cauchy-Bunyakovsky-Schwarz} inequality is among the most important results for solving problems.
 		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]\label{thm:cs}
 			Let $n$ be a positive integer and $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align}
@@ -13,14 +13,14 @@
 				\end{align}
 			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
 		\end{theorem}
-	The reason why it is also called Cauchy-Bunyakovsky-Schwarz inequality is that the analog of this inequality for integrals
+	The reason why it is also called \index{Cauchy-Bunyakovsky-Schwarz}Cauchy-Bunyakovsky-Schwarz inequality is that the analog of this inequality for integrals
 		\begin{align}
 			\left(\int_{a}^{b}f(x)g(x)dx\right)^2
 				& \leq\left(\int_{a}^{b}f^2(x)dx\right)\cdot\left(\int_{a}^{b}g^2(x)dx\right)\label{ineq:cbs}
 		\end{align}
-	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \textit{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \textit{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
+	appeared in the \emph{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \emph{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \emph{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
 	
-	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of vectors as a list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \textit{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of vectors as a list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\emph{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
 		\begin{align*}
 			\langle \mathbf{a},\mathbf{b}\rangle
 				& = a_1b_1+\ldots+a_nb_n
@@ -58,7 +58,7 @@
 			\|\mathbf{x}\|_p
 				& = \sqrt[p]{x_1^p+\ldots+x_n^p}
 		\end{align*}
-	This is often called the $L-p$ \textit{norm} for the vector $\mathbf{x}$. These notations will help us shorten some long inequalities later. We will now show the proofs.
+	This is often called the $L-p$ \index{norm of vector}\emph{norm} for the vector $\mathbf{x}$. These notations will help us shorten some long inequalities later. We will now show the proofs.
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
@@ -67,7 +67,7 @@
 					\|\mathbf{b}\|
 						& = \sqrt{b_1^2+\ldots+b_n^2}
 				\end{align*}
-			If $\theta$ is the minimum angle between them, from the rule of \textit{dot product} we get
+			If $\theta$ is the minimum angle between them, from the rule of \emph{dot product} we get
 				\begin{align*}
 					\mathbf{a}\cdot\mathbf{b}
 						& = a_1b_1+\ldots+a_nb_n\\
@@ -195,14 +195,14 @@
 				\end{align*}
 			This proves the inequality.
 		\end{proof}
-	The fact above also proves the \textit{Lagrange Identity}.
+	The fact above also proves the \index{Lagrange Identity}\emph{Lagrange Identity}.
 		\begin{align*}
 			\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)-\left(\sum_{i=1}^na_ib_i\right)^2
 				& = \sum_{1\leq i< j\leq n}(a_ib_j-a_jb_i)^2
 		\end{align*}
-	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the \textit{Lagrange inequality} but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
+	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the Lagrange inequality but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
 	
-	Gram's inequality is a very nice generalization of Cauchy-Schwarz.
+	\index{Gram's inequality}\emph{Gram's inequality} is a very nice generalization of Cauchy-Schwarz.
 		\begin{theorem}[Gram's inequality]
 			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be $n$ tuples. Then
 				\begin{align*}

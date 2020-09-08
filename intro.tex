@@ -7,7 +7,7 @@
 			x^2
 				& \geq0\label{ineq:mother}
 		\end{align}
-	The first author calls it the mother of all inequality. Equality occurs if and only if $x=0$. We can extend it for $n$ variables.
+	The first author calls it the \index{mother of all inequality}mother of all inequality. Equality occurs if and only if $x=0$. We can extend it for $n$ variables.
 		\begin{align}
 			x_1^2+\ldots+x_n^2
 				& \geq0\label{ineq:extendedmother}
@@ -29,7 +29,7 @@
 				& \geq2
 		\end{align*}
 	where $x=\dfrac{a}{b}$. This can be generalized to the following result.
-		\begin{theorem}[Arithmetic-Geometric Inequality]\label{thm:amgm}
+		\begin{theorem}[\index{Arithmetic-Geometric Inequality}Arithmetic-Geometric Inequality]\label{thm:amgm}
 			Let $a_1,\ldots,a_n$ be positive real numbers. Then
 				\begin{align*}
 					\dfrac{a_1+\ldots+a_n}{n}
@@ -49,7 +49,7 @@
 			\dfrac{a+b}{2}
 				& \geq\sqrt{ab}
 		\end{align*}
-	Now, $\frac{a+b}{2}$ is the \textit{arithmetic mean} of $a$ and $b$. On the right side, $\sqrt{ab}$ is the \textit{geometric mean} of $a$ and $b$. So the inequality states that the arithmetic mean of two positive real numbers is greater than or equal to their geometric mean. We can also rewrite it as the following.
+	Now, $\frac{a+b}{2}$ is the \index{arithmetic mean}\emph{arithmetic mean} of $a$ and $b$. On the right side, $\sqrt{ab}$ is the \index{geometric mean}\emph{geometric mean} of $a$ and $b$. So the inequality states that the arithmetic mean of two positive real numbers is greater than or equal to their geometric mean. We can also rewrite it as the following.
 		\begin{align*}
 			\sqrt{ab}\left(\dfrac{a+b}{2}\right)
 				& \geq ab\\
@@ -58,7 +58,7 @@
 			\sqrt{ab}
 				& \geq\dfrac{2}{\frac{1}{a}+\frac{1}{b}}
 		\end{align*}
-	$\dfrac{2ab}{a+b}$ is the \textit{harmonic mean} of $a$ and $b$. So, this form of the inequality states that the geometric mean is larger than the harmonic mean. This can be extended for three variables.
+	$\dfrac{2ab}{a+b}$ is the \index{harmonic mean}\emph{harmonic mean} of $a$ and $b$. So, this form of the inequality states that the geometric mean is larger than the harmonic mean. This can be extended for three variables.
 		\begin{align*}
 			\dfrac{a+b+c}{3}
 				& \geq\dfrac{3}{\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}}
@@ -182,10 +182,10 @@
 		\begin{enumerate}[(i)]
 			\item If $\dfrac{1}{x}\geq\dfrac{1}{y}$, then $\dfrac{1}{x-a}\geq\dfrac{1}{y}$ for $a\geq0$. Similarly, $\dfrac{1}{x}\geq\dfrac{1}{y-b}$ for $b\geq0$. They are true because $x-a\leq x$ implies $\dfrac{1}{x-a}\geq\dfrac{1}{x}$ and $y+b\geq y$ implies $\dfrac{1}{y+b}\leq\dfrac{1}{y}$.
 			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \hyperref[ch:buffalo]{$\S$\ref{ch:buffalo}}.
-			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \textit{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
-			\item See if you can get an \textit{if and only if} way of proving an inequality. We will do this very often. If we can use if and only if (or \textit{iff}), then we are free to prove either the if part or the only if part.
+			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \emph{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
+			\item See if you can get an \emph{if and only if} way of proving an inequality. We will do this very often. If we can use if and only if (or \emph{iff}), then we are free to prove either the if part or the only if part.
 			\item Check if you can get some familiar expressions with some basic manipulations such as making the numerator or denominator equal. For example, see the transformation in \hyperref[eqn:nesbittf]{\ref{eqn:nesbittf}}. This often helps us get a clue on what to do with the inequality.
-			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality. Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \hyperref[ch:subs]{$\S$\ref{ch:subs}}.
+			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality (see \autoref{proof:nesbittclassical}). Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \hyperref[ch:subs]{$\S$\ref{ch:subs}}.
 			\item Check if the inequality holds even if you put some restrictions on it. For example, you may be allowed to assume that one of the variables is $1$ due to some scaling. We will talk about this in \hyperref[ch:homonorm]{$\S$\ref{ch:homonorm}}.
 			\item Can you reduce the number of variables without any assumption? See that we have already used it to prove $a^2+b^2+c^2\geq ab+bc+ca$ in a proof above. Also, see a proof of Nesbitt's inequality below where it is enough to prove the inequality for reduced number of variables.
 		\end{enumerate}
@@ -194,7 +194,7 @@
 			f(a,b,c)
 				& = a^2+b^2+c^2-ab-bc-ca
 		\end{align*}
-	then $f(a,b,c)$ is \textit{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
+	then $f(a,b,c)$ is \emph{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
 		\begin{align*}
 			a^2+b^2+c^2
 				& \geq ab+bc+ca\\
@@ -208,7 +208,7 @@
 				& \geq0
 		\end{align*}
 	The last inequality immediately follows from the assumption that $a-c\geq0,a-b\geq0,(b-c)^2\geq0$. Also, note that we did not actually require the condition $a\geq b\geq c$. Just assuming $a=\max(a,b,c)$ was enough in this case to claim that the inequality holds. 
-		\begin{theorem}[Nesbitt's inequality]\label{thm:nesbitt}
+		\begin{theorem}[\index{Nesbitt's inequality}Nesbitt's inequality]\label{thm:nesbitt}
 			Let $a,b,c$ be real positive numbers. Then
 				\begin{align*}
 					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
@@ -216,8 +216,8 @@
 				\end{align*}
 			and equality occurs if and only $a=b=c$.
 		\end{theorem}
-	The thing about most inequalities is that they can be solved in more than one ways most of the time. We will  prove this inequality along with some other classical results such as \textit{Cauchy-Schwarz inequality} in more than one ways. Some proofs will be discussed later when we develop some certain techniques. For now, we present some proofs using what we have already developed.
-	First, we will try to \textit{familiarize} the expression on the left side.
+	The thing about most inequalities is that they can be solved in more than one ways most of the time. We will  prove this inequality along with some other classical results such as \emph{Cauchy-Schwarz inequality} in more than one ways. Some proofs will be discussed later when we develop some certain techniques. For now, we present some proofs using what we have already developed.
+	First, we will try to \emph{familiarize} the expression on the left side.
 		\begin{align}
 			S
 				& = \dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\nonumber\\
@@ -226,7 +226,7 @@
 				& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\label{eqn:nesbittf}
 		\end{align}
 	
-		\begin{proof}[Classical proof]
+		\begin{proof}[Classical proof]\label{proof:nesbittclassical}
 			Setting $x=a+b,y=b+c,z=c+a$,
 				\begin{align*}
 					S
@@ -258,7 +258,7 @@
 				\end{align*}
 		\end{proof}
 	
-		\begin{proof}[Variable reduction proof]
+		\begin{proof}[\index{Variable reduction}Variable reduction proof]
 			Let us clear the denominators in the original inequality.
 				\begin{align*}
 					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
@@ -352,7 +352,7 @@
 		\end{problem}
 	Equality is not possible because on both sides we have non-integers.
 		\begin{definition}
-			A function $f$ is \textit{non-decreasing} (\textit{increasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\geq0$ ($(a-b)(f(a)-f(b))>0$). Similarly, $f$ is \textit{non-increasing} (\textit{decreasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\leq0$ ($(a-b)(f(a)-f(b))<0$). If either of these two conditions apply for $f$, then $f$ is a \textit{monotone function}. We say that $f$ is \textit{monotonic}.
+			A function $f$ is \emph{non-decreasing} (\emph{increasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\geq0$ ($(a-b)(f(a)-f(b))>0$). Similarly, $f$ is \emph{non-increasing} (\emph{decreasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\leq0$ ($(a-b)(f(a)-f(b))<0$). If either of these two conditions apply for $f$, then $f$ is a \index{monotone function}\emph{monotone function}. We say that $f$ is \emph{monotonic}.
 		\end{definition}
 	Note that the slope between any two points $(a,f(a))$ and $(b,f(b))$ is $m=\frac{f(a)-f(b)}{a-b}$ and the quantity we have used for the definition is
 		\begin{align*}
@@ -362,7 +362,7 @@
 		\end{align*}
 	So, the sign of this quantity is the same as the sign of the slope $m$.
 		\begin{definition}
-			A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
+			A sequence $(a_n)$ is \emph{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \emph{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \emph{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \emph{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \emph{monotone sequence}. We say that $(a_n)$ is \emph{monotonic}.
 		\end{definition}
 	
 		\begin{theorem}[Abel's Inequality]
@@ -422,9 +422,9 @@
 				\end{align*}
 			When does equality occur in the last inequality?
 		\end{problem}
-	The first inequality in this problem is also known as the \textit{triangle inequality}.
+	The first inequality in this problem is also known as the \index{triangle inequality}\emph{triangle inequality}.
 		\begin{problem}
-			Prove Jordan's inequality
+			Prove \index{Jordan's inequality}\emph{Jordan's inequality}.
 				\begin{align*}
 					\dfrac{2}{\pi}
 						& \leq\dfrac{\sin{\theta}}{\theta}<1
@@ -433,13 +433,13 @@
 		\end{problem}
 	
 		\begin{problem}
-			Prove Redheffer's inequality.
+			Prove \index{Redheffer's inequality}\emph{Redheffer's inequality}.
 				\begin{align*}
 					\dfrac{\sin{\theta}}{\theta}
 						& \geq\dfrac{\pi^2-\theta^2}{\pi^2+\theta^2}
 				\end{align*}
 		\end{problem}
-	
+	The two inequalities above are not derived from each other. Also, you may have to put a bit of extra effort to prove them. Use calculus if that gives a faster solution.
 		\begin{problem}[IMO $1960$]
 			For which real value of $x$ does the inequality
 				\begin{align*}
@@ -448,5 +448,4 @@
 				\end{align*}
 			hold?
 		\end{problem}
-	The two inequalities above are not derived from each other. Also, you may have to put a bit of extra effort to prove them. Use calculus if that gives a faster solution.
 \end{document}
