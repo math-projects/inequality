@@ -42,7 +42,7 @@
 	\clearpage           
 }
 
-\titleformat{\chapter}{\vspace{.3 in}\centering\Huge\bfseries}{$\S$\Huge\thechapter.}{1em}{}
+\titleformat{\chapter}{\vspace{.3 in}\centering\LARGE\bfseries}{$\S$\LARGE\thechapter.}{1em}{}
 \titleformat{\section}{\vspace{.2 in}\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
 \titleformat{\subsection}{\vspace{.1 in}\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
 
@@ -63,10 +63,20 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 
+\newtheoremstyle{custom} % name
+{\topsep}                    % Space above
+{\topsep}                    % Space below
+{\normalfont}                   % Body font
+{}                           % Indent amount
+{\emph}                   % Theorem head font
+{.}                          % Punctuation after theorem head
+{.5em}                       % Space after theorem head
+{}  % Theo
+
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem{problem}{Problem}
-\newtheorem*{solution}{Solution}
+\newtheorem{definition}{\emph{Definition}}
+\newtheorem{problem}{{Problem}}
+\newtheorem*{solution}{\emph{Solution}}
 
 \numberwithin{problem}{chapter}
 

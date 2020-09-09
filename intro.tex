@@ -89,21 +89,20 @@
 	In other words, if $x_n=\left(1+\frac{1}{n}\right)^n$, then $x_n$ converges to $e$. However, we also have the relation that $x_n\leq x_{n+1}$. While we can prove this using induction, we will show a better proof with arithmetic-geometric mean inequality here.
 		\begin{problem}
 			Let $x_n=\left(1+\frac{1}{n}\right)^n$. Prove that $x_n\leq x_{n+1}$.
+				\begin{solution}
+					Apply the arithmetic-geometric mean inequality for $a_1=1,a_2=1+\frac{1}{n},\ldots,a_{n+1}=1+\frac{1}{n}$,
+						\begin{align*}
+							1+\left(1+\dfrac{1}{n}\right)+\ldots+\left(1+\dfrac{1}{n}\right)
+								& \geq(n+1)\sqrt[n+1]{1\cdot\left(1+\dfrac{1}{n}\right)\cdots\left(1+\dfrac{1}{n}\right)}\\
+							n+2
+								& \geq(n+1)\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
+							1+\dfrac{1}{n+1}
+								& \geq\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
+							\left(1+\dfrac{1}{n+1}\right)^{n+1}
+								& \geq\left(1+\dfrac{1}{n}\right)^n
+						\end{align*}
+				\end{solution}
 		\end{problem}
-	
-		\begin{solution}
-			Apply the arithmetic-geometric mean inequality for $a_1=1,a_2=1+\frac{1}{n},\ldots,a_{n+1}=1+\frac{1}{n}$,
-				\begin{align*}
-					1+\left(1+\dfrac{1}{n}\right)+\ldots+\left(1+\dfrac{1}{n}\right)
-						& \geq(n+1)\sqrt[n+1]{1\cdot\left(1+\dfrac{1}{n}\right)\cdots\left(1+\dfrac{1}{n}\right)}\\
-					n+2
-						& \geq(n+1)\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
-					1+\dfrac{1}{n+1}
-						& \geq\sqrt[n+1]{\left(1+\dfrac{1}{n}\right)^n}\\
-					\left(1+\dfrac{1}{n+1}\right)^{n+1}
-						& \geq\left(1+\dfrac{1}{n}\right)^n
-				\end{align*}
-		\end{solution}
 	Note that we can generalize the idea used in this problem.
 		\begin{problem}
 			For positive real numbers $x,y$ show that
@@ -130,20 +129,19 @@
 						& \geq n!
 				\end{align*}
 			Equality occurs only for $n=1$.
+				\begin{solution}
+					We use arithmetic-geometric inequality for $1,2,\ldots,n$.
+						\begin{align*}
+							1+\ldots+n
+								& \geq n\sqrt[n]{1\cdots n}\\
+							\dfrac{n(n+1)}{2}
+								& \geq n\sqrt[n]{n!}\\
+							\dfrac{n+1}{2}
+								& \geq\sqrt[n]{n!}
+						\end{align*}
+					Equality occurs if and only if $1=\ldots=n$ which is possible only when $n=1$.
+				\end{solution}
 		\end{problem}
-	
-		\begin{solution}
-			We use arithmetic-geometric inequality for $1,2,\ldots,n$.
-				\begin{align*}
-					1+\ldots+n
-						& \geq n\sqrt[n]{1\cdots n}\\
-					\dfrac{n(n+1)}{2}
-						& \geq n\sqrt[n]{n!}\\
-					\dfrac{n+1}{2}
-						& \geq\sqrt[n]{n!}
-				\end{align*}
-			Equality occurs if and only if $1=\ldots=n$ which is possible only when $n=1$.
-		\end{solution}
 	Let us again go back to the mother of inequality. Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in \hyperref[ineq:extendedmother]{\ref{ineq:extendedmother}},
 		\begin{align*}
 			(a-b)^2+(b-c)^2+(c-a)^2
