@@ -8,6 +8,7 @@
 \usepackage[toc]{glossaries}
 \usepackage{glossaries-extra}
 \usepackage{makeidx}
+\usepackage{sectsty}
 
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \RequirePackage{hyperref}
@@ -35,15 +36,6 @@
 \definecolor{venetianred}{rgb}{0.78, 0.03, 0.08}
 \definecolor{tyrianpurple}{rgb}{0.4, 0.01, 0.24}
 
-\hypersetup{
-	colorlinks,
-	citecolor=prussianblue,
-	filecolor=black,
-	linkcolor=oxfordblue,
-	urlcolor=amber,
-	pdfstartview=,
-	pdfencoding=auto,
-}
 \makeatletter
 \newcommand{\globalcolor}[1]{%
 	\color{#1}\global\let\default@color\current@color
@@ -51,9 +43,25 @@
 \makeatother
 \AtBeginDocument{\globalcolor{coolblack}}
 
+
+
+\titleformat{\chapter}{\vspace{.3 in}\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}
+\titleformat{\section}{\vspace{.2 in}\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
+\titleformat{\subsection}{\vspace{.1 in}\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
+\sectionfont{\color{tyrianpurple}}
+
+
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
-
+\hypersetup{
+	colorlinks,
+	citecolor=prussianblue,
+	filecolor=black,
+	linkcolor=oxfordblue,
+	urlcolor=indigodye,
+	pdfstartview=,
+	pdfencoding=auto,
+}
 \setlength{\textwidth}{6.5in}
 \setlength{\oddsidemargin}{.1in}
 \setlength{\evensidemargin}{.1in}
@@ -82,9 +90,7 @@
 	\clearpage           
 }
 
-\titleformat{\chapter}{\vspace{.3 in}\centering\LARGE\bfseries}{$\S$\LARGE\thechapter.}{1em}{}
-\titleformat{\section}{\vspace{.2 in}\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
-\titleformat{\subsection}{\vspace{.1 in}\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
+
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -215,7 +221,7 @@
 
 	\begin{refsection}
 		\subfile{problems.tex}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
@@ -223,7 +229,7 @@
 		%\printbibliography
 	\end{refsection}
 	\backmatter
-	\printglossary[type=\acronymtype, title=Abbreviations]
+	%\printglossary[type=\acronymtype, title=Abbreviations]
 	\printnoidxglossary[sort=letter,]
 	\printindex
 \end{document}
