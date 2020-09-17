@@ -5,7 +5,8 @@
 \usepackage{csquotes, xcolor, titlesec}
 %\usepackage{baskervillef}
 %\usepackage[baskerville]{newtxmath}
-\usepackage{glossaries}
+\usepackage[toc]{glossaries}
+\usepackage{glossaries-extra}
 \usepackage{makeidx}
 
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
@@ -18,16 +19,37 @@
 \definecolor{prune}{rgb}{0.44, 0.11, 0.11}
 \definecolor{prussianblue}{rgb}{0.0, 0.19, 0.33}
 \definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+\definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
+\definecolor{darkjunglegreen}{rgb}{0.1, 0.14, 0.13}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+\definecolor{deepjunglegreen}{rgb}{0.0, 0.29, 0.29}
+\definecolor{indigodye}{rgb}{0.0, 0.25, 0.42}
+\definecolor{onyx}{rgb}{0.06, 0.06, 0.06}
+\definecolor{red(ncs)}{rgb}{0.77, 0.01, 0.2}
+\definecolor{rosewood}{rgb}{0.4, 0.0, 0.04}
+\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
+\definecolor{yaleblue}{rgb}{0.06, 0.3, 0.57}
+\definecolor{vividauburn}{rgb}{0.58, 0.15, 0.14}
+\definecolor{venetianred}{rgb}{0.78, 0.03, 0.08}
+\definecolor{tyrianpurple}{rgb}{0.4, 0.01, 0.24}
+
 \hypersetup{
 	colorlinks,
-	citecolor=burgundy,
+	citecolor=prussianblue,
 	filecolor=black,
 	linkcolor=oxfordblue,
 	urlcolor=amber,
 	pdfstartview=,
 	pdfencoding=auto,
 }
-
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+	\color{#1}\global\let\default@color\current@color
+}
+\makeatother
+\AtBeginDocument{\globalcolor{coolblack}}
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
@@ -100,18 +122,16 @@
 
 %\renewcommand{\thechapter}{\Roman{chapter}}
 
-\makeatletter
-\newcommand{\globalcolor}[1]{%
-	\color{#1}\global\let\default@color\current@color
-}
-\makeatother
-\AtBeginDocument{\globalcolor{oxfordblue}}
+
 
 \title{\bfseries Techniques in Olympiad Inequalities}
 \author{Masum Billal\and Samin Riasat}
 
+\subfile{glossary.tex}
 \bibliography{ref.bib}
-%\makenoidxglossaries
+
+
+\makenoidxglossaries
 \makeindex
 
 \begin{document}
@@ -121,12 +141,12 @@
 		\section*{Preface}
 		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_poolya_2018} that it was understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. Some of them focus on the theory and some of them focus on problem solving. The present book focuses on some problem solving techniques which can be applied in mathematical Olympiads. Even though the objective of this book is mostly Olympiad oriented, quite a bit of theory is discussed as well. The discussion on classical theory should be a good refresher of both the literature and a little bit of history. One of the aims of this book is to popularize the methods which were already popular in some closed circles such as the Art of Problem Solving forum. Another aim is to popularize some less known inequalities which are very nice results by themselves but are not that well known. For example, \textcite{Seitz1936} inequality combines both Cauchy-Schwarz and Chebyshev's results but it is almost non-existent in popular inequality books. We discuss a number of such inequalities as part of our theory discussion. We will also discuss some refinements on some well known inequalities which are also not so well known.
 		
-		Inequalities have been a part of the International Mathematical Olympiad (IMO) for a long time. There has been several problems at the IMO which involve solving inequalities. However, the number of inequality problems have reduced considerably. 
+		Inequalities have been a part of the \Gls{imo} and other popular mathematical contests such as \Gls{apmo}, \Gls{usamo} for a long time. There has been several problems at the IMO which involve solving inequalities. However, the number of inequality problems have reduced considerably. 
 		\printbibliography
 	\end{refsection}
 	\tableofcontents
 	\mainmatter
-	
+	%mount inequality erupted, second moment method?
 	\begin{refsection}
 		\subfile{basics.tex}
 		\subfile{intro.tex}
@@ -203,6 +223,7 @@
 		%\printbibliography
 	\end{refsection}
 	\backmatter
-	%\printnoidxglossary[sort=letter,]
+	\printglossary[type=\acronymtype, title=Abbreviations]
+	\printnoidxglossary[sort=letter,]
 	\printindex
 \end{document}
