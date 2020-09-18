@@ -9,6 +9,7 @@
 \usepackage{glossaries-extra}
 \usepackage{makeidx}
 \usepackage{sectsty}
+\usepackage{setspace}
 
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \RequirePackage{hyperref}
@@ -48,7 +49,7 @@
 \titleformat{\chapter}{\vspace{.3 in}\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}
 \titleformat{\section}{\vspace{.2 in}\Large\bfseries}{$\S\S$\Large\thesection.}{1.5em}{}
 \titleformat{\subsection}{\vspace{.1 in}\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
-\sectionfont{\color{tyrianpurple}}
+\sectionfont{\color{amber}}
 
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
@@ -56,7 +57,7 @@
 \hypersetup{
 	colorlinks,
 	citecolor=prussianblue,
-	filecolor=black,
+	filecolor=burgundy,
 	linkcolor=oxfordblue,
 	urlcolor=indigodye,
 	pdfstartview=,
@@ -126,9 +127,8 @@
 
 \numberwithin{problem}{chapter}
 
-%\renewcommand{\thechapter}{\Roman{chapter}}
 
-
+\renewcommand{\numberline}[1]{#1~}
 
 \title{\bfseries Techniques in Olympiad Inequalities}
 \author{Masum Billal\and Samin Riasat}
@@ -147,10 +147,12 @@
 		\section*{Preface}
 		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_poolya_2018} that it was understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. Some of them focus on the theory and some of them focus on problem solving. The present book focuses on some problem solving techniques which can be applied in mathematical Olympiads. Even though the objective of this book is mostly Olympiad oriented, quite a bit of theory is discussed as well. The discussion on classical theory should be a good refresher of both the literature and a little bit of history. One of the aims of this book is to popularize the methods which were already popular in some closed circles such as the Art of Problem Solving forum. Another aim is to popularize some less known inequalities which are very nice results by themselves but are not that well known. For example, \textcite{Seitz1936} inequality combines both Cauchy-Schwarz and Chebyshev's results but it is almost non-existent in popular inequality books. We discuss a number of such inequalities as part of our theory discussion. We will also discuss some refinements on some well known inequalities which are also not so well known.
 		
-		Inequalities have been a part of the mathematical contests for a long time. We have borrowed a lot of problems from these prominent contests. Some of the most notable are \Gls{imo}, \Gls{apmo}, \Gls{usamo}, \Gls{apc}, \Gls{bmo}, China Mathematical Olympiad, Belarus Mathematical Olympiad, Iran Mathematical Olympiad, Singapor Mathematical Olympiad, etc. 
+		
 		\printbibliography
 	\end{refsection}
+	%\doublespacing
 	\tableofcontents
+	%\singlespacing
 	\mainmatter
 
 	\begin{refsection}
@@ -225,15 +227,33 @@
 
 	\begin{refsection}
 		\subfile{problems.tex}
+		\subfile{abmo.tex}
+		\subfile{almo.tex}
+		\subfile{amc.tex}
+		\subfile{apc.tex}
+		\subfile{apmo.tex}
+		\subfile{bmo.tex}
+		\subfile{bno.tex}
+		\subfile{brmo.tex}
+		\subfile{buno.tex}
+		\subfile{chmo.tex}
+		\subfile{cmo.tex}
+		\subfile{cno.tex}
+		\subfile{imo.tex}
+		\subfile{inmo.tex}
+		\subfile{irmo.tex}
+		\subfile{kno.tex}
+		\subfile{mdno.tex}
+		\subfile{mno.tex}
+		\subfile{rno.tex}
+		\subfile{sgmo.tex}
+		\subfile{tno.tex}
+		\subfile{usamo.tex}
+		\subfile{vno.tex}
 		\printbibliography
 	\end{refsection}
 
-	\begin{refsection}
-		\subfile{exercises.tex}
-		%\printbibliography
-	\end{refsection}
 	\backmatter
-	%\printglossary[type=\acronymtype, title=Abbreviations]
 	\printnoidxglossary[sort=letter,]
 	\printindex
 \end{document}

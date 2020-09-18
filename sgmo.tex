@@ -1,0 +1,225 @@
+\documentclass{subfile}
+
+\begin{document}
+	
+	\section{SgMO}\label{sec:sgmo}
+	
+		\begin{problem}[Singapore Team Selection Test $2009$, problem $2$]
+			If $a,b,c$ are three positive real numbers such that $ab+bc+ca=1$, prove that
+				\begin{align*}
+					\sqrt[3]{\dfrac{1}{a}+6b}+\sqrt[3]{\dfrac{1}{b}+6c}+\sqrt[3]{\dfrac{1}{c}+6a}
+						& \leq\dfrac{1}{abc}
+				\end{align*}
+		\end{problem}
+		
+		\begin{problem}[Singapore Team Selection Test $2008$, problem $2$]
+			Let $x_{1},\ldots,x_{n}$ be positive real numbers such that $x_{1}\cdots x_{n}=1$. Prove that
+				\begin{align*}
+					\sum_{i=1}^{n}\dfrac{1}{n-1+x_{i}}
+						& \leq1
+				\end{align*}
+		\end{problem}
+		
+		\begin{problem}[Singapore Team Selection Test $2007$, problem $2$]
+			Prove the inequality
+				\begin{align*}
+					\sum_{i<j}\dfrac{a_{i}a_{j}}{a_{i}+a_{j}}
+						& \leq \dfrac{n}{2(a_{1}+\ldots+a_{n})}\sum_{i<j}a_{i}a_{j}
+				\end{align*}
+			for all positive real numbers $a_{1},\ldots,a_{n}$.
+		\end{problem}
+		
+		\begin{problem}[Singapore $2006$, problem $2$]
+			Let $n>1$ be an integer and $x_{1},\ldots,x_{n}$ be real numbers such that
+				\begin{align*}
+					|x_{1}|+\ldots+|x_{n}|
+						& = 1\quad\mbox{and}\\
+					x_{1}+\ldots+x_{n}
+						& = 0
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\left|\dfrac{x_{1}}{1}+\ldots+\dfrac{x_{n}}{n}\right|
+						& \leq \dfrac{1}{2}\left(1-\dfrac{1}{n}\right)
+				\end{align*}
+		\end{problem}
+		
+		\begin{problem}[Singapore $2004$, problem $2$]
+			Let $a,b,c$ be real numbers such that $ab+bc+ca=1$ and $0<a,b,c<1$. Prove that
+				\begin{align*}
+					\dfrac{a}{1-a^{2}}+\dfrac{b}{1-b^{2}}+\dfrac{c}{1-c^{2}}
+						& \geq\dfrac{3\sqrt{3}}{2}
+				\end{align*}
+		\end{problem}
+	
+	\section{USAMO}
+		\begin{problem}[USAMO $2020$, problem $6$]
+			Let $n\geq2$ be an integer and $x_{1}\geq\ldots\geq x_{n},y_{1}\geq\ldots\geq y_{n}$ be $2n$ real numbers such that
+				\begin{align*}
+					0 = x_{1}+\ldots+x_{n}
+						& = y_{1}+\ldots+y_{n}\\
+					1 = x_{1}^{2}+\ldots+x_{n}^{2}
+						& = y_{1}^{2}+\ldots+y_{n}^{2}
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\sum_{i=1}^{n}(x_{i}y_{i}-x_{i}y_{n+i-1})^{2}
+						& \geq\dfrac{2}{\sqrt{n-1}}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2018$, problem $1$]
+			Let $a,b,c$ be positive real numbers such that $a+b+c=4\sqrt[3]{abc}$. Prove that
+				\begin{align*}
+					2(ab+bc+ca)+4\min\{a^{2},b^{2},c^{2}\}
+						& \geq a^{2}+b^{2}+c^{2}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2017$, problem $6$]
+			Find the minimum possible value of
+				\begin{align*}
+					\dfrac{a}{b^{3}+4}+\dfrac{b}{c^{3}+4}+\dfrac{c}{d^{3}+4}+\dfrac{d}{a^{3}+4}
+				\end{align*}
+			given that $a,b,c,d$ are non-negative real numbers such that $a+b+c+d=4$.
+		\end{problem}
+	
+		\begin{problem}[USAMO $2013$, problem $4$]
+			Find all real numbers $x,y,z\ge1$ such that
+				\begin{align*}
+					\min\{\sqrt{x+xyz},\sqrt{y+xyz},\sqrt{z+xyz}\}
+						& = \sqrt{x-1}+\sqrt{y-1}+\sqrt{z-1}
+				\end{align*}
+		\end{problem}
+	This is actually a special case of the following.
+		\begin{problem}
+			Prove that for real numbers $a,b,c\geq1$, the following inequality holds:
+				\begin{align*}
+					\sqrt{a-1}+\sqrt{b-1}+\sqrt{c-1}
+						& \leq\sqrt{a(bc+1)}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2012$, problem $6$]
+			Let $n\geq2$ be an integer and $x_{1}\geq\ldots\geq x_{n},y_{1}\geq\ldots\geq y_{n}$ be $2n$ real numbers such that
+				\begin{align*}
+					0 = x_{1}+\ldots+x_{n}
+						& = y_{1}+\ldots+y_{n}\\
+					1 = x_{1}^{2}+\ldots+x_{n}^{2}
+						& = y_{1}^{2}+\ldots+y_{n}^{2}
+				\end{align*}
+			For each subset $A$ of $\{1,2,\ldots,n\}$, define
+				\begin{align*}
+					S_{A}
+						& = \sum_{i\in A}x_{i}
+				\end{align*}
+			$S_{A}=0$ if $A$ is empty. Prove that for any positive number $\lambda$, the number of sets $A$ satisfying $S_{A}>\lambda$ is at most
+				\begin{align*}
+					\dfrac{2^{n-3}}{\lambda^{2}}
+				\end{align*}
+			For which choices of $x_{1},\ldots,x_{n},\lambda$ does equality hold?
+		\end{problem}
+	
+		\begin{problem}[USAMO $2011$, problem $1$]
+			Let $a,b,c$ be positive real numbers such that
+				\begin{align*}
+					a^{2}+b^{2}+c^{2}+(a+b+c)^{2}
+						& \leq 4
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\dfrac{ab+1}{(a+b)^{2}}+\dfrac{bc+1}{(b+c)^{2}}+\dfrac{ca+1}{(c+a)^{2}}
+						& \geq3
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2009$, problem $4$]
+			Let $n\geq2$ be an $a_{1},\ldots,a_{n}$ be positive real numbers such that
+				\begin{align*}
+					(a_{1}+\ldots+a_{n})\left(\dfrac{1}{a_{1}}+\ldots+\dfrac{1}{a_{n}}\right)
+						& \leq \left(n+\dfrac{1}{2}\right)^{2}
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\max\{a_{1},\ldots,a_{n}\}
+						& \leq\min\{a_{1},\ldots,a_{n}\}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2004$, problem $5$]
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					(a^{5}-a^{2}+3)(b^{5}-b^{2}+3)(c^{5}-c^{2}+3)
+						& \geq (a+b+c)^{3}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2003$, problem $5$]
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{(2a+b+c)^{2}}{2a^{2}+(b+c)^{2}}+\dfrac{(2b+c+a)^{2}}{2b^{2}+(c+a)^{2}}+\dfrac{(2c+a+b)^{2}}{2c^{2}+(a+b)^{2}}
+						& \leq 8
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2007$, problem $3$]
+			Let $a,b,c$ be positive real numbers such that $a^{2}+b^{2}+c^{2}+abc=4$. Prove that
+				\begin{align*}
+					0
+						& \leq ab+bc+ca-abc\leq 2
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2000$, problem $6$]
+			Let $a_{1},\ldots,a_{n},b_{1},\ldots,b_{n}$ be non-negative real numbers. Prove that
+				\begin{align*}
+					\sum_{i,j=1}^{n}\min\{a_{i}a_{j},b_{i}b_{j}\}
+						& \leq\sum_{i,j=1}^{n}\min\{a_{i}b_{j},a_{j}b_{i}\}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $1999$, problem $4$]
+			Let $n>3$ be an integer and $a_{1},\ldots,a_{n}$ be positive real numbers such that
+				\begin{align*}
+					a_{1}+\ldots+a_{n}
+						& \geq n\quad\mbox{and}\\
+					a_{1}^{2}+\ldots+a_{n}^{2}
+						& \geq n^{2}
+				\end{align*}
+			Prove that $\max\{a_{1},\ldots,a_{n}\}\geq2$.
+		\end{problem}
+	
+		\begin{problem}[USAMO $1996$, problem $3$]
+			Let $a_{1},\ldots,a_{n}$ be real numbers in the interval $(0,\pi/2)$ such that
+				\begin{align*}
+					\tan\left(a_{0}-\dfrac{\pi}{4}\right)+\ldots+\tan\left(a_{1}-\dfrac{\pi}{4}\right)
+						& \geq n-1
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\tan{a_{0}}\cdots\tan{a_{n}}
+						& \geq n^{n+1}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $1994$, problem $4$]
+			Let $a_{1},\ldots,a_{n}$ be a sequence of positive real numbers such that
+				\begin{align*}
+					\sum_{i=1}^{n}a_{i}^{2}
+						& \geq \sqrt{n}
+				\end{align*}
+			for all $n$. Prove that
+				\begin{align*}
+					\sum_{i=1}^{n}a_{i}^{2}
+						& > \dfrac{1}{4}\left(1+\dfrac{1}{2}+\ldots+\dfrac{1}{n}\right)
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[USAMO $1993$, problem $5$]
+			Let $a_{0},\ldots,a_{n}$ be positive real numbers such that $a_{i-1}a_{i+1}\leq a_{i}^2$ (such a sequence is called \textit{log concave}). Show that for $n>1$,
+				\begin{align*}
+					\dfrac{a_{0}+\ldots+a_{n}}{n+1}\dfrac{a_{1}+\ldots+a_{n-1}}{n-1}
+						& \geq\dfrac{a_{0}+\ldots+a_{n-1}}{n}\dfrac{a_{1}+\ldots+a_{n}}{n}
+				\end{align*}
+		\end{problem}
+\end{document}
