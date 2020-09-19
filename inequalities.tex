@@ -64,9 +64,8 @@
 \AtBeginDocument{\globalcolor{onyx}}
 
 
-\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}
-%\titleformat{\section}{\Large\bfseries}{\titlerule$\S\S$\Large\thesection.}{1.5em}{}
-%\titleformat{\subsection}{\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
+\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{\thesection.}}}{1em}{}[{\titlerule[0.8pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
