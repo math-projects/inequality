@@ -8,7 +8,6 @@
 \usepackage{glossaries-extra}
 \usepackage[toc]{glossaries}
 \usepackage{makeidx}
-\usepackage{sectsty}
 \usepackage{setspace}
 \usepackage{afterpage}
 \usepackage{datetime}
@@ -50,7 +49,12 @@
 \definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
 \definecolor{bittersweet}{rgb}{1.0, 0.44, 0.37}
 \definecolor{blue(munsell)}{rgb}{0.0, 0.5, 0.69}
+\definecolor{forestgreen(web)}{rgb}{0.13, 0.55, 0.13}
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{harvardcrimson}{rgb}{0.79, 0.0, 0.09}
+\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
+\definecolor{mangotango}{rgb}{1.0, 0.51, 0.26}
+
 
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -59,11 +63,10 @@
 \makeatother
 \AtBeginDocument{\globalcolor{onyx}}
 
+
 \titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}
-\titleformat{\section}{\Large\bfseries}{\titlerule$\S\S$\Large\thesection.}{1.5em}{}
-\titleformat{\subsection}{\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
-\sectionfont{\color{burntorange}\underline}
-\subsectionfont{\color{firebrick}}
+%\titleformat{\section}{\Large\bfseries}{\titlerule$\S\S$\Large\thesection.}{1.5em}{}
+%\titleformat{\subsection}{\bfseries}{$\S\S\S$\thesubsection.}{1.5em}{}
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
@@ -76,6 +79,7 @@
 	pdfstartview=,
 	pdfencoding=auto,
 }
+
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \newcommand\HRule{\rule{\textwidth}{1pt}}
@@ -156,7 +160,8 @@
 \begin{document}
 	\frontmatter
 	\begin{titlepage}
-		\pagecolor{darkspringgreen}\afterpage{\nopagecolor}
+		\color{rosewood}
+		\pagecolor{bondiblue}\afterpage{\nopagecolor}
 		\begin{tikzpicture}[remember picture, overlay]
 			\draw[line width = 4pt] ($(current page.north west) + (1in,-2in)$) rectangle ($(current page.south east) + (-.5in,2in)$);
 		\end{tikzpicture}
