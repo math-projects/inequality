@@ -55,7 +55,6 @@
 \definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
 \definecolor{mangotango}{rgb}{1.0, 0.51, 0.26}
 
-
 \makeatletter
 \newcommand{\globalcolor}[1]{%
 	\color{#1}\global\let\default@color\current@color
@@ -63,9 +62,8 @@
 \makeatother
 \AtBeginDocument{\globalcolor{onyx}}
 
-
-\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[0.8pt]}]
-\titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{\thesection.}}}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[01.5pt]}]
+\titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[0.8pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
@@ -89,7 +87,6 @@
 \setlength{\topmargin}{-.1in}
 \setlength{\textheight}{8.4in}
 
-
 \setlength{\textwidth}{6.5in}
 \setlength{\oddsidemargin}{.1in}
 \setlength{\evensidemargin}{.1in}
@@ -112,7 +109,6 @@
 }
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
-
 
 \pagestyle{fancyplain}
 \fancyhf{}
