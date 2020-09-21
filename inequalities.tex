@@ -1,5 +1,6 @@
 \documentclass[a4paper, 12pt, leqno,]{book}
 
+
 \usepackage{amsmath, amsfonts, amssymb, amsthm, lmodern}
 \usepackage{subfiles, pdfrender, enumerate, fancyhdr}
 \usepackage{csquotes, xcolor, titlesec}
@@ -12,48 +13,9 @@
 \usepackage{afterpage}
 \usepackage{datetime}
 
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
-\RequirePackage{hyperref}
-\definecolor{bondiblue}{rgb}{0.0, 0.58, 0.71}
-\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
-\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
-\definecolor{darkturquoise}{rgb}{0.0, 0.81, 0.82}
-\definecolor{oxfordblue}{rgb}{0.0, 0.13, 0.28}
-\definecolor{prune}{rgb}{0.44, 0.11, 0.11}
-\definecolor{prussianblue}{rgb}{0.0, 0.19, 0.33}
-\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
-\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
-\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
-\definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
-\definecolor{darkjunglegreen}{rgb}{0.1, 0.14, 0.13}
-\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
-\definecolor{deepjunglegreen}{rgb}{0.0, 0.29, 0.29}
-\definecolor{indigodye}{rgb}{0.0, 0.25, 0.42}
-\definecolor{onyx}{rgb}{0.06, 0.06, 0.06}
-\definecolor{red(ncs)}{rgb}{0.77, 0.01, 0.2}
-\definecolor{rosewood}{rgb}{0.4, 0.0, 0.04}
-\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
-\definecolor{yaleblue}{rgb}{0.06, 0.3, 0.57}
-\definecolor{vividauburn}{rgb}{0.58, 0.15, 0.14}
-\definecolor{venetianred}{rgb}{0.78, 0.03, 0.08}
-\definecolor{tyrianpurple}{rgb}{0.4, 0.01, 0.24}
-\definecolor{burntorange}{rgb}{0.8, 0.33, 0.0}
-\definecolor{carminepink}{rgb}{0.92, 0.3, 0.26}
-\definecolor{darkpastelred}{rgb}{0.76, 0.23, 0.13}
-\definecolor{darkscarlet}{rgb}{0.34, 0.01, 0.1}
-\definecolor{deepcarminepink}{rgb}{0.94, 0.19, 0.22}
-\definecolor{falured}{rgb}{0.5, 0.09, 0.09}
-\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
-\definecolor{fireenginered}{rgb}{0.81, 0.09, 0.13}
-\definecolor{firebrick}{rgb}{0.7, 0.13, 0.13}
-\definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
-\definecolor{bittersweet}{rgb}{1.0, 0.44, 0.37}
-\definecolor{blue(munsell)}{rgb}{0.0, 0.5, 0.69}
-\definecolor{forestgreen(web)}{rgb}{0.13, 0.55, 0.13}
-\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
-\definecolor{harvardcrimson}{rgb}{0.79, 0.0, 0.09}
-\definecolor{internationalorange}{rgb}{1.0, 0.31, 0.0}
-\definecolor{mangotango}{rgb}{1.0, 0.51, 0.26}
+\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+\usepackage{hyperref}
+\usepackage{mystyle}
 
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -62,8 +24,8 @@
 \makeatother
 \AtBeginDocument{\globalcolor{onyx}}
 
-\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[01.5pt]}]
-\titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[03pt]}]
+\titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[01pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
@@ -77,74 +39,12 @@
 	pdfencoding=auto,
 }
 
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\newcommand\HRule{\rule{\textwidth}{1pt}}
-
-\setlength{\textwidth}{6.5in}
-\setlength{\oddsidemargin}{.1in}
-\setlength{\evensidemargin}{.1in}
-\setlength{\topmargin}{-.1in}
-\setlength{\textheight}{8.4in}
-
-\setlength{\textwidth}{6.5in}
-\setlength{\oddsidemargin}{.1in}
-\setlength{\evensidemargin}{.1in}
-\setlength{\topmargin}{-.1in}
-\setlength{\textheight}{8.4in}
-
-\DeclareMathOperator{\rad}{rad}
-\DeclareMathOperator{\lcm}{lcm}
-\DeclareMathOperator{\ord}{ord}
-
-\newenvironment{dedication}
-{\clearpage           
-	\thispagestyle{empty}
-	\vspace*{\stretch{1}}
-	\raggedleft         
-}
-{\par 
-	\vspace{\stretch{3}} 
-	\clearpage           
-}
-
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
-\pagestyle{fancyplain}
-\fancyhf{}
-\setlength{\headheight}{52pt}
-\fancyhead[RO]{\textit{\nouppercase{\rightmark}}}
-\fancyhead[LO, RE]{\textit{Masum Billal, Samin Riasat}}
-\fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
-\fancyfoot[LE, RO]{Page\ \thepage}
-\renewcommand{\headrulewidth}{.01pt}
-\renewcommand{\footrulewidth}{.01pt}
-\renewcommand{\chaptermark}[1]{\markboth{$\S$\thechapter.\ #1}{}}
+%\numberwithin{problem}{chapter}
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-
-\newtheoremstyle{custom} % name
-{\topsep}                    % Space above
-{\topsep}                    % Space below
-{\normalfont}                   % Body font
-{}                           % Indent amount
-{\emph}                   % Theorem head font
-{.}                          % Punctuation after theorem head
-{.5em}                       % Space after theorem head
-{}  % Theo
-
-\theoremstyle{definition}
-\newtheorem{definition}{\emph{Definition}}
-\newtheorem{problem}{{Problem}}
-\newtheorem*{solution}{\emph{Solution}}
-
-\numberwithin{problem}{chapter}
-
-\renewcommand{\numberline}[1]{#1~}
-
-\title{\bfseries Techniques in Olympiad Inequalities}
-\author{Masum Billal\and Samin Riasat}
+%\title{\bfseries Techniques in Olympiad Inequalities}
+%\author{Masum Billal\and Samin Riasat}
 
 \subfile{glossary.tex}
 \bibliography{ref.bib}
@@ -155,8 +55,8 @@
 \begin{document}
 	\frontmatter
 	\begin{titlepage}
-		\color{rosewood}
-		\pagecolor{bondiblue}\afterpage{\nopagecolor}
+		\color{deepjunglegreen}
+		\pagecolor{linen}%\afterpage{\nopagecolor}
 		\begin{tikzpicture}[remember picture, overlay]
 			\draw[line width = 4pt] ($(current page.north west) + (1in,-2in)$) rectangle ($(current page.south east) + (-.5in,2in)$);
 		\end{tikzpicture}
@@ -164,24 +64,29 @@
 		\begin{center}
 			% Upper part of the page
 			\textsc{\LARGE }\\[2.5cm]
-			\textsc{\Large }\\[3cm]
+			{\Huge\bfseries\itshape\color{venetianred} Techniques\\ {\normalsize in }\\\vspace*{.1in} Inequalities}\\[3cm]
 			% Title
 			\HRule \\[0.4cm]
-			{ \huge \bfseries Techniques in Inequalities}\\[0.4cm]
-			%\HRule \\[3cm]
+			{ \LARGE\bfseries\color{rosewood} {Masum Billal\quad Samin Riasat}}\\[0.4cm]
+			%\vspace*{.2in}
+			%\HRule \\[.5cm]
+			\vspace*{.1in}
+			
 			\begin{minipage}{0.45\textwidth}
-				\large\emph{Masum Billal\quad Samin Riasat}\\\\
-				\today\\
+				%\centering
+				%\color{darkspringgreen}\Large\textbf{Springer Nature}
+				%\bfseries\\\\
+				%	\today\\
 			\end{minipage}
 			\vspace*{.2in}
 			\HRule \\[3cm]
 			\vfill
 			% Bottom of the page
-			%Publisher: Springer Nature
 		\end{center}
 	\end{titlepage}
 	%\maketitle
 	\begin{refsection}
+		\pagecolor{splashedwhite}
 		\section*{Preface}
 		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_poolya_2018} that it was understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. Some of them focus on the theory and some of them focus on problem solving. The present book focuses on some problem solving techniques which can be applied in mathematical Olympiads. Even though the objective of this book is mostly Olympiad oriented, quite a bit of theory is discussed as well. The discussion on classical theory should be a good refresher of both the literature and a little bit of history. One of the aims of this book is to popularize the methods which were already popular in some closed circles such as the Art of Problem Solving forum. Another aim is to popularize some less known inequalities which are very nice results by themselves but are not that well known. For example, \textcite{Seitz1936} inequality combines both Cauchy-Schwarz and Chebyshev's results but it is almost non-existent in popular inequality books. We discuss a number of such inequalities as part of our theory discussion. We will also discuss some refinements on some well known inequalities which are also not so well known.
 		
@@ -276,25 +181,12 @@
 		\subfile{brno.tex}
 		\subfile{buno.tex}
 		\subfile{chmo.tex}
-		\subfile{cmo.tex}
-		\subfile{cno.tex}
-		\subfile{crno.tex}
-		\subfile{dmo.tex}
-		\subfile{gno.tex}
-		\subfile{hib.tex}
 		\subfile{imo.tex}
-		\subfile{inmo.tex}
 		\subfile{irmo.tex}
-		\subfile{kno.tex}
-		\subfile{mdno.tex}
-		\subfile{memo.tex}
-		\subfile{nmc.tex}
-		\subfile{mno.tex}
-		\subfile{mono.tex}
+		\subfile{mmo.tex}
 		\subfile{pmo.tex}
 		\subfile{rno.tex}
 		\subfile{sgmo.tex}
-		\subfile{snmo.tex}
 		\subfile{tno.tex}
 		\subfile{usamo.tex}
 		\subfile{vno.tex}

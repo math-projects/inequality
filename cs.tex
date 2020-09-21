@@ -44,34 +44,34 @@
 		\end{enumerate}
 	Let us generalize this notation further. Let $m$ be a positive integer. Then for $\mathbf{x}=(x_1,\ldots,x_n)$, define
 		\begin{align*}
-			\|\mathbf{x}\|_m
+			\| \mathbf{x}\| _m
 				& = \langle\underbrace{\mathbf{x},\ldots,\mathbf{x}}_{m\mbox{ times}}\rangle^{\frac{1}{m}}\\
 				& = \sqrt[m]{x_1^m+\ldots+x_n^m}
 		\end{align*}
-	For $m=2$, we will simply write $\|\mathbf{x}\|$ instead of $\|\mathbf{x}\|_2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write Cauchy-Schwarz inequality in a more compact form.
+	For $m=2$, we will simply write $\| \mathbf{x}\| $ instead of $\| \mathbf{x}\| _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write Cauchy-Schwarz inequality in a more compact form.
 		\begin{align*}
-			\|\mathbf{a}\|\cdot\|\mathbf{b}\|
+			\| \mathbf{a}\| \cdot\| \mathbf{b}\| 
 				& \geq\langle\mathbf{a},\mathbf{b}\rangle
 		\end{align*}
 	This notion can be further generalized for arbitrary real numbers. For a real number $p$, define
 		\begin{align*}
-			\|\mathbf{x}\|_p
+			\| \mathbf{x}\| _p
 				& = \sqrt[p]{x_1^p+\ldots+x_n^p}
 		\end{align*}
 	This is often called the $L_p$ \index{norm of vector}\emph{norm} for the vector $\mathbf{x}$. These notations will help us shorten some long inequalities later. Let us see the proofs now.
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
-					\|\mathbf{a}\|
+					\| \mathbf{a}\| 
 						& = \sqrt{a_1^2+\ldots+a_n^2}\\
-					\|\mathbf{b}\|
+					\| \mathbf{b}\| 
 						& = \sqrt{b_1^2+\ldots+b_n^2}
 				\end{align*}
 			If $\theta$ is the minimum angle between them, from the rule of \emph{dot product} we get
 				\begin{align*}
 					\mathbf{a}\cdot\mathbf{b}
 						& = a_1b_1+\ldots+a_nb_n\\
-					\|\mathbf{a}\|\cdot\|\mathbf{b}\|\cdot\cos\theta
+					\| \mathbf{a}\| \cdot\| \mathbf{b}\| \cdot\cos\theta
 						& = a_1b_1+\ldots+a_nb_n\\
 					\cos{\theta}
 						& = \dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{a_1^2+\ldots+a_n^2}\sqrt{b_1^2+\ldots+b_n^2}}
