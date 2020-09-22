@@ -666,10 +666,7 @@
 		\end{problem}
 	
 		\begin{problem}[$2005$ Team Selection Test, problem $4$]
-			Let $a_{1},\ldots,a_{6};b_{1},\ldots,b_{6};c_{1},\ldots,c_{6}$ be permutations of $1,\ldots,6$. Find the minimum value of
-				\begin{align*}
-					\sum_{i=1}^{6}a_{i}b_{i}c_{i}
-				\end{align*}
+			Let $a_{1},\ldots,a_{6};b_{1},\ldots,b_{6};c_{1},\ldots,c_{6}$ be permutations of $1,\ldots,6$. Find the minimum value of $\sum_{i=1}^{6}a_{i}b_{i}c_{i}$.
 		\end{problem}
 	
 		\begin{problem}[$2005$ Quiz $1$, problem $2$]
@@ -732,5 +729,94 @@
 					\left(\sum_{i=1}^{n}a_{i}^{2n}\right)-n^{2}\sum_{1\leq i < j\leq n}\left(\dfrac{a_{i}}{a_{j}}-\dfrac{a_{j}}{a_{i}}\right)^{2}
 						& > n^{2}
 				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[$2002$ Team Selection Test, problem $6$]
+			Let
+				\begin{align*}
+					f(x_{1},x_{2},x_{3})	
+						& = -2(x_{1}^{3}+x_{2}^{3}+x_{3}^{3})+3x_{1}^{2}(x_{2}+x_{3})+3x_{2}^{2}(x_{3}+x_{1})+3x_{3}^{2}(x_{1}+x_{2})-12x_{1}x_{2}x_{3}
+				\end{align*}
+			For real numbers $r,s,t$, define
+				\begin{align*}
+					g(r,s,t)
+						& = \max\limits_{t\leq x_{3}\leq t+2}|f(r, r+2, x_{3})+s|
+				\end{align*}
+			Find the minimum value of $g(r,s,t)$.
+		\end{problem}
+	
+		\begin{problem}[$2001$ Team Selection Test, problem $4$]
+			Let $n>3$ be an integer. The real numbers $x_{1},\ldots,x_{n+2}$ satisfy the condition $0<x_{1}<\ldots<x_{n+2}$. Find the minimum possible value of
+				\begin{align*}
+					\dfrac{\left(\sum_{i=1}^{n}\dfrac{x_{i+1}}{x_{i}}\right)\left(\sum_{i=1}^{n}\dfrac{x_{i+2}}{x_{i+1}}\right)}{\left(\sum_{i=1}^{n}\dfrac{x_{i+1}x_{i+2}}{x_{k+1}^{2}+x_{k}x_{k+2}}\right)\left(\sum_{i=1}^{n}\dfrac{x_{i+1}^{2}+x_{i}x_{i+2}}{x_{i}x_{i+1}}\right)}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[$2001$ Team Selection Test, problem $6$]
+			Find the maximum value of
+				\begin{align*}
+					\max\limits_{1\leq x\leq 3}|x^{3}-ax^{2}-bx-c|
+				\end{align*}
+			where $a,b,c$ runs through all real numbers.
+		\end{problem}
+	
+		\begin{problem}[$1999$ Team Selection Test, problem $1$]
+			Let $n$ be a positive integer and $x_{1},\ldots,x_{n}$ be non-negative real numbers such that $x_{1}+\ldots+x_{n}=1$. Find the largest possible value of $\sum_{i=1}^{n}(x_{i}^{4}-x_{j}^{5})$.
+		\end{problem}
+	
+		\begin{problem}[$1998$ Team Selection Test, problem $3$]
+			For a fixed real number $\theta\in\left[0,\frac{\pi}{2}\right]$, find the smallest positive real number $a$ for which
+				\begin{align*}
+					\dfrac{\sqrt{a}}{\cos{\theta}}+\dfrac{\sqrt{a}}{\sin{\theta}}
+						& > 1
+				\end{align*}
+			and there exists $x\in\left[1-\frac{\sqrt{a}}{\sin{\theta}},\cos{\theta}\right]$ such that
+				\begin{align*}
+					\left((1-x)\sin{\theta}-\sqrt{a-x^{2}\cos^{2}{\theta}}\right)^{2}+\left(x\cos{\theta}-\sqrt{a-(1-x)^{2}\sin{\theta}}\right)^{2}
+						& \leq a
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[$1996$ Team Selection Test, problem $5$]
+			Let $n\geq 4$ be an integer and $\alpha_{1},\ldots,\alpha_{n},\beta_{1},\ldots,\beta_{n}$ be real numbers such that $\sum_{i=1}^{n}\alpha_{i}^{2}<1$ and $\sum_{i=1}^{n}\beta_{i}^{2}<1$.
+				\begin{align*}
+					A^{2}
+						& = 1-\sum_{i=1}^{n}\alpha_{i}^{2}\\
+					B^{2}
+						& = 1-\sum_{i=1}^{n}\beta_{i}^{2}\\
+					W
+						& = \dfrac{1}{2}\left(1-\sum_{i=1}^{n}\alpha_{i}\beta_{i}\right)^{2}
+				\end{align*}
+			Find all real number $\lambda$ such that
+				\begin{align*}
+					x^{n}+\lambda(x^{n-1}+\ldots+x^{3}+Wx^{2}+ABx+1)
+						& = 0
+				\end{align*}
+			only has real roots.
+		\end{problem}
+	
+		\begin{problem}[$1995$ Team Selection Test, problem $4$]
+			Let $n$ be a positive integer and $r_{1},\ldots,r_{n},s_{1},\ldots,s_{n},t_{1},\ldots,t_{n},u_{1},\ldots,u_{n},v_{1},\ldots,v_{n}$ be $5n$ real numbers.
+				\begin{align*}
+					R
+						& = \dfrac{1}{n}\sum_{i=1}^{n}r_{i}\\
+					S
+						& = \dfrac{1}{n}\sum_{i=1}^{n}s_{i}\\
+					T
+						& = \dfrac{1}{n}\sum_{i=1}^{n}t_{i}\\
+					U
+						& = \dfrac{1}{n}\sum_{i=1}^{n}u_{i}\\
+					V
+						& = \dfrac{1}{n}\sum_{i=1}^{n}v_{i}
+				\end{align*}
+			Prove that
+				\begin{align*}
+					\prod_{i=1}^{n}\dfrac{r_{i}s_{i}t_{i}u_{i}v_{i}+1}{r_{i}s_{i}t_{i}u_{i}v_{i}-1}
+						& \geq \left(\dfrac{RSTUV+1}{RSTUV-1}\right)^{n}
+				\end{align*}
+		\end{problem}
+	
+		\begin{problem}[$1993$ Team Selection Test, problem $2$]
+			Let $n\geq 2$ be an integer and $a,b,c,d$ be positive integers such that $\frac{a}{b}+\frac{c}{d}<1$ and $a+c\leq n$. Find the maximum value of $\frac{a}{b}+\frac{c}{d}$ for a fixed $n$.
 		\end{problem}
 \end{document}
