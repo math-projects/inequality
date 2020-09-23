@@ -27,22 +27,20 @@
 				\end{align*}
 			Note that the arithmetic mean of $a_1,\ldots,a_n$ is actually $\mathfrak{M}_1(a_1,\ldots,a_n)$. Similarly, the harmonic mean is $\mathfrak{M}_{-1}(a_1,\ldots,a_n)$. Moreover, $\mathfrak{M}_0(a_1,\ldots,a_n)$ is the geometric mean which we show below.
 		\end{definition}
-	We may omit the numbers $a_{1},\ldots,a_{n}$ and just call it $\mathfrak{M}_r$ instead of $\mathfrak{M}_r(a_1,\ldots,a_n)$ if the context is clear. An even better way would be using $\mathfrak{M}_{r}(\mathbf{a})$ where $\mathbf{a}=(a_{1},\ldots,a_{n})$.
+	We may omit the numbers $a_{1},\ldots,a_{n}$ and just call it $\mathfrak{M}_r$ instead of $\mathfrak{M}_r(a_1,\ldots,a_n)$ if the context is clear. An even better way to denote this would be using $\mathfrak{M}_{r}(\mathbf{a})$ where $\mathbf{a}=(a_{1},\ldots,a_{n})$.
 		\begin{align*}
 			\mathfrak{M}_{r}(\mathbf{a})
 				& = \dfrac{\|\mathbf{a}\|_{r}}{\sqrt[r]{n}}
 		\end{align*}
-	Next, we show that $\mathfrak{M}_{0}(\mathbf{a})$ is the geometric mean.
+	We can also denote the arithmetic, geometric and harmonic means of $\mathbf{a}$ by $\mathfrak{A}(\mathbf{a}),\mathfrak{G}(\mathbf{a})$ and $\mathfrak{H}(\mathbf{a})$ respectively. The notations $\mathfrak{M},\mathfrak{A},\mathfrak{G},\mathfrak{H}$ are inspired by \textcite{hardy_littlewood_polya_2018}. Next, we show that $\mathfrak{G}(\mathbf{a})$ is the geometric mean.
 		\begin{align*}
-			\mathfrak{M}_{0}(\mathbf{a})
+			\mathfrak{G}(\mathbf{a})
 				& = \lim\limits_{r\to0}\left(\dfrac{a_1^r+\ldots+a_n^r}{n}\right)^{\dfrac{1}{r}}
 		\end{align*}
 	
 		\begin{theorem}[Power mean inequality]
 			If $r,s$ are real numbers such that $r\leq s$, then for $n$ real numbers $a_1,\ldots,a_n$,
 				\begin{align*}
-					\min(a_1,\ldots,a_n)
-						& \leq \mathfrak{M}_r\leq \mathfrak{M}_s\leq\max(a_1,\ldots,a_n)\quad\mbox{ or}\\
 					\min{(\mathbf{a})}
 						& \leq \mathfrak{M}_r(\mathbf{a})\leq \mathfrak{M}_s(\mathbf{a})\leq\max{(\mathbf{a})}
 				\end{align*}
