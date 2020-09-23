@@ -1,0 +1,7 @@
+% File name:      config.webo
+% Created by:     Maurizio Loreti
+% Created using:  vim 6.0
+% Creation date:  7-Feb-2002
+% $Id: config.webo,v 1.1 2002/02/07 11:04:29 loreti Exp $
+
+p +webo.map

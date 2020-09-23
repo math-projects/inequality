@@ -1,0 +1,15 @@
+\ProvidesFile{uwebo.fd}
+   [2019/07/06 v1.1c font definitions for U/webo]
+
+\DeclareFontFamily{U}{webo}{}
+
+\DeclareFontShape{U}{webo}{xl}{n}{
+   <-> s * [1.2] WebOMintsGD
+}{}
+
+% Also support standard NFSS series and shape names (without a scale)
+
+\DeclareFontShape{U}{webo}{m}{n}{<-> WebOMintsGD}{}
+
+
+\endinput

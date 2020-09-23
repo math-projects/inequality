@@ -1,8 +1,7 @@
 \documentclass[a4paper, 12pt, leqno,]{book}
 
-
-\usepackage{amsmath, amsfonts, amssymb, amsthm, lmodern}
-\usepackage{subfiles, pdfrender, enumerate, fancyhdr}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{subfiles, graphicx, enumerate, fancyhdr}
 \usepackage{csquotes, xcolor, titlesec}
 %\usepackage{baskervillef}
 %\usepackage[baskerville]{newtxmath}
@@ -13,9 +12,20 @@
 \usepackage{afterpage}
 \usepackage{datetime}
 
-\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+%\usepackage[T1]{fontenc}
+
+%\usepackage{pdfrender}
+%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \usepackage{hyperref}
 \usepackage{mystyle}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{\emph{Definition}}
+\newtheorem{problem}{{Problem}}
+\newtheorem*{solution}{\emph{Solution}}
 
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -43,44 +53,67 @@
 
 %\numberwithin{problem}{chapter}
 
-%\title{\bfseries Techniques in Olympiad Inequalities}
-%\author{Masum Billal\and Samin Riasat}
-
 \subfile{glossary.tex}
 \bibliography{ref.bib}
 
 \makenoidxglossaries
 \makeindex
 
+\newlength{\drop}
+\newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
+
+%\fancypagestyle{main}{
+\pagestyle{fancyplain}
+\fancyhf{}
+%\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}
+\setlength{\headheight}{52pt}
+
+%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[LO, RE]{\textit{Masum Billal \& Samin Riasat}}
+\fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[RO]{\textit{\nouppercase{\rightmark}}}
+\fancyfoot[LE, RO]{Page\ \thepage}
+%\lfoot{\sc Masum Billal}
+%\rfoot{Page\ \thepage}
+\renewcommand{\headrulewidth}{.01pt} % remove lines as well
+\renewcommand{\footrulewidth}{.01pt}
+%}
+
 \begin{document}
 	\frontmatter
 	\begin{titlepage}
-		\color{deepjunglegreen}
-		\pagecolor{linen}%\afterpage{\nopagecolor}
+		\pagecolor{antiquewhite}%\afterpage{splashedwhite}
+		%\color{rosewood}
 		\begin{tikzpicture}[remember picture, overlay]
-			\draw[line width = 4pt] ($(current page.north west) + (1in,-2in)$) rectangle ($(current page.south east) + (-.5in,2in)$);
+			\draw[line width = 4pt] ($(current page.north west) + (01in,-1in)$) rectangle ($(current page.south east) + (-.5in,.5in)$);
 		\end{tikzpicture}
 		
 		\begin{center}
-			\textsc{\LARGE }\\[2.5cm]
-			{\Huge\bfseries\itshape\color{venetianred} Techniques\\ {\normalsize in }\\\vspace*{.1in} Inequalities}\\[3cm]
+			\begingroup
+			% Upper part of the page
+			\drop = 1cm
+			\vspace*{1cm}
+			{\Huge\bfseries {ADVANCES IN OLYMPIAD INEQUALITIES}\\[\drop]
+				\scalebox{8}[1]{{\wb{10}{12}4}}\\[\drop]
+				\vspace*{.3in}\normalsize\normalfont\itshape Old and New Olympiad Problems}\\[\drop]
+			% Title
 			\HRule \\[0.4cm]
-			{ \LARGE\bfseries\color{rosewood} {Masum Billal\quad Samin Riasat}}\\[0.4cm]
-			\vspace*{.1in}
-				\begin{minipage}{0.45\textwidth}
-					
-				\end{minipage}
-			%\vspace*{.2in}
-			\HRule \\[3cm]
-			\vfill
+			{ \LARGE\bfseries {Masum Billal\quad Samin Riasat}}\\[\drop]
+			{\wb{10}{12}4}\\[\drop]
+			\HRule \\[.5cm]
+			\begin{minipage}{0.45\textwidth}
+				\scalebox{8}[1]{{\wb{10}{12}4}}\\[\drop]
+				\centering
+				%{\Large\textbf{Publisher Name}}
+			\end{minipage}
+			\vfill\endgroup
 			% Bottom of the page
 		\end{center}
 	\end{titlepage}
-	%\maketitle
 	\begin{refsection}
-		%\pagecolor{splashedwhite}
+		\pagecolor{splashedwhite}
 		\section*{Preface}
-		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_poolya_2018} that it was understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. Some of them focus on the theory and some of them focus on problem solving. The present book focuses on some problem solving techniques which can be applied in mathematical Olympiads. Even though the objective of this book is mostly Olympiad oriented, quite a bit of theory is discussed as well. The discussion on classical theory should be a good refresher of both the literature and a little bit of history. One of the aims of this book is to popularize the methods which were already popular in some closed circles such as the Art of Problem Solving forum. Another aim is to popularize some less known inequalities which are very nice results by themselves but are not that well known. For example, \textcite{Seitz1936} inequality combines both Cauchy-Schwarz and Chebyshev's results but it is almost non-existent in popular inequality books. We discuss a number of such inequalities as part of our theory discussion. We will also discuss some refinements on some well known inequalities which are also not so well known.
+		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_polya_2018} that it was understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. Some of them focus on the theory and some of them focus on problem solving. The present book focuses on some problem solving techniques which can be applied in mathematical Olympiads. Even though the objective of this book is mostly Olympiad oriented, quite a bit of theory is discussed as well. The discussion on classical theory should be a good refresher of both the literature and a little bit of history. One of the aims of this book is to popularize the methods which were already popular in some closed circles such as the Art of Problem Solving forum. Another aim is to popularize some less known inequalities which are very nice results by themselves but are not that well known. For example, \textcite{Seitz1936} inequality combines both Cauchy-Schwarz and Chebyshev's results but it is almost non-existent in popular inequality books. We discuss a number of such inequalities as part of our theory discussion. We will also discuss some refinements on some well known inequalities which are also not so well known.
 		
 		\printbibliography
 	\end{refsection}
@@ -95,6 +128,7 @@
 		\subfile{rearrangement.tex}
 		\subfile{majorization.tex}
 		\subfile{huygen.tex}
+		\subfile{bunching.tex}
 		\printbibliography
 	\end{refsection}
 	
