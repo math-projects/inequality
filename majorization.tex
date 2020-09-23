@@ -2,4 +2,52 @@
 
 \begin{document}
 	\section{Majorization and Symmetric Sums}\label{sec:mazorization}
+	
+	Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors with $n$ elements. We say that $\mathbf{x}$ \textit{dominates} or \textit{majorizes} $y$ if
+		\begin{align*}
+			x_{1}
+				& \geq x_{2}\geq \ldots\geq x_{n}\\
+			y_{1}
+				& \geq y_{2}\geq \ldots\geq y_{n}\\
+			x_{1}+\ldots+x_{n}
+				& = y_{1}+\ldots+y_{n}\\
+			x_{1}+\ldots+x_{k}
+				& \geq y_{1}+\ldots+y_{k}
+		\end{align*}
+	for $1\leq k\leq n-1$. If $\mathbf{x}$ dominates $\mathbf{y}$, then we write $\mathbf{x}\succ\mathbf{y}$. The vectors $\mathbf{x}$ and $\mathbf{y}$ need not be sorted because we can just rearrange them into sorted vectors. For example, $(4,0,0)\succ(3,1,0)\succ(2,2,0)$.
+	
+	We will also introduce the cyclic and symmetric polynomials and notations juxtaposed with them. The expression $x^{2}+y^{2}+z^{2}$ is \textit{symmetric} whereas $x^{2}y+y^{2}z+z^{2}x$ is \textit{cyclic} but not symmetric because $y^{2}x+z^{2}y+x^{2}z\neq x^{2}y+y^{2}z+z^{2}x$. A symmetric polynomial in the variables $x_{1},\ldots,x_{n}$ should remain same regardless of the order in which the variables are used. So $f(x_{1},\ldots,x_{n})$ is symmetric if $f$ remains \textit{invariant} for all permutations of $x_{1},\ldots,x_{n}$ in the expression unlike the cyclic example we just saw. For example, $xy+yz+zx$ is symmetric and so is $xyz$. But $\frac{a}{b}+\frac{b}{c}+\frac{c}{a}$ is cyclic but not symmetric. We can use the cyclic and symmetric notations to represent the expressions in a short form. Here are some demonstrations.
+		\begin{align*}
+			a^{2}+b^{2}+c^{2}
+				& = \sum_{cyc}a^{2}\\
+			a^{2}b+b^{2}c+c^{2}a
+				& = \sum_{cyc}a^{2b}\\
+			xy+yz+zx
+				& = \sum_{cyc}xy
+		\end{align*}
+	Note that even though the expression $xy+yz+zx$ and $a^{2}+b^{2}+c^{2}$ are symmetric, we do not consider them symmetric polynomial sums in this notation. A symmetric polynomial sum should have all $n!$ terms in the sum since it is symmetric on all $n!$ permutations of the variables in it. Even if there can be duplicates, the total number of terms should still remain $n!$. For this reason, this sum is often denoted by $\sum^{!}$. Here are some examples.
+		\begin{align*}
+			\sum_{sym}a^{2}
+				& = 2(a^{2}+b^{2}+c^{2})\\
+			\sum^{!} x^{2}y
+				& = x^{2}y+y^{2}x+y^{2}z+z^{2}y+z^{2}x+x^{2}z
+		\end{align*}
+	If $\mathbf{a}$ be a vector with $n$ elements. We write
+		\begin{align*}
+			F(\mathbf{x}, \mathbf{a})
+				& = x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}\\
+			T(\mathbf{x},\mathbf{a})
+				& = \sum^{!}F(\mathbf{x},\mathbf{a})\\
+				& = \sum_{sym} F(\mathbf{x},\mathbf{a})\\
+				& = \sum^{!}x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}
+		\end{align*}
+	Some authors write this notation as
+		\begin{align*}
+			T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})
+		\end{align*}
+	Simply $T[a_{1},\ldots,a_{n}]$ is used if it is clear what $\mathbf{x}$ is. Then we can write the arithmetic-geometric mean inequality as
+		\begin{align*}
+			T[1,0,\ldots,0]
+				& \geq T\left[\dfrac{1}{n},\ldots,\dfrac{1}{n}\right]
+		\end{align*}
 \end{document}

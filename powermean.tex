@@ -58,7 +58,12 @@
 			\mathfrak{M}_{r}(\mathbf{a},\mathbf{\omega})
 				& = \left(w_{1}a_{1}^{r}+\ldots+w_{n}a_{n}^{r}\right)^{\frac{1}{r}}
 		\end{align*}
-	If the context is clear on what the weights are, then we may omit the weight from the notation and simply write $\mathfrak{M}_{r}(\mathbf{a})$. Let us call $\omega$ the \textit{weight vector}. The power mean inequality applies to weighted means as well.
+	If the context is clear on what the weights are, then we may omit the weight from the notation and simply write $\mathfrak{M}_{r}(\mathbf{a})$. Let us call $\omega$ the \textit{weight vector}. We can convert almost any vector into a weight vector. If $\tau=(t_{1},\ldots,t_{n})$ is an arbitrary vector not all elements zero, then
+		\begin{align*}
+			\omega
+				& = \left(\dfrac{t_{1}}{t_{1}+\ldots+t_{n}},\ldots,\dfrac{t_{n}}{t_{1}+\ldots+t_{n}}\right)
+		\end{align*}
+	is a weight vector. The power mean inequality applies to weighted means as well.
 		\begin{theorem}[Weighted Power Mean Inequality]\label{thm:weightedpowermean}
 			Let $\mathbf{a}$ and $\mathbf{\omega}$ be vectors with $n$ elements. Then for real numbers $r,s$ such that $r\leq s$,
 				\begin{align*}
