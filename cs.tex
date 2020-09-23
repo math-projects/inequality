@@ -20,7 +20,7 @@
 		\end{align}
 	appeared in the \emph{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \emph{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \emph{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
 	
-	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of a vector as an ordered list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\emph{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
+	This theorem has many proofs and even more applications. We will see later in \hyperref[ch:engel]{$\S$\ref{ch:engel}} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of a vector as an ordered list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. The numbers $a_{1},\ldots,a_{n}$ inside the vector $\mathbf{a}$ can be called \textit{elements} of $\mathbf{a}$. So, $\mathbf{a}$ has $n$ elements. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\emph{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
 		\begin{align*}
 			\langle \mathbf{a},\mathbf{b}\rangle
 				& = a_1b_1+\ldots+a_nb_n
@@ -44,7 +44,7 @@
 		\end{enumerate}
 	Let us generalize this notation further. Let $m$ be a positive integer. Then for $\mathbf{x}=(x_1,\ldots,x_n)$, define
 		\begin{align*}
-			\| \mathbf{x}\| _m
+			\| \mathbf{x}\|_{m}
 				& = \langle\underbrace{\mathbf{x},\ldots,\mathbf{x}}_{m\mbox{ times}}\rangle^{\frac{1}{m}}\\
 				& = \sqrt[m]{x_1^m+\ldots+x_n^m}
 		\end{align*}
@@ -55,10 +55,15 @@
 		\end{align*}
 	This notion can be further generalized for arbitrary real numbers. For a real number $p$, define
 		\begin{align*}
-			\| \mathbf{x}\| _p
-				& = \sqrt[p]{x_1^p+\ldots+x_n^p}
+			\| \mathbf{x}\|_{p}
+				& = \sqrt[p]{x_{1}^{p}+\ldots+x_{n}^{p}}
 		\end{align*}
-	This is often called the $L_p$ \index{norm of vector}\emph{norm} for the vector $\mathbf{x}$. These notations will help us shorten some long inequalities later. Let us see the proofs now.
+	This is often called the $L_{p}$ \index{norm of vector}\emph{norm} for the vector $\mathbf{x}$. Furthermore, we can define the addition or subtraction between two vectors as
+		\begin{align*}
+			\mathbf{a}\pm \mathbf{b}
+				& = (a_{1}\pm b_{1},\ldots,a_{n}\pm b_{n})
+		\end{align*}
+	These notations will help us shorten some long inequalities later. We will see the benefit of these notations shortly in \autoref{thm:holder}, H\"{o}lder's inequality. Let us see the proofs now.
 		\begin{proof}[Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
@@ -204,7 +209,7 @@
 	
 	\index{Gram's inequality}\emph{Gram's inequality} is a very nice generalization of Cauchy-Schwarz.
 		\begin{theorem}[Gram's inequality]
-			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be $n$ tuples. Then
+			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be vectors with $n$ elements. Then
 				\begin{align*}
 					\begin{vmatrix}
 						\langle \mathbf{x}_{1},\mathbf{x}_{1}\rangle & \ldots & \langle \mathbf{x}_{1},\mathbf{x}_{n}\rangle\\
@@ -216,8 +221,9 @@
 			Equality occurs if and only if there are real numbers $a_1,\ldots,a_n$ such that all of them are not zero at the same time and
 				\begin{align*}
 					a_{1}\mathbf{x}_{1}+\ldots+a_{n}\mathbf{x}_{n}
-						& = 0
+						& = \mathbf{0}
 				\end{align*}
+			where $\mathbf{0}$ is the zero vector with every element $0$.
 		\end{theorem}
 	This result is very intuitive to say the least. Note that we get Cauchy-Schwarz inequality for $n=2$ since
 		\begin{align*}
@@ -229,5 +235,10 @@
 			\iff\langle\mathbf{x},\mathbf{x}\rangle\cdot\langle\mathbf{y},\mathbf{y}\rangle-\langle\mathbf{x},\mathbf{y}\rangle\cdot\langle\mathbf{y},\mathbf{x}\rangle
 				& \geq0
 		\end{align*}
-	implies Cauchy-Schwarz inequality due to the fact $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
+	implies Cauchy-Schwarz inequality due to the fact $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$. The condition of equality in Gram's inequality is \textit{linear dependence}. Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be some vectors with $n$ elements. Then they are \index{linearly dependent}\textit{linearly dependent} if and only if there are real numbers $a_{1},\ldots,a_{n}$ not all zero such that
+		\begin{align*}
+			a_{1}x_{1}+\ldots+a_{n}x_{n}
+				& = \mathbf{0}
+		\end{align*}
+	If such $a_{1},\ldots,a_{n}$ do not exist, that is the condition satisfies only when $a_{1}=\ldots=a_{n}=0$, then $x_{1},\ldots,x_{n}$ are \index{linearly independent}\textit{linearly independent}.
 \end{document}
