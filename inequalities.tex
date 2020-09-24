@@ -1,5 +1,6 @@
-\documentclass[a4paper, 12pt, leqno,]{book}
+\documentclass[a4paper, 14pt, leqno,fleq]{extbook}
 
+%\usepackage{extsizes}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, graphicx, enumerate, fancyhdr}
 \usepackage{csquotes, xcolor, titlesec}
@@ -12,7 +13,7 @@
 
 \usepackage[T1]{fontenc}
 %\usepackage{baskervillef}
-\usepackage[baskerville]{newtxmath}
+%\usepackage[baskerville]{newtxmath}
 
 \usepackage{pdfrender}
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
@@ -32,7 +33,7 @@
 	\color{#1}\global\let\default@color\current@color
 }
 \makeatother
-\AtBeginDocument{\globalcolor{onyx}}
+\AtBeginDocument{\globalcolor{darkjunglegreen}}
 
 \titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[03pt]}]
 \titleformat{\section}{\normalfont\Large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[01pt]}]
@@ -48,10 +49,6 @@
 	pdfstartview=,
 	pdfencoding=auto,
 }
-%\usepackage{pdfrender,xcolor}
-
-%\pdfrender{StrokeColor=blue,TextRenderingMode=2,LineWidth=0.2pt}%
-
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -72,7 +69,7 @@
 \setlength{\headheight}{52pt}
 
 %\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
-\fancyhead[LO, RE]{\textit{Masum Billal \& Samin Riasat}}
+\fancyhead[LO, RE]{\textit{Masum Billal}\quad\textit{\&}\textsc{Samin Riasat}}
 \fancyhead[LE]{\textit{\nouppercase{\leftmark}}}
 \fancyhead[RO]{\textit{\nouppercase{\rightmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}
@@ -93,11 +90,12 @@
 		\end{minipage}
 		\hspace{0.05\txtwidth}
 		\begin{minipage}[t]{2\txtwidth}
+			\color{darkjunglegreen}
 			\vspace*{\drop}
-			{\LARGE\itshape Masum Billal\quad\& Samin Riasat} \\
+			{\Large\scshape Masum Billal\quad\textit{\&} Samin Riasat} \\
 			\rule{0.9\txtwidth}{1pt} \par
 			\vspace{3\baselineskip}
-			{\noindent\Huge\bfseries Advances in Olympiad Inequalities} \par
+			{\noindent\bfseries ADVANCES IN OLYMPIAD INEQUALITIES} \par
 			\vspace{2\baselineskip}
 			{\Large\itshape Old and New Problems} \par
 			\vspace{6.5\baselineskip}
@@ -107,7 +105,7 @@
 			\vspace{\baselineskip}
 			\rule{0.9\txtwidth}{1pt} \par
 			\vspace{\baselineskip}
-			%{\Large THE PUBLISHER}
+			{\Large THE PUBLISHER}
 		\end{minipage}
 		\hfill
 	\end{titlepage}

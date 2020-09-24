@@ -5,20 +5,22 @@
 	\section{H\"{o}lder and Minkowski's Inequality}\label{sec:holdmink}
 	
 		\begin{theorem}[H\"{o}lder's Inequality]\label{thm:holder}
-			Let $\mathbf{\alpha},\mathbf{\alpha},\ldots,\mathbf{\lambda}$ be some vectors with $n$ elements and $\omega$ be the weight vector same for all of them. Then we have
+			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements and $\omega$ be a weight vector. Then
 				\begin{align*}
-					\mathfrak{G}(\mathbf{\alpha}+\mathbf{\beta}+\ldots+\mathbf{\lambda})
-						& \geq \mathfrak{G}(\mathbf{\mathbf{\alpha}})+\mathfrak{G}(\mathbf{\beta})+\ldots+\mathfrak{G}(\mathbf{\lambda})
+					\mathfrak{G}\left(\sum_{i=1}^{n}x_{i},\omega\right)
+					& \geq \sum_{i=1}^{n}\mathfrak{G}(\mathbf{x}_{i},\omega)
 				\end{align*}
 		\end{theorem}
 	
 		\begin{theorem}[Minkowski's Inequality]\label{thm:mink}
-			Let $r\neq 1$ be a real number, $\alpha,\beta,\ldots,\lambda$ be vectors with $n$ elements and $\omega$ be the weight vector same for all of them. Then
+			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
 				\begin{align*}
-					\mathfrak{M}_{r}(\alpha+\beta+\ldots+\lambda)
-						& \geq \mathfrak{M}_{r}(\alpha)+\mathfrak{M}_{r}(\beta)+\ldots+\mathfrak{M}_{r}(\lambda)\quad\mbox{ if }r<1\\
-					\mathfrak{M}_{r}(\alpha+\beta+\ldots+\lambda)
-					& \leq \mathfrak{M}_{r}(\alpha)+\mathfrak{M}_{r}(\beta)+\ldots+\mathfrak{M}_{r}(\lambda)\quad\mbox{ if }r>1
+					\mathfrak{M}_{r}\left(\sum_{i=1}^{n}x_{i},\omega\right)
+						&
+							\begin{cases}
+								\geq \sum_{i=1}^{n}\mathfrak{M}_{r}(\mathbf{x}_{i},\omega)& \mbox{if }r<1\\
+								\leq \sum_{i=1}^{n}\mathfrak{M}_{r}(\mathbf{x}_{i}, \omega)& \mbox{ otherwise}
+							\end{cases}
 				\end{align*}
 		\end{theorem}
 \end{document}
