@@ -3,8 +3,6 @@
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, graphicx, enumerate, fancyhdr}
 \usepackage{csquotes, xcolor, titlesec}
-%\usepackage{baskervillef}
-%\usepackage[baskerville]{newtxmath}
 \usepackage{glossaries-extra}
 \usepackage[toc]{glossaries}
 \usepackage{makeidx}
@@ -12,7 +10,9 @@
 \usepackage{afterpage}
 \usepackage{datetime}
 
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
+%\usepackage{baskervillef}
+\usepackage[baskerville]{newtxmath}
 
 \usepackage{pdfrender}
 \pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
@@ -63,7 +63,6 @@
 \makenoidxglossaries
 \makeindex
 
-\newlength{\drop}
 \newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
 
 %\fancypagestyle{main}{
@@ -86,35 +85,34 @@
 \begin{document}
 	\frontmatter
 	\begin{titlepage}
-		\pagecolor{antiquewhite}%\afterpage{splashedwhite}
-		%\color{rosewood}
-		\begin{tikzpicture}[remember picture, overlay]
-			\draw[line width = 4pt] ($(current page.north west) + (01in,-1in)$) rectangle ($(current page.south east) + (-.5in,.5in)$);
-		\end{tikzpicture}
-		
-		\begin{center}
-			\begingroup
-			% Upper part of the page
-			\drop = 1cm
-			\vspace*{1cm}
-			
-			{\Huge\bfseries {ADVANCES IN OLYMPIAD INEQUALITIES}\\[\drop]
-				\scalebox{8}[1]{{\wb{10}{12}4}}\\[\drop]
-				\vspace*{.3in}\normalsize\normalfont\itshape Old and New Olympiad Problems}\\[\drop]
-			% Title
-			\HRule \\[0.4cm]
-			{ \LARGE\bfseries {Masum Billal\quad Samin Riasat}}\\[\drop]
-			{\wb{10}{12}4}\\[\drop]
-			\HRule \\[.5cm]
-			\begin{minipage}{0.45\textwidth}
-				\scalebox{8}[1]{{\wb{10}{12}4}}\\[\drop]
-				\centering
-				%{\Large\textbf{Publisher Name}}
-			\end{minipage}
-			\vfill\endgroup
-			% Bottom of the page
-		\end{center}
+		%\pagecolor{darkturquoise}%\afterpage{splashedwhite}
+		\drop=0.1\txtheight
+		\begin{minipage}[t]{0.05\txtwidth}
+			\color{darkjunglegreen}
+			\rule{6pt}{\txtheight}
+		\end{minipage}
+		\hspace{0.05\txtwidth}
+		\begin{minipage}[t]{2\txtwidth}
+			\vspace*{\drop}
+			{\LARGE\itshape Masum Billal\quad\& Samin Riasat} \\
+			\rule{0.9\txtwidth}{1pt} \par
+			\vspace{3\baselineskip}
+			{\noindent\Huge\bfseries Advances in Olympiad Inequalities} \par
+			\vspace{2\baselineskip}
+			{\Large\itshape Old and New Problems} \par
+			\vspace{6.5\baselineskip}
+			{\scshape } \par
+			\vspace{0.1\baselineskip}
+			{\Large } \par
+			\vspace{\baselineskip}
+			\rule{0.9\txtwidth}{1pt} \par
+			\vspace{\baselineskip}
+			%{\Large THE PUBLISHER}
+		\end{minipage}
+		\hfill
 	\end{titlepage}
+		
+
 	\begin{refsection}
 		\pagecolor{splashedwhite}
 		\section*{Preface}

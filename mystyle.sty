@@ -18,12 +18,28 @@
 	\clearpage           
 }
 
+\usepackage{pifont}
+\ifxetex
+\usepackage{fontspec}
+\fi
+
+\providecommand{\HUGE}{\Huge}% if not using memoir
+\newlength{\drop}
+
+\DeclareRobustCommand{\cs}[1]{\texttt{\char`\\#1}}
+\newlength{\tpheight}\setlength{\tpheight}{0.9\textheight}
+\newlength{\txtheight}\setlength{\txtheight}{0.9\tpheight}
+\newlength{\tpwidth}\setlength{\tpwidth}{0.9\textwidth}
+\newlength{\txtwidth}\setlength{\txtwidth}{0.9\tpwidth}
+
 
 \setlength{\textwidth}{6.5in}
 \setlength{\oddsidemargin}{.1in}
 \setlength{\evensidemargin}{.1in}
 \setlength{\topmargin}{-.1in}
 \setlength{\textheight}{8.4in}
+
+\definecolor{darkjunglegreen}{rgb}{0.1, 0.14, 0.13}
 \definecolor{whitesmoke}{rgb}{0.96, 0.96, 0.96}
 \definecolor{splashedwhite}{rgb}{1.0, 0.99, 1.0}
 \definecolor{pastelyellow}{rgb}{0.99, 0.99, 0.59}
