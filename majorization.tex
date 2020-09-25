@@ -3,7 +3,7 @@
 \begin{document}
 	\section{Majorization and Symmetric Sums}\label{sec:mazorization}
 	
-	Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors with $n$ elements. We say that $\mathbf{x}$ \textit{dominates} or \textit{majorizes} $y$ if
+	Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors of $n$ real numbers. We say that $\mathbf{x}$ \textit{dominates} or \textit{majorizes} $y$ if
 		\begin{align*}
 			x_{1}
 				& \geq x_{2}\geq \ldots\geq x_{n}\\
@@ -14,7 +14,7 @@
 			x_{1}+\ldots+x_{k}
 				& \geq y_{1}+\ldots+y_{k}
 		\end{align*}
-	for $1\leq k\leq n-1$. If $\mathbf{x}$ dominates $\mathbf{y}$, then we write $\mathbf{x}\succ\mathbf{y}$. The vectors $\mathbf{x}$ and $\mathbf{y}$ need not be sorted because we can just rearrange them into sorted vectors. For example, $(4,0,0)\succ(3,1,0)\succ(2,2,0)$.
+	for $1\leq k\leq n-1$. If $\mathbf{x}$ dominates $\mathbf{y}$ (resp. $\mathbf{y}$ is \textit{dominated by} $\mathbf{x}$), then we write $\mathbf{x}\succ\mathbf{y}$ (resp. $\mathbf{y}\prec\mathbf{x}$). For example, $(4,0,0)\succ(3,1,0)\succ(2,2,0)$. The vectors $\mathbf{x}$ and $\mathbf{y}$ need not be monotonic because we can just sort them into monotonic vectors.
 	
 	We will also introduce the cyclic and symmetric polynomials and notations juxtaposed with them. The expression $x^{2}+y^{2}+z^{2}$ is \textit{symmetric} whereas $x^{2}y+y^{2}z+z^{2}x$ is \textit{cyclic} but not symmetric because $y^{2}x+z^{2}y+x^{2}z\neq x^{2}y+y^{2}z+z^{2}x$. A symmetric polynomial in the variables $x_{1},\ldots,x_{n}$ should remain same regardless of the order in which the variables are used. So $f(x_{1},\ldots,x_{n})$ is symmetric if $f$ remains \textit{invariant} for all permutations of $x_{1},\ldots,x_{n}$ in the expression unlike the cyclic example we just saw. For example, $xy+yz+zx$ is symmetric and so is $xyz$. But $\frac{a}{b}+\frac{b}{c}+\frac{c}{a}$ is cyclic but not symmetric. We can use the cyclic and symmetric notations to represent the expressions in a short form. Here are some demonstrations.
 		\begin{align*}

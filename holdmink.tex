@@ -4,16 +4,39 @@
 	
 	\section{H\"{o}lder and Minkowski's Inequality}\label{sec:holdmink}
 	
-		\begin{theorem}[H\"{o}lder's Inequality]\label{thm:holder}
-			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements and $\omega$ be a weight vector. Then
+		\begin{theorem}[Generalized H\"{o}lder's Inequality]\label{thm:holder}
+			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors of $n$ positive real numbers and $\omega$ be a weight vector. Then
 				\begin{align*}
 					\mathfrak{G}\left(\sum_{i=1}^{n}\mathbf{x}_{i},\omega\right)
 					& \geq \sum_{i=1}^{n}\mathfrak{G}(\mathbf{x}_{i},\omega)
 				\end{align*}
+			Equality occurs if any two of the vectors are proportional.
+		\end{theorem}
+	This is not exactly the H\"{o}lder's inequality to be precise. To be strict, H\"{o}lder's inequality is the following theorem. For the statement of this result, we need to define conjugates. Two real numbers $u$ and $v$ are \textit{conjugate} if
+		\begin{align*}
+			\dfrac{1}{u}+\dfrac{1}{v}
+				& = 1
+		\end{align*}
+	
+		\begin{theorem}[H\"{o}lder's inequality]
+			Let $u>1$ be a real number and $v$ be the conjugate of $u$. If $\alpha,\beta$ are complex numbers,
+				\begin{align*}
+					\langle\alpha,\beta\rangle
+						& \leq \|\alpha\|_{u}\cdot\|\beta\|_{v}
+				\end{align*}
+			Equality occurs if $\alpha^{u}$ and $\beta^{v}$ are proportional.
+		\end{theorem}
+	
+		\begin{theorem}[Liapunov's inequality]
+			Let $\mathbf{x},\mathbf{y}$ be a vector of $n$ positive real numbers and $\omega$ be a weight vector. If $r,s,t$ are positive real numbers such that $r>s>t$,
+				\begin{align*}
+					\langle\mathbf{x},\mathbf{y}^{s}\rangle^{r-t}
+						& \leq \langle\mathbf{x},\mathbf{y}^{t}\rangle^{r-s}\cdot\langle\mathbf{x},\mathbf{y}^{r}\rangle^{s-t}
+				\end{align*}
 		\end{theorem}
 	
 		\begin{theorem}[Minkowski's Inequality]\label{thm:mink}
-			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
+			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors of $n$ positive real numbers, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
 				\begin{align*}
 					\mathfrak{M}_{r}\left(\sum_{i=1}^{n}\mathbf{x}_{i},\omega\right)
 						&
