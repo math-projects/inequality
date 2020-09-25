@@ -46,7 +46,7 @@
 			T[\mathbf{a}](\mathbf{x})
 				& = T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})
 		\end{align*}
-	Simply $T[a_{1},\ldots,a_{n}]$ is used if it is clear what $\mathbf{x}$ is.
+	Simply $T[\mathbf{a}]=T[a_{1},\ldots,a_{n}]$ is used if it is clear what $\mathbf{x}$ is.
 		\begin{align*}
 			T[1,0,\ldots,0]
 				& = (x_{1}+\ldots+x_{n})(n-1)!\\
@@ -58,4 +58,19 @@
 			T[1,0,\ldots,0]
 				& \geq T\left[\dfrac{1}{n},\ldots,\dfrac{1}{n}\right]
 		\end{align*}
+	We can also define mean values based on the symmetric polynomials. We call
+		\begin{align*}
+			\mathfrak{M}[\mathbf{a}](\mathbf{x})
+				& = \dfrac{T[\mathbf{a}](\mathbf{x})}{n!}
+		\end{align*}
+	the \textit{symmetrical mean}. For example,
+		\begin{align*}
+			\mathfrak{M}[1,0\ldots,0]
+				& = \dfrac{(n-1)!}{n!}(a_{1}+\ldots+a_{n})\\
+				& = \mathfrak{A}(\mathbf{a})\\
+			\mathfrak{M}\left[\dfrac{1}{n},\ldots,\dfrac{1}{n}\right]
+				& = \dfrac{n!}{n!}a_{1}^{\frac{1}{n}}\cdots a_{n}^{\frac{1}{n}}\\
+				& = \mathfrak{G}(\mathbf{a})
+		\end{align*}
+	So, the symmetrical mean is a generalization of $\mathfrak{A}$ and $\mathfrak{G}$.
 \end{document}
