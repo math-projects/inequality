@@ -21,7 +21,7 @@
 			a^{2}+b^{2}+c^{2}
 				& = \sum_{cyc}a^{2}\\
 			a^{2}b+b^{2}c+c^{2}a
-				& = \sum_{cyc}a^{2b}\\
+				& = \sum_{cyc}a^{2}b\\
 			xy+yz+zx
 				& = \sum_{cyc}xy
 		\end{align*}
@@ -29,7 +29,7 @@
 		\begin{align*}
 			\sum_{sym}a^{2}
 				& = 2(a^{2}+b^{2}+c^{2})\\
-			\sum^{!} x^{2}y
+			\sum{!} x^{2}y
 				& = x^{2}y+y^{2}x+y^{2}z+z^{2}y+z^{2}x+x^{2}z
 		\end{align*}
 	If $\mathbf{a}$ be a vector with $n$ elements. We write
@@ -37,13 +37,14 @@
 			F(\mathbf{x}, \mathbf{a})
 				& = x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}\\
 			T(\mathbf{x},\mathbf{a})
-				& = \sum^{!}F(\mathbf{x},\mathbf{a})\\
+				& = \sum{!}F(\mathbf{x},\mathbf{a})\\
 				& = \sum_{sym} F(\mathbf{x},\mathbf{a})\\
-				& = \sum^{!}x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}
+				& = \sum{!}x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}
 		\end{align*}
 	Some authors write this notation as
 		\begin{align*}
-			T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})
+			T[\mathbf{a}](\mathbf{x})
+				& = T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})
 		\end{align*}
 	Simply $T[a_{1},\ldots,a_{n}]$ is used if it is clear what $\mathbf{x}$ is.
 		\begin{align*}

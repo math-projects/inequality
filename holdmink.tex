@@ -7,7 +7,7 @@
 		\begin{theorem}[H\"{o}lder's Inequality]\label{thm:holder}
 			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements and $\omega$ be a weight vector. Then
 				\begin{align*}
-					\mathfrak{G}\left(\sum_{i=1}^{n}x_{i},\omega\right)
+					\mathfrak{G}\left(\sum_{i=1}^{n}\mathbf{x}_{i},\omega\right)
 					& \geq \sum_{i=1}^{n}\mathfrak{G}(\mathbf{x}_{i},\omega)
 				\end{align*}
 		\end{theorem}
@@ -15,11 +15,11 @@
 		\begin{theorem}[Minkowski's Inequality]\label{thm:mink}
 			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors with $n$ elements, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
 				\begin{align*}
-					\mathfrak{M}_{r}\left(\sum_{i=1}^{n}x_{i},\omega\right)
+					\mathfrak{M}_{r}\left(\sum_{i=1}^{n}\mathbf{x}_{i},\omega\right)
 						&
 							\begin{cases}
 								\geq \sum_{i=1}^{n}\mathfrak{M}_{r}(\mathbf{x}_{i},\omega)& \mbox{if }r<1\\
-								\leq \sum_{i=1}^{n}\mathfrak{M}_{r}(\mathbf{x}_{i}, \omega)& \mbox{ otherwise}
+								\leq \sum_{i=1}^{n}\mathfrak{M}_{r}(\mathbf{x}_{i}, \omega)& \mbox{otherwise}
 							\end{cases}
 				\end{align*}
 		\end{theorem}

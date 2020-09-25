@@ -3,6 +3,15 @@
 \begin{document}
 	\section{Convexity, Jensen and Popoviciu's Inequality}\label{sec:convexity}
 	
+	Let $f$ be a convex function. For a vector $\mathbf{x}$, let $f(\mathbf{x})$ be the vector $(f(x_{1}),\ldots,f(x_{n}))$.
+		\begin{theorem}[Jensen's inequality]
+			Let $f$ be a convex function. For a vector $\mathbf{x}$ and a weight vector $\omega$,
+				\begin{align*}
+					f\left(\mathfrak{A}(\mathbf{x},\omega)\right)
+						& \leq \mathfrak{A}(f(\mathbf{x}),\omega)
+				\end{align*}
+		\end{theorem}
+	
 		\begin{theorem}[Huygen's inequality]
 			Let $\mathbf{x}$ be a vector with $n$ elements and $\omega$ be a weight vector. Then
 				\begin{align*}
