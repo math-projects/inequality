@@ -12,6 +12,14 @@
 				\end{align*}
 		\end{theorem}
 	
+		\begin{theorem}[Petrovic's Inequality]
+			Let $f$ be a convex function and $(x_{n})$ be a sequence of positive real numbers. Then
+				\begin{align*}
+					f(x_{1})+\ldots+f(x_{n})
+						& \leq f(x_{1}+\ldots+x_{n})+(n-1)f(0)
+				\end{align*}
+		\end{theorem}
+	
 		\begin{theorem}[Huygen's inequality]
 			Let $\mathbf{x}$ be a vector with $n$ elements and $\omega$ be a weight vector. Then
 				\begin{align*}
@@ -20,4 +28,11 @@
 				\end{align*}
 		\end{theorem}
 	Note that this is just a special case of \autoref{thm:holder}, H\"{o}lder's inequality.
+		\begin{theorem}[Popoviciu's inequality]
+			Let $f$ be a convex function in the interval $[a,b]$. For any $x,y,z\in[a,b]$,
+				\begin{align*}
+					f\left(\dfrac{x+y+z}{3}\right)+\dfrac{f(x)+f(y)+f(z)}{3}
+						& \geq \left(f\left(\dfrac{x+y}{2}\right)+f\left(\dfrac{y+z}{2}\right)+f\left(\dfrac{z+x}{2}\right)\right)
+				\end{align*}
+		\end{theorem}
 \end{document}
