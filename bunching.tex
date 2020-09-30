@@ -22,6 +22,11 @@
 		\end{theorem}
 	\textcite{paris_vencovska_2009} proves a generalization of this inequality but the result is of little practical use for Olympiad purposes.
 		\begin{theorem}[Generalization of Murihead's inequality]
-			
+			Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors of positive real numbers such that $\mathbf{x}\succ\mathbf{y}$. If $p_{1},\ldots,p_{k}$ are non-negative real numbers, then
+				\begin{align*}
+					\sum_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum_{i\in S_{j}}p_{i}\right)^{\square x_{j}}
+						& \geq \sum_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum_{i\in S_{j}}p_{i}\right)^{\square y_{j}}
+				\end{align*}
+			where $\square$ in $\square x_{j}$ denotes that in the expansion of this power, we only consider the terms with non-zero power of $p_{i}$.
 		\end{theorem}
 \end{document}

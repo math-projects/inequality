@@ -1,4 +1,4 @@
-\documentclass[a4paper, 14pt, leqno,fleq]{extbook}
+\documentclass[a4paper, 12pt, leqno,fleq]{extbook}
 
 %\usepackage{extsizes}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
@@ -14,9 +14,20 @@
 \usepackage[T1]{fontenc}
 %\usepackage{baskervillef}
 %\usepackage[baskerville]{newtxmath}
-
-\usepackage{pdfrender}
-\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+\usepackage[]{fontspec}
+\setmainfont[
+%FakeBold=.2,
+%SizeFeatures={Size=12},
+BoldFont={ModernMTStd-Bold.otf}, 
+%SizeFeatures={Size=14},
+ItalicFont={ModernMT-ExtendedItalic.otf},
+%SizeFeatures={Size=14},
+BoldItalicFont={Monotype-Modern-Std-Bold-Italic_31158.ttf},
+SmallCapsFont={MrsEavesSmallCaps_Regular.ttf},
+Ligatures=TeX,
+]{Monotype-Modern-Std-Extended_31163.ttf}
+%\usepackage{pdfrender}
+%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \usepackage{hyperref}
 \usepackage{mystyle}
 
@@ -69,7 +80,7 @@
 \setlength{\headheight}{52pt}
 
 %\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
-\fancyhead[LO, RE]{\small\textsc{Masum Billal}\textit{\&}\textsc{Samin Riasat}}
+\fancyhead[LO, RE]{\small\textit{Masum Billal}\textit{\&}\textit{Samin Riasat}}
 \fancyhead[LE]{\small\textit{\nouppercase{\leftmark}}}
 \fancyhead[RO]{\small\textit{\nouppercase{\rightmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}

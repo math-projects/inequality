@@ -72,5 +72,30 @@
 				& = \dfrac{n!}{n!}a_{1}^{\frac{1}{n}}\cdots a_{n}^{\frac{1}{n}}\\
 				& = \mathfrak{G}(\mathbf{a})
 		\end{align*}
-	So, the symmetrical mean is a generalization of $\mathfrak{A}$ and $\mathfrak{G}$.
+	So, the symmetrical mean is a generalization of $\mathfrak{A}$ and $\mathfrak{G}$. While we are talking about symmetric sums, we should consider the next identity.
+		\begin{align*}
+			(x+a_{1})\cdots(x+a_{n})
+				& = x^{n}+\binom{n}{1}x^{n-1}D_{1}+\binom{n}{2}x^{n-2}d_{2}+\ldots+\binom{n}{n}D_{n}
+		\end{align*}
+	where $S_{k}$ is the sum of products of $a_{1},\ldots,a_{n}$ taken $k$ at the same time. If $S_{k}$ is the coefficient of $x^{n-k}$ in the expansion, then
+		\begin{align*}
+			S_{k}
+				& = \binom{n}{i}D_{k}
+		\end{align*}
+	
+		\begin{theorem}[Newton's inequality]
+			For $1\leq i\leq n-1$, we have
+				\begin{align*}
+					D_{i}^{2}
+						& \geq D_{i-1}D_{i+1}
+				\end{align*}
+		\end{theorem}
+	
+		\begin{theorem}[Maclaurin's inequality]
+			With the same notation,
+				\begin{align*}
+					D_{1}
+						& \geq \sqrt{D_{2}}\geq\ldots\geq\sqrt[n]{D_{n}}
+				\end{align*}
+		\end{theorem}
 \end{document}
