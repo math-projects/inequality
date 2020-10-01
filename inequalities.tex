@@ -12,20 +12,25 @@
 \usepackage{datetime}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 %\usepackage{baskervillef}
 %\usepackage[baskerville]{newtxmath}
 \usepackage[]{fontspec}
-\setmainfont[
-%FakeBold=.2,
-%SizeFeatures={Size=12},
-BoldFont={ModernMTStd-Bold.otf}, 
-%SizeFeatures={Size=14},
-ItalicFont={ModernMT-ExtendedItalic.otf},
-%SizeFeatures={Size=14},
-BoldItalicFont={Monotype-Modern-Std-Bold-Italic_31158.ttf},
-SmallCapsFont={MrsEavesSmallCaps_Regular.ttf},
-Ligatures=TeX,
-]{Monotype-Modern-Std-Extended_31163.ttf}
+\setmainfont{ModernMT-Extended.otf}[
+	FakeBold=.2,
+	%SizeFeatures={Size=12},
+	BoldFont={ModernMTStd-Bold.otf}, 
+	%SizeFeatures={Size=14},
+	ItalicFont={ModernMT-ExtendedItalic.otf},
+	%SizeFeatures={Size=14},
+	BoldItalicFont={Monotype-Modern-Std-Bold-Italic_31158.ttf},
+	SmallCapsFont={MrsEavesSmallCaps_Regular.ttf},
+	Ligatures=TeX,
+]
+%\setmathrm{lmroman10-regular.otf}
+%\setboldmathrm{Monotype-Modern-Std-Bold_31159.ttf}
+%\setmonofont{Monotype-Modern-Std-Extended_31163.ttf}[Scale=MatchLowercase]
+%\AtBeginDocument{\DeclareMathAlphabet\mathbf{U}{lmr}{b}{n}}
 %\usepackage{pdfrender}
 %\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
 \usepackage{hyperref}
@@ -120,7 +125,6 @@ Ligatures=TeX,
 		\end{minipage}
 		\hfill
 	\end{titlepage}
-		
 
 	\begin{refsection}
 		\pagecolor{splashedwhite}
