@@ -17,22 +17,24 @@
 %\usepackage[baskerville]{newtxmath}
 \usepackage[]{fontspec}
 \setmainfont{ModernMTStd-Extended.otf}[
-	FakeBold=1,
+	FakeBold=3,
 	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
 	BoldFont=Monotype-Modern-Std-Bold_31159.ttf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
 	BoldItalicFont=ModernMTStd-BoldItalic.otf,
 	Ligatures=TeX,
 ]
-%\setmonofont{CormorantGaramond-Regular.ttf}[Scale=MatchLowercase]
-%\setmathrm{CormorantGaramond-Regular.ttf}[Scale=MatchLowercase]
-%\usepackage{mathptmx}
-%\usepackage{CormorantGaramond}
-%\setboldmathrm{CormorantGaramond-Bold.ttf}
-%\setmonofont{Monotype-Modern-Std-Extended_31163.ttf}[Scale=MatchLowercase]
-%\AtBeginDocument{\DeclareMathAlphabet\mathbf{U}{lmr}{b}{n}}
-%\usepackage{pdfrender}
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.4pt}
+
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}[
+	FakeBold=3,
+	BoldFeatures={FakeBold=1},
+	BoldFont=lmroman10-bold.otf,
+	ItalicFont=lmroman10-italic.otf,
+	BoldItalicFeatures={FakeBold=1},
+	BoldItalicFont=lmroman10-bolditalic.otf,
+]
+
 \usepackage{hyperref}
 \usepackage{mystyle}
 
