@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, leqno,fleq]{extbook}
+\documentclass[a4paper, 12pt, leqno]{extbook}
 
 %\usepackage{extsizes}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
@@ -16,19 +16,19 @@
 %\usepackage{baskervillef}
 %\usepackage[baskerville]{newtxmath}
 \usepackage[]{fontspec}
-\setmainfont{ModernMT-Extended.otf}[
-	FakeBold=.2,
-	%SizeFeatures={Size=12},
-	BoldFont={ModernMTStd-Bold.otf}, 
-	%SizeFeatures={Size=14},
-	ItalicFont={ModernMT-ExtendedItalic.otf},
-	%SizeFeatures={Size=14},
-	BoldItalicFont={Monotype-Modern-Std-Bold-Italic_31158.ttf},
-	SmallCapsFont={MrsEavesSmallCaps_Regular.ttf},
+\setmainfont{ModernMTStd-Extended.otf}[
+	FakeBold=1,
+	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
+	BoldFont=Monotype-Modern-Std-Bold_31159.ttf,
+	ItalicFont=ModernMT-ExtendedItalic.otf,
+	BoldItalicFont=ModernMTStd-BoldItalic.otf,
 	Ligatures=TeX,
 ]
-%\setmathrm{lmroman10-regular.otf}
-%\setboldmathrm{Monotype-Modern-Std-Bold_31159.ttf}
+%\setmonofont{CormorantGaramond-Regular.ttf}[Scale=MatchLowercase]
+%\setmathrm{CormorantGaramond-Regular.ttf}[Scale=MatchLowercase]
+%\usepackage{mathptmx}
+%\usepackage{CormorantGaramond}
+%\setboldmathrm{CormorantGaramond-Bold.ttf}
 %\setmonofont{Monotype-Modern-Std-Extended_31163.ttf}[Scale=MatchLowercase]
 %\AtBeginDocument{\DeclareMathAlphabet\mathbf{U}{lmr}{b}{n}}
 %\usepackage{pdfrender}
@@ -39,9 +39,10 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 
-\theoremstyle{definition}
 \newtheorem{definition}{\emph{Definition}}
 \newtheorem{problem}{{Problem}}
+
+\theoremstyle{definition}
 \newtheorem*{solution}{\emph{Solution}}
 
 \makeatletter
@@ -52,7 +53,7 @@
 \AtBeginDocument{\globalcolor{smokyblack}}
 
 \titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[03pt]}]
-\titleformat{\section}{\normalfont\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[01pt]}]
+\titleformat{\section}{\large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[01pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
@@ -108,7 +109,7 @@
 		\begin{minipage}[t]{2\txtwidth}
 			\color{smokyblack}
 			\vspace*{\drop}
-			{\Large\scshape Masum Billal\quad\textit{\&}\quad Samin Riasat} \\
+			{\Large {\scshape Masum Billal} \quad\textit{\&}\quad \textsc{Samin Riasat}} \\
 			\rule{1\txtwidth}{1pt} \par
 			\vspace{3\baselineskip}
 			{\noindent\bfseries ADVANCES IN OLYMPIAD INEQUALITIES} \par
