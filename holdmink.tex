@@ -12,7 +12,7 @@
 				\end{align*}
 			Equality occurs if any two of the vectors are proportional.
 		\end{theorem}
-	This is not exactly the H\"{o}lder's inequality to be precise. The inequality appears in \textcite[Page $117$]{minkowski_1968}. To be strict, \textcite{holder_1889} proved the following theorem for  which we need to define conjugates. Two real numbers $u$ and $v$ are \textit{conjugate} if
+	This is not exactly the \index{H\"{o}lder's inequality}H\"{o}lder's inequality to be precise. The inequality appears in \textcite[Page $117$]{minkowski_1968}. To be strict, \textcite{holder_1889} proved the following theorem for  which we need to define conjugates. Two real numbers $u$ and $v$ are \textit{conjugate} if
 		\begin{align*}
 			\dfrac{1}{u}+\dfrac{1}{v}
 				& = 1
@@ -26,8 +26,16 @@
 				\end{align*}
 			Equality occurs if $\alpha^{u}$ and $\beta^{v}$ are proportional.
 		\end{theorem}
-	
-		\begin{theorem}[Converse of H\"{o}lder's inequality]
+	H\"{o}lder's inequality can be proved with the help of \index{Young's inequality}\textcite{young_1912}.
+		\begin{theorem}[Young's inequality]
+			Let $a,b$ be positive real numbers and $u,v$ be conjugates. Then
+				\begin{align*}
+					ab
+						& \leq \dfrac{a^{u}}{u}+\dfrac{b^{v}}{v}
+				\end{align*}
+		\end{theorem}
+	The next result is usually known as \index{converse of H\"{o}lder's inequality}\textit{the converse of H\"{o}lder's inequality}.
+		\begin{theorem}
 			Let $\mathbf{a}$ and $\mathbf{b}$ be vectors of positive real numbers, $u$ and $v$ be conjugates.  If $B$ is a positive real number, then a necessary and sufficient condition that
 				\begin{align*}
 					\sum_{i=1}^{n}a_{i}^{u}
@@ -44,15 +52,15 @@
 						& \leq B
 				\end{align*}
 		\end{theorem}
-	\textcite{Ljapu_1901} proves the next theorem.
-		\begin{theorem}[Liapunov's inequality]
+	\index{Ljapunov's inequality}\textcite{Ljapu_1901} proves the next theorem.
+		\begin{theorem}[Ljapunov's inequality]
 			Let $\mathbf{x},\mathbf{y}$ be two vectors of $n$ positive real numbers and $\omega$ be a weight vector. If $r,s,t$ are positive real numbers such that $r>s>t$,
 				\begin{align*}
 					\langle\mathbf{x},\mathbf{y}^{s}\rangle^{r-t}
 						& \leq \langle\mathbf{x},\mathbf{y}^{t}\rangle^{r-s}\cdot\langle\mathbf{x},\mathbf{y}^{r}\rangle^{s-t}
 				\end{align*}
 		\end{theorem}
-	
+	\index{Minkowski's inequality}\textcite[Page $115-117$]{minkowski_1968} proves the following result.
 		\begin{theorem}[Minkowski's Inequality]\label{thm:mink}
 			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors of $n$ positive real numbers, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
 				\begin{align*}

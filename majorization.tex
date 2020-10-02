@@ -3,7 +3,7 @@
 \begin{document}
 	\section{Majorization and Symmetric Sums}\label{sec:mazorization}
 	
-	Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors of $n$ real numbers. We say that $\mathbf{x}$ \textit{dominates} or \textit{majorizes} $y$ if
+	Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors of $n$ real numbers. We say that $\mathbf{x}$ \textit{dominates} or \index{majorization}\textit{majorizes} $y$ if
 		\begin{align*}
 			x_{1}
 				& \geq x_{2}\geq \ldots\geq x_{n}\\
@@ -25,12 +25,14 @@
 			xy+yz+zx
 				& = \sum_{cyc}xy
 		\end{align*}
-	Note that even though the expression $xy+yz+zx$ and $a^{2}+b^{2}+c^{2}$ are symmetric, we do not consider them symmetric polynomial sums in this notation. A symmetric polynomial sum should have all $n!$ terms in the sum since it is symmetric on all $n!$ permutations of the variables in it. Even if there can be duplicates, the total number of terms should still remain $n!$. For this reason, this sum is often denoted by $\sum{!}$. Here are some examples.
+	Note that even though the expression $xy+yz+zx$ and $a^{2}+b^{2}+c^{2}$ are symmetric, we do not consider them symmetric polynomial sums in this notation. A symmetric polynomial sum should have all $n!$ terms in the sum since it is symmetric on all $n!$ permutations of the variables in it. Even if there can be duplicates, the total number of terms should still remain $n!$. For this reason, this sum is often denoted by $\sum{!}$ or $\sum_{\sigma}$ where $\sigma$ indicates that the sum is taken over all possible permutations. Here are some examples.
 		\begin{align*}
 			\sum_{sym}a^{2}
 				& = 2(a^{2}+b^{2}+c^{2})\\
 			\sum{!} x^{2}y
-				& = x^{2}y+y^{2}x+y^{2}z+z^{2}y+z^{2}x+x^{2}z
+				& = x^{2}y+y^{2}x+y^{2}z+z^{2}y+z^{2}x+x^{2}z\\
+			\sum_{\sigma}x^{3}y
+				& = x^{3}y+x^{3}z+y^{3}z+y^{3}x+z^{3}x+z^{3}y
 		\end{align*}
 	If $\mathbf{a}$ be a vector with $n$ elements. We write
 		\begin{align*}
@@ -41,7 +43,11 @@
 				& = \sum_{sym} F(\mathbf{x},\mathbf{a})\\
 				& = \sum{!}x_{1}^{a_{1}}\cdots x_{n}^{a_{n}}
 		\end{align*}
-	Some authors write this notation as
+	We will explain it a little more. Say, we want to find the symmetric polynomials of the type $x^{3}y$ for the variables $x,y,z$. Write it as $x^{3}y^{1}z^{0}$. Now, we fix the powers $3,1,0$ in their respective places and let $x,y,z$ run through the permutations. Then we get
+		\begin{align*}
+			x^{3}y^{1}z^{0}+x^{3}z^{1}y^{0}+y^{3}z^{1}x^{0}+y^{3}x^{1}z^{0}+z^{3}x^{1}y^{0}+z^{3}y^{1}x^{0}
+		\end{align*}
+	See that this is exactly what we got in the last line of $\sum_{\sigma}x^{3}y$. Some authors write this notation as
 		\begin{align*}
 			T[\mathbf{a}](\mathbf{x})
 				& = T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})
@@ -63,7 +69,7 @@
 			\mathfrak{M}[\mathbf{a}](\mathbf{x})
 				& = \dfrac{T[\mathbf{a}](\mathbf{x})}{n!}
 		\end{align*}
-	the \textit{symmetrical mean}. For example,
+	the \index{symmetrical mean}\textit{symmetrical mean}. For example,
 		\begin{align*}
 			\mathfrak{M}[1,0\ldots,0]
 				& = \dfrac{(n-1)!}{n!}(a_{1}+\ldots+a_{n})\\

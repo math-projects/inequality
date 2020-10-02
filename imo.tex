@@ -87,6 +87,60 @@
 				\end{align*}
 		\end{problem}
 	
+		\begin{problem}[IMO $2020$, problem $2$]
+			Let $a,b,c,d$ be positive real numbers such that $a\geq b\geq c\geq d$ and $a+b+c+d=1$. Prove that
+				\begin{align*}
+					(a+2b+3c+4d)a^{a}b^{b}c^{c}d^{d}
+						& < 1
+				\end{align*}
+			
+				\begin{solution}
+					Since $a+b+c+d=1$, by weighted arithmetic-geometric mean inequality on $\omega=(a,b,c,d)$ and $\mathbf{a}=(a,b,c,d)$,
+						\begin{align*}
+							a\cdot a+b\cdot a+c\cdot c+d\cdot d
+								& \geq a^{a}b^{b}c^{c}d^{d}
+						\end{align*}
+					So it is enough to prove that
+						\begin{align*}
+							(a+2b+3c+4d)(a^{2}+b^{2}+c^{2}+d^{2})
+								& \leq (a+b+c+d)^{3}
+						\end{align*}
+					Expanding these we can easily see that the inequality has to follow. But we can prove it in a smarter way.
+						\begin{align*}
+							(a+b+c+d)^{3}
+								& = (a+b+c+d)\left(a^{2}+b^{2}+c^{2}+d^{2}+2\sum ab\right)
+						\end{align*}
+					where the sum runs over all possible $\binom{4}{2}$ pairs. Then
+						\begin{align*}
+							(a+2b+3c+4d)(a^{2}+b^{2}+c^{2}+d^{2})
+							& < (a+b+c+d)^{3}\\
+							\iff (b+2c+3d)(a^{2}+b^{2}+c^{2}+d^{2})
+								& < 2(a+b+c+d)\left(\sum ab\right)
+						\end{align*}
+					Now, using $a\geq b\geq c$,
+						\begin{align*}
+							a^{2}+b^{2}+c^{2}+d^{2}
+								& \leq a(a+b+c+d)
+						\end{align*}
+					So, it is enough to show that
+						\begin{align*}
+							a(b+2c+3d)(a+b+c+d)
+								& \leq  2(a+b+c+d)\left(\sum ab\right)\\
+							\iff a(b+2c+3d)
+								& \leq 2\sum ab\\
+							\iff 3da
+								& \leq ab+2ca\\
+							\iff da+da+da
+								& \leq ab+ca+ca
+						\end{align*}
+					This inequality obviously holds.
+				\end{solution}
+			
+				\begin{remark}
+					We could also use weighted Jensen's inequality after using the fact that $\log(x)$ is concave. The buffalo way works here as well. But the calculation is not going to be pretty if you go that way. This problem was highly criticized within some forums such as the Art of Problem Solving. It was the first inequality problem at the IMO since $2012$. A lot of people thought that the days of inequality at the IMO was over. But when this problem appeared at the IMO $2020$, many people complained and expressed their disappointment that the \textit{no inequality problem at the IMO} streak was finally broken with such a problem.
+				\end{remark}
+		\end{problem}
+	
 		\begin{problem}[IMO Shortlist $2015$, A1]
 			Let $a,b,c$ be positive real numbers such that $\min\{ab,bc,ca\}\geq1$. Prove that
 				\begin{align*}
