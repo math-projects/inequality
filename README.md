@@ -4,12 +4,12 @@ This is a book written on Olympiad level inequalities. The purpose is to kill in
 
 READ
 * When referencing an equation, use `\ref{eqn:label}`
-* When referencing a custom environment such as theorem, lemma or problem, use `\nameref{label}` if the environment has a name. That is, if it was in the format
+* When referencing an environment such as theorem, lemma or problem, use `\nameref{label}` if the environment has a name. That is, if it was in the format
   
     `\begin{env}[Name]\label{env:label}
       \end{env}
      `
  then use `\nameref{env:label}` instead of `\ref{env:label}` or `\autoref{env:label}`. This way, we will print the actual name instead of the number, which is better and more convenient.
-* For referencing anything else such as chapter or section, use `\autoref{label}`. 
+* For referencing anything without name such as chapter or section, use `\autoref{label}`. 
 
 I have customized the reference for chapter, section, problem and equations.
