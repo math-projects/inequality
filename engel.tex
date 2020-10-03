@@ -57,7 +57,7 @@
 				\end{align*}
 			The last inequality follows from the fact that $b_1^2+\ldots+b_n^2\leq(b_1+\ldots+b_n)^2$.
 		\end{proof}
-	Another result that is similar to Engel form of Cauchy-Schwarz inequality is the \textit{Beckenbach inequality}.
+	Another result that is similar to \nameref{thm:engel} is the \textit{Beckenbach inequality}.
 		\begin{theorem}[Beckenbach inequality]
 			Let $x_{1},\ldots,x_{n}$ and $y_{1},\ldots,y_{n}$ be positive real numbers. Then
 				\begin{align*}
@@ -65,7 +65,7 @@
 						& \geq \dfrac{\sum_{i=1}^{n}(x_{i}+y_{i})^{2}}{\sum_{i=1}^{n}(x_{i}+y_{i})}
 				\end{align*}
 		\end{theorem}
-	We will start with another proof of Nesbitt's inequality with the Engel form.
+	We will start with another proof of \nameref{thm:nesbitt} with the \nameref{thm:engel}.
 		\begin{proof}[Nesbitt inequality using Engel form]
 			We will use the fact that $a^2+b^2+c^2\geq ab+bc+ca$.
 				\begin{align*}
@@ -79,5 +79,210 @@
 						& \geq\dfrac{1}{2}+1=\dfrac{3}{2}
 				\end{align*}
 		\end{proof}
+	Let us use this inequality to solve some problems.
+		\begin{problem}
+			Let $n$ be a positive integer and $a_{1},\ldots,a_{n};b_{1},\ldots,b_{n}$ be positive real numbers. Show that
+				\begin{align*}
+					(a_{1}b_{1}+\ldots+a_{n}b_{n})\left(\dfrac{a_{1}}{b_{1}}+\ldots+\dfrac{a_{n}}{b_{n}}\right)
+						& \geq (a_{1}+\ldots+a_{n})^{2}
+				\end{align*}
+			
+				\begin{solution}
+					By \nameref{thm:engel},
+						\begin{align*}
+							\dfrac{a_{1}}{b_{1}}+\ldots+\dfrac{a_{n}}{b_{n}}
+								& = \dfrac{a_{1}^{2}}{a_{1}b_{1}}+\ldots+\dfrac{a_{n}^{2}}{a_{n}b_{n}}\\
+								& \geq \dfrac{(a_{1}+\ldots+a_{n})^{2}}{a_{1}b_{1}+\ldots+a_{n}b_{n}}\\
+							\iff (a_{1}b_{1}+\ldots+a_{n}b_{n})\left(\dfrac{a_{1}}{b_{1}}+\ldots+\dfrac{a_{n}}{b_{n}}\right)
+								& \geq (a_{1}+\ldots+a_{n})^{2}
+						\end{align*}
+				\end{solution}
+		\end{problem}
 	
+		\begin{remark}
+			In order to apply the Engel form, we often need transformations like $a/b=a^{2}/b^{2}$. Sometimes we will divide the odd power into an even one and send the remaining one in the denominator, for example,
+				\begin{align*}
+					\dfrac{a^{2n+1}}{b}
+						& = \dfrac{\left(a^{n}\right)^{2}}{\dfrac{b}{a}}
+				\end{align*}
+			so that we can then apply it. We will demonstrate these ideas in the following problems.
+		\end{remark}
+	
+		\begin{problem}
+			For positive real numbers $a,b,c$, prove that
+				\begin{align*}
+					\dfrac{a}{b+2c}+\dfrac{b}{c+2a}+\dfrac{c}{a+2b}
+						& \geq 1
+				\end{align*}
+			
+				\begin{solution}
+					We again resort to the same trick.
+						\begin{align*}
+							\dfrac{a}{b+2c}+\dfrac{b}{c+2a}+\dfrac{c}{a+2b}
+								& = \dfrac{a^{2}}{ab+2ca}+\dfrac{b^{2}}{bc+2ab}+\dfrac{c^{2}}{ca+2bc}\\
+								& \geq \dfrac{(a+b+c)^{2}}{3(ab+bc+ca)}\\
+								& = \dfrac{a^{2}+b^{2}+c^{2}+2(ab+bc+ca)}{3(ab+bc+ca)}\\
+								& \geq \dfrac{ab+bc+ca+2(ab+bc+ca)}{3(ab+bc+ca)}
+						\end{align*}
+					In the last line, we used $a^{2}+b^{2}+c^{2}\geq ab+bc+ca$ which is well known by now.
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}
+			Let $x,y,z$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{2}{x+y}+\dfrac{2}{y+z}+\dfrac{2}{z+x}
+						& \geq \dfrac{9}{x+y+z}
+				\end{align*}
+			
+				\begin{solution}
+					This is again a similar problem.
+						\begin{align*}
+							\dfrac{2}{x+y}+\dfrac{2}{y+z}+\dfrac{2}{z+x}
+								& = \dfrac{4}{2(x+y)}+\dfrac{4}{2(y+z)}+\dfrac{4}{2(z+x)}
+								& \geq \dfrac{(2+2+2)^{2}}{2(x+y+y+z+z+x)}\\
+								& = \dfrac{36}{4(x+y+z)}\\
+								& = \dfrac{9}{x+y+z}
+						\end{align*}
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}
+			Let $x,y,z$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{x^{2}}{(x+z)(x+y)}+\dfrac{y^{2}}{(y+x)(y+z)}+\dfrac{z^{2}}{(z+y)(z+x)}
+						& \geq \dfrac{3}{4}
+				\end{align*}
+			
+				\begin{solution}
+					First, see that $(x+z)(x+y)=x^{2}+xy+zx+yz$. Next, we apply \nameref{thm:engel}.
+						\begin{align*}
+								& \dfrac{x^{2}}{(x+z)(x+y)}+\dfrac{y^{2}}{(y+x)(y+z)}+\dfrac{z^{2}}{(z+y)(z+x)}\\
+								& = \dfrac{x^{2}}{x^{2}+xy+zx+yz}+\dfrac{y^{2}}{y^{2}+yz+xy+zx}+\dfrac{z^{2}}{z^{2}+zx+yz+xy}\\
+								& \geq \dfrac{(x+y+z)^{2}}{x^{2}+y^{2}+z^{2}+3(xy+yz+zx)}\\
+								& = \dfrac{3}{4}\left(\dfrac{4(x+y+z)^{2}}{3(x^{2}+y^{2}+z^{2}+2(xy+yz+zx)+xy+yz+zx)}\right)\\
+								& = \dfrac{3}{4}\left(\dfrac{3(x+y+z)^{2}+(x+y+z)^{2}}{3((x+y+z)^{2}+xy+yz+zx)}\right)\\
+								& = \dfrac{3}{4}\left(\dfrac{3(x+y+z)^{2}+x^{2}+y^{2}+z^{2}+2(xy+yz+zx)}{3(x+y+z)^{2}+3(xy+yz+zx)}\right)\\
+								& \geq \dfrac{3}{4}\left(\dfrac{3(x+y+z)^{2}+3(xy+yz+zx)}{3(x+y+z)^{2}+3(xy+yz+zx)}\right)\\
+								& = \dfrac{3}{4}\cdot1=\dfrac{3}{4}
+						\end{align*}
+					Thus, the inequality is proved.
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}[IMO Shortlist $1993$]
+			For positive real numbers $a,b,c$ and $d$, prove that
+				\begin{align*}
+					\dfrac{a}{b+2c+3d}+\dfrac{b}{c+2d+3a}+\dfrac{c}{d+2a+3b}+\dfrac{d}{a+2b+3c}
+						& \geq \dfrac{2}{3}
+				\end{align*}
+			
+				\begin{solution}
+					Writing $\frac{a}{b+2c+3d}=\frac{a^{2}}{ab+2ca+3ad}$ and applying \nameref{thm:engel}, we get
+						\begin{align*}
+							S
+								& \dfrac{a}{b+2c+3d}+\dfrac{b}{c+2d+3a}+\dfrac{c}{d+2a+3b}+\dfrac{d}{a+2b+3c}\\
+								& = \dfrac{a^{2}}{ab+2ca+3ad}+\dfrac{b^{2}}{bc+2bd+3ab}+\dfrac{c^{2}}{cd+2ca+3bc}+\dfrac{d^{2}}{ad+2bd+3cd}\\
+								& \geq \dfrac{(a+b+c+d)^{2}}{4ab+4bc+4ca+4ad+4bd+4cd}\\
+								& = \dfrac{2}{3}\left(\dfrac{3(a+b+c+d)^{2}}{8(ab+bc+ca+ad+bd+cd)}\right)\\
+								& = \dfrac{2}{3}\left(\dfrac{3(a+b+c+d)^{2}}{4\left((a+b+c+d)^{2}-(a^{2}+b^{2}+c^{2}+d^{2})\right)}\right)\\
+								& = \dfrac{2}{3}\left(\dfrac{4(a+b+c+d)^{2}-(a+b+c+d)^{2}}{4(a+b+c+d)^{2}-4(a^{2}+b^{2}+c^{2})}\right)
+						\end{align*}
+					By \nameref{thm:cs},
+						\begin{align*}
+							(a^{2}+b^{2}+c^{2}+d^{2})(1^{2}+1^{2}+1^{2}+1^{2})
+								& \geq (a+b+c+d)^{2}\\
+							\iff -4(a^{2}+b^{2}+c^{2}+d^{2})
+								& \leq -(a+b+c+d)^{2}\\
+							\iff 4(a+b+c+d)^{2}-4(a^{2}+b^{2}+c^{2}+d^{2})
+								& \leq 4(a+b+c+d)^{2}-(a+b+c+d)^{2}
+						\end{align*}
+					Thus, we have $S\geq \frac{2}{3}\cdot1=\frac{2}{3}$.
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}[IMO $1995$, problem $2$]
+			Let $a,b,c$ be positive real numbers such that $abc=1$. Prove that
+				\begin{align*}
+					\dfrac{1}{a^{3}(b+c)}+\dfrac{1}{b^{3}(c+a)}+\dfrac{1}{c^{3}(a+b)}
+						& \geq \dfrac{3}{2}
+				\end{align*}
+				
+				\begin{solution}
+					Write $\frac{1}{a^{3}(b+c)}=\frac{\frac{1}{a^{2}}}{a(b+c)}$ and apply \nameref{thm:engel}.
+						\begin{align*}
+							\dfrac{1}{a^{3}(b+c)}+\dfrac{1}{b^{3}(c+a)}+\dfrac{1}{c^{3}(a+b)}
+								& = \dfrac{\dfrac{1}{a^{2}}}{a(b+c)}+\dfrac{\dfrac{1}{b^{2}}}{b(c+a)}+\dfrac{\dfrac{1}{c^{2}}}{c(a+b)}\\
+								& \geq \dfrac{\left(\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\right)^{2}}{ab+ca+bc+ab+ca+bc}\\
+								& = \dfrac{\left(\dfrac{ab+bc+ca}{abc}\right)^{2}}{2(ab+bc+ca)}\\
+								& = \dfrac{ab+bc+ca}{2}\\
+								& \geq \dfrac{3\sqrt[3]{ab\cdot bc\cdot ca}}{2}\\
+								& = \dfrac{3\sqrt[3]{(abc)^{2}}}{2}\\
+								& = \dfrac{3}{2}
+						\end{align*}
+					Here, we get $ab+bc+ca\geq3\sqrt[3]{ab\cdot bc\cdot ca}$ by \nameref{thm:amgm}.
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}[Tournament of the Towns, $1998$]
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{a^{3}}{a^{2}+ab+b^{2}}+\dfrac{b^{3}}{b^{2}+bc+c^{2}}+\dfrac{c^{3}}{c^{2}+ca+a^{2}}
+						& \geq \dfrac{a+b+c}{3}
+				\end{align*}
+				
+				\begin{solution}
+					We again make the numerator a square using $\frac{a^{3}}{a^{2}+ab+b^{2}}=\frac{a^{4}}{a^{3}+a^{2}b+ab^{2}}$.
+						\begin{align*}
+							\dfrac{a^{3}}{a^{2}+ab+b^{2}}+\dfrac{b^{3}}{b^{2}+bc+c^{2}}+\dfrac{c^{3}}{c^{2}+ca+a^{2}}
+								& = \dfrac{a^{4}}{a^{3}+a^{2}b+ab^{2}}+\dfrac{b^{4}}{b^{3}+b^{2}c+bc^{2}}+\dfrac{c^{4}}{c^{3}+c^{2}a+ca^{2}}\\
+								& \geq \dfrac{(a^{2}+b^{2}+c^{2})^{2}}{a^{3}+b^{3}+c^{3}+ab(a+b)+bc(b+c)+ca(c+a)}\\
+								& = \dfrac{(a^{2}+b^{2}+c^{2})^{2}}{(a+b+c)(ab+bc+ca)}\\
+								& = \dfrac{a^{2}+b^{2}+c^{2}}{a+b+c}
+						\end{align*}
+					The last line follows since $a^{2}+b^{2}+c^{2}\geq ab+bc+ca$. Then the conclusion follows because by \nameref{thm:cs},
+						\begin{align*}
+							(a^{2}+b^{2}+c^{2})(1^{2}+1^{2}+1^{2})
+								& \geq (a+b+c)^{2}\\
+							\iff \dfrac{a^{2}+b^{2}+c^{2}}{a+b+c}
+								& \geq \dfrac{a+b+c}{3}
+						\end{align*}
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}[IMO $2005$, problem $3$]\label{prob:imo2005-3}
+			Let $x,y,z$ be real numbers such that $xyz\geq1$. Prove that
+				\begin{align*}
+					\dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}
+						& \geq0
+				\end{align*}
+			
+				\begin{solution}
+					Rearrange the inequality as
+						\begin{align*}
+							\dfrac{x^{2}-x^{5}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{2}-y^{5}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{2}-z^{5}}{x^{2}+y^{2}+z^{5}}
+								& \leq 0\\
+							\dfrac{x^{2}-x^{5}}{x^{5}+y^{2}+z^{2}}+1+\dfrac{y^{2}-y^{5}}{x^{2}+y^{5}+z^{2}}+1+\dfrac{z^{2}-z^{5}}{x^{2}+y^{2}+z^{5}}+1
+								& \leq 3\\
+							\dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{5}}
+								& \leq 3
+						\end{align*}
+					Now, there is no obvious way to use \nameref{thm:engel} here. And it looks like the denominators are supposed to be in place of the numerators. So, we will try to accomplish that.
+						\begin{align*}
+							x^{5}+y^{2}+z^{2}
+								& = \dfrac{x^{4}}{\dfrac{1}{x}}+\dfrac{y^{4}}{y^{2}}+\dfrac{z^{4}}{z^{2}}\\
+								& \geq \dfrac{(x^{2}+y^{2}+z^{2})^{2}}{\dfrac{1}{x}+y^{2}+z^{2}}\\
+							\iff \dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}
+								& \leq \dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
+						\end{align*}
+					So we have
+						\begin{align*}
+							\dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+\dfrac{1}{y}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+\dfrac{1}{z}}{x^{2}+y^{2}+z^{2}}
+								& \leq \dfrac{yz+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+zx+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+xy}{x^{2}+y^{2}+z^{2}}\\
+								& = \dfrac{2(x^{2}+y^{2}+z^{2})+xy+yz+zx}{x^{2}+y^{2}+z^{2}}\\
+								& \leq \dfrac{2(x^{2}+y^{2}+z^{2})+x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
+						\end{align*}
+					This gives us the desired inequality.
+				\end{solution}
+		\end{problem}
 \end{document}
