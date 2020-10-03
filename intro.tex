@@ -40,7 +40,7 @@
 						& \geq a_1\cdots a_n
 				\end{align*}
 		\end{theorem}
-	We will show a classical proof of this result here. The proof is due to \textcite{cauchy_1821}. Later in \hyperref[sec:powermean]{$\S\S$\ref{sec:powermean}}, \hyperref[sec:mazorization]{$\S\S$\ref{sec:mazorization}} we will show more proofs.
+	We will show a classical proof of this result here. The proof is due to \textcite{cauchy_1821}. Later in \autoref{sec:powermean}, \autoref{sec:mazorization} we will show more proofs.
 		\begin{proof}
 			
 		\end{proof}
@@ -49,7 +49,7 @@
 			\dfrac{a+b}{2}
 				& \geq\sqrt{ab}
 		\end{align*}
-	Now, $\frac{a+b}{2}$ is the \index{arithmetic mean}\emph{arithmetic mean} of $a$ and $b$. On the right side, $\sqrt{ab}$ is the \index{geometric mean}\emph{geometric mean} of $a$ and $b$. So the inequality states that the arithmetic mean of two positive real numbers is greater than or equal to their geometric mean. We can also rewrite it as the following.
+	Now, $\frac{a+b}{2}$ is the \index{arithmetic mean}\textit{arithmetic mean} of $a$ and $b$. On the right side, $\sqrt{ab}$ is the \index{geometric mean}\textit{geometric mean} of $a$ and $b$. So the inequality states that the arithmetic mean of two positive real numbers is greater than or equal to their geometric mean. We can also rewrite it as the following.
 		\begin{align*}
 			\sqrt{ab}\left(\dfrac{a+b}{2}\right)
 				& \geq ab\\
@@ -58,12 +58,12 @@
 			\sqrt{ab}
 				& \geq\dfrac{2}{\frac{1}{a}+\frac{1}{b}}
 		\end{align*}
-	$\dfrac{2ab}{a+b}$ is the \index{harmonic mean}\emph{harmonic mean} of $a$ and $b$. So, this form of the inequality states that the geometric mean is larger than the harmonic mean. This can be extended for three variables.
+	$\dfrac{2ab}{a+b}$ is the \index{harmonic mean}\textit{harmonic mean} of $a$ and $b$. So, this form of the inequality states that the geometric mean is larger than the harmonic mean. This can be extended for three variables.
 		\begin{align*}
 			\dfrac{a+b+c}{3}
 				& \geq\dfrac{3}{\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}}
 		\end{align*}
-	In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \hyperref[sec:powermean]{$\S\S$\ref*{sec:powermean}}.
+	In fact, this result can be extensively generalized. First, we can consider $n$ variables $a_1,\ldots,a_n$ instead of just $a$ and $b$. Second, we can generalize the fact that $AM\geq GM\geq HM$. We will talk about this generalization in \autoref{sec:powermean}.
 		\begin{problem}
 			If $a$ is a real number greater than one, prove that $\log{a}+\log_{a}{e}\geq2$.
 		\end{problem}
@@ -142,7 +142,7 @@
 					Equality occurs if and only if $1=\ldots=n$ which is possible only when $n=1$.
 				\end{solution}
 		\end{problem}
-	Let us again go back to the mother of inequality. Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in \hyperref[ineq:extendedmother]{\ref{ineq:extendedmother}},
+	Let us again go back to the mother of inequality. Setting $x_1=a-b,x_2=b-c,x_3=c-a$ in \ref{ineq:extendedmother},
 		\begin{align*}
 			(a-b)^2+(b-c)^2+(c-a)^2
 				& \geq0\\
@@ -179,12 +179,12 @@
 	Before we go into any theory or method of solving problems, here are some basic tactics which are used very often for solving problems. Let $x,y,z>0$ be real numbers.
 		\begin{enumerate}[(i)]
 			\item If $\dfrac{1}{x}\geq\dfrac{1}{y}$, then $\dfrac{1}{x-a}\geq\dfrac{1}{y}$ for $a\geq0$. Similarly, $\dfrac{1}{x}\geq\dfrac{1}{y-b}$ for $b\geq0$. They are true because $x-a\leq x$ implies $\dfrac{1}{x-a}\geq\dfrac{1}{x}$ and $y+b\geq y$ implies $\dfrac{1}{y+b}\leq\dfrac{1}{y}$.
-			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \hyperref[ch:buffalo]{$\S$\ref{ch:buffalo}}.
-			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \emph{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
-			\item See if you can get an \emph{if and only if} way of proving an inequality. We will do this very often. If we can use if and only if (or \emph{iff}), then we are free to prove either the if part or the only if part.
-			\item Check if you can get some familiar expressions with some basic manipulations such as making the numerator or denominator equal. For example, see the transformation in \hyperref[eqn:nesbittf]{\ref{eqn:nesbittf}}. This often helps us get a clue on what to do with the inequality.
-			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality (see \autoref{proof:nesbittclassical}). Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \hyperref[ch:subs]{$\S$\ref{ch:subs}}.
-			\item Check if the inequality holds even if you put some restrictions on it. For example, you may be allowed to assume that one of the variables is $1$ due to some scaling. We will talk about this in \hyperref[ch:homonorm]{$\S$\ref{ch:homonorm}}.
+			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \autoref{sec:buffalo}.
+			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \textit{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
+			\item See if you can get an \textit{if and only if} way of proving an inequality. We will do this very often. If we can use if and only if (or \textit{iff}), then we are free to prove either the if part or the only if part.
+			\item Check if you can get some familiar expressions with some basic manipulations such as making the numerator or denominator equal. For example, see the transformation in \ref{eqn:nesbittf}. This often helps us get a clue on what to do with the inequality.
+			\item Does some substitutions such as $x=a+b,y=b+c,z=c+a$ or $x=a-b,y=b-c,z=c-a$ help? One could say we used substitution in our first proof of Nesbitt's inequality (see \ref{eqn:nesbittsub}). Also, see the transformation $a-c=a-b+b-c$ used in the example below. We will check more on substitutions in \autoref{sec:subs}.
+			\item Check if the inequality holds even if you put some restrictions on it. For example, you may be allowed to assume that one of the variables is $1$ due to some scaling. We will talk about this in \autoref{sec:homonorm}.
 			\item Can you reduce the number of variables without any assumption? See that we have already used it to prove $a^2+b^2+c^2\geq ab+bc+ca$ in a proof above. Also, see a proof of Nesbitt's inequality below where it is enough to prove the inequality for reduced number of variables.
 			\item Induction works great in many cases. We will use induction on many occasions.
 		\end{enumerate}
@@ -193,7 +193,7 @@
 			f(a,b,c)
 				& = a^2+b^2+c^2-ab-bc-ca
 		\end{align*}
-	then $f(a,b,c)$ is \emph{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
+	then $f(a,b,c)$ is \textit{symmetric} on $a,b,c$. We can verify this by the fact that $f(a,b,c)=f(b,a,c)=f(c,a,b)$ and so on. So, without loss of generality, we assume that $a\geq b\geq c$. Then see the following.
 		\begin{align*}
 			a^2+b^2+c^2
 				& \geq ab+bc+ca\\
@@ -225,8 +225,12 @@
 				& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\label{eqn:nesbittf}
 		\end{align}
 	
-		\begin{proof}[Classical proof]\label{proof:nesbittclassical}
-			Setting $x=a+b,y=b+c,z=c+a$,
+		\begin{proof}[Classical proof]
+			Setting
+				\begin{align}
+					x=a+b,
+						& y=b+c,z=c+a\label{eqn:nesbittsub}
+				\end{align}
 				\begin{align*}
 					S
 						& = \dfrac{1}{2}(x+y+z)\left(\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}\right)-3\\
@@ -292,7 +296,7 @@
 					\dfrac{1}{a+b}+\dfrac{1}{b+c}+\dfrac{1}{c+a}
 						& \geq3\sqrt[3]{\dfrac{1}{(a+b)(b+c)(c+a)}}
 				\end{align*}
-			We can use this observation on \hyperref[eqn:nesbittf]{\ref{eqn:nesbittf}} and get the following.
+			We can use this observation on \ref{eqn:nesbittf} and get the following.
 				\begin{align*}
 					S
 						& \geq\dfrac{1}{2}\cdot3\sqrt[3]{(a+b)(b+c)(c+a)}\cdot3\sqrt[3]{\dfrac{1}{(a+b)(b+c)(c+a)}}-2\\
@@ -351,7 +355,7 @@
 		\end{problem}
 	Equality is not possible because on both sides we have non-integers.
 		%\begin{definition}
-			A function $f$ is \emph{non-decreasing} (resp. \emph{increasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\geq0$ (resp. $(a-b)(f(a)-f(b))>0$). Similarly, $f$ is \emph{non-increasing} (resp. \emph{decreasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\leq0$ (resp. $(a-b)(f(a)-f(b))<0$). If either of these two conditions apply for $f$, then $f$ is a \index{monotone function}\emph{monotone function}. We say that $f$ is \emph{monotonic}.
+			A function $f$ is \textit{non-decreasing} (resp. \textit{increasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\geq0$ (resp. $(a-b)(f(a)-f(b))>0$). Similarly, $f$ is \textit{non-increasing} (resp. \textit{decreasing}) on the interval $I$ if for any $a,b\in I$, $(a-b)(f(a)-f(b))\leq0$ (resp. $(a-b)(f(a)-f(b))<0$). If either of these two conditions apply for $f$, then $f$ is a \index{monotone function}\textit{monotone function}. We say that $f$ is \textit{monotonic}.
 		%\end{definition}
 	Note that the slope between any two points $(a,f(a))$ and $(b,f(b))$ is $m=\frac{f(a)-f(b)}{a-b}$ and the quantity we have used for the definition is
 		\begin{align*}
@@ -361,7 +365,7 @@
 		\end{align*}
 	So, the sign of this quantity is the same as the sign of the slope $m$.
 		%\begin{definition}
-			A sequence $(a_n)$ is \emph{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \emph{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \emph{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \emph{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \emph{monotone sequence}. We say that $(a_n)$ is \emph{monotonic}.
+			A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
 		%\end{definition}
 	
 		\begin{theorem}[Abel's Inequality]

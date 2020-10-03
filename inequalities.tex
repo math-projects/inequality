@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, leqno]{book}
+\documentclass[a4paper, 12pt, leqno, twoside]{book}
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, graphicx, enumerate, fancyhdr}
@@ -76,7 +76,12 @@
 \makenoidxglossaries
 \makeindex
 
-\newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
+%\newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
+
+\newcommand*{\problemautorefname}{Problem}
+
+\renewcommand*{\chapterautorefname}{$\S$}
+\renewcommand*{\sectionautorefname}{$\S\S$}
 
 %\fancypagestyle{main}{
 \pagestyle{fancyplain}
@@ -137,88 +142,45 @@
 	\mainmatter
 
 	\begin{refsection}
-		\subfile{basics.tex}
+		\chapter{Classical Inequalities}\label{ch:basics}
 		\subfile{intro.tex}
 		\subfile{cs.tex}
 		\subfile{powermean.tex}
 		\subfile{holdmink.tex}
 		\subfile{rearrangement.tex}
 		\subfile{convexity.tex}
-		\subfile{majorization.tex}
-		\subfile{bunching.tex}
 		\printbibliography
 	\end{refsection}
 	
 	\begin{refsection}
+		\chapter{Traditional Principles \& Inequalities}\label{ch:traditional}
 		\subfile{buffalo.tex}
-		%\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
-		\subfile{substitution.tex}
-		%\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
+		\subfile{majorization.tex}
+		\subfile{bunching.tex}
 		\subfile{homonorm.tex}
-		%\printbibliography
-	\end{refsection}
-	
-	\begin{refsection}
+		\subfile{substitution.tex}
 		\subfile{engel.tex}
 		\subfile{radon.tex}
 		\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
+		\chapter{Advanced Techniques \& Inequalities}\label{ch:advanced}
 		\subfile{tangent.tex}
-	\end{refsection}
-	
-	\begin{refsection}
 		\subfile{smoothfudging.tex}
-	\end{refsection}
-
-	\begin{refsection}
-		\subfile{reverse.tex}
-		%\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
 		\subfile{sos.tex}
-		%\printbibliography
-	\end{refsection}
-	
-	\begin{refsection}
 		\subfile{uvw.tex}
-		\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
 		\subfile{mv.tex}
-		\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
-		\subfile{sv.tex}
-		\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
-		\subfile{dumbassing.tex}
-		%\printbibliography
-	\end{refsection}
-
-	\begin{refsection}
 		\subfile{miscellaneous.tex}
-	\end{refsection}
-
-	\begin{refsection}
+		\subfile{sv.tex}
+		\subfile{dumbassing.tex}
 		\subfile{ev.tex}
+		\subfile{prob.tex}
 		\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
-		\subfile{prob.tex}
+		\subfile{exercise.tex}
 	\end{refsection}
 	
 	\begin{refsection}
