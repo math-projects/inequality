@@ -2,6 +2,143 @@
 
 \begin{document}
 	
-	\chapter{Tangent Line Trick}
+	\chapter{Tangent Line Trick}\label{ch:tangent}
+	The \textit{tangent line trick} is a very useful trick which has been around for quite some time. \textcite{li_2006} demonstrates some problems with this trick. Here, we will discuss this in detail and show how it can tackle problems.
 	
+	Imagine that we are given an inequality in $a_{1},\ldots,a_{n}$. The inequality can be divided into a sum of expressions which is same for $a_{1},\ldots,a_{n}$. That is it can be written as $f(a_{1})+\ldots+f(a_{n})\geq g(a_{1},\ldots,a_{n})$. Now, we typically try to use Jensen's inequality in cases like this. But assume that in this case,  $f$ is not convex. However, in many cases, we may still be able to prove something like
+		\begin{align*}
+			f(x)
+				& \geq f(\bar{a})+(x-\bar{a})f'(\bar{a})
+		\end{align*}
+	where $\bar{a}=\frac{a_{1}+\ldots+a_{n}}{n}$. Summing this for $x=a_{1},\ldots,a_{n}$, we have
+		\begin{align*}
+			f(a_{1})+\ldots+f(a_{n})
+				& \geq nf(\bar{a})
+		\end{align*}
+	The motivation sort of comes from basic calculus. By \textit{wishful thinking}, we may be able to prove that the slope between the points $(x,f(x))$ and $(\bar{a},f(\bar{a}))$ is at least the slope of the tangent line of $f(x)$ at $x=\bar{a}$. This is where the name comes from. This trick is specially useful if you are given the quantity $a_{1}+\ldots+a_{n}$. If the expressions involved are homogeneous, then you do not even need this value. You can use homogeneity to impose conditions such as $a+b+c=1$. For example, see this problem.
+		\begin{problem}
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{1}{a(b+c)}+\dfrac{1}{b(c+a)}+\dfrac{1}{c(a+b)}
+						& \geq \dfrac{27}{2(a+b+c)^{2}}
+				\end{align*}
+			
+				\begin{solution}
+					The inequality is homogeneous in $a,b,c$. So without loss of generality, we can normalize the inequality assuming that $a+b+c=1$. Then $0<a,b,c<1$, $\bar{a}=1/3$ and we get the transformation
+						\begin{align*}
+							\dfrac{1}{a(1-a)}+\dfrac{1}{b(1-b)}+\dfrac{1}{c(1-c)}
+								& \geq \dfrac{27}{2}
+						\end{align*}
+					We define
+						\begin{align*}
+							f(x)
+								& = \dfrac{1}{a(1-a)}
+						\end{align*}
+					and attempt to prove the inequality that is required by tangent line trick. Since
+						\begin{align*}
+							f'(x)
+								& = \dfrac{2x-1}{x^{2}(1-x)^{2}}
+						\end{align*}
+					we have $f(1/3)=9/2$ and $f'(1/3)=-27/4$. Thus, if we can prove the inequality
+						\begin{align*}
+							f(x)
+								& \geq \dfrac{9}{2}-\dfrac{27}{4}\left(x-\dfrac{1}{3}\right)
+						\end{align*}
+					we are done since we will have
+						\begin{align*}
+							f(a)+f(b)+f(c)
+								& \geq 3\cdot f\left(\dfrac{1}{3}\right)\\
+								& = \dfrac{27}{2}
+						\end{align*}
+					So we should check if the tangent line inequality indeed holds.
+						\begin{align*}
+							\dfrac{1}{x(1-x)}
+								& \geq \dfrac{9}{2}-\dfrac{27}{4}\left(x-\dfrac{1}{3}\right)\\
+							\iff \dfrac{1}{x(1-x)}
+								& \geq \dfrac{54-81x+27}{12}\\
+								& \geq \dfrac{27(1-x)}{4}\\
+							\iff x(1-x)^{2}
+								& \leq \dfrac{4}{27}
+						\end{align*}
+					We can check if this holds. If $g(x)=x(1-x)^{2}$, then
+						\begin{align*}
+							g'(x)
+								& = -2x(1-x)+(1-x)^{2}\\
+								& = (1-x)(1-3x)
+						\end{align*}
+					We have $g'(x)=0$ if $x\in\{1,1/3\}$ and
+						\begin{align*}
+							g''(x)
+								& = -3(1-x)-(1-3x)\\
+								& = 6x-4
+						\end{align*}
+					Since $g''(1)=2>0$ and $g''(1/3)=-2<0$, we have that $g(x)$ is maximum at $x=1/3$. Thus,
+						\begin{align*}
+							x(1-x)^{2}
+								& \leq \dfrac{1}{3}\left(1-\dfrac{1}{3}\right)^{2}\\
+								& = \dfrac{27}{4}
+						\end{align*}
+					We are finally done.
+				\end{solution}
+			
+				\begin{remark}
+					Tangent line is a neat trick but it may always not be pretty. But before you go all in, you can easily check if the desired inequality follows from
+						\begin{align*}
+							f(a_{1})+\ldots+f(a_{n})
+								& \geq nf(\bar{a})
+						\end{align*}
+					or not. If it does, there is a good chance that $f(x)\geq f(\bar{a})+(x-\bar{a})f'(\bar{a})$ holds as well. Another indication that this might work is that equality occurs for $a_{1}=\ldots=a_{n}=\bar{a}$. In order to avoid calculation with fractional values, we could also assume $a_{1}+\ldots+a_{n}=n$ for normalization so $\bar{a}=1$. Also, we may sometimes have to deal with $\leq$ instead of $\geq$. Let us see an example of this type below.
+				\end{remark}
+		\end{problem}
+	
+		\begin{problem}[USAMO $2003$]\label{prob:usamo2003}
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					\dfrac{(2a+b+c)^{2}}{2a^{2}+(b+c)^{2}}+\dfrac{(2b+c+a)^{2}}{2b^{2}+(c+a)^{2}}+\dfrac{(2c+a+b)^{2}}{2c^{2}+(a+b)^{2}}
+						& \leq 8
+				\end{align*}
+			
+				\begin{solution}
+					Due to homogeneity, we can assume that $0<a,b,c<1$ and $a+b+c=1$ without loss of generality. Then we are required to prove
+						\begin{align*}
+							\dfrac{(1+a)^{2}}{2a^{2}+(1-a)^{2}}+\dfrac{(1+b)^{2}}{2b^{2}+(1-b)^{2}}+\dfrac{(1+c)^{2}}{2c^{2}+(1-c)^{2}}
+								& \leq 8
+						\end{align*}
+					We can see that equality occurs for $a=b=c=1/3$. Define
+						\begin{align*}
+							f(x)
+								& = \dfrac{(1+x)^{2}}{2x^{2}+(1-x)^{2}}\\
+								& = \dfrac{(1+x)^{2}}{3x^{2}-2x+1}
+						\end{align*}
+					The tangent line inequality in this case is
+						\begin{align*}
+							f(x)
+								& \leq f(\bar{a})+(x-\bar{a})f'(\bar{a})
+						\end{align*}
+					where
+						\begin{align*}
+							f'(x)
+								& = \dfrac{2(3x^{2}-2x+1)(1+x)-2(1+x)^{2}(3x-1)}{(3x^{2}-2x+1)^{2}}\\
+								& = \dfrac{2(1+x)}{3x^{2}-2x+1}-\dfrac{2(1+x)^{2}(3x-1)}{(3x^{2}-2x+1)^{2}}
+						\end{align*}
+					We have $f(1/3)=8/3$ and $f'(1/3)=4$ so if we can prove that
+						\begin{align*}
+							f(x)
+								& \leq \dfrac{8}{3}+4\left(x-\dfrac{1}{3}\right)\\
+								& = \dfrac{4(3x+1)}{3}
+						\end{align*}
+					for $0<x<1$, then the inequality follows.
+						\begin{align*}
+							f(x)
+								& \leq \dfrac{4(3x+1)}{3}\\
+							\iff \dfrac{(1+x)^{2}}{3x^{2}-2x+1}
+								& \leq \dfrac{12x+3}{3}\\
+							\iff 36x^{3}-15x^{2}-2x+1
+									& \geq 0\\
+							\iff (3x-1)^{2}(4x+1)
+								& \geq 0
+						\end{align*}
+					This is obviously true. So, we have the inequality.
+				\end{solution}
+		\end{problem}
 \end{document}
