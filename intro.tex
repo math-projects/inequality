@@ -373,9 +373,19 @@
 				& = (a-b)^2m
 		\end{align*}
 	So, the sign of this quantity is the same as the sign of the slope $m$.
-		%\begin{definition}
-			A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
-		%\end{definition}
+
+	A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
+		\begin{theorem}[Abel formula]\label{thm:abelform}
+			Let $(a_{n})$ and $(b_{n})$ be two sequences of real numbers. If $c_{k}=b_{1}+\ldots+b_{k}$ for $1\leq k\leq n$, then
+				\begin{align*}
+					a_{1}b_{1}+\ldots+a_{n}b_{n}
+						& = (a_{1}-a_{2})c_{1}+(a_{2}-a_{3})c_{2}+\ldots+(a_{n-1}-a_{n})c_{n}+a_{n}c_{n}
+				\end{align*}
+			
+				\begin{proof}
+					
+				\end{proof}
+		\end{theorem}
 	
 		\begin{theorem}[Abel's Inequality]
 			Let $(a_n)$ and $(b_n)$ be two sequences of real numbers such that $b_1\geq \ldots\geq b_n\geq0$. For $1\leq k\leq n$, define
