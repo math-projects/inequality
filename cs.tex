@@ -216,7 +216,7 @@
 		\end{align*}
 	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the Lagrange inequality but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
 	
-	\index{Gram's inequality}\textit{Gram's inequality} is a very nice generalization of Cauchy-Schwarz.
+	\index{Gram's inequality}\textit{Gram's inequality} is a very nice generalization of \nameref{thm:cs}.
 		\begin{theorem}[Gram's inequality]
 			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be vectors with $n$ elements. Then
 				\begin{align*}
@@ -234,7 +234,7 @@
 				\end{align*}
 			where $\mathbf{0}$ is the zero vector with every element $0$.
 		\end{theorem}
-	This result is very intuitive to say the least. Note that we get Cauchy-Schwarz inequality for $n=2$ since
+	This result is very intuitive to say the least. Note that we get \nameref{thm:cs} for $n=2$ since
 		\begin{align*}
 			\begin{vmatrix}
 				\langle\mathbf{x},\mathbf{x}\rangle & \langle\mathbf{x},\mathbf{y}\rangle\\
@@ -244,7 +244,7 @@
 			\iff\langle\mathbf{x},\mathbf{x}\rangle\cdot\langle\mathbf{y},\mathbf{y}\rangle-\langle\mathbf{x},\mathbf{y}\rangle\cdot\langle\mathbf{y},\mathbf{x}\rangle
 				& \geq0
 		\end{align*}
-	implies Cauchy-Schwarz inequality due to the fact $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$. The condition of equality in Gram's inequality is \textit{linear dependence}. Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be some vectors with $n$ elements. Then they are \index{linearly dependent}\textit{linearly dependent} if and only if there are real numbers $a_{1},\ldots,a_{n}$ not all zero such that
+	implies \nameref{thm:cs} due to the fact $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$. The condition of equality in Gram's inequality is \textit{linear dependence}. Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be some vectors with $n$ elements. Then they are \index{linearly dependent}\textit{linearly dependent} if and only if there are real numbers $a_{1},\ldots,a_{n}$ not all zero such that
 		\begin{align*}
 			a_{1}x_{1}+\ldots+a_{n}x_{n}
 				& = \mathbf{0}
