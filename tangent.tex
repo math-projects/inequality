@@ -91,6 +91,58 @@
 				\end{remark}
 		\end{problem}
 	
+		\begin{problem}
+			Given positive real numbers $a,b,c$ such that $a+b+c\geq 3$. Prove that
+				\begin{align*}
+					\dfrac{1}{a^{2}+b+c}+\dfrac{1}{a+b^{2}+c}+\dfrac{1}{a+b+c^{2}}
+						& \leq 1
+				\end{align*}
+			
+				\begin{solution}
+					We have equality in the case $a=b=c=1$. So, we may be optimistic that tangent line trick will work here. Using $b+c\geq 3-a$,
+						\begin{align*}
+							\dfrac{1}{a^{2}+b+c}+\dfrac{1}{a+b^{2}+c}+\dfrac{1}{a+b+c^{2}}
+								& \leq \dfrac{1}{a^{2}+3-a}+\dfrac{1}{b^{2}+3-b}+\dfrac{1}{c^{2}+3-c}
+						\end{align*}
+					So we are done if we can prove that
+						\begin{align*}
+							\dfrac{1}{a^{2}+3-a}+\dfrac{1}{b^{2}+3-b}+\dfrac{1}{c^{2}+3-c}
+								& \leq 1
+						\end{align*}
+					Let
+						\begin{align*}
+							f(x)
+								& = \dfrac{1}{x^{2}+3-x}
+						\end{align*}
+					We have that
+						\begin{align*}
+							f'(x)
+								& = \dfrac{1-2x}{(x^{2}+3-x)^{2}}
+						\end{align*}
+					Since $f(1)=1/3$ and $f'(1)=-1/9$, we need to prove the tangent line inequality
+						\begin{align*}
+							f(x)
+								& \leq \dfrac{1}{3}-\dfrac{1}{9}(x-1)\\
+							\iff \dfrac{1}{x^{2}+3-x}
+								& \leq \dfrac{4-x}{9}\\
+							\iff 5x^{2}+3-7x-x^{3}
+								& \geq 0\\
+							\iff x^{3}-5x^{2}+7x-3
+								& \leq 0
+						\end{align*}
+					We can see that $(x-3)$ is a factor of this polynomial. So we can factor it easily.
+						\begin{align*}
+							\iff x^{2}(x-3)-2x(x-3)+x-3
+								& \leq 0\\
+							\iff (x-3)(x^{2}-2x+1)
+								& \leq 0\\
+							\iff (3-x)(x-1)^{2}
+								& \geq 0
+						\end{align*}
+					This is obviously true. And summing up the tangent line inequality, we get the conclusion.
+				\end{solution}
+		\end{problem}
+	
 		\begin{problem}[USAMO $2003$]\label{prob:usamo2003}
 			Let $a,b,c$ be positive real numbers. Prove that
 				\begin{align*}
