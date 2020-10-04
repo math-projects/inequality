@@ -3,7 +3,7 @@
 \begin{document}
 	\section{Engel Form of Cauchy-Schwarz}\label{sec:engel}
 	We mentioned earlier that there is a particular case of Cauchy-Schwarz inequality which is very useful for solving problems. It is known as \index{Engel form of Cauchy-Schwarz}\emph{Engel form of Cauchy-Schwarz}. Some people also call it \index{Titu's lemma}\emph{Titu's lemma} or \emph{T2's lemma}. This name became popular among the USA students who attended the IMO training camp after a lecture given by Titu Andreescu at Math Olympiad Summer Program (MOSP) at Georgetown University in June, $2001$. Even though it is a direct consequence of Cauchy-Schwarz inequality, it can be proven independently as well. Moreover, Cauchy-Schwarz inequality can be proven using this result as well.
-		\begin{theorem}[Engel form of Cauchy-Schwarz]\label{thm:engel}
+		\begin{theorem}[\itshape Engel form of Cauchy-Schwarz]\label{thm:engel}
 			Let $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align}
 					\dfrac{a_1^2}{x_1}+\ldots+\dfrac{a_n^2}{x_1}
@@ -58,7 +58,7 @@
 			The last inequality follows from the fact that $b_1^2+\ldots+b_n^2\leq(b_1+\ldots+b_n)^2$.
 		\end{proof}
 	Another result that is similar to \nameref{thm:engel} is the \textit{Beckenbach inequality}.
-		\begin{theorem}[Beckenbach inequality]
+		\begin{theorem}[\itshape Beckenbach inequality]
 			Let $x_{1},\ldots,x_{n}$ and $y_{1},\ldots,y_{n}$ be positive real numbers. Then
 				\begin{align*}
 					\dfrac{\sum_{i=1}^{n}x_{i}^{2}}{\sum_{i=1}^{n}x_{i}}+\dfrac{\sum_{i=1}^{n}y_{i}^{2}}{\sum_{i=1}^{n}y_{i}}
@@ -139,7 +139,7 @@
 					This is again a similar problem.
 						\begin{align*}
 							\dfrac{2}{x+y}+\dfrac{2}{y+z}+\dfrac{2}{z+x}
-								& = \dfrac{4}{2(x+y)}+\dfrac{4}{2(y+z)}+\dfrac{4}{2(z+x)}
+								& = \dfrac{4}{2(x+y)}+\dfrac{4}{2(y+z)}+\dfrac{4}{2(z+x)}\\
 								& \geq \dfrac{(2+2+2)^{2}}{2(x+y+y+z+z+x)}\\
 								& = \dfrac{36}{4(x+y+z)}\\
 								& = \dfrac{9}{x+y+z}
@@ -181,7 +181,7 @@
 					Writing $\frac{a}{b+2c+3d}=\frac{a^{2}}{ab+2ca+3ad}$ and applying \nameref{thm:engel}, we get
 						\begin{align*}
 							S
-								& \dfrac{a}{b+2c+3d}+\dfrac{b}{c+2d+3a}+\dfrac{c}{d+2a+3b}+\dfrac{d}{a+2b+3c}\\
+								& = \dfrac{a}{b+2c+3d}+\dfrac{b}{c+2d+3a}+\dfrac{c}{d+2a+3b}+\dfrac{d}{a+2b+3c}\\
 								& = \dfrac{a^{2}}{ab+2ca+3ad}+\dfrac{b^{2}}{bc+2bd+3ab}+\dfrac{c^{2}}{cd+2ca+3bc}+\dfrac{d^{2}}{ad+2bd+3cd}\\
 								& \geq \dfrac{(a+b+c+d)^{2}}{4ab+4bc+4ca+4ad+4bd+4cd}\\
 								& = \dfrac{2}{3}\left(\dfrac{3(a+b+c+d)^{2}}{8(ab+bc+ca+ad+bd+cd)}\right)\\
