@@ -3,7 +3,7 @@
 \begin{document}
 	\section[Cauchy-Schwarz]{Cauchy-Schwarz Inequality and Improvements}\label{sec:cs}
 	\index{Cauchy-Schwarz}\textit{Cauchy-Schwarz} inequality also known as \textit{Cauchy-Bunyakovsky-Schwarz} inequality is among the most important results for solving problems.
-		\begin{theorem}[Cauchy-Bunyakovsky-Schwarz inequality]\label{thm:cs}
+		\begin{theorem}[\itshape Cauchy-Bunyakovsky-Schwarz inequality]\label{thm:cs}
 			Let $n$ be a positive integer, $a_1,\ldots,a_n$ and $b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align}
 					(a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
@@ -20,7 +20,7 @@
 		\end{align}
 	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \textit{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \textit{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
 	
-	This theorem has many proofs and even more applications. We will see later in \autoref{sec:engel} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the Cauchy-Schwarz inequality. Let two vectors (think of a vector as an ordered list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. The numbers $a_{1},\ldots,a_{n}$ inside the vector $\mathbf{a}$ can be called \textit{elements} of $\mathbf{a}$. So, $\mathbf{a}$ has $n$ elements and so does $\mathbf{b}$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\textit{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
+	This theorem has many proofs and even more applications. We will see later in \autoref{sec:engel} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the \nameref{thm:cs}. Let two vectors (think of a vector as an ordered list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. The numbers $a_{1},\ldots,a_{n}$ inside the vector $\mathbf{a}$ can be called \textit{elements} of $\mathbf{a}$. So, $\mathbf{a}$ has $n$ elements and so does $\mathbf{b}$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\textit{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined by
 		\begin{align*}
 			\langle \mathbf{a},\mathbf{b}\rangle
 				& = a_1b_1+\ldots+a_nb_n
@@ -36,7 +36,7 @@
 				& \geq0
 		\end{align*}
 	for any $\mathbf{x}=(x_1,\ldots,x_n)$ where $x_i$ is a real number. Similarly, define $\mathbf{y}=(y_1,\ldots,y_n)$. Then we have the following.
-		\begin{enumerate}[(i)]\label{list:innerprops}
+		\begin{enumerate}[\itshape (i)]\label{list:innerprops}
 			\item $\langle\mathbf{x},\mathbf{x}\rangle=0$ if and only if $\mathbf{x}=\mathbf{0}$ i.e. $\mathbf{x}=(0,\ldots,0)$.
 			\item For any real number $\alpha$, $\langle\alpha\mathbf{x},\mathbf{y}\rangle=\alpha\langle\mathbf{x},\mathbf{y}\rangle$.
 			\item $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
@@ -53,7 +53,7 @@
 				& = \langle\underbrace{\mathbf{x},\ldots,\mathbf{x}}_{m\mbox{ times}}\rangle^{\frac{1}{m}}\\
 				& = \sqrt[m]{x_1^m+\ldots+x_n^m}
 		\end{align*}
-	For $m=2$, we will simply write $\| \mathbf{x}\| $ instead of $\| \mathbf{x}\| _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write Cauchy-Schwarz inequality in a more compact form.
+	For $m=2$, we will simply write $\| \mathbf{x}\| $ instead of $\| \mathbf{x}\| _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write \nameref{thm:cs} in a more compact form.
 		\begin{align*}
 			\| \mathbf{a}\| \cdot\| \mathbf{b}\| 
 				& \geq\langle\mathbf{a},\mathbf{b}\rangle
@@ -69,7 +69,7 @@
 				& = (a_{1}\pm b_{1},\ldots,a_{n}\pm b_{n})
 		\end{align*}
 	These notations will help us shorten some long inequalities later. We will see the benefit of these notations shortly in \nameref{thm:holder}. Let us see the proofs now.
-		\begin{proof}[Proof by vector]
+		\begin{proof}[\itshape Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
 					\| \mathbf{a}\| 
@@ -101,7 +101,7 @@
 				\end{align*}
 		\end{proof}
 	
-		\begin{proof}[Classical proof by Schwarz]
+		\begin{proof}[\itshape Classical proof by Schwarz]
 			Consider the quadratic polynomial
 				\begin{align*}
 					P(x)
@@ -125,7 +125,7 @@
 				\end{align*}
 		\end{proof}
 	
-		\begin{proof}[Proof by arithmetic-geometric mean]
+		\begin{proof}[\itshape Proof by arithmetic-geometric mean]
 			We use the notations from the proof above. If $A=0$ or $B=0$, then the inequality is an identity. So, assume that $A,B\neq0$. Note the following.
 				\begin{align*}
 					\dfrac{a_1^2}{A}+\dfrac{b_1^2}{B}
@@ -148,7 +148,7 @@
 			Again, equality holds if and only if $\frac{a_i}{A}=\frac{b_i}{B}$ or $\frac{a_i}{b_i}=\frac{A}{B}=c$, a constant for all $i$.
 		\end{proof}
 	
-		\begin{proof}[Proof using the mother of inequality]
+		\begin{proof}[\itshape Proof using the mother of inequality]
 			Let $x_i=\frac{a_i}{A},y_i=\frac{b_i}{B}$ for $1\leq i\leq n$. We have
 				\begin{align*}
 					\sum_{i=1}^nx_i^2
@@ -168,7 +168,7 @@
 			This is obviously true.
 		\end{proof}
 	
-		\begin{proof}[Proof using sequences]
+		\begin{proof}[\itshape Proof using sequences]
 			Define the sequence $(S_n)$ as
 				\begin{align*}
 					D_n
@@ -217,7 +217,7 @@
 	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the Lagrange inequality but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
 	
 	\index{Gram's inequality}\textit{Gram's inequality} is a very nice generalization of \nameref{thm:cs}.
-		\begin{theorem}[Gram's inequality]
+		\begin{theorem}[\itshape Gram's inequality]
 			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be vectors with $n$ elements. Then
 				\begin{align*}
 					\begin{vmatrix}

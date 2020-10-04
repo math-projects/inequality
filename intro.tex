@@ -29,7 +29,7 @@
 				& \geq2
 		\end{align*}
 	where $x=\dfrac{a}{b}$. This can be generalized to the following result.
-		\begin{theorem}[\index{Arithmetic-Geometric Inequality}Arithmetic-Geometric Inequality]\label{thm:amgm}
+		\begin{theorem}[\itshape \index{Arithmetic-Geometric Inequality}Arithmetic-Geometric Inequality]\label{thm:amgm}
 			Let $a_1,\ldots,a_n$ be positive real numbers. Then
 				\begin{align*}
 					\dfrac{a_1+\ldots+a_n}{n}
@@ -177,7 +177,7 @@
 				& \geq3\sqrt[3]{uvw}\label{ineq:amgm3}
 		\end{align}
 	Before we go into any theory or method of solving problems, here are some basic tactics which are used very often for solving problems. Let $x,y,z>0$ be real numbers.
-		\begin{enumerate}[(i)]
+		\begin{enumerate}[\itshape (i)]
 			\item If $\dfrac{1}{x}\geq\dfrac{1}{y}$, then $\dfrac{1}{x-a}\geq\dfrac{1}{y}$ for $a\geq0$. Similarly, $\dfrac{1}{x}\geq\dfrac{1}{y-b}$ for $b\geq0$. They are true because $x-a\leq x$ implies $\dfrac{1}{x-a}\geq\dfrac{1}{x}$ and $y+b\geq y$ implies $\dfrac{1}{y+b}\leq\dfrac{1}{y}$.
 			\item Check if you can assume an ordering on the variables. For example, if the inequality is symmetric or cyclic on $x,y,z$, you may possibly assume without loss of generality that $x\geq y\geq z$ or $x\leq y\leq z$. We will discuss more on this in \autoref{sec:buffalo}.
 			\item If you cannot assume an ordering on the variables e.g. $a\geq b\geq c$, can you assume that it has a \textit{maximal element} e.g. $a=\max(a,b,c)$? Sometimes this helps in unexpected ways. See the example below.
@@ -207,7 +207,7 @@
 				& \geq0
 		\end{align*}
 	The last inequality immediately follows from the assumption that $a-c\geq0,a-b\geq0,(b-c)^2\geq0$. Also, note that we did not actually require the condition $a\geq b\geq c$. Just assuming $a=\max(a,b,c)$ was enough in this case to claim that the inequality holds. 
-		\begin{theorem}[\index{Nesbitt's inequality}Nesbitt's inequality]\label{thm:nesbitt}
+		\begin{theorem}[\itshape \index{Nesbitt's inequality}Nesbitt's inequality]\label{thm:nesbitt}
 			Let $a,b,c$ be real positive numbers. Then
 				\begin{align*}
 					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
@@ -225,7 +225,7 @@
 				& = \dfrac{1}{2}(a+b+b+c+c+a)\left(\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b}\right)-3\label{eqn:nesbittf}
 		\end{align}
 	
-		\begin{proof}[Classical proof]
+		\begin{proof}[\itshape Classical proof]
 			Setting
 				\begin{align}
 					x=a+b,
@@ -246,7 +246,7 @@
 			Thus, $S\geq\frac{3}{2}$. Equality occurs if $u=1,v=1,z=1$ or $x=y=z$ or $a=b=c$.
 		\end{proof}
 	
-		\begin{proof}[Proof by arithmetic-harmonic mean inequality]
+		\begin{proof}[\itshape Proof by arithmetic-harmonic mean inequality]
 			We write the arithmetic-harmonic mean inequality for $u,v,w$ as below.
 				\begin{align*}
 					\dfrac{u+v+w}{3}
@@ -261,7 +261,7 @@
 				\end{align*}
 		\end{proof}
 	
-		\begin{proof}[\index{Variable reduction}Variable reduction proof]
+		\begin{proof}[\itshape \index{Variable reduction}Variable reduction proof]
 			Let us clear the denominators in the original inequality.
 				\begin{align*}
 					\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}
@@ -288,7 +288,7 @@
 			The last inequality is evidently true.
 		\end{proof}
 	
-		\begin{proof}[Proof using arithmetic-geometric mean inequality]
+		\begin{proof}[\itshape Proof using arithmetic-geometric mean inequality]
 			Using \ref{ineq:amgm3},
 				\begin{align*}
 					(a+b)+(b+c)+(c+a)
@@ -375,7 +375,7 @@
 	So, the sign of this quantity is the same as the sign of the slope $m$.
 
 	A sequence $(a_n)$ is \textit{non-decreasing} if $a_i\leq a_{i+1}$ for all $i\in\mathbf{N}$. $(a_n)$ is \textit{strictly increasing} if $a_i<a_{i+1}$. Similarly, $(a_n)$ is \textit{non-increasing} if $a_i\geq a_{i+1}$ for all $i$. $(a_n)$ is \textit{strictly decreasing} if $a_i>a_{i+1}$. If $(a_n)$ is either increasing or decreasing, then $(a_n)$ is a \textit{monotone sequence}. We say that $(a_n)$ is \textit{monotonic}.
-		\begin{theorem}[Abel formula]\label{thm:abelform}
+		\begin{theorem}[\itshape Abel formula]\label{thm:abelform}
 			Let $(a_{n})$ and $(b_{n})$ be two sequences of real numbers. If $c_{k}=b_{1}+\ldots+b_{k}$ for $1\leq k\leq n$, then
 				\begin{align*}
 					a_{1}b_{1}+\ldots+a_{n}b_{n}
@@ -387,7 +387,7 @@
 				\end{proof}
 		\end{theorem}
 	
-		\begin{theorem}[Abel's Inequality]
+		\begin{theorem}[\itshape Abel's Inequality]\label{thm:abelineq}
 			Let $(a_n)$ and $(b_n)$ be two sequences of real numbers such that $b_1\geq \ldots\geq b_n\geq0$. For $1\leq k\leq n$, define
 				\begin{align*}
 					s_k
@@ -464,7 +464,7 @@
 				\end{align*}
 		\end{problem}
 	The two inequalities above are not derived from each other. Also, you may have to put a bit of extra effort to prove them. Use calculus if that gives a faster solution.
-		\begin{problem}[IMO $1960$]
+		\begin{problem}[\itshape IMO $1960$]
 			For which real value of $x$ does the inequality
 				\begin{align*}
 					\dfrac{4x^2}{(1-\sqrt{1+2x})^2}
