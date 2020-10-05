@@ -16,21 +16,30 @@
 \setmainfont{ModernMTStd-Extended.otf}[
 	FakeBold=2,
 	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
-	BoldFont=Abril_Display_Bold.otf,
+	BoldFont=goodfish-rg.ttf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
 	BoldItalicFont=ModernMTStd-BoldItalic.otf,
 	Ligatures=TeX,
 ]
 
+\setsansfont[%
+FakeBold=2,
+ItalicFont=NewCMSans10-Oblique.otf,%
+BoldFont=NewCMSans10-Bold.otf,%
+BoldItalicFont=NewCMSans10-BoldOblique.otf,%
+SmallCapsFeatures={Numbers=OldStyle}]{NewCMSans10-Regular.otf}
+
+\setmonofont[%
+FakeBold=2,
+ItalicFont=NewCMMono10-Italic.otf,%
+BoldFont=NewCMMono10-Bold.otf,%
+BoldItalicFont=NewCMMono10-BoldOblique.otf,%
+SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
+
+\let\mathbbalt\mathbb
 \usepackage{unicode-math}
-\setmathfont{latinmodern-math.otf}[
-	FakeBold=3,
-	%BoldFeatures={FakeBold=1},
-	%BoldFont=lmroman10-bold.otf,
-	%ItalicFont=lmroman10-italic.otf,
-	%BoldItalicFeatures={FakeBold=1},
-	%BoldItalicFont=lmroman10-bolditalic.otf,
-]
+\setmathfont{NewCMMath-Regular.otf}[FakeBold=2]
+\let\mathbb\mathbbalt
 
 \usepackage{hyperref}
 \usepackage{mystyle}
@@ -51,17 +60,18 @@
 \makeatother
 \AtBeginDocument{\globalcolor{smokyblack}}
 
-\titleformat{\chapter}{\centering\LARGE\bfseries\color{burgundy}}{$\S$\LARGE\thechapter.}{1em}{}[{\titlerule[03pt]}]
-\titleformat{\section}{\large\bfseries\color{burntorange}}{{\textcolor{burntorange}{$\S\S$\thesection.}}}{1em}{}[{\titlerule[01pt]}]
+\titleformat{\chapter}{\centering\LARGE\bfseries\color{deepjunglegreen}}{$\S$\LARGE\thechapter.}{0.5em}{}[{\titlerule[02pt]}]
+\titleformat{\section}{\centering\Large\bfseries\color{deepjunglegreen}}{$\S$\Large\thesection.}{0.5em}{}[{\titlerule[01pt]}]
+\titleformat{\subsection}{\centering\large\bfseries\color{deepjunglegreen}}{$\S$\large\thesubsection.}{0.5em}{}[{\titlerule[0.5pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
 \hypersetup{
 	colorlinks,
-	citecolor=mahogany,
-	filecolor=darkpastelred,
-	linkcolor=firebrick,
-	urlcolor=vividauburn,
+	citecolor=deepjunglegreen,
+	filecolor=deepjunglegreen,
+	linkcolor=deepjunglegreen,
+	urlcolor=deepjunglegreen,
 	pdfstartview=,
 	pdfencoding=auto,
 }
@@ -107,7 +117,7 @@
 		%\afterpage{splashedwhite}
 		\drop=0.1\txtheight
 		\begin{minipage}[t]{0.05\txtwidth}
-			\color{rosewood}
+			\color{black}
 			\rule{6pt}{\txtheight}
 		\end{minipage}
 		\hspace{0.05\txtwidth}
