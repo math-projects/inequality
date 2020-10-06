@@ -3,11 +3,27 @@
 \begin{document}
 	\section[Karamata]{Karamata's Inequality}\label{sec:karamata}
 	\index{Karamata's inequality}\textcite{karamata_1932} proves the next theorem regarding convex functions when one vector majorizes another.
-		\begin{theorem}[\itshape Karamata's inequality]
+		\begin{theorem}[\itshape Karamata's inequality]\label{thm:karamata}
 			Let $f$ be a convex function and $\mathbf{a}$ and $\mathbf{b}$ be two vectors such that $\mathbf{a}\succ\mathbf{b}$. Then
 				\begin{align*}
 					\sum_{i=1}^{n}f(a_{i})
 						& \geq \sum_{i=1}^{n}f(b_{i})
+				\end{align*}
+		\end{theorem}
+	The next result first appeared at the forum \textit{Art of Problem Solving}\footnote{\texttt{https://artofproblemsolving.com/community/q2h617132p3677200}}. \textit{Daniel S. Liu} showed this as a separate result but it also follows from \nameref{thm:karamata}.
+		\begin{theorem}[\textit{Reverse rearrangement inequality}]\label{thm:reverse}
+			Let $\sigma$ be a permutation of $\{1,\ldots,n\}$ and $(a_{n}),(b_{n})$ be two similarly sorted sequences of positive real numbers. Then
+				\begin{align*}
+					(a_{1}+b_{1})\cdots(a_{n}+b_{n})
+						& \leq (a_{1}+b_{\sigma(1)})\cdots(a_{n}+b_{\sigma(n)})\leq(a_{1}+b_{n})\cdots(a_{n}+b_{1})
+				\end{align*}
+		\end{theorem}
+	Later this was generalized to the following result.
+		\begin{theorem}[\textit{Generalized reverse rearrangement inequality}]\label{thm:genreverse}
+			Let $(a_{1}),\ldots,(a_{m})$ be $m$ similarly sorted sequences of $n$ positive real numbers. Then
+				\begin{align*}
+					\prod_{i=1}^{m}\sum_{j=1}^{n}a_{\sigma_{j}(i),j}
+						& \geq \prod_{i=1}^{m}\sum_{j=1}^{n}a_{i,j}
 				\end{align*}
 		\end{theorem}
 	\section[Bunching: Muirhead]{The Bunching Method: Murihead's Inequality}\label{sec:bunching}
