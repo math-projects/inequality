@@ -14,7 +14,7 @@
 \usepackage{lmodern}
 \usepackage[no-math]{fontspec}
 \setmainfont{ModernMTStd-Extended.otf}[
-	FakeBold=2,
+	FakeBold=1,
 	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
 	BoldFont=goodfish-rg.ttf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
@@ -23,23 +23,23 @@
 ]
 
 \setsansfont[%
-FakeBold=2,
+FakeBold=1,
 ItalicFont=NewCMSans10-Oblique.otf,%
 BoldFont=NewCMSans10-Bold.otf,%
 BoldItalicFont=NewCMSans10-BoldOblique.otf,%
 SmallCapsFeatures={Numbers=OldStyle}]{NewCMSans10-Regular.otf}
 
 \setmonofont[%
-FakeBold=2,
+FakeBold=1,
 ItalicFont=NewCMMono10-Italic.otf,%
 BoldFont=NewCMMono10-Bold.otf,%
 BoldItalicFont=NewCMMono10-BoldOblique.otf,%
 SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 
-\let\mathbbalt\mathbb
+%\let\mathbbalt\mathbb
 \usepackage{unicode-math}
-\setmathfont{NewCMMath-Regular.otf}[FakeBold=2]
-\let\mathbb\mathbbalt
+\setmathfont{NewCMMath-Book.otf}[FakeBold=1]
+%\let\mathbb\mathbbalt
 
 \usepackage{hyperref}
 \usepackage{mystyle}
