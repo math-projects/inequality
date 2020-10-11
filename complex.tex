@@ -1,0 +1,56 @@
+\documentclass[inequalities.tex]{subfile}
+
+\begin{document}
+	\section{Complex Numbers}
+	We may occasionally need complex numbers. So we provide a brief introduction here. A complex number $z$ is defined as
+		\begin{align*}
+			z
+				& = x+iy
+		\end{align*}
+	where $x,y$ are real numbers and $i$ is the imaginary unit such that $i^{2}=-1$. We call $x$ the real component and $y$ the complex component of $z$. Complex numbers follow the same properties as vectors which we established in \autoref{sec:cs}. That is for two complex numbers $z_{1}=x_{1}+iy_{1}$ and $z_{2}=x_{2}+iy_{2}$,
+		\begin{align*}
+			z_{1}\pm z_{2}
+				& = (x_{1}\pm x_{2})+i(y_{1}\pm y_{2})\\
+			\langle z_{1},z_{2}\rangle
+				& = x_{1}x_{2}+y_{1}y_{2}
+		\end{align*}
+	Here $\langle z_{1},z_{2}\rangle$ is the dot product of $z_{1}$ and $z_{2}$. We define an additional operation $\cdot$ as
+		\begin{align*}
+			z_{1}\cdot z_{2}
+				& = x_{1}y_{2}-x_{2}y_{1}
+		\end{align*}
+	The \textit{modulus} of $z$ is similar to $L_{2}$ norm.
+		\begin{align*}
+			|z|
+				& = \sqrt{x^{2}+y^{2}}
+		\end{align*}
+	We have the following property.
+		\begin{align*}
+			|z_{1}z_{2}|
+				& = |z_{1}|\cdot|z_{2}|
+		\end{align*}
+	For a complex number $z=x+iy$, the \textit{conjugate} of $z$ is defined as
+		\begin{align*}
+			\bar{z}
+				& = x-iy
+		\end{align*}
+	So, we have $z\bar{z}=|z|^{2}=|\bar{z}|^{2}$. The \textit{argument} of $z$ is defined as
+		\begin{align*}
+			\arg(z)
+				& = \tan\left(\dfrac{y}{x}\right)
+		\end{align*}
+	You can think of it as the angle the point $(x,y)$ creates with the positive $X$ axis and the origin.
+		\begin{problem}
+			Prove the triangle inequality for complex numbers.
+				\begin{align*}
+					|z_{1}+z_{2}|
+						& \leq |z_{1}|+|z_{2}|
+				\end{align*}
+			This inequality can be generalized as the following.
+				\begin{align*}
+					|z_{1}+\ldots+z_{n}|
+						& \leq |z_{1}+\ldots+z_{n}|
+				\end{align*}
+			When does equality occur?
+		\end{problem}
+\end{document}
