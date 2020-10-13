@@ -2,6 +2,25 @@
 
 \begin{document}
 	\section[Jensen and Popoviciu]{Convexity, Jensen and Popoviciu's Inequality}\label{sec:convexity}
+	A function $f:I\to\mathbb{R}$ is called \index{Jensen convex}\textit{Jensen convex} on some interval $I=[a,b]$ if for any $x,y\in I$,
+		\begin{align*}
+			f\left(\dfrac{x+y}{2}\right)
+				& \leq \dfrac{f(x)+f(y)}{2}
+		\end{align*}
+	$f$ is \textit{Jensen concave} if $-f$ is Jensen convex. Similarly, a sequence of real numbers $(a_{n})$ is \textit{Jensen convex} if
+		\begin{align*}
+			2a_{n}
+				& \leq a_{n-1}+a_{n+1}
+		\end{align*}
+	holds for $n\in\mathbb{N}$. This concept of convexity was formally introduced first by \textcite{jensen_1905, jensen_1906}. Jensen also proved the following result.
+		\begin{theorem}\label{thm:jensenrational}
+			Let $w_{1},\ldots,w_{n}$ be non-negative rational numbers in the interval $I$ such that $w_{1}+\ldots+w_{n}=1$ and $f$ be a Jensen convex function on $I$. Then
+				\begin{align*}
+					f(w_{1}x_{1}+\ldots+w_{n}x_{n})
+						& \leq w_{1}f(x_{1})+\ldots+w_{n}f(x_{n})
+				\end{align*}
+		\end{theorem}
+	But the idea itself was not completely new. \textcite{holder_1889} proved \autoref{thm:jensenrational} under the condition that $f$ can be differentiated at least twice and $f''(x)\geq 0$. Ironically, this is exactly the convexity condition from calculus point of view.
 	
 	Let $f$ be a convex function. For a vector $\mathbf{x}$, let $f(\mathbf{x})$ be the vector $(f(x_{1}),\ldots,f(x_{n}))$.
 		\begin{theorem}[\itshape Weighted Jensen's inequality]\label{thm:weightedjensen}

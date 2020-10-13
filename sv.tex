@@ -2,5 +2,87 @@
 
 \begin{document}
 	\section{Schur-Vornicu-Mildorf Inequality}\label{sec:sv}
-	\textcite{vornicu_2003}
+	\textcite[Page $64$]{hardy_littlewood_polya_1934} states the following as \index{Schur's inequality}\textit{Schur's inequality}.
+		\begin{theorem}[Schur's inequality]\label{thm:schur}
+			Let $n$ be a positive integer. If $a,b,c$ are positive real numbers, then
+				\begin{align*}
+					a^{n}(a-b)(a-c)+b^{n}(b-c)(b-a)+c^{n}(c-a)(c-b)
+						& \geq 0
+				\end{align*}
+		\end{theorem}
+	\textcite[Page $217$]{barnard_child_2018} states this theorem for $n\leq -1$ as well. \textcite{hardy_littlewood_polya_1934} mentions this result in connection with the following result.
+		\begin{theorem}\label{thm:schurspecial}
+			Consider a vector of positive real numbers $\mathbf{x}$ such that no two elements are equal. If $v\geq 0$ and $\delta>0$, then
+				\begin{align*}
+					\mathfrak{M}[v+2\delta,0,0,a_{4},\ldots]-2\mathfrak{M}[v+\delta,\delta,0,a_{4},\ldots]+\mathfrak{M}[v,\delta,\delta,a_{4},\ldots]
+						& \geq 0
+				\end{align*}
+			for a vector of non-negative real numbers $\mathbf{a}$.
+		\end{theorem}
+	It was Issai Schur who informed \textcite{hardy_littlewood_polya_1934} that \autoref{thm:schurspecial} does not follow from \nameref{thm:muirhead} but from \nameref{thm:schur} if we set $n=\frac{v}{\delta}$. So \autoref{thm:schur} is accredited to Schur following \textcite{watson_1955, watson_1956, neville_1956, wright_1956, oppenheim_1958}. Schur's inequality and its reverse have been generalized in many ways. For example, \textcite{guha_1962} proves the following result.
+		\begin{theorem}[Guha's inequality]\label{thm:guha}
+			Let $a,b,c,u,v,w$ be positive real numbers such that for a real number $p$,
+				\begin{align}
+					\sqrt[p]{a}+\sqrt[p]{c}
+						& \leq \sqrt[p]{b}\label{eqn:guhacond1}\\
+					\sqrt[p+1]{u}+\sqrt[p+1]{w}
+						& \leq \sqrt[p+1]{v}\label{eqn:guhacond2}
+				\end{align}
+			If $p>0$, then
+				\begin{align}
+					ubc-vca+wab
+						& \geq 0\label{eqn:guha}
+				\end{align}
+			If $-1<p<0$, then \ref{eqn:guha} is reverse. If $p<-1$, then \ref{eqn:guhacond1} and \ref{eqn:guhacond2} need to be reversed. Equality occurs if and only if
+				\begin{align*}
+					\dfrac{a^{p+1}}{u^{p}}
+						& = \dfrac{b^{p+1}}{v^{p}}=\dfrac{c^{p+1}}{w^{p}}
+				\end{align*}
+		\end{theorem}
+	\textcite{oppenheim_davies_1964} proves the following result which can be thought as the reverse of Schur's inequality.
+		\begin{theorem}
+			Let $n\geq 3$ be an integer and $a_{1},\ldots,a_{n}$ be real numbers. Then
+				\begin{align*}
+					\sum_{i=1}^{n}(x_{i}-x_{1})\cdots(x_{i}-x_{i-1})\cdot(x_{i}-x_{i+1})\cdots(x_{i}-x_{n})
+						& \geq 0
+				\end{align*}
+			holds for all real numbers $x_{1},\ldots,x_{n}$ such that $x_{1}\geq\ldots\geq x_{n}$ if
+				\begin{align*}
+					\begin{cases}
+						a_{1}\geq 0; a_{2}\leq \left(a_{1}^{\frac{1}{2}}+a_{3}^{\frac{1}{2}}\right)^{2};a_{3}\geq 0& \mbox{if }n=3\\
+						a_{2}\leq a_{1}; (-1)^{n}(a_{n-1}-a_{n})\geq 0;(-1)^{k+1}a_{k}\geq 0& \mbox{if }n\geq 4
+					\end{cases}
+				\end{align*}
+			where $1\leq k\leq n-1$ and $k\not\in\{2,n-1\}$.
+		\end{theorem}
+	We will first mention a notable generalization of Schur's inequality.
+		\begin{theorem}[Schur-Vornicu-Mildorf inequality]\label{thm:svm}
+			Let $a,b,c$ be three real numbers and $x,y,z$ be non-negative real numbers. Then
+				\begin{align*}
+					x(a-b)(a-c)+y(b-c)(b-a)+z(c-a)(c-b)
+						& \geq 0
+				\end{align*}
+			holds if one of the following conditions hold:
+				\begin{enumerate}[(1)]
+					\item $a\geq b\geq c$ and $x\geq y$.
+					\item $a\geq b\geq c$ and $z\geq y$.
+					\item $a\geq b\geq c$ and $x+z\geq y$.
+					\item $a,b,c$ are non-negative, $a\geq b\geq c$ and $ax\geq by$.
+					\item $a,b,c$ are non-negative, $a\geq b\geq c$ and $cz\geq by$.
+					\item $a,b,c$ are non-negative, $a\geq b\geq c$ and $ax+cz\geq by$.
+					\item $x,y,z$ are lengths of a triangle.
+					\item $x,y,z$ are square of lengths of a triangle.
+					\item $ax,by,cz$ are the lengths of a triangle.
+					\item There is a convex function $f$ on the interval $I$ such that $x=f(a),y=f(b),z=f(c)$ for non-negative real numbers $a,b,c\in I$.
+				\end{enumerate}
+		\end{theorem}
+	\textcite{vornicu_2003} generalized this result to the following.
+		\begin{theorem}[Vornicu-Schur inequality]\label{thm:sv}
+			Let $a,b,c;x,y,z$ be real numbers such that $a\geq b\geq c$ and either $x\geq y\geq z$ or $z\geq y\geq x$. Let $k$ be a positive integer $f$ be a non-negative real valued convex or monotonic function. Then
+				\begin{align*}
+					f(x)(a-b)^{k}(a-c)^{k}+f(y)(b-c)^{k}(b-a)^{k}+f(z)(c-a)^{k}(c-b)^{k}
+						& \geq 0
+				\end{align*}
+		\end{theorem}
+	We can easily verify that \nameref{thm:schur} follows from \nameref{thm:sv} by setting $x=a,y=b,z=c,k=1$ and $f(m)=m^{n}$.
 \end{document}
