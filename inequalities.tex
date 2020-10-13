@@ -9,6 +9,7 @@
 \usepackage{setspace}
 \usepackage{afterpage}
 \usepackage{datetime}
+\usepackage[none]{hyphenat}
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -145,7 +146,12 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 	\begin{refsection}
 		\section*{Preface}
 		
-		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_polya_1934} we understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}. 
+		Inequalities have been extensively studied for at least a couple of centuries. Cauchy was among the first of the mathematicians who had major contributions in this literature. But it was probably not until \textcite{hardy_littlewood_polya_1934} we understood that it could be possible to study inequalities in a more systematic way. Since then a good number of books have discussed different aspects of inequalities for example, \textcite{beckenbach_bellman_1983}.
+		
+		\section*{Objectives}
+			\begin{itemize}
+				\item Dis
+			\end{itemize}
 		\printbibliography
 	\end{refsection}
 	\tableofcontents
@@ -166,7 +172,6 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 	\begin{refsection}
 		\chapter{Traditional Principles}\label{ch:traditional}
 		\subfile{engel.tex}
-		\subfile{radon.tex}
 		\subfile{buffalo.tex}
 		\subfile{majorization.tex}
 		\subfile{bunching.tex}
@@ -178,11 +183,12 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 	\begin{refsection}
 		\chapter{Advanced Techniques \& Inequalities}\label{ch:advanced}
 		\subfile{tangent.tex}
+		\subfile{sv.tex}
+		\subfile{radon.tex}
 		\subfile{smoothfudging.tex}
 		\subfile{uvw.tex}
 		\subfile{mv.tex}
 		\subfile{miscellaneous.tex}
-		\subfile{sv.tex}
 		\subfile{dumbassing.tex}
 		\subfile{ev.tex}
 		\subfile{prob.tex}
