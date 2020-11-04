@@ -2,7 +2,84 @@
 
 \begin{document}
 	\section{Separation}
+	We prove the arithmetic-geometric inequality yet again. Assume that $x_{1}\cdots x_{n}=1$ and we want to show that
+		\begin{align*}
+			x_{1}+\ldots+x_{n}
+				& \geq n
+		\end{align*}
+	Assume that the result is valid for $n$ and we want to prove it for $n+1$. Without loss of generality, we can assume that $x_{1}\leq 1$ and $x_{2}\geq 1$. Otherwise, $x_{i}\geq 1$ for all $i$ implies that $x_{i}=1$ which makes the inequality trivially true.
+		\begin{align*}
+			(1-x_{1})(x_{2}-1)
+				& \leq 0\\
+			\implies x_{1}+x_{2}
+				& \geq 1+x_{1}x_{2}
+		\end{align*}
+	Then we have the following by induction.
+		\begin{align*}
+			x_{1}+\ldots+x_{n+1}
+				& \geq 1+x_{1}x_{2}+x_{3}\cdots x_{n+1}\\
+				& \geq 1+n
+		\end{align*}
+	The trick here is to separate the variables in terms of which side of $1$ they are on. It is almost the same as being on the same or different sides of a line a point is. See the following problem for a better explanation.
+		\begin{problem}
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					a^{2}+b^{2}+c^{2}+2abc+1
+						& \geq 2(ab+bc+ca)
+				\end{align*}
+			
+				\begin{solution}
+					By the \textit{pigeonhole principle}, at least two of $a,b,c$ are on the same side of $1$. Without loss of generality, assume that $a$ and $b$ are on the same side of $1$. Then
+						\begin{align*}
+							(a-1)(b-1)
+								& \geq 0\\
+							\implies ab
+								& \geq a+b-1
+						\end{align*}
+					Then we have
+						\begin{align*}
+							a^{2}+b^{2}+c^{2}+2abc+1
+								& \geq a^{2}+b^{2}+c^{2}+2c(a+b-1)+1\\
+								& = (c-1)^{2}+a^{2}+2ca+2bc+b^{2}\\
+								& \geq 0+2ab+2bc+2ca
+						\end{align*}
+				\end{solution}
+		\end{problem}
 	
+		\begin{problem}[USAMO $2001$, problem $3$]
+			Let $a,b,c$ be positive real numbers such that
+				\begin{align*}
+					a^{2}+b^{2}+c^{2}+2abc
+						& = 4
+				\end{align*}
+			Prove that,
+				\begin{align*}
+					0
+						& \leq ab+bc+ca-abc\leq 2
+				\end{align*}
+			
+				\begin{solution}
+					
+				\end{solution}
+		\end{problem}
+	
+		\begin{problem}
+			Let $a,b,c$ be real numbers. Prove that
+				\begin{align*}
+					4(1+a^{2})(1+b^{2})(1+c^{2})
+						& \geq 3(a+b+c)^{2}
+				\end{align*}
+			
+				\begin{solution}
+					Again, we can assume without loss of generality that $ab+1\geq a+b$.
+						\begin{align*}
+							(1+a^{2})(1+b^{2})
+								& = 1+a^{2}+b^{2}+a^{2}b^{2}\\
+								& \geq 1+a^{2}+b^{2}+(a+b-1)^{2}\\
+								& = 2(1+a^{2}+b^{2})+2(ab-a-b)
+						\end{align*}
+				\end{solution}
+		\end{problem}
 	\section{Flipping}
 	
 	\section{Neutralizing Denominators}

@@ -10,6 +10,29 @@
 						& \geq \dfrac{(a_{1}+\ldots+a_{n})^{m+1}}{(b_{1}+\ldots+b_{n})^{m}}
 				\end{align*}
 		\end{theorem}
+	\textcite{beckenbach_1950} proves a similar result. For a vector of positive real numbers $\mathbf{a}$ and a real number $r$, let us define
+		\begin{align*}
+			\mathfrak{R}_{r}(\mathbf{a})
+				& = \dfrac{\sum_{i=1}^{n}a_{i}^{r}}{\sum_{i=1}^{n}a_{i}^{r-1}}
+		\end{align*}
+	Note that this is actually a weighted arithmetic mean of $\mathbf{a}$ with the weight vector
+		\begin{align*}
+			\omega
+				& = \left(\dfrac{a_{1}^{r-1}}{\sum_{i=1}^{n}a_{i}^{r-1}},\ldots,\dfrac{a_{n}^{r-1}}{\sum_{i=1}^{n}a_{i}^{r-1}}\right)
+		\end{align*}
+	This is also a generalization of arithmetic, geometric and harmonic means. We get the usual arithmetic and harmonic means if we set $r=1$ and $-1$ respectively. $r=\frac{1}{2}$ gives us the geometric mean for $n=2$.
+		\begin{theorem}[\itshape Beckenbach's inequality]\label{thm:beckenbach}
+			Let $r$ be a real number. Then
+				\begin{align*}
+					\mathfrak{R}_{r}(\mathbf{a}+\mathbf{b})
+						& 
+							\begin{cases}
+								\leq \mathfrak{R}_{r}(\mathbf{a})+\mathfrak{R}_{r}(\mathbf{b}) &\mbox{if }1\leq r\leq 2\\
+								\geq \mathfrak{R}_{r}(\mathbf{a})+\mathfrak{R}_{r}(\mathbf{b}) &\mbox{if }0\leq r\leq 1 
+							\end{cases}
+				\end{align*}
+			Equality occurs if and only if $r=1$ or $\mathbf{a}$ is proportional to $\mathbf{b}$.
+		\end{theorem}
 	\textcite{yang_2002} proves the following generalization of \nameref{thm:radon}.
 		\begin{theorem}[\itshape Generalized Radon's Inequality]\label{thm:genradon}
 			Let $b_{1},\ldots,b_{n}$ be positive real numbers and
