@@ -6,9 +6,9 @@
 		\begin{theorem}[\itshape Cauchy-Bunyakovsky-Schwarz inequality]\label{thm:cs}
 			Let $n$ be a positive integer, $a_1,\ldots,a_n$ and $b_1,\ldots,b_n$ be real numbers. Then
 				\begin{align}
-					(a_1^2+\ldots+a_n^2)(b_1^2+\ldots+b_n^2)
-						& \geq(a_1b_1+\ldots+a_nb_n)^2\label{ineq:cs}\\
-					\left(\sum_{i=1}^na_i^2\right)\left(\sum_{i=1}^nb_i^2\right)
+					(a_{1}^{2}+\ldots+a_{n}^{2})(b_{1}^{2}+\ldots+b_{n}^{2})
+						& \geq(a_{1}b_{1}+\ldots+a_{n}b_{n})^2\label{ineq:cs}\\
+					\left(\sum_{i=1}^{n}a_{i}^{2}\right)\left(\sum_{i=1}^nb_i^2\right)
 						& \geq\left(\sum_{i=1}^na_ib_i\right)^2\nonumber
 				\end{align}
 			and equality holds if and only if $\frac{a_1}{b_1}=\cdots=\frac{a_n}{b_n}$.
@@ -19,7 +19,7 @@
 				& \leq\left(\int_{a}^{b}f^2(x)dx\right)\cdot\left(\int_{a}^{b}g^2(x)dx\right)\label{ineq:cbs}
 		\end{align}
 	appeared in the \textit{M\'{e}moire} \textcite[Page $4$]{bunyakovsky_1846} for the first time. This \textit{M\'{e}moire} was published by the Imperial Academy of Sciences of St. Petersburg in \textcite{bouniakowsky_1859}. \textcite[Page $10$]{steele_2010} states that \textit{Bunyakovsky (1804–1889) had studied in Paris with Cauchy, and he was quite familiar with Cauchy’s work on inequalities; so much so that by the time he came to write his M\'{e}moire, Bunyakovsky was content to refer to the classical form of Cauchy’ inequality for finite sums simply as well-known.}
-	
+
 	This theorem has many proofs and even more applications. We will see later in \autoref{sec:engel} how powerful just a special case of this inequality can be. Let us start with a proof that is probably the most elegant one. Before we show proofs, we will introduce a notation for shortening the \nameref{thm:cs}. Let two vectors (think of a vector as an ordered list of numbers) be $\mathbf{a}=(a_1,\ldots,a_n)$ and $\mathbf{b}=(b_1,\ldots,b_n)$. The numbers $a_{1},\ldots,a_{n}$ inside the vector $\mathbf{a}$ can be called \textit{elements} of $\mathbf{a}$. So, $\mathbf{a}$ has $n$ elements and so does $\mathbf{b}$. Denote by $\langle \mathbf{a},\mathbf{b}\rangle$ the \index{inner product}\textit{inner product} of $\mathbf{a}$ and $\mathbf{b}$ defined as
 		\begin{align*}
 			\langle \mathbf{a},\mathbf{b}\rangle
@@ -41,6 +41,7 @@
 			\item For any real number $\alpha$, $\langle\alpha\mathbf{x},\mathbf{y}\rangle=\alpha\langle\mathbf{x},\mathbf{y}\rangle$.
 			\item $\langle\mathbf{x},\mathbf{y}\rangle=\langle\mathbf{y},\mathbf{x}\rangle$.
 			\item For $\mathbf{z}=(z_1,\ldots,z_n)$, $\langle\mathbf{x},\mathbf{y}+\mathbf{z}\rangle=\langle\mathbf{x},\mathbf{y}\rangle+\langle\mathbf{x},\mathbf{z}\rangle$.
+			\item $\mathbf{x}+\mathbf{y}=(x_{1}+y_{1},\ldots,x_{n}+y_{n})$.
 		\end{enumerate}
 	For convenience, we can also define $\mathbf{x}^{r}$ as
 		\begin{align*}
@@ -55,7 +56,7 @@
 		\end{align*}
 	For $m=2$, we will simply write $\| \mathbf{x}\| $ instead of $\| \mathbf{x}\| _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write \nameref{thm:cs} in a more compact form.
 		\begin{align*}
-			\| \mathbf{a}\| \cdot\| \mathbf{b}\| 
+			\| \mathbf{a}\| \cdot\| \mathbf{b}\|
 				& \geq\langle\mathbf{a},\mathbf{b}\rangle
 		\end{align*}
 	This notion can be generalized even further for arbitrary real numbers. For a real number $p$, define
@@ -66,15 +67,17 @@
 	This is often called the $L_{p}$ \index{norm of vector}\textit{norm} for the vector $\mathbf{x}$. Furthermore, we can define the addition or subtraction between two vectors as
 		\begin{align*}
 			\mathbf{a}\pm \mathbf{b}
-				& = (a_{1}\pm b_{1},\ldots,a_{n}\pm b_{n})
+				& = (a_{1}\pm b_{1},\ldots,a_{n}\pm b_{n})\\
+			m\mathbf{a}
+				& = (ma_{1},\ldots,ma_{n})
 		\end{align*}
 	These notations will help us shorten some long inequalities later. We will see the benefit of these notations shortly in \nameref{thm:holder} and \nameref{thm:mink}. Let us see the proofs now.
 		\begin{proof}[\itshape Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
-					\| \mathbf{a}\| 
+					\| \mathbf{a}\|
 						& = \sqrt{a_1^2+\ldots+a_n^2}\\
-					\| \mathbf{b}\| 
+					\| \mathbf{b}\|
 						& = \sqrt{b_1^2+\ldots+b_n^2}
 				\end{align*}
 			If $\theta$ is the minimum angle between them, from the rule of \textit{dot product} we get
@@ -100,7 +103,7 @@
 					\dfrac{a_1}{b_1}& = \ldots=\dfrac{a_n}{b_n}
 				\end{align*}
 		\end{proof}
-	
+
 		\begin{proof}[\itshape Classical proof by Schwarz]
 			Consider the quadratic polynomial
 				\begin{align*}
@@ -124,7 +127,7 @@
 						& = \dfrac{b_1}{a_1}=\cdots=\dfrac{b_n}{a_n}
 				\end{align*}
 		\end{proof}
-	
+
 		\begin{proof}[\itshape Proof by arithmetic-geometric mean]
 			We use the notations from the proof above. If $A=0$ or $B=0$, then the inequality is an identity. So, assume that $A,B\neq0$. Note the following.
 				\begin{align*}
@@ -147,7 +150,7 @@
 				\end{align*}
 			Again, equality holds if and only if $\frac{a_i}{A}=\frac{b_i}{B}$ or $\frac{a_i}{b_i}=\frac{A}{B}=c$, a constant for all $i$.
 		\end{proof}
-	
+
 		\begin{proof}[\itshape Proof using the mother of inequality]
 			Let $x_i=\frac{a_i}{A},y_i=\frac{b_i}{B}$ for $1\leq i\leq n$. We have
 				\begin{align*}
@@ -167,7 +170,7 @@
 				\end{align*}
 			This is obviously true.
 		\end{proof}
-	
+
 		\begin{proof}[\itshape Proof using sequences]
 			Define the sequence $(S_n)$ as
 				\begin{align*}
@@ -215,7 +218,7 @@
 				& = \sum_{1\leq i< j\leq n}(a_ib_j-a_jb_i)^2
 		\end{align*}
 	This inequality immediately proves the theorem but it is not quite obvious how the identity follows unless someone knows it beforehand. For this reason, some people also call this the Lagrange inequality but we will stick with Cauchy-Schwarz. % Do we show CALLEBAUT1965491 result here? What about Gram's inequality on Gram's matrix of vectors?
-	
+
 	\index{Gram's inequality}\textit{Gram's inequality} is a very nice generalization of \nameref{thm:cs}.
 		\begin{theorem}[\itshape Gram's inequality]
 			Let $\mathbf{x}_1=(x_{11},\ldots,x_{1n}),\ldots,\mathbf{x}_n=(x_{n1},\ldots,x_{nn})$ be vectors with $n$ elements. Then
