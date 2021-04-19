@@ -1,10 +1,10 @@
 \documentclass[inequalities.tex]{subfile}
 
 \begin{document}
-	
+
 	\section[Holder and Minkowski]{H\"{o}lder, Minkowski's Inequality}\label{sec:holdmink}
-	
-		\begin{theorem}[\itshape Generalized H\"{o}lder's Inequality]\label{thm:holder}
+
+		\begin{theorem}[\itshape Generalized H\"{o}lder's Inequality]\label{thm:holdergen}
 			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors of $n$ positive real numbers and $\omega$ be a weight vector. Then
 				\begin{align*}
 					\mathfrak{G}\left(\sum_{i=1}^{n}\mathbf{x}_{i},\omega\right)
@@ -12,13 +12,13 @@
 				\end{align*}
 			Equality occurs if any two of the vectors are proportional.
 		\end{theorem}
-	This is not exactly the \index{H\"{o}lder's inequality}H\"{o}lder's inequality to be precise. The inequality appears in \textcite[Page $117$]{minkowski_1968}. To be strict, \textcite{holder_1889} proved the following theorem for  which we need to define conjugates. Two real numbers $u$ and $v$ are \textit{conjugate} if
+	This is not exactly the \index{H\"{o}lder's inequality}H\"{o}lder's inequality to be precise. This inequality can be specified as \index{Generalized H\"{o}lder's inequality}Generalized H\"{o}lder's inequality which appears in \textcite[Page $117$]{minkowski_1968}. And \textcite{holder_1889} proved \nameref{thm:holder} for  which we need to define conjugates. Two real numbers $u$ and $v$ are \textit{conjugate} if
 		\begin{align*}
 			\dfrac{1}{u}+\dfrac{1}{v}
 				& = 1
 		\end{align*}
-	
-		\begin{theorem}[\itshape H\"{o}lder's inequality]
+
+		\begin{theorem}[\itshape H\"{o}lder's inequality]\label{thm:holder}
 			Let $u>1$ be a real number and $v$ be the conjugate of $u$. If $\alpha,\beta$ are complex numbers,
 				\begin{align*}
 					\langle\alpha,\beta\rangle
@@ -34,7 +34,7 @@
 						& \leq \dfrac{a^{u}}{u}+\dfrac{b^{v}}{v}
 				\end{align*}
 		\end{theorem}
-	\textcite{razminia_2019} presents another proof of \nameref{thm:holder}. The next result is usually known as \index{converse of H\"{o}lder's inequality}\textit{the converse of H\"{o}lder's inequality}.
+	\textcite{razminia_2019} presents another proof of \nameref{thm:holdergen}. The next result is usually known as \index{converse of H\"{o}lder's inequality}\textit{the converse of H\"{o}lder's inequality}.
 		\begin{theorem}[\itshape The converse of H\"{o}lder's inequality]
 			Let $\mathbf{a}$ and $\mathbf{b}$ be vectors of positive real numbers, $u$ and $v$ be conjugates.  If $B$ is a positive real number, then a necessary and sufficient condition that
 				\begin{align*}
@@ -60,7 +60,14 @@
 						& \leq \langle\mathbf{x},\mathbf{y}^{t}\rangle^{r-s}\cdot\langle\mathbf{x},\mathbf{y}^{r}\rangle^{s-t}
 				\end{align*}
 		\end{theorem}
-	\index{Minkowski's inequality}\textcite[Page $115-117$]{minkowski_1968} proves the following result.
+	Note that \nameref{thm:holdergen} is a generalization of \nameref{thm:cs}. We can even prove the \nameref{thm:amgm} from \nameref{thm:holdergen} in the following way.
+		\begin{align*}
+			\dfrac{a_{1}+\ldots+a_{n}}{n}
+				& \geq \sqrt[n]{a_{1}\cdots a_{n}}\\
+			\iff (a_{1}+\ldots+a_{n})^{n}
+				& \geq n^{n}a_{1}\cdots a_{n}
+		\end{align*}
+	This follows from \nameref{thm:holdergen} if we set $\mathbf{x}_{i}=\mathbf{x}$ and $\omega=\left(\frac{1}{n},\ldots,\frac{1}{n}\right)$. \index{Minkowski's inequality}\textcite[Page $115-117$]{minkowski_1968} proves the following result.
 		\begin{theorem}[\itshape Minkowski's Inequality]\label{thm:mink}
 			Let $\mathbf{x}_{1},\ldots,\mathbf{x}_{n}$ be vectors of $n$ positive real numbers, $\omega$ be a weight vector and $r\neq1$ be a real number. Then
 				\begin{align*}
