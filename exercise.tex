@@ -36,4 +36,23 @@
 						\end{align*}
 				\end{solution}
 		\end{problem}
+
+		\begin{problem}
+			Let $a,b,c$ be positive real numbers such that $a+b+c=1$. Prove that
+				\begin{align*}
+					4a^{3}+9b^{3}+36c^{3}
+						& \geq 1
+				\end{align*}
+			Notice that $4,9,36$ are square numbers while $a+b+c$ is also $1$. This along with the terms like $4a^{3}$ tells us to somehow cancel the factors $4,9,36$ so that we can use the fact that
+				\begin{align*}
+					\left(a^{3}\right)^{\frac{1}{3}}+\left(b^{3}\right)^{\frac{1}{3}}+\left(c^{3}\right)^{\frac{1}{3}}
+						& = 1
+				\end{align*}
+			Fortunately, we also have $\frac{1}{2}+\frac{1}{3}+\frac{1}{6}=1$ so using \nameref{thm:holdergen},
+				\begin{align*}
+					\left(\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{6}\right)^{\frac{1}{3}}\left(\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{6}\right)^{\frac{1}{3}}\left(4a^{3}+9b^{3}+36c^{3}\right)^{\frac{1}{3}}
+						& \geq\\ \left(\dfrac{1}{2}\cdot\dfrac{1}{2}\cdot4a^{3}\right)^{\frac{1}{3}}+\left(\dfrac{1}{3}\cdot\dfrac{1}{3}\cdot9b^{3}\right)^{\frac{1}{3}}+\left(\dfrac{1}{6}\cdot\dfrac{1}{6}\cdot36c^{3}\right)^{\frac{1}{3}}
+				\end{align*}
+			This proves the claim.
+		\end{problem}
 \end{document}
