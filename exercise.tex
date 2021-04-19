@@ -2,6 +2,38 @@
 
 \begin{document}
 	\chapter{Practice Problems}\label{ch:practice}
-	
+
 	We will pose various types of problems here. The problems will not be sorted in any particular order. There will be no categorization and similar problems will not be put together. We did not provide practice problems per section or chapter because in real contest, you will have no way of knowing what technique or theorem to use. This is why we demonstrated some problems while discussing a particular concept but did not add any extra problems. Here, you are free to use any method necessary to solve the problems.
+		\begin{problem}
+			Let $a,b,c$ be positive real numbers. Prove that
+				\begin{align*}
+					(a^{3}+2)(b^{3}+2)(c^{3}+2)
+						& \geq (a+b+c)^{3}
+				\end{align*}
+
+				\begin{solution}
+					Rearrange the inequality as
+						\begin{align*}
+							(a^{3}+1^{3}+1^{3})^{\frac{1}{3}}(1^{3}+b^{3}+1^{3})^{\frac{1}{3}}(1^{3}+1^{3}+c^{3})^{\frac{1}{3}}
+								& \geq \left(a^{3}1^{3}1^{3}\right)^{\frac{1}{3}}+\left(1^{3}b^{3}1^{3}\right)^{\frac{1}{3}}+\left(1^{3}1^{3}c^{3}\right)^{\frac{1}{3}}
+						\end{align*}
+					which is obviously true by \nameref{thm:holdergen}.
+				\end{solution}
+		\end{problem}
+
+		\begin{problem}
+			Let $a,b$ be positive real numbers such that $a+b=1$. Prove that
+				\begin{align*}
+					\dfrac{1}{a^{2}}+\dfrac{1}{b^{2}}
+						& \geq 8
+				\end{align*}
+
+				\begin{solution}
+					Using \nameref{thm:holdergen} on $(a+b),(a+b),\left(\frac{1}{a^{2}}+\frac{1}{b^{2}}\right)$,
+						\begin{align*}
+							(a+b)^{\frac{1}{3}}(a+b)^{\frac{1}{3}}\left(\dfrac{1}{a^{2}}+\dfrac{1}{b^{2}}\right)^{\frac{1}{3}}
+								& \geq \left(a\cdot a\cdot\dfrac{1}{a^{2}}\right)^{\frac{1}{3}}+\left(b\cdot b\cdot\dfrac{1}{b^{2}}\right)^{\frac{1}{3}}
+						\end{align*}
+				\end{solution}
+		\end{problem}
 \end{document}
