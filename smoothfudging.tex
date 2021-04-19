@@ -7,5 +7,31 @@
 			f(x_{1},\ldots,x_{n})
 				& \geq a
 		\end{align*}
-	for some real number $a$, we may be able to establish the property that $f$ assumes smaller values when the difference between two variables $x_{i}$ and $x_{j}$ decreases. In such cases, we can use the fact that $f$ assumes the smallest value when $x_{1}=\ldots=x_{n}$. This is known as the \textit{smoothing principle}. Recall that we used a similar argument for arithmetic-geometric mean inequality.
+	for some real number $a$, we may be able to establish the property that $f$ assumes smaller values when the difference between two variables $x_{i}$ and $x_{j}$ decreases. In such cases, we can use the fact that $f$ assumes the smallest value when $x_{1}=\ldots=x_{n}$. This is known as the \textit{smoothing principle}. Recall that we used a similar argument for arithmetic-geometric mean inequality when we replaced the product $a_{1}a_{2}$ by $\bar{a}(\bar{a}+k-h)$ where $a_{1}=\bar{a}-h$ and $a_{2}=\bar{a}+k$.
+		\begin{problem}[USA $1996$]\label{prob:usa1996-3}
+			Let $a_{0},\ldots,a_{n}$ be real numbers in the interval $\left(0,\frac{\pi}{2}\right)$. If
+				\begin{align*}
+					\tan\left(a_{0}-\dfrac{\pi}{4}\right)+\ldots+\tan\left(a_{n}-\dfrac{\pi}{4}\right)
+						& \geq n-1
+				\end{align*}
+			prove that
+				\begin{align*}
+					\tan{a_{0}}\cdots\tan{a_{n}}
+						& \geq n^{n+1}
+				\end{align*}
+
+				\begin{solution}
+					If $x_{i}=\tan\left(a_{i}-\frac{\pi}{4}\right)$ so $-1<x_{i}<1$ and
+						\begin{align*}
+							x_{i}
+								& = \dfrac{\tan{a_{i}}-1}{1+\tan{a_{i}}}\\
+								& = \dfrac{y_{i}-1}{1+y_{i}}
+						\end{align*}
+					where $y_{i}=\tan{a_{i}}$. Then
+						\begin{align*}
+							y_{i}
+								& = \dfrac{1+x_{i}}{1-x_{i}}
+						\end{align*}
+				\end{solution}
+		\end{problem}
 \end{document}
