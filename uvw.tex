@@ -27,8 +27,88 @@
 			abc
 				& = w^{3}
 		\end{align*}
-	Hence, the name UVW. While working with such transformations, be careful not to assume $v^{2}\geq 0$ by default. We have to consider the case where $v^{2}$ is negative as well. We do not know for sure that $a,b,c$ are all positive unless it is stated specifically. However, the following result is very nice when they are indeed positive. We will use the notations as stated above throughout this section.
-		\begin{theorem}
+	Hence, the name UVW. While working with such transformations, be careful not to assume $v^{2}\geq 0$ by default. We have to consider the case where $v^{2}$ is negative as well. We do not know for sure that $a,b,c$ are all positive unless it is stated specifically. However, the following result is very nice when they are indeed positive. We will use the notations as stated above throughout this section and the names of the following theorems follow \textcite{knudsen}.
+		\begin{theorem}[The Idiot Theorem]
 			If $a,b,c\geq 0$, then $u\geq v\geq w$.
 		\end{theorem}
+
+		\begin{proof}
+			Using $a^{2}+b^{2}+c^{2}\geq ab+bc+ca$ and $a+b+c\geq 3\sqrt[3]{abc}$, we immediately see that
+				\begin{align*}
+					(a+b+c)^{2}
+						& \geq 3(ab+bc+ca)
+				\end{align*}
+			which implies $9u^{2}\geq 9v^{2}$ or $u^{2}\geq v^{2}$ and $u\geq w$. For proving $v\geq w$, we can use arithmetic-harmonic mean inequality
+				\begin{align*}
+					\dfrac{3}{\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}}
+						& \leq \sqrt[3]{abc}\\
+					\iff \dfrac{3abc}{ab+bc+ca}
+						& \leq \sqrt[3]{abc}\\
+					\iff ab+bc+ca
+						& \geq 3\sqrt[3]{(abc)^{2}}\\
+					\iff 3v^{2}
+						& \geq 3w^{2}
+				\end{align*}
+			This proves the theorem.
+		\end{proof}
+
+
+		\begin{theorem}[The UVW theorem]\label{thm:uvw}
+			Let $u,v,w$ be numbers such that $u,v^{2},w^{3}$ are real numbers. Then there exists real numbers $a,b,c$ such that
+				\begin{align*}
+					a+b+c
+						& = 3u\\
+					ab+bc+ca
+						& = 3v^{2}\\
+					abc
+						& = w^{3}
+				\end{align*}
+			if and only if $u^{2}\geq v^{2}$ and
+				\begin{align*}
+					3uv^{2}-2u^{3}-2\sqrt{(u^{2}-v^{2})^{3}}
+						& \leq w^{3} \leq 3uv^{2}-2u^{3}+2\sqrt{(u^{2}-v^{2})^{3}}
+				\end{align*}
+		\end{theorem}
+	For proving this theorem, we will need the following result first.
+		\begin{theorem}\label{thm:abc}
+			$a,b,c$ are real numbers if and only if $(a-b)(b-c)(c-a)$ is a real number.
+		\end{theorem}
+
+		\begin{proof}
+			The if part is obvious. So we will focus on the only if part. If $(a-b)(b-c)(c-a)$ is not real, then $a,b,c$ are not real either. Clearly, $a,b,c$ are the roots of $x^{3}-3ux^{2}+3vx-w^{3}=0$ by Vieta's formulas. If one of the roots is complex, say $a$, then another of $b,c$ is complex, say $b$. Moreover, we must have $a=z$ and $b=\bar{z}$ for some complex number $z$ since complex roots can appear only in conjugates. Then
+				\begin{align*}
+					(a-b)(b-c)(c-a)
+						& = (z-\bar{z})(\bar{z}-c)(c-z)
+				\end{align*}
+			Letting $z=u+iv$ for some $u,v\in\mathbb{R}$, we have $\bar{z}=u-iv$ and
+				\begin{align*}
+					(a-b)(b-c)(c-a)
+						& = -2iv(u-c+iv)(u-c-iv)\\
+						& = -2iv\left((u-c)^{2}+v^{2}\right)
+				\end{align*}
+			This is obviously a complex number, so the claim is true unless $v=0$ which cannot hold since $z\not\in\mathbb{R}$.
+		\end{proof}
+
+		\begin{proof}[Proof of \nameref{thm:uvw}]
+			For any $x\in\mathbb{R}$, we have $x^{2}\geq 0$. By \eqref{thm:abc}, $a,b,c\in\mathbb{R}$ implies that $(a-b)(b-c)(c-a)\in\mathbb{R}$ and so $(a-b)^{2}(b-c)^{2}(c-a)^{2}\in\mathbb{R}$. Then
+				\begin{align*}
+					(a-b)^{2}(b-c)^{2}(c-a)^{2}
+						& \geq 0\\
+					\iff 27\left(-(w^{3}-(3uv^{2}-2u^{3}))^{2}+4(u^{2}-v^{2})^{3}\right)
+						& \geq 0\\
+					\iff 4(u^{2}-v^{2})^{3}
+						& \geq (w^{3}-(3uv^{2}-2u^{3}))^{2}\\
+					\iff 2\sqrt{(u^{2}-v^{2})^{3}}
+						& \geq \left|w^{3}-(3uv^{2}-2u^{3})\right|
+				\end{align*}
+			This proves the theorem.
+		\end{proof}
+
+		\begin{theorem}[The positivity theorem]\label{thm:positivity}
+			$a,b,c$ are non-negative real numbers if and only if $u,v^{2},w^{3}$ are non-negative real numbers.
+		\end{theorem}
+
+		\begin{proof}
+
+		\end{proof}
 \end{document}
