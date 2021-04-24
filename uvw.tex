@@ -109,6 +109,40 @@
 		\end{theorem}
 
 		\begin{proof}
+			The if part is obvious, so we prove the only if part. So we should prove that if any of $a,b,c$ are negative, then at lest one of $u,v^{2},w^{3}$ is negative. It is easy to see that $w^{3}=abc$ is negative if one or three of $a,b,c$ are negative. So, we are left with the case where two of $a,b,c$ are negative. Without loss of generality, assume that $a$ and $b$ are negative whereas $c$ is non-negative. Let $a=-x,b=-y$ so that
+				\begin{align*}
+					a+b+c
+						& = 3u\\
+					c-x-y
+						& = 3u\\
+					ab+bc+ca
+						& = 3v^{2}\\
+						& = xy-c(x+y)
+				\end{align*}
+			From this we can show that at least one of $u$ or $v$ has to be negative. Otherwise, if both $u$ and $v$ are non-negative, then $c-x-y\geq 0$ and $xy-c(x+y)\geq 0$. But this leads to a contradiction since
+				\begin{align*}
+					xy
+						& \geq c(x+y)\\
+						& \geq (x+y)^{2}\\
+						& \geq 2xy
+				\end{align*}
+			by \nameref{thm:amgm}.
+		\end{proof}
 
+		\begin{theorem}[Tej's theorem]\label{thm:tej}
+			Let $a,b,c$ be non-negative real numbers. Then we have the following:
+				\begin{enumerate}
+					\item If at least one value of $w^{3}$ exists for fixed $u$ and $v^{2}$ corresponding to $a,b,c$, then $w^{3}$ has a global maximum and minimum (see \gls{gls:globalextreme}). This maximum value is achieved when at least two of $a,b,c$ are equal. The minimum value is achieved when two of $a,b,c$ are equal or when one of them is $0$.
+					\item If at least one value of $v^{2}$ exists for fixed $u$ and $w^{3}$ corresponding to $a,b,c$, then $v^{2}$ has a global maximum and minimum. This maximum value is achieved when at least two of $a,b,c$ are equal. The minimum value is achieved when two of $a,b,c$ are equal or when one of them is $0$.
+					\item If at least one value of $u$ exists for fixed $v^{2}$ and $w^{3}$ corresponding to $a,b,c$, then $u$ has a global maximum and minimum. This maximum value is achieved when at least two of $a,b,c$ are equal. The minimum value is achieved when two of $a,b,c$ are equal or when one of them is $0$.
+				\end{enumerate}
+		\end{theorem}
+
+		\begin{theorem}
+			Every symmetric inequality of degree at most $5$ has to be proved only for $a_{1}=a_{2}$ or $a_{n}=0$.
+		\end{theorem}
+
+		\begin{proof}
+			Using \gls{gls:elempoly},
 		\end{proof}
 \end{document}
