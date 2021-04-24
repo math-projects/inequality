@@ -5,6 +5,7 @@
 \usepackage{csquotes, xcolor, titlesec}
 \usepackage{glossaries-extra}
 \usepackage[toc]{glossaries}
+\usepackage[toc,page]{appendix}
 \usepackage{makeidx}
 \usepackage{setspace}
 \usepackage{afterpage}
@@ -39,7 +40,7 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 
 %\let\mathbbalt\mathbb
 \usepackage{unicode-math}
-\setmathfont{NewCMMath-Book.otf}[FakeBold=1]
+\setmathfont{NewCMMath-Book.otf}[FakeBold=2]
 %\let\mathbb\mathbbalt
 
 \usepackage{hyperref}
@@ -225,6 +226,7 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 	\end{refsection}
 
 	\backmatter
-	\printnoidxglossary[sort=letter,style=long,nonumberlist]
+	\appendix
+	\printnoidxglossary[]
 	\printindex
 \end{document}
