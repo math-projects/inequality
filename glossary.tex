@@ -1,38 +1,78 @@
 \documentclass[inequalities.tex]{subfile}
 
 \begin{document}
-	\newabbreviation{apmo}{APMO}{Asian Pacific Mathematical Olympiad}
-	\newabbreviation{almo}{AlMO}{Albania Mathematical Olympiad}
-	\newabbreviation{amc}{AMC}{Abel's Mathematical Contest (Norwegian Mathematical Olympiad)}
-	\newabbreviation{apc}{APC}{Austrian-Polish Competition}
-	\newabbreviation{bmo}{BMO}{British Mathematical Olympiad}
-	\newabbreviation{buno}{BuNO}{Bulgarian National Olympiad}
-	\newabbreviation{cno}{CNO}{Canada National Olympiad}
-	\newabbreviation{chmo}{ChMO}{China Mathematical Olympiad}
-	\newabbreviation{imo}{IMO}{International Mathematical Olympiad}
-	\newabbreviation{inmo}{InMO}{India Mathematical Olympiad}
-	\newabbreviation{usamo}{USAMO}{United States of America Mathematical Olympiad}
-	\newabbreviation{abmo}{ABMO}{Albania-Balkan Mathematical Olympiad}
-	\newabbreviation{sgmo}{SgMO}{Singapore Mathematical Olympiad}
-	\newabbreviation{irmo}{IrMO}{Iranian Mathematical Olympiad}
-	\newabbreviation{brno}{BrNO}{Belarusian National Olympiad}
-	\newabbreviation{kno}{KNO}{Korean National Olympiad}
-	\newabbreviation{tno}{TNO}{Taiwan National Olympiad}
-	\newabbreviation{vno}{VNO}{Vietnam National Olympiad}
-	\newabbreviation{rno}{RNO}{Romania National Olympiad}
-	\newabbreviation{mdno}{MdNO}{Moldova National Olympiad}
-	\newabbreviation{mno}{MNO}{Mongolia National Olympiad}
-	\newabbreviation{hib}{HIB}{Hungary-Israel Binational}
-	\newabbreviation{mmo}{MMO}{Mediterranean Mathematical Olympiad}
-	\newabbreviation{gno}{GNO}{German National Olympiad}
-	\newabbreviation{pmo}{PMO}{Poland Mathematical Olympiad}
-	\newabbreviation{snmo}{SNMO}{Serbia National Mathematical Olympiad}
-	\newabbreviation{mono}{MoNO}{Morocco National Olympiad}
-	\newabbreviation{crno}{CrNO}{Croatia National Olympiad}
-	\newabbreviation{azno}{AzNO}{Azerbaijan National Olympiad}
-	\newabbreviation{dmo}{DMO}{Dutch Mathematical Olympiad}
-	\newabbreviation{memo}{MEMO}{Middle European Mathematical Olympiad}
-	\newabbreviation{nmc}{NMC}{Nordic Mathematical Contest}
-	\newabbreviation{bkmo}{BkMO}{Balkan Mathematical Olympiad}
-	\newabbreviation{bno}{BNO}{Brazil National Olympiad}
+\newabbreviation{apmo}{APMO}{Asian Pacific Mathematical Olympiad}
+\newabbreviation{almo}{AlMO}{Albania Mathematical Olympiad}
+\newabbreviation{amc}{AMC}{Abel's Mathematical Contest (Norwegian Mathematical Olympiad)}
+\newabbreviation{apc}{APC}{Austrian-Polish Competition}
+\newabbreviation{bmo}{BMO}{British Mathematical Olympiad}
+\newabbreviation{buno}{BuNO}{Bulgarian National Olympiad}
+\newabbreviation{cno}{CNO}{Canada National Olympiad}
+\newabbreviation{chmo}{ChMO}{China Mathematical Olympiad}
+\newabbreviation{imo}{IMO}{International Mathematical Olympiad}
+\newabbreviation{inmo}{InMO}{India Mathematical Olympiad}
+\newabbreviation{usamo}{USAMO}{United States of America Mathematical Olympiad}
+\newabbreviation{abmo}{ABMO}{Albania-Balkan Mathematical Olympiad}
+\newabbreviation{sgmo}{SgMO}{Singapore Mathematical Olympiad}
+\newabbreviation{irmo}{IrMO}{Iranian Mathematical Olympiad}
+\newabbreviation{brno}{BrNO}{Belarusian National Olympiad}
+\newabbreviation{kno}{KNO}{Korean National Olympiad}
+\newabbreviation{tno}{TNO}{Taiwan National Olympiad}
+\newabbreviation{vno}{VNO}{Vietnam National Olympiad}
+\newabbreviation{rno}{RNO}{Romania National Olympiad}
+\newabbreviation{mdno}{MdNO}{Moldova National Olympiad}
+\newabbreviation{mno}{MNO}{Mongolia National Olympiad}
+\newabbreviation{hib}{HIB}{Hungary-Israel Binational}
+\newabbreviation{mmo}{MMO}{Mediterranean Mathematical Olympiad}
+\newabbreviation{gno}{GNO}{German National Olympiad}
+\newabbreviation{pmo}{PMO}{Poland Mathematical Olympiad}
+\newabbreviation{snmo}{SNMO}{Serbia National Mathematical Olympiad}
+\newabbreviation{mono}{MoNO}{Morocco National Olympiad}
+\newabbreviation{crno}{CrNO}{Croatia National Olympiad}
+\newabbreviation{azno}{AzNO}{Azerbaijan National Olympiad}
+\newabbreviation{dmo}{DMO}{Dutch Mathematical Olympiad}
+\newabbreviation{memo}{MEMO}{Middle European Mathematical Olympiad}
+\newabbreviation{nmc}{NMC}{Nordic Mathematical Contest}
+\newabbreviation{bkmo}{BkMO}{Balkan Mathematical Olympiad}
+\newabbreviation{bno}{BNO}{Brazil National Olympiad}
+\newglossaryentry{gls:elempoly}{
+	name={Elementary polynomials},
+	description={
+		All symmetric polynomials in $x_{1},\ldots,x_{n}$ can be written as a sum of \textit{elementary polynomials}. Elementary polynomials $E_{k}$ are defined as
+			\begin{align*}
+				E_{0}(x_{1},\ldots,x_{n})
+					& = 1\\
+				E_{1}(x_{1},\ldots,x_{n})
+					& = x_{1}+\ldots+x_{n}\\
+				E_{2}(x_{1},\ldots,x_{n})
+					& = x_{1}x_{2}+x_{1}x_{3}+\ldots+x_{n-1}x_{n}\\
+					& = \sum_{1\leq i<j\leq n}x_{i}x_{j}\\
+					& \vdots\\
+				E_{k}(x_{1},\ldots,x_{n})
+					& = \sum_{1\leq i_{1}<\ldots<i_{n}\leq n}x_{i_{1}}\cdots x_{i_{n}}
+			\end{align*}
+		If $k>n$, then $E_{k}(x_{1},\ldots,x_{n})=0$. A special case which is very useful for us is
+			\begin{align*}
+				E_{1}(a,b,c)
+					& = a+b+c\\
+				E_{2}(a,b,c)
+					& = ab+bc+ca\\
+				E_{3}(a,b,c)
+					& = abc
+			\end{align*}
+		We can show that any symmetric polynomial can be written as a sum of elementary polynomials using induction. The main idea behind this is to show that
+			\begin{align*}
+				\sigma_{k}
+					& =x_{1}^{k}+\ldots+x_{n}^{k}
+			\end{align*}
+		can be represented in terms of $E_{0},\ldots,E_{k}$. For $k\in\{0,1\}$, the proof is obvious.
+	}
+}
+\newglossaryentry{gls:globalextreme}{
+	name={Global maximum and minimum},
+	description={
+		A \textit{global minimum} (\textit{absolute minimum}) and a \textit{global maximum} (resp. \textit{absolute maximum}) is the smallest possible value of a set or a function.
+	},
+}
+
 \end{document}
