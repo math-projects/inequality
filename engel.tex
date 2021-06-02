@@ -249,40 +249,4 @@
 						\end{align*}
 				\end{solution}
 		\end{problem}
-
-		\begin{problem}[IMO $2005$, problem $3$]\label{prob:imo2005-3}
-			Let $x,y,z$ be real numbers such that $xyz\geq1$. Prove that
-				\begin{align*}
-					\dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}
-						& \geq0
-				\end{align*}
-
-				\begin{solution}
-					Rearrange the inequality as
-						\begin{align*}
-							\dfrac{x^{2}-x^{5}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{2}-y^{5}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{2}-z^{5}}{x^{2}+y^{2}+z^{5}}
-								& \leq 0\\
-							\dfrac{x^{2}-x^{5}}{x^{5}+y^{2}+z^{2}}+1+\dfrac{y^{2}-y^{5}}{x^{2}+y^{5}+z^{2}}+1+\dfrac{z^{2}-z^{5}}{x^{2}+y^{2}+z^{5}}+1
-								& \leq 3\\
-							\dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{5}}
-								& \leq 3
-						\end{align*}
-					Now, there is no obvious way to use \nameref{thm:engel} here. And it looks like the denominators are supposed to be in place of the numerators. So, we will try to accomplish that.
-						\begin{align*}
-							x^{5}+y^{2}+z^{2}
-								& = \dfrac{x^{4}}{\dfrac{1}{x}}+\dfrac{y^{4}}{y^{2}}+\dfrac{z^{4}}{z^{2}}\\
-								& \geq \dfrac{(x^{2}+y^{2}+z^{2})^{2}}{\dfrac{1}{x}+y^{2}+z^{2}}\\
-							\iff \dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}
-								& \leq \dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
-						\end{align*}
-					So we have
-						\begin{align*}
-							\dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+\dfrac{1}{y}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+\dfrac{1}{z}}{x^{2}+y^{2}+z^{2}}
-								& \leq \dfrac{yz+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+zx+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+xy}{x^{2}+y^{2}+z^{2}}\\
-								& = \dfrac{2(x^{2}+y^{2}+z^{2})+xy+yz+zx}{x^{2}+y^{2}+z^{2}}\\
-								& \leq \dfrac{2(x^{2}+y^{2}+z^{2})+x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
-						\end{align*}
-					This gives us the desired inequality.
-				\end{solution}
-		\end{problem}
 \end{document}

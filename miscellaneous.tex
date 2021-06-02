@@ -27,7 +27,7 @@
 					a^{2}+b^{2}+c^{2}+2abc+1
 						& \geq 2(ab+bc+ca)
 				\end{align*}
-			
+
 				\begin{solution}
 					By the \textit{pigeonhole principle}, at least two of $a,b,c$ are on the same side of $1$. Without loss of generality, assume that $a$ and $b$ are on the same side of $1$. Then
 						\begin{align*}
@@ -45,7 +45,7 @@
 						\end{align*}
 				\end{solution}
 		\end{problem}
-	
+
 		\begin{problem}[USAMO $2001$, problem $3$]
 			Let $a,b,c$ be positive real numbers such that
 				\begin{align*}
@@ -57,19 +57,19 @@
 					0
 						& \leq ab+bc+ca-abc\leq 2
 				\end{align*}
-			
+
 				\begin{solution}
-					
+
 				\end{solution}
 		\end{problem}
-	
+
 		\begin{problem}
 			Let $a,b,c$ be real numbers. Prove that
 				\begin{align*}
 					4(1+a^{2})(1+b^{2})(1+c^{2})
 						& \geq 3(a+b+c)^{2}
 				\end{align*}
-			
+
 				\begin{solution}
 					Again, we can assume without loss of generality that $ab+1\geq a+b$.
 						\begin{align*}
@@ -81,6 +81,137 @@
 				\end{solution}
 		\end{problem}
 	\section{Flipping}
-	
+	Sometimes we face inequalities that give us the wrong signs after using some common techniques. We can consider subtracting or dividing some expression to reach the desired form. Let us see how to do that using the following problems.
+		\begin{problem}
+			Let $x_{1},\ldots,x_{n}$ be real numbers such that $x_{1}+\ldots+x_{n}=n$. Prove that,
+				\begin{align*}
+					\dfrac{1}{x_{1}^{2}+1}+\ldots+\dfrac{1}{x_{n}^{2}+1}
+						& \geq \dfrac{n}{2}
+				\end{align*}
+
+				\begin{solution}
+					First, see that $x^{2}+1\geq 2x$ gives us
+						\begin{align*}
+							\dfrac{1}{x_{i}^{2}+1}
+								& \leq \dfrac{1}{2x_{i}}
+						\end{align*}
+					This is the opposite sign of what we want to show. One idea to flip the signs is to send the expressions on the other side like this.
+						\begin{align*}
+							\dfrac{1}{x_{1}^{2}+1}+\ldots+\dfrac{1}{x_{n}^{2}+1}+n
+								& \geq \dfrac{n}{2}+n\\
+							\iff n
+								& \geq \dfrac{n}{2}+\left(1-\dfrac{1}{x_{1}^{2}+1}\right)+\ldots+\left(1-\dfrac{1}{x_{n}^{2}+1}\right)\\
+							\iff \dfrac{n}{2}
+								& \geq \dfrac{x_{1}^{2}}{x_{1}^{2}+1}+\ldots+\dfrac{x_{n}^{2}}{x_{n}^{2}+1}
+						\end{align*}
+					This is evident since
+						\begin{align*}
+							\dfrac{1}{x_{i}^{2}+1}
+								& \leq \dfrac{1}{2x_{i}}\\
+							\iff \dfrac{x_{i}^{2}}{x_{i}^{2}+1}
+								& \leq \dfrac{x_{i}}{2}
+						\end{align*}
+					Summing over $1\leq i\leq n$, we get
+						\begin{align*}
+							\dfrac{x_{1}^{2}}{x_{1}^{2}+1}+\ldots+\dfrac{x_{n}^{2}}{x_{n}^{2}+1}
+								& \leq \dfrac{x_{1}+\ldots+x_{n}}{2}\\
+								& = \dfrac{n}{2}
+						\end{align*}
+				\end{solution}
+		\end{problem}
+
+		\begin{problem}[PuMaC $2014$]
+			Let $a,b,c$ be positive real numbers such that $a^{2}+b^{2}+c^{2}=3$. Prove that
+				\begin{align*}
+					\dfrac{1}{a^{3}+2}+\dfrac{1}{b^{3}+2}+\dfrac{1}{c^{3}+2}
+						& \geq 1
+				\end{align*}
+
+				\begin{solution}
+					We again have a similar situation here. Using \nameref{thm:amgm}, we get $a^{3}+1+1\geq 3a$ so
+						\begin{align*}
+							\dfrac{1}{a^{3}+2}
+								& \leq \dfrac{1}{3a}
+						\end{align*}
+					Let us use the same strategy as the example right above.
+						\begin{align*}
+							\dfrac{1}{a^{3}+2}+\dfrac{1}{b^{3}+2}+\dfrac{1}{c^{3}+2}+3
+								& \geq 1+3\\
+							\iff 3
+								& \geq 1+\left(1-\dfrac{1}{a^{3}+2}\right)+\left(1-\dfrac{1}{b^{3}+2}\right)+\left(1-\dfrac{1}{c^{3}+2}\right)\\
+							\iff 2
+								& \geq \dfrac{a^{3}+1}{a^{3}+2}+\dfrac{b^{3}+1}{b^{3}+2}+\dfrac{c^{3}+1}{c^{3}+2}
+						\end{align*}
+					We are still facing a problem that the constants in the numerators of each expressions are not vanishing. The reason behind it is the constant $2$ which is not fully canceled out. In order to completely cancel it out, we need to subtract the expression from $1/2$ instead of $1$.
+						\begin{align*}
+							\dfrac{1}{a^{3}+2}+\dfrac{1}{b^{3}+2}+\dfrac{1}{c^{3}+2}+\dfrac{3}{2}
+								& \geq 1+\dfrac{3}{2}\\
+							\iff \dfrac{3}{2}
+								& \geq 1+\left(\dfrac{1}{2}-\dfrac{1}{a^{3}+2}\right)+\left(\dfrac{1}{2}-\dfrac{1}{b^{3}+2}\right)+\left(\dfrac{1}{2}-\dfrac{1}{c^{3}+2}\right)\\
+							\iff \dfrac{1}{2}
+								& \geq \dfrac{a^{3}}{2(a^{3}+2)}+\dfrac{b^{3}}{2(b^{3}+2)}+\dfrac{c^{3}}{2(c^{3}+2)}\\
+							\iff 1
+								& \geq \dfrac{a^{3}}{a^{3}+2}+\dfrac{b^{3}}{b^{3}+2}+\dfrac{c^{3}}{c^{3}+2}
+						\end{align*}
+					This is again something we can work on.
+						\begin{align*}
+							\dfrac{1}{a^{3}+2}
+								& \leq \dfrac{1}{3a}\\
+							\iff \dfrac{a^{3}}{a^{3}+2}
+								& \leq \dfrac{a^{3}}{3a}
+						\end{align*}
+					Summing over,
+						\begin{align*}
+							\dfrac{a^{3}}{a^{3}+2}+\dfrac{b^{3}}{b^{3}+2}+\dfrac{c^{3}}{c^{3}+2}
+								& \leq \dfrac{a^{2}+b^{2}+c^{2}}{3}
+						\end{align*}
+					This is exactly what we wanted.
+				\end{solution}
+
+				\begin{remark}
+					This can be generalized to the following using the same technique. If $a_{1},\ldots,a_{n}$ are positive real numbers such that $a_{1}^{2}+\ldots+a_{n}^{2}=n$,
+						\begin{align*}
+							\dfrac{1}{a_{1}^{3}+2}+\ldots+\dfrac{1}{a_{n}^{3}+2}
+								& \geq \dfrac{n}{3}
+						\end{align*}
+				\end{remark}
+		\end{problem}
+
+		\begin{problem}[IMO $2005$, problem $3$]\label{prob:imo2005-3}
+			Let $x,y,z$ be real numbers such that $xyz\geq1$. Prove that
+				\begin{align*}
+					\dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}
+						& \geq0
+				\end{align*}
+
+				\begin{solution}
+					Rearrange the inequality as
+						\begin{align*}
+							\dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}
+								& \geq0\\
+							\iff \dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}+3
+								& \geq 3\\
+							\iff \left(1-\dfrac{x^{5}-x^{2}}{x^{5}+y^{2}+z^{2}}\right)+\left(1-\dfrac{y^{5}-y^{2}}{x^{2}+y^{5}+z^{2}}\right)+\left(1-\dfrac{z^{5}-z^{2}}{x^{2}+y^{2}+z^{5}}\right)
+								& \leq 3\\
+							\iff \dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{5}+z^{2}}+\dfrac{x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{5}}
+								& \leq 3
+						\end{align*}
+					Now, there is no obvious way to use something like \nameref{thm:cs} or \nameref{thm:engel} here. And it looks like the denominators are supposed to be in place of the numerators. So, we will try to accomplish that.
+						\begin{align*}
+							x^{5}+y^{2}+z^{2}
+								& = \dfrac{x^{4}}{\dfrac{1}{x}}+\dfrac{y^{4}}{y^{2}}+\dfrac{z^{4}}{z^{2}}\\
+								& \geq \dfrac{(x^{2}+y^{2}+z^{2})^{2}}{\dfrac{1}{x}+y^{2}+z^{2}}\\
+							\iff \dfrac{x^{2}+y^{2}+z^{2}}{x^{5}+y^{2}+z^{2}}
+								& \leq \dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
+						\end{align*}
+					So we have
+							\begin{align*}		\dfrac{\dfrac{1}{x}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+\dfrac{1}{y}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+\dfrac{1}{z}}{x^{2}+y^{2}+z^{2}}
+								& \leq \dfrac{yz+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+zx+z^{2}}{x^{2}+y^{2}+z^{2}}+\dfrac{x^{2}+y^{2}+xy}{x^{2}+y^{2}+z^{2}}\\
+								& = \dfrac{2(x^{2}+y^{2}+z^{2})+xy+yz+zx}{x^{2}+y^{2}+z^{2}}\\
+								& \leq \dfrac{2(x^{2}+y^{2}+z^{2})+x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
+						\end{align*}
+					This gives us the desired inequality.
+				\end{solution}
+		\end{problem}
 	\section{Neutralizing Denominators}
 \end{document}
