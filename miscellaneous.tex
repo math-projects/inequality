@@ -80,7 +80,7 @@
 						\end{align*}
 				\end{solution}
 		\end{problem}
-	\section{Flipping}
+	\section{Flipping}\label{sec:flip}
 	Sometimes we face inequalities that give us the wrong signs after using some common techniques. We can consider subtracting or dividing some expression to reach the desired form. Let us see how to do that using the following problems.
 		\begin{problem}
 			Let $x_{1},\ldots,x_{n}$ be real numbers such that $x_{1}+\ldots+x_{n}=n$. Prove that,
@@ -211,6 +211,43 @@
 								& \leq \dfrac{2(x^{2}+y^{2}+z^{2})+x^{2}+y^{2}+z^{2}}{x^{2}+y^{2}+z^{2}}
 						\end{align*}
 					This gives us the desired inequality.
+				\end{solution}
+		\end{problem}
+
+		\begin{problem}[APMO $1991$, problem $3$]
+			Let $a_{1},\ldots,a_{n},b_{1},\ldots,b_{n}$ be positive real numbers such that
+				\begin{align*}
+					a_{1}+\ldots+a_{n}
+						& = b_{1}+\ldots+b_{n}
+				\end{align*}
+			Show that
+				\begin{align*}
+					\dfrac{a_{1}^{2}}{a_{1}+b_{1}}+\ldots+\dfrac{a_{n}^{2}}{a_{n}+b_{n}}
+						& \geq\dfrac{a_{1}+\ldots+a_{n}}{2}
+				\end{align*}
+
+				\begin{solution}
+					See the following.
+						\begin{align*}
+							\dfrac{a_{1}^{2}}{a_{1}+b_{1}}+\ldots+\dfrac{a_{n}^{2}}{a_{n}+b_{n}}
+								& \geq\dfrac{a_{1}+\ldots+a_{n}}{2}\\
+							\iff \dfrac{a_{1}^{2}}{a_{1}+b_{1}}+\ldots+\dfrac{a_{n}^{2}}{a_{n}+b_{n}}+\dfrac{a_{1}+\ldots+a_{n}}{2}
+								& \geq a_{1}+\ldots+a_{n}\\
+							\iff \dfrac{a_{1}+\ldots+a_{n}}{2}
+								& \geq \left(a_{1}-\dfrac{a_{1}^{2}}{a_{1}+b_{1}}\right)+\ldots+\left(a_{n}-\dfrac{a_{n}^{2}}{a_{n}+b_{n}}\right)\\
+								& = \dfrac{a_{1}b_{1}}{a_{1}+b_{1}}+\ldots+\dfrac{a_{n}b_{n}}{a_{n}+b_{n}}\\
+							\iff a_{1}+\ldots+a_{n}
+								& \geq \dfrac{2a_{1}b_{1}}{a_{1}+b_{1}}+\ldots+\dfrac{2a_{n}b_{n}}{a_{n}+b_{n}}\\
+							\iff \dfrac{1}{2}(a_{1}+b_{1}+\ldots+a_{n}+b_{n})
+								& \geq \dfrac{2a_{1}b_{1}}{a_{1}+b_{1}}+\ldots+\dfrac{2a_{n}b_{n}}{a_{n}+b_{n}}\\
+							\iff \dfrac{a_{1}+b_{1}}{2}+\ldots+\dfrac{a_{n}+b_{n}}{2}
+								& \geq \dfrac{2a_{1}b_{1}}{a_{1}+b_{1}}+\ldots+\dfrac{2a_{n}b_{n}}{a_{n}+b_{n}}
+						\end{align*}
+					The last inequality is evidently true since $\frac{2ab}{a+b}$ is the harmonic mean of $a$ and $b$. Then we can use the following to verify the inequality.
+						\begin{align*}
+							\dfrac{a+b}{2}
+								& \geq \dfrac{2ab}{a+b}
+						\end{align*}
 				\end{solution}
 		\end{problem}
 	\section{Neutralizing Denominators}
