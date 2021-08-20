@@ -10,46 +10,53 @@
 \usepackage{setspace}
 \usepackage{afterpage}
 \usepackage{datetime}
-\usepackage[none]{hyphenat}
+\usepackage{physics}
 
-%\usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage[no-math]{fontspec}
+%\usepackage{mathspec}
+
 \setmainfont{ModernMTStd-Extended.otf}[
 	FakeBold=2,
 	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
 	BoldFont=goodfish-rg.ttf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
-	BoldItalicFont=ModernMT-ExtendedItalic.otf,
-	Ligatures=TeX,
-]
+	BoldItalicFont=ModernMT-ExtendedItalic.otf,	Ligatures=TeX,]
 
 \setsansfont[%
-FakeBold=2,
-ItalicFont=NewCMSans10-Oblique.otf,%
-BoldFont=NewCMSans10-Bold.otf,%
-BoldItalicFont=NewCMSans10-BoldOblique.otf,%
+FakeBold=2,ItalicFont=NewCMSans10-Oblique.otf,BoldFont=NewCMSans10-Bold.otf,BoldItalicFont=NewCMSans10-BoldOblique.otf,
 SmallCapsFeatures={Numbers=OldStyle}]{NewCMSans10-Regular.otf}
 
 \setmonofont[%
-FakeBold=2,
-ItalicFont=NewCMMono10-Italic.otf,%
-BoldFont=NewCMMono10-Bold.otf,%
-BoldItalicFont=NewCMMono10-BoldOblique.otf,%
-SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
+FakeBold=2,ItalicFont=NewCMMono10-Italic.otf,BoldFont=NewCMMono10-Bold.otf,
+BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 
-%\let\mathbbalt\mathbb
 \usepackage{unicode-math}
 \setmathfont{NewCMMath-Book.otf}[FakeBold=2]
-%\let\mathbb\mathbbalt
+
+
+%\defaultfontfeatures{Mapping=tex-text, Numbers=OldStyle}
+%\setmainfont[FakeBold=2,BoldFont=ModernMTStd-Bold.otf,ItalicFont=ModernMT-ExtendedItalic.otf,SmallCapsFont=MrsEavesSmallCaps_Regular.ttf]{ModernMTStd-Extended.otf}
+%\setmathrm[FakeBold=2]{baskervillef}
+%\setmathsfont(Greek)[Uppercase=Plain,Lowercase=Regular,FakeBold=2]{baskervillef}
+%\setmathsfont(Digits)[Numbers=OldStyle,FakeBold=2]{baskervillef} % because      Solomos' "1" wasn't as good
+%\setmathsfont(Latin)[Uppercase=Italic,Lowercase=Italic,FakeBold=2]{baskervillef}
+
+%\setallsansfonts[Numbers={OldStyle,Proportional},Scale=MatchLowercase,FakeBold=2]{Old Standard}
+%\setallmonofonts[Numbers=OldStyle,Scale=MatchLowercase,FakeBold=2]{Courier New}
+%\setmathsfont(Digits,Latin)[Scale=MatchLowercase]{Bembo MT}
+
+\newfontfamily{\bask}{GFS Baskerville}
+\let\sum\relax
+\DeclareMathOperator*{\sum}{\raisebox{-3.5pt}{\scalebox{2}{\rotatebox{1}{{\bask Σ}}}}}
+
 
 \usepackage{hyperref}
 \usepackage{mystyle}
 
-\newtheorem{theorem}{\textit{Theorem}}
-\newtheorem{lemma}{\textit{Lemma}}
-\newtheorem{definition}{\textit{Definition}}
-\newtheorem{problem}{\textit{Problem}}
+\newtheorem{theorem}{\textsc{Theorem}}
+\newtheorem{lemma}{\textsc{Lemma}}
+\newtheorem{definition}{\textsc{Definition}}
+\newtheorem{problem}{\textsc{Problem}}
 
 \theoremstyle{definition}
 \newtheorem*{remark}{\textit{Remark}}
@@ -88,30 +95,23 @@ SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
 \makenoidxglossaries
 \makeindex
 
-%\newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
-
 \newcommand*{\problemautorefname}{\textit{Problem}}
 
 \renewcommand*{\chapterautorefname}{$\S$}
 \renewcommand*{\sectionautorefname}{$\S$}
 \renewcommand*{\subsectionautorefname}{$\S$}
 
-%\fancypagestyle{main}{
+
 \pagestyle{fancyplain}
 \fancyhf{}
-%\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}
 \setlength{\headheight}{52pt}
 
-%\fancyhead[RE]{\textit{\nouppercase{\leftmark}}}
 \fancyhead[LO, RE]{\small\textit{Masum Billal}\textit{\&}\textit{Samin Riasat}}
 \fancyhead[LE]{\small\textit{\nouppercase{\leftmark}}}
 \fancyhead[RO]{\small\textit{\nouppercase{\rightmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}
-%\lfoot{\sc Masum Billal}
-%\rfoot{Page\ \thepage}
 \renewcommand{\headrulewidth}{.01pt} % remove lines as well
 \renewcommand{\footrulewidth}{.01pt}
-%}
 
 \begin{document}
 	\frontmatter
