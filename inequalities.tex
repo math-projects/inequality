@@ -17,8 +17,8 @@
 
 \setmainfont{ModernMTStd-Extended.otf}[
 	FakeBold=2,
-	SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
-	BoldFont=goodfish-rg.ttf,
+	%SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
+	BoldFont=ModernMTStd-Bold.otf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
 	BoldItalicFont=ModernMT-ExtendedItalic.otf,	Ligatures=TeX,]
 
@@ -33,30 +33,13 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \usepackage{unicode-math}
 \setmathfont{NewCMMath-Book.otf}[FakeBold=2]
 
-
-%\defaultfontfeatures{Mapping=tex-text, Numbers=OldStyle}
-%\setmainfont[FakeBold=2,BoldFont=ModernMTStd-Bold.otf,ItalicFont=ModernMT-ExtendedItalic.otf,SmallCapsFont=MrsEavesSmallCaps_Regular.ttf]{ModernMTStd-Extended.otf}
-%\setmathrm[FakeBold=2]{baskervillef}
-%\setmathsfont(Greek)[Uppercase=Plain,Lowercase=Regular,FakeBold=2]{baskervillef}
-%\setmathsfont(Digits)[Numbers=OldStyle,FakeBold=2]{baskervillef} % because      Solomos' "1" wasn't as good
-%\setmathsfont(Latin)[Uppercase=Italic,Lowercase=Italic,FakeBold=2]{baskervillef}
-
-%\setallsansfonts[Numbers={OldStyle,Proportional},Scale=MatchLowercase,FakeBold=2]{Old Standard}
-%\setallmonofonts[Numbers=OldStyle,Scale=MatchLowercase,FakeBold=2]{Courier New}
-%\setmathsfont(Digits,Latin)[Scale=MatchLowercase]{Bembo MT}
-
-\newfontfamily{\bask}{GFS Baskerville}
-\let\sum\relax
-\DeclareMathOperator*{\sum}{\raisebox{-3.5pt}{\scalebox{2}{\rotatebox{1}{{\bask Σ}}}}}
-
-
 \usepackage{hyperref}
 \usepackage{mystyle}
 
-\newtheorem{theorem}{\textsc{Theorem}}
-\newtheorem{lemma}{\textsc{Lemma}}
-\newtheorem{definition}{\textsc{Definition}}
-\newtheorem{problem}{\textsc{Problem}}
+\newtheorem{theorem}{{Theorem}}
+\newtheorem{lemma}{{Lemma}}
+\newtheorem{definition}{{Definition}}
+\newtheorem{problem}{{Problem}}
 
 \theoremstyle{definition}
 \newtheorem*{remark}{\textit{Remark}}
@@ -69,9 +52,9 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \makeatother
 \AtBeginDocument{\globalcolor{smokyblack}}
 
-\titleformat{\chapter}{\centering\LARGE\bfseries\color{deepjunglegreen}}{$\S$\LARGE\thechapter.}{0.5em}{}[{\titlerule[02pt]}]
-\titleformat{\section}{\centering\Large\bfseries\color{deepjunglegreen}}{$\S$\Large\thesection.}{0.5em}{}[{\titlerule[01pt]}]
-\titleformat{\subsection}{\centering\large\bfseries\color{deepjunglegreen}}{$\S$\large\thesubsection.}{0.5em}{}[{\titlerule[0.5pt]}]
+%\titleformat{\chapter}{\centering\LARGE\bfseries}{$\S$\LARGE\thechapter.}{0.5em}{}[{\titlerule[02pt]}]
+\titleformat{\section}{\centering\Large\bfseries}{$\S$\Large\thesection.}{0.5em}{}[{\titlerule[01pt]}]
+\titleformat{\subsection}{\centering\large\bfseries}{$\S$\large\thesubsection.}{0.5em}{}[{\titlerule[0.5pt]}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
