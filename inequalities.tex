@@ -8,15 +8,15 @@
 \usepackage[toc,page]{appendix}
 \usepackage{makeidx}
 \usepackage{setspace}
-\usepackage{afterpage}
+%\usepackage{afterpage}
 \usepackage{datetime}
 \usepackage{physics}
 
 \usepackage[no-math]{fontspec}
-%\usepackage{mathspec}
 
 \setmainfont{ModernMTStd-Extended.otf}[
 	FakeBold=2,
+	SmallCapsFont=PlayfairDisplaySC-Black.otf,
 	%SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
 	BoldFont=ModernMTStd-Bold.otf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
@@ -36,34 +36,18 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \usepackage{hyperref}
 \usepackage{mystyle}
 
-\newtheorem{theorem}{{Theorem}}
-\newtheorem{lemma}{{Lemma}}
-\newtheorem{definition}{{Definition}}
-\newtheorem{problem}{{Problem}}
+\newtheorem{theorem}{\textsc{Theorem}}
+\newtheorem{lemma}{\textsc{Lemma}}
+\newtheorem{definition}{\textsc{Definition}}
+\newtheorem{problem}{\textsc{Problem}}
 
 \theoremstyle{definition}
 \newtheorem*{remark}{\textit{Remark}}
 \newtheorem*{solution}{\textit{Solution}}
 
-\makeatletter
-\newcommand{\globalcolor}[1]{%
-	\color{#1}\global\let\default@color\current@color
-}
-\makeatother
-\AtBeginDocument{\globalcolor{smokyblack}}
-
-%\titleformat{\chapter}{\centering\LARGE\bfseries}{$\S$\LARGE\thechapter.}{0.5em}{}[{\titlerule[02pt]}]
-\titleformat{\section}{\centering\Large\bfseries}{$\S$\Large\thesection.}{0.5em}{}[{\titlerule[01pt]}]
-\titleformat{\subsection}{\centering\large\bfseries}{$\S$\large\thesubsection.}{0.5em}{}[{\titlerule[0.5pt]}]
-
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
 \hypersetup{
-	colorlinks,
-	citecolor=deepjunglegreen,
-	filecolor=deepjunglegreen,
-	linkcolor=deepjunglegreen,
-	urlcolor=deepjunglegreen,
 	pdfstartview=,
 	pdfencoding=auto,
 }
@@ -99,8 +83,6 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \begin{document}
 	\frontmatter
 	\begin{titlepage}
-		\pagecolor{splashedwhite}
-		%\afterpage{splashedwhite}
 		\drop=0.1\txtheight
 		\begin{minipage}[t]{0.05\txtwidth}
 			\color{black}
@@ -108,7 +90,6 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 		\end{minipage}
 		\hspace{0.05\txtwidth}
 		\begin{minipage}[t]{2\txtwidth}
-			\color{smokyblack}
 			\vspace*{\drop}
 			{\Large {\scshape Masum Billal} \quad\textit{\&}\quad \textsc{Samin Riasat}} \\
 			\rule{1\txtwidth}{1pt} \par
