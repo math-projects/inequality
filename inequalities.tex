@@ -2,22 +2,38 @@
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, graphicx, enumerate, fancyhdr}
-\usepackage{csquotes, xcolor, titlesec}
 \usepackage{glossaries-extra}
 \usepackage[toc]{glossaries}
 \usepackage[toc,page]{appendix}
 \usepackage{makeidx}
 \usepackage{setspace}
-%\usepackage{afterpage}
 \usepackage{datetime}
 \usepackage{physics}
+\usepackage{hyperref}
+\hypersetup{
+	pdfstartview=,
+	pdfencoding=auto,
+}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+
+\renewcommand{\numberline}[1]{#1~}
+
+\providecommand{\HUGE}{\Huge}
+\newlength{\drop}
+
+\DeclareRobustCommand{\cs}[1]{\texttt{\char`\\#1}}
+\newlength{\tpheight}\setlength{\tpheight}{0.9\textheight}
+\newlength{\txtheight}\setlength{\txtheight}{0.9\tpheight}
+\newlength{\tpwidth}\setlength{\tpwidth}{0.9\textwidth}
+\newlength{\txtwidth}\setlength{\txtwidth}{0.9\tpwidth}
 
 \usepackage[no-math]{fontspec}
-
 \setmainfont{ModernMTStd-Extended.otf}[
 	FakeBold=2,
 	SmallCapsFont=PlayfairDisplaySC-Black.otf,
-	%SmallCapsFont=MrsEavesSmallCaps_Regular.ttf,
 	BoldFont=ModernMTStd-Bold.otf,
 	ItalicFont=ModernMT-ExtendedItalic.otf,
 	BoldItalicFont=ModernMT-ExtendedItalic.otf,	Ligatures=TeX,]
@@ -33,9 +49,6 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \usepackage{unicode-math}
 \setmathfont{NewCMMath-Book.otf}[FakeBold=2]
 
-\usepackage{hyperref}
-\usepackage{mystyle}
-
 \newtheorem{theorem}{\textsc{Theorem}}
 \newtheorem{lemma}{\textsc{Lemma}}
 \newtheorem{definition}{\textsc{Definition}}
@@ -47,10 +60,6 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 
 \usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
 
-\hypersetup{
-	pdfstartview=,
-	pdfencoding=auto,
-}
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -67,7 +76,6 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \renewcommand*{\chapterautorefname}{$\S$}
 \renewcommand*{\sectionautorefname}{$\S$}
 \renewcommand*{\subsectionautorefname}{$\S$}
-
 
 \pagestyle{fancyplain}
 \fancyhf{}
