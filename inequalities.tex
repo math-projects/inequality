@@ -30,24 +30,42 @@
 \newlength{\tpwidth}\setlength{\tpwidth}{0.9\textwidth}
 \newlength{\txtwidth}\setlength{\txtwidth}{0.9\tpwidth}
 
+\ifxetex
+%\usepackage{mathspec}
 \usepackage[no-math]{fontspec}
-\setmainfont{ModernMTStd-Extended.otf}[
-	FakeBold=2,
-	SmallCapsFont=PlayfairDisplaySC-Black.otf,
-	BoldFont=ModernMTStd-Bold.otf,
-	ItalicFont=ModernMT-ExtendedItalic.otf,
-	BoldItalicFont=ModernMT-ExtendedItalic.otf,	Ligatures=TeX,]
-
-\setsansfont[%
-FakeBold=2,ItalicFont=NewCMSans10-Oblique.otf,BoldFont=NewCMSans10-Bold.otf,BoldItalicFont=NewCMSans10-BoldOblique.otf,
-SmallCapsFeatures={Numbers=OldStyle}]{NewCMSans10-Regular.otf}
-
-\setmonofont[%
-FakeBold=2,ItalicFont=NewCMMono10-Italic.otf,BoldFont=NewCMMono10-Bold.otf,
-BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]{NewCMMono10-Regular.otf}
-
 \usepackage{unicode-math}
-\setmathfont{NewCMMath-Book.otf}[FakeBold=2]
+\else
+\usepackage[LGR,T2A,LY1]{fontenc}
+%\usepackage{OldStandard}
+%\usepackage[noamssymbols,baskervillef]{newtxmath}
+\usepackage{mlmodern}
+%\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,]{microtype}
+%\usepackage{pdfrender, xcolor}
+\fi
+
+
+\ifpdftex
+%\microtypecontext{spacing=nonfrench}
+%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.1pt}
+%\makeatletter\let\normalrender\PdfRender@NormalColorHook\let\PdfRender@NormalColorHook\@empty\newcommand*{\textnormalrender}[1]{\begingroup\normalrender#1\endgroup}\makeatother
+\else
+\newfontfamily\headingfont[]{BaskervilleF-BoldItalic.otf}
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]{\huge\headingfont}{\chaptertitlename\ \thechapter}{20pt}{\Huge\headingfont}
+%\titleformat*{\section}{\Large\headingfont}
+\newcommand{\fakebold}{2}
+\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic.otf,BoldItalicFont=OldStandard-BoldItalic.otf,BoldFont=OldStandard-Bold.otf,BoldFeatures={FakeBold=0},BoldItalicFeatures={FakeBold=0}]{OldStandard-Regular.otf}
+\setmathfont[FakeBold=\fakebold,]{NewCMMath-Book.otf}
+\setmathfont[range=it,FakeBold=\fakebold]{Old Standard Italic}
+\setmathfont[range={\symfrak},FakeBold=\fakebold]{Asana Math}
+\setmathfont[range={\int},Scale=2,]{Old Standard Italic}
+\setmathfont[range={\sum,\prod},Scale=2]{Old Standard}
+
+\usepackage{mathspec}
+%\setmathsfont(Digits)[Scale=MatchUppercase,FakeBold=\fakebold]{Old Standard}
+\setmathsfont(Latin)[Uppercase=Italic,Lowercase=Italic,FakeBold=\fakebold,Scale=MatchUppercase]{ModernMT-ExtendedItalic.otf}
+\defaultfontfeatures{Mapping=tex-text,Ligatures=Tex}
+\fi
 
 \newtheorem{theorem}{\textsc{Theorem}}
 \newtheorem{lemma}{\textsc{Lemma}}
@@ -58,7 +76,7 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \newtheorem*{remark}{\textit{Remark}}
 \newtheorem*{solution}{\textit{Solution}}
 
-\usepackage[backend=biber,style=alphabetic,natbib=true,sorting=nyt,]{biblatex}
+\usepackage[style=philosophy-verbose,backend=biber,sortcites=true,classical=true,scauthors=true, scauthorscite=true,scauthorsbib=true,volnumformat=strings,volumeformat=romansc,]{biblatex}
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -80,7 +98,8 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 \fancyhf{}
 \setlength{\headheight}{52pt}
 
-\fancyhead[LO, RE]{\small\textit{Masum Billal}\textit{\&}\textit{Samin Riasat}}
+\fancyhead[LO, RE]{\small\textit{Masum Billal}\textit{\&}%\textit{Samin Riasat}
+}
 \fancyhead[LE]{\small\textit{\nouppercase{\leftmark}}}
 \fancyhead[RO]{\small\textit{\nouppercase{\rightmark}}}
 \fancyfoot[LE, RO]{Page\ \thepage}
@@ -98,7 +117,9 @@ BoldItalicFont=NewCMMono10-BoldOblique.otf,SmallCapsFeatures={Numbers=OldStyle}]
 		\hspace{0.05\txtwidth}
 		\begin{minipage}[t]{2\txtwidth}
 			\vspace*{\drop}
-			{\Large {\scshape Masum Billal} \quad\textit{\&}\quad \textsc{Samin Riasat}} \\
+			{\Large {\scshape Masum Billal} %\quad\textit{\&}\quad \textsc{Samin Riasat}
+			} 
+			\\
 			\rule{1\txtwidth}{1pt} \par
 			\vspace{3\baselineskip}
 			{\noindent\bfseries ADVANCES IN OLYMPIAD INEQUALITIES} \par
