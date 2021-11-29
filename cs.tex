@@ -50,18 +50,18 @@
 		\end{align*}
 	for a real number $r$. Let us generalize this notation further. Let $m$ be a positive integer. Then for $\mathbf{x}=(x_1,\ldots,x_n)$, define
 		\begin{align*}
-			\| \mathbf{x}\|_{m}
+			\parallel \mathbf{x}\parallel_{m}
 				& = \langle\underbrace{\mathbf{x},\ldots,\mathbf{x}}_{m\mbox{ times}}\rangle^{\frac{1}{m}}\\
 				& = \sqrt[m]{x_1^m+\ldots+x_n^m}
 		\end{align*}
-	For $m=2$, we will simply write $\| \mathbf{x}\| $ instead of $\| \mathbf{x}\| _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write \nameref{thm:cs} in a more compact form.
+	For $m=2$, we will simply write $\parallel \mathbf{x}\parallel $ instead of $\parallel \mathbf{x}\parallel _2$ just like we write $\sqrt{x}$ instead of $\sqrt[2]{x}$. So we can write \nameref{thm:cs} in a more compact form.
 		\begin{align*}
-			\| \mathbf{a}\| \cdot\| \mathbf{b}\|
+			\parallel \mathbf{a}\parallel \cdot\parallel \mathbf{b}\parallel
 				& \geq\langle\mathbf{a},\mathbf{b}\rangle
 		\end{align*}
 	This notion can be generalized even further for arbitrary real numbers. For a real number $p$, define
 		\begin{align*}
-			\| \mathbf{x}\|_{p}
+			\parallel \mathbf{x}\parallel_{p}
 				& = \sqrt[p]{x_{1}^{p}+\ldots+x_{n}^{p}}
 		\end{align*}
 	This is often called the $L_{p}$ \index{norm of vector}\textit{norm} for the vector $\mathbf{x}$. Furthermore, we can define the addition or subtraction between two vectors as
@@ -75,16 +75,16 @@
 		\begin{proof}[\itshape Proof by vector]
 			Consider two vectors $\mathbf{a}=(a_1,\ldots,a_n),\mathbf{b}=(b_1,\ldots,b_n)$ and their modulus
 				\begin{align*}
-					\| \mathbf{a}\|
+					\parallel \mathbf{a}\parallel
 						& = \sqrt{a_1^2+\ldots+a_n^2}\\
-					\| \mathbf{b}\|
+					\parallel \mathbf{b}\parallel
 						& = \sqrt{b_1^2+\ldots+b_n^2}
 				\end{align*}
 			If $\theta$ is the minimum angle between them, from the rule of \textit{dot product} we get
 				\begin{align*}
 					\mathbf{a}\cdot\mathbf{b}
 						& = a_1b_1+\ldots+a_nb_n\\
-					\| \mathbf{a}\| \cdot\| \mathbf{b}\| \cdot\cos\theta
+					\parallel \mathbf{a}\parallel \cdot\parallel \mathbf{b}\parallel \cdot\cos\theta
 						& = a_1b_1+\ldots+a_nb_n\\
 					\cos{\theta}
 						& = \dfrac{a_1b_1+\ldots+a_nb_n}{\sqrt{a_1^2+\ldots+a_n^2}\sqrt{b_1^2+\ldots+b_n^2}}
