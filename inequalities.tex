@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, leqno, twoside]{book}
+\documentclass[a4paper, 12pt]{book}
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{subfiles, graphicx, enumerate, fancyhdr}
@@ -98,7 +98,7 @@
 \fancyhf{}
 \setlength{\headheight}{52pt}
 
-\fancyhead[LO, RE]{\small\textit{Masum Billal}\textit{\&}%\textit{Samin Riasat}
+\fancyhead[LO, RE]{\small\textit{Masum Billal}%\textit{\&}\textit{Samin Riasat}
 }
 \fancyhead[LE]{\small\textit{\nouppercase{\leftmark}}}
 \fancyhead[RO]{\small\textit{\nouppercase{\rightmark}}}
@@ -132,7 +132,7 @@
 			\vspace{\baselineskip}
 			\rule{\txtwidth}{1pt} \par
 			\vspace{\baselineskip}
-			{\Large THE PUBLISHER}
+			{\Large }
 		\end{minipage}
 		\hfill
 	\end{titlepage}
@@ -146,7 +146,7 @@
 			\begin{itemize}
 				\item Dis
 			\end{itemize}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 	\tableofcontents
 	\mainmatter
@@ -160,7 +160,7 @@
 		\subfile{holdmink.tex}
 		\subfile{rearrangement.tex}
 		\subfile{convexity.tex}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
@@ -171,7 +171,7 @@
 		\subfile{bunching.tex}
 		\subfile{homonorm.tex}
 		\subfile{substitution.tex}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
@@ -186,7 +186,7 @@
 		\subfile{dumbassing.tex}
 		\subfile{ev.tex}
 		\subfile{prob.tex}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 
 	\begin{refsection}
@@ -215,11 +215,12 @@
 		\subfile{sgmo.tex}
 		\subfile{tno.tex}
 		\subfile{usamo.tex}
-		\printbibliography
+		%\printbibliography
 	\end{refsection}
 
 	\backmatter
 	\appendix
 	\printnoidxglossary[]
+	\printbibliography
 	\printindex
 \end{document}
