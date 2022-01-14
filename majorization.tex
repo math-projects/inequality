@@ -25,7 +25,12 @@
 			xy+yz+zx
 				& = \sum_{cyc}xy
 		\end{align*}
-	Note that even though the expression $xy+yz+zx$ and $a^{2}+b^{2}+c^{2}$ are symmetric, we do not consider them symmetric polynomial sums in this notation. A symmetric polynomial sum should have all $n!$ terms in the sum since it is symmetric on all $n!$ permutations of the variables in it. Even if there can be duplicates, the total number of terms should still remain $n!$. For this reason, this sum is often denoted by $\sum{!}$ or $\sum_{\sigma}$ where $\sigma$ indicates that the sum is taken over all possible permutations. Here are some examples.
+	Note that even though the expression $xy+yz+zx$ and $a^{2}+b^{2}+c^{2}$ are symmetric, we do not consider them symmetric polynomial sums in this notation. A symmetric polynomial sum should have all $n!$ terms in the sum since it is symmetric on all $n!$ permutations of the variables in it. Even if there can be duplicates, the total number of terms should still remain $n!$. For this reason, this sum is often denoted by
+		\begin{align*}
+			\sum{!}
+				&\mbox{ or }\sum_{\sigma}
+		\end{align*}
+	where $\sigma$ indicates that the sum is taken over all possible permutations. Here are some examples.
 		\begin{align*}
 			\sum_{sym}a^{2}
 				& = 2(a^{2}+b^{2}+c^{2})\\
@@ -47,7 +52,11 @@
 		\begin{align*}
 			x^{3}y^{1}z^{0}+x^{3}z^{1}y^{0}+y^{3}z^{1}x^{0}+y^{3}x^{1}z^{0}+z^{3}x^{1}y^{0}+z^{3}y^{1}x^{0}
 		\end{align*}
-	See that this is exactly what we got in the last line of $\sum_{\sigma}x^{3}y$. Some authors write this notation as
+	See that this is exactly what we got in the last line of
+		\begin{align*}
+			\sum_{\sigma}x^{3}y
+		\end{align*}
+	Some authors write this notation as
 		\begin{align*}
 			T[\mathbf{a}](\mathbf{x})
 				& = T[a_{1},\ldots,a_{n}](x_{1},\ldots,x_{n})

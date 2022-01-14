@@ -6,8 +6,8 @@
 		\begin{theorem}[\itshape Karamata's inequality]\label{thm:karamata}
 			Let $f$ be a convex function and $\mathbf{a}$ and $\mathbf{b}$ be two vectors such that $\mathbf{a}\succ\mathbf{b}$. Then
 				\begin{align*}
-					\sum_{i=1}^{n}f(a_{i})
-						& \geq \sum_{i=1}^{n}f(b_{i})
+					\sum\limits_{i=1}^{n}f(a_{i})
+						& \geq \sum\limits_{i=1}^{n}f(b_{i})
 				\end{align*}
 		\end{theorem}
 	The next result first appeared at the forum \textit{Art of Problem Solving}\footnote{\texttt{https://artofproblemsolving.com/community/q2h617132p3677200}}. \textit{Daniel S. Liu} showed this as a separate result but it also follows from \nameref{thm:karamata}.
@@ -22,8 +22,8 @@
 		\begin{theorem}[\textit{Generalized reverse rearrangement inequality}]\label{thm:genreverse}
 			Let $(a_{1}),\ldots,(a_{m})$ be $m$ similarly sorted sequences of $n$ positive real numbers. Then
 				\begin{align*}
-					\prod_{i=1}^{m}\sum_{j=1}^{n}a_{\sigma_{j}(i),j}
-						& \geq \prod_{i=1}^{m}\sum_{j=1}^{n}a_{i,j}
+					\prod_{i=1}^{m}\sum\limits_{j=1}^{n}a_{\sigma_{j}(i),j}
+						& \geq \prod_{i=1}^{m}\sum\limits_{j=1}^{n}a_{i,j}
 				\end{align*}
 		\end{theorem}
 	\section[Bunching: Muirhead]{The Bunching Method: Murihead's Inequality}\label{sec:bunching}
@@ -40,8 +40,8 @@
 		\begin{theorem}[\itshape Generalization of Muirhead's inequality]
 			Let $\mathbf{x}$ and $\mathbf{y}$ be two vectors of positive real numbers such that $\mathbf{x}\succ\mathbf{y}$. If $p_{1},\ldots,p_{k}$ are non-negative real numbers, then
 				\begin{align*}
-					\sum_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum_{i\in S_{j}}p_{i}\right)^{\square x_{j}}
-						& \geq \sum_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum_{i\in S_{j}}p_{i}\right)^{\square y_{j}}
+					\sum\limits_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum\limits_{i\in S_{j}}p_{i}\right)^{\square x_{j}}
+						& \geq \sum\limits_{\substack{S_{1}\cup\ldots\cup S_{r}=\{1,\ldots,k\}\\S_{i}\cap S_{j}=\phi}}\prod_{j=1}^{r}\left(\sum\limits_{i\in S_{j}}p_{i}\right)^{\square y_{j}}
 				\end{align*}
 			where $\square$ in $\square x_{j}$ denotes that in the expansion of this power, we only consider the terms with non-zero power of $p_{i}$.
 		\end{theorem}
