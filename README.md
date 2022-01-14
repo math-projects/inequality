@@ -13,3 +13,5 @@ READ
 * For referencing anything without name such as chapter or section, use `\autoref{label}`. 
 
 I have customized the reference for chapter, section, problem and equations.
+* Always use `\sum\limits_` instead of `\sum_`, `\prod\limits_` instead of `\prod_`, etc.
+* If you think some other font would look better, consult me first. I have put in a lot of effort for achieving this antique latex style. That's one of the main reasons why I no longer have any motivation to continue this book. So unless I think the font you are recommending is better, I do not intend on changing it. It's unlikely you will find a better font for retaining an old  look considering I have tried out a lot of fonts already.
