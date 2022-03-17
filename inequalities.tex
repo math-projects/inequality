@@ -1,7 +1,7 @@
 \documentclass[a4paper, 12pt]{book}
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
-\usepackage{subfiles, graphicx, enumerate, fancyhdr}
+\usepackage{subfiles, graphicx, enumerate, fancyhdr,titlesec,ifthen,xcolor}
 \usepackage{glossaries-extra}
 \usepackage[toc]{glossaries}
 \usepackage[toc,page]{appendix}
@@ -10,10 +10,15 @@
 \usepackage{datetime}
 \usepackage{physics}
 \usepackage{hyperref}
-\hypersetup{
-	pdfstartview=,
-	pdfencoding=auto,
-}
+\hypersetup{colorlinks,citecolor=teal,linktocpage,linkcolor=cyan,pdfstartview=,pdfencoding=auto,}
+\usepackage[style=philosophy-verbose,backend=biber,sortcites=true,classical=true,scauthors=true, scauthorscite=true,scauthorsbib=true,volnumformat=strings,volumeformat=romansc,]{biblatex}
+
+\usepackage{nomencl}
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\scshape}
+\renewcommand{\cftchapfont}{\scshape}
+
+
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
@@ -31,52 +36,42 @@
 \newlength{\txtwidth}\setlength{\txtwidth}{0.9\tpwidth}
 
 \ifxetex
-%\usepackage{mathspec}
 \usepackage[no-math]{fontspec}
 \usepackage{unicode-math}
 \else
 \usepackage[LGR,T2A,LY1]{fontenc}
-%\usepackage{OldStandard}
-%\usepackage[noamssymbols,baskervillef]{newtxmath}
-\usepackage{mlmodern}
-%\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,]{microtype}
-%\usepackage{pdfrender, xcolor}
+\usepackage{OldStandard}
+\usepackage{pdfrender, xcolor}
 \fi
 
-
 \ifpdftex
-%\microtypecontext{spacing=nonfrench}
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.1pt}
-%\makeatletter\let\normalrender\PdfRender@NormalColorHook\let\PdfRender@NormalColorHook\@empty\newcommand*{\textnormalrender}[1]{\begingroup\normalrender#1\endgroup}\makeatother
+\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.1pt}
+\makeatletter\let\normalrender\PdfRender@NormalColorHook\let\PdfRender@NormalColorHook\@empty\newcommand*{\textnormalrender}[1]{\begingroup\normalrender#1\endgroup}\makeatother
 \else
-\newfontfamily\headingfont[]{BaskervilleF-BoldItalic.otf}
-%\usepackage{titlesec}
-%\titleformat{\chapter}[display]{\huge\headingfont}{\chaptertitlename\ \thechapter}{20pt}{\Huge\headingfont}
-%\titleformat*{\section}{\Large\headingfont}
 \newcommand{\fakebold}{2}
-\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic.otf,BoldItalicFont=OldStandard-BoldItalic.otf,BoldFont=OldStandard-Bold.otf,BoldFeatures={FakeBold=0},BoldItalicFeatures={FakeBold=0}]{OldStandard-Regular.otf}
+\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic.otf,ItalicFeatures={FakeBold=\fakebold},BoldItalicFont=OldStandard-BoldItalic.otf,SmallCapsFont={OldStandard-Regular.otf},SmallCapsFeatures={Letters=SmallCaps,FakeBold=\fakebold,RawFeature=+smcp},BoldFont=OldStandard-Bold.otf,BoldFeatures={FakeBold=\fakebold,SmallCapsFont=OldStandard-Regular.otf,SmallCapsFeatures={RawFeature=+smcp,Color=992211}},BoldItalicFeatures={FakeBold=0}]{ModernMT-Extended-OldStandard.otf}
 \setmathfont[FakeBold=\fakebold,]{NewCMMath-Book.otf}
-\setmathfont[range=it,FakeBold=\fakebold]{Old Standard Italic}
-\setmathfont[range={\symfrak},FakeBold=\fakebold]{Asana Math}
-\setmathfont[range={\int},Scale=2,]{Old Standard Italic}
-\setmathfont[range={\sum,\prod},Scale=2]{Old Standard Italic}
-
-\usepackage{mathspec}
-%\setmathsfont(Digits)[Scale=MatchUppercase,FakeBold=\fakebold]{Old Standard}
-\setmathsfont(Latin)[Uppercase=Italic,Lowercase=Italic,FakeBold=\fakebold,Scale=MatchUppercase]{ModernMT-ExtendedItalic.otf}
+\setmathfont[FakeBold=\fakebold,range={"0000,"FFFF}]{Old Standard}
+\setmathfont[range={it},FakeBold=\fakebold]{ModernMT-ExtendedItalic-OldStandard-Italic.otf}
+\setmathfont[range={up/{num}},FakeBold=\fakebold]{ModernMT-Extended-OldStandard.otf}
+%\setmathfont[range={\symfrak,},FakeBold=\fakebold]{Asana Math}
+\setmathfont[range={\int},Scale=1.6,]{Old Standard Italic}
+\setmathfont[range={\sum,\prod},Scale=1.4]{Old Standard}
+%\setmathfont[range={"005B,"005D,"0028,"0029,"007B,"007D},FakeBold=0]{Asana Math}
+%\usepackage{mathspec}
+%\setmathsfont(Digits)[Scale=MatchUppercase,FakeBold=\fakebold]{ModernMTStd-Extended.otf}
+%\setmathsfont(Latin)[Uppercase=Italic,Lowercase=Italic,FakeBold=\fakebold,Scale=MatchUppercase]{ModernMTStd-ExtendedItalic.otf}
 \defaultfontfeatures{Mapping=tex-text,Ligatures=Tex}
 \fi
 
-\newtheorem{theorem}{\textsc{Theorem}}
-\newtheorem{lemma}{\textsc{Lemma}}
-\newtheorem{definition}{\textsc{Definition}}
+\newtheorem{theorem}{\textsc{\textbf{Theorem}}}[chapter]
+\theoremstyle{definition}
+\newenvironment{definition}[1][]{\par\medskip\noindent \textbf{\textsc{{\ifthenelse{\isempty{#1}}{Definition.}{#1.}}}} \rmfamily}{\medskip}
 \newtheorem{problem}{\textsc{Problem}}
 
 \theoremstyle{definition}
 \newtheorem*{remark}{\textit{Remark}}
 \newtheorem*{solution}{\textit{Solution}}
-
-\usepackage[style=philosophy-verbose,backend=biber,sortcites=true,classical=true,scauthors=true, scauthorscite=true,scauthorsbib=true,volnumformat=strings,volumeformat=romansc,]{biblatex}
 
 \renewcommand{\theequation}{$\ddagger$\ \thechapter.\arabic{equation}}
 
@@ -94,20 +89,21 @@
 \renewcommand*{\sectionautorefname}{$\S$}
 \renewcommand*{\subsectionautorefname}{$\S$}
 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \pagestyle{fancyplain}
 \fancyhf{}
-\setlength{\headheight}{52pt}
+\rhead{ \fancyplain{}{\small\textit{{Masum Billal}}} }
+\lhead{ \fancyplain{}{\small$\S$\thechapter. \ \textsc{\leftmark}} }
+\rfoot{ \fancyplain{}{\thepage}}
 
-\fancyhead[LO, RE]{\small\textit{Masum Billal}%\textit{\&}\textit{Samin Riasat}
-}
-\fancyhead[LE]{\small\textit{\nouppercase{\leftmark}}}
-\fancyhead[RO]{\small\textit{\nouppercase{\rightmark}}}
-\fancyfoot[LE, RO]{Page\ \thepage}
-\renewcommand{\headrulewidth}{.01pt} % remove lines as well
-\renewcommand{\footrulewidth}{.01pt}
+\titleformat{\chapter}[display]{\bfseries\scshape\Huge}{}{1ex}{\centering\titlerule\vspace{1ex}\ifthenelse{\value{chapter}>0}{$\S$\thechapter\;}{}}[\vspace{1ex}\titlerule]
+\titleformat{\section}[display]{\bfseries\scshape\LARGE}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S$\thesection\;}{}}[\titlerule]
+\titleformat{\subsection}[display]{\bfseries\scshape\Large}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S\S$\thesection\;}{}}[\titlerule]
+
 
 \begin{document}
 	\frontmatter
+	\pagestyle{empty}
 	\begin{titlepage}
 		\drop=0.1\txtheight
 		\begin{minipage}[t]{0.05\txtwidth}
@@ -118,7 +114,7 @@
 		\begin{minipage}[t]{2\txtwidth}
 			\vspace*{\drop}
 			{\Large {\scshape Masum Billal} %\quad\textit{\&}\quad \textsc{Samin Riasat}
-			} 
+			}
 			\\
 			\rule{1\txtwidth}{1pt} \par
 			\vspace{3\baselineskip}
@@ -148,9 +144,10 @@
 			\end{itemize}
 		%\printbibliography
 	%\end{refsection}
+	\newpage
 	\tableofcontents
 	\mainmatter
-
+	\pagestyle{fancyplain}
 	%\begin{refsection}
 		\chapter{Classical Inequalities}\label{ch:basics}
 		\subfile{intro.tex}
