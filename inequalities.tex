@@ -53,6 +53,7 @@
 \setmathfont[FakeBold=\fakebold,]{NewCMMath-Book.otf}
 \setmathfont[FakeBold=\fakebold,range={"0000,"FFFF}]{Old Standard}
 \setmathfont[range={it},FakeBold=\fakebold]{ModernMT-ExtendedItalic-OldStandard-Italic.otf}
+\setmathfont[range={bfup},]{Asana Math}
 \setmathfont[range={up/{num}},FakeBold=\fakebold]{ModernMT-Extended-OldStandard.otf}
 %\setmathfont[range={\symfrak,},FakeBold=\fakebold]{Asana Math}
 \setmathfont[range={\int},Scale=1.6,]{Old Standard Italic}
@@ -100,10 +101,12 @@
 \titleformat{\section}[display]{\bfseries\scshape\LARGE}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S$\thesection\;}{}}[\titlerule]
 \titleformat{\subsection}[display]{\bfseries\scshape\Large}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S\S$\thesection\;}{}}[\titlerule]
 
+\definecolor{platinum}{rgb}{0.9, 0.89, 0.89}
 
 \begin{document}
 	\frontmatter
 	\pagestyle{empty}
+	\pagecolor{platinum}
 	\begin{titlepage}
 		\drop=0.1\txtheight
 		\begin{minipage}[t]{0.05\txtwidth}
