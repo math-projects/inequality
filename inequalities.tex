@@ -17,19 +17,25 @@
 
 \ifxetex
 	\usepackage{unicode-math}
-	\newcommand{\fakebold}{1}
-	\newcommand{\scale}{1}
-	\newcommand{\fakemathbold}{1}
-	\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic-New.otf,ItalicFeatures={FakeBold=\fakebold,Scale=\scale},BoldItalicFont=ModernMT-ExtendedItalic-New.otf,SmallCapsFont={OldStandard-Regular.otf},SmallCapsFeatures={Letters=SmallCaps,FakeBold=\fakebold,RawFeature=+smcp,Scale=\scale},BoldFont=OldStandard-Bold.otf,BoldFeatures={FakeBold=0,Scale=\scale,SmallCapsFont=OldStandard-Bold.otf,SmallCapsFeatures={RawFeature=+smcp,Scale=\scale}},BoldItalicFeatures={FakeBold=3},]{ModernMT-Extended-New.otf}
-	\setsansfont[FakeBold=1,Scale=\scale]{Latin Modern Sans}
-	\setmonofont[FakeBold=1,Scale=\scale]{Latin Modern Mono}
-	\setmathfont[FakeBold=\fakemathbold,Scale=\scale]{NewCMMath-Book.otf}
-	\setmathfont[range={it,},FakeBold=\fakemathbold,Scale=\scale]{ModernMT-ExtendedItalic-New.otf}
-	\setmathfont[range={up,},FakeBold=\fakemathbold,Scale=\scale]{ModernMT-Extended-New.otf}
-	\setmathfont{latinmodern-math.otf}[range=bfup]
-	\setmathfont{texgyrepagella-math.otf}[range={"0028,"0029,"005B,"005D,"007B,"007D,}]
+	\newcommand{\fakebold}{1.5}
+	\newcommand{\fakestretch}{.95}
+	\newcommand{\scale}{1.2}
+	\newcommand{\fakemathbold}{1.5}
+	\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic-New.otf,ItalicFeatures={FakeBold=\fakebold,},BoldItalicFont=ModernMT-ExtendedItalic-New.otf,SmallCapsFont={OldStandard-Regular.otf},SmallCapsFeatures={Letters=SmallCaps,FakeBold=\fakebold,RawFeature=+smcp,Scale=\scale,FakeStretch=\fakestretch},BoldFont=TheanoModern-Bold.otf,BoldFeatures={FakeBold=1,Scale=\scale,SmallCapsFont=OldStandard-Bold.otf,SmallCapsFeatures={RawFeature=+smcp,Scale=\scale},FakeStretch=\fakestretch},BoldItalicFeatures={FakeBold=3},Scale=\scale,FakeStretch=\fakestretch]{ModernMT-Extended-New.otf}
+	\setsansfont[FakeBold=1,Scale=\scale,FakeStretch=\fakestretch]{Latin Modern Sans}
+	\setmonofont[FakeBold=1,Scale=\scale,FakeStretch=\fakestretch]{Latin Modern Mono}
+	\setmathfont[,Scale=\scale,FakeStretch=\fakestretch]{NewCMMath-Regular.otf}% KpMath-Regular.otf,KpMath-Light.otf
 	
-	\newfontfamily{\bask}{ModernExtT-Theano.otf}
+	\setmathfont[range={it,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]{ModernMT-ExtendedItalic-New.otf}
+	\setmathfont[range={up,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]{ModernMT-Extended-New.otf}
+	\setmathfont{latinmodern-math.otf}[range={bfup,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]
+	\setmathfont{NewCMMath-Regular.otf}[range={"0028,"0029,"005B,"005D,"2308-"230B,"005B,"005D,"003A,"003B,"002C,\symfrak,"003D,bb,},FakeStretch=1.1\fakestretch]% NewCMMath-Regular.otf,texgyrepagella-math.otf
+	\setmathfont{NewCMMath-Book.otf}[range={bb},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]
+	%\setmathfont{OldStandard-Regular.otf}[range={"2264-"2267,"003C-"003E,"00A7,},FakeBold=\fakemathbold,]
+	\setmathfont{ModernMT-ExtendedItalic-New.otf}[range={"2264-"2265,"003C,"003E,"00A7,},FakeStretch=1.\fakestretch,Scale=\scale]
+	\setmathfont{ModernMT-ExtendedItalic-New.otf}[range={"00A7,"003D},FakeStretch=1.1\fakestretch,Scale=1.3]
+	%\newfontfamily\titlefont{TheanoModern-Bold.otf}[FakeBold=0]
+	\newfontfamily{\sumfont}{ModernMT-ExtendedItalic-New.otf}[]% GFSSolomos.otf,lmroman17-regular.otf,lmromanslant17-regular.otf,Theano Didot Regular V1.otf
 	\makeatletter
 	\RenewDocumentCommand{\sum@}{}{\DOTSB\baskervillesum}
 	\AtBeginDocument{%
@@ -37,14 +43,15 @@
 	}
 	\NewDocumentCommand{\baskervillesum}{}{%
 		\mathchoice
-		{\makebaskervillesum{1.4}}% displaystyle
+		{\makebaskervillesum{1.9}}% displaystyle
 		{\makebaskervillesum{1.2}}% textstyle
 		{\makebaskervillesum{1}}% scriptstyle
 		{\makebaskervillesum{0.7}}% scriptscriptstyle
 	}
 	\NewDocumentCommand{\makebaskervillesum}{m}{%
-		\vcenter{\hbox{\scalebox{#1}{\bask Σ}}}%
+		\vcenter{\hbox{\scalebox{#1}{\sumfont Σ}}}%
 	}
+	\newfontfamily{\prodfont}{OldStandard-Italic.otf}[FakeStretch=.9\fakestretch]%OldStandard-Italic.otf,ModernExtT-Theano.otf
 	\makeatletter
 	\RenewDocumentCommand{\prod@}{}{\DOTSB\baskervilleprod}
 	\AtBeginDocument{%
@@ -52,15 +59,15 @@
 	}
 	\NewDocumentCommand{\baskervilleprod}{}{%
 		\mathchoice
-		{\makebaskervilleprod{1.2}}% displaystyle
+		{\makebaskervilleprod{1.9}}% displaystyle
 		{\makebaskervilleprod{1.2}}% textstyle
 		{\makebaskervilleprod{1}}% scriptstyle
 		{\makebaskervilleprod{0.7}}% scriptscriptstyle
 	}
 	\NewDocumentCommand{\makebaskervilleprod}{m}{%
-		\vcenter{\hbox{\scalebox{#1}{\bask ∏}}}%
+		\vcenter{\hbox{\scalebox{#1}{\prodfont ∏}}}%
 	}
-	\newfontfamily\intfont{OldStandard-Italic.otf}
+	\newfontfamily\intfont{ModernMT-ExtendedItalic-New.otf}[FakeBold=0]% OldStandard-Italic.otf,latinmodern-math.otf,Erewhon-Math.otf
 	\makeatletter
 	\NewDocumentCommand{\int@}{}{\DOTSB\baskervilleint}
 	\AtBeginDocument{%
@@ -68,14 +75,15 @@
 	}
 	\NewDocumentCommand{\baskervilleint}{}{%
 		\mathchoice
-		{\makebaskervilleint{1.5}}% displaystyle
-		{\makebaskervilleint{1.2}}% textstyle
+		{\makebaskervilleint{2}}% displaystyle
+		{\makebaskervilleint{1.6}}% textstyle
 		{\makebaskervilleint{1}}% scriptstyle
 		{\makebaskervilleint{0.7}}% scriptscriptstyle
 	}
 	\NewDocumentCommand{\makebaskervilleint}{m}{%
 		\vcenter{\hbox{\scalebox{#1}{\intfont ∫}}}%
 	}
+	\newfontfamily\titlefont{ModernMT-Extended-New.otf}[FakeBold=1,UprightFeatures={Letters=Uppercase},]
 	\defaultfontfeatures{Mapping=tex-text,Ligatures=Tex}
 \else
 	\usepackage{pdfrender, xcolor}
