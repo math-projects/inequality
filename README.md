@@ -1,3 +1,5 @@
+### Before you start editing anything in this book, please discuss with the author. Some conventions must be followed. Also, font/layouts are not be changed.
+
 # Techniques in Olympiad Inequalities
 
 This is a book written on Olympiad level inequalities. The purpose is to kill inequalities in popular Olympiads by making some methods of problem solving more popular and well known than they are right now.
