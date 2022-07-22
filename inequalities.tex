@@ -8,8 +8,9 @@
 \usepackage{datetime}
 \usepackage{physics}
 \usepackage{hyperref}
+\usepackage[left=.5in,right=.5in,top=.5in,]{geometry}
 
-\usepackage[bibstyle=philosophy-modern,citestyle=philosophy-verbose,backend=biber,autopunct,sortcites,]{biblatex}
+\usepackage[bibstyle=philosophy-modern,citestyle=philosophy-verbose,backend=biber,autopunct,sortcites,dashed,datamodel=ext-eprint,doi,eprint,scauthors=true,volnumformat=strings,volumeformat=romansc,scauthorsbib,scauthorscite]{biblatex}
 
 \hypersetup{linktocpage,unicode,pdfencoding=auto,pdfstartview=,allcolors=black,anchorcolor=black,allbordercolors=black,hidelinks}
 \DeclareNameAlias{sortname}{given-family}
@@ -17,25 +18,22 @@
 
 \ifxetex
 	\usepackage{unicode-math}
-	\newcommand{\fakebold}{1.5}
-	\newcommand{\fakestretch}{.95}
-	\newcommand{\scale}{1.2}
-	\newcommand{\fakemathbold}{1.5}
-	\setmainfont[FakeBold=\fakebold,ItalicFont=ModernMT-ExtendedItalic-New.otf,ItalicFeatures={FakeBold=\fakebold,},BoldItalicFont=ModernMT-ExtendedItalic-New.otf,SmallCapsFont={OldStandard-Regular.otf},SmallCapsFeatures={Letters=SmallCaps,FakeBold=\fakebold,RawFeature=+smcp,Scale=\scale,FakeStretch=\fakestretch},BoldFont=TheanoModern-Bold.otf,BoldFeatures={FakeBold=1,Scale=\scale,SmallCapsFont=OldStandard-Bold.otf,SmallCapsFeatures={RawFeature=+smcp,Scale=\scale},FakeStretch=\fakestretch},BoldItalicFeatures={FakeBold=3},Scale=\scale,FakeStretch=\fakestretch]{ModernMT-Extended-New.otf}
-	\setsansfont[FakeBold=1,Scale=\scale,FakeStretch=\fakestretch]{Latin Modern Sans}
-	\setmonofont[FakeBold=1,Scale=\scale,FakeStretch=\fakestretch]{Latin Modern Mono}
-	\setmathfont[,Scale=\scale,FakeStretch=\fakestretch]{NewCMMath-Regular.otf}% KpMath-Regular.otf,KpMath-Light.otf
+	\newcommand{\fakebold}{0.}
+	\newcommand{\fakestretch}{1.}
+	\newcommand{\scale}{1.}
+	\newcommand{\fakemathbold}{0.}
+	\setmainfont[FakeBold=\fakebold,ItalicFont=CenturymodernTT-Italic.otf,BoldItalicFont=CenturymodernTT-Italic.otf,SmallCapsFont={CenturymodernTT-SC.otf},BoldFont=CenturymodernTT-Regular.otf,BoldFeatures={SmallCapsFeatures={FakeBold=2}},BoldItalicFeatures={FakeBold=2},Scale=\scale,FakeStretch=\fakestretch]{CenturymodernTT-Regular.otf}
+	\setsansfont[FakeBold=\fakebold,Scale=\scale,FakeStretch=\fakestretch]{NewCMSans10-Book.otf}
+	\setmonofont[FakeBold=\fakebold,Scale=\scale,FakeStretch=\fakestretch]{NewCMMono10-Book.otf}
+	\setmathfont[,Scale=\scale,FakeStretch=\fakestretch,FakeBold=\fakemathbold]{NewCMMath-Regular.otf}% KpMath-Regular.otf,KpMath-Light.otf
 	
-	\setmathfont[range={it,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]{ModernMT-ExtendedItalic-New.otf}
-	\setmathfont[range={up,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]{ModernMT-Extended-New.otf}
-	\setmathfont{latinmodern-math.otf}[range={bfup,},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]
-	\setmathfont{NewCMMath-Regular.otf}[range={"0028,"0029,"005B,"005D,"2308-"230B,"005B,"005D,"003A,"003B,"002C,\symfrak,"003D,bb,},FakeStretch=1.1\fakestretch]% NewCMMath-Regular.otf,texgyrepagella-math.otf
-	\setmathfont{NewCMMath-Book.otf}[range={bb},FakeBold=\fakemathbold,Scale=\scale,FakeStretch=\fakestretch]
-	%\setmathfont{OldStandard-Regular.otf}[range={"2264-"2267,"003C-"003E,"00A7,},FakeBold=\fakemathbold,]
-	\setmathfont{ModernMT-ExtendedItalic-New.otf}[range={"2264-"2265,"003C,"003E,"00A7,},FakeStretch=1.\fakestretch,Scale=\scale]
-	\setmathfont{ModernMT-ExtendedItalic-New.otf}[range={"00A7,"003D},FakeStretch=1.1\fakestretch,Scale=1.3]
-	%\newfontfamily\titlefont{TheanoModern-Bold.otf}[FakeBold=0]
-	\newfontfamily{\sumfont}{ModernMT-ExtendedItalic-New.otf}[]% GFSSolomos.otf,lmroman17-regular.otf,lmromanslant17-regular.otf,Theano Didot Regular V1.otf
+	\setmathfont[range={it,"007D,frak,"2022,{up/Greek},{it/Greek},"22EF,"2217-"2219,"2229-"222B,"2208,"2022,"211C,"2111},Scale=\scale,FakeStretch=\fakestretch,FakeBold=\fakemathbold]{CenturymodernTT-Italic.otf}
+	\setmathfont{CenturymodernTT-Regular.otf}[range={it/{num,"03BB},up/{num,"03BB},"00A7,"03BB,"007B-"007D,"0028-"0029,"002F,"005B-"005D,"00A7,\mid,},Scale=\scale,FakeStretch=\fakestretch,FakeBold=\fakemathbold]
+	\setmathfont{ModernMT-ExtendedItalic-New.otf}[range={"2260-"2267,"226A-"226B,"003C,"003E,"03B1},FakeBold=\fakemathbold,FakeStretch=1.1\fakestretch]
+	\setmathfont[range={bb,"2022,{up/Greek},{it/Greek},"22EF,"2217-"2219,"2229-"222B,"2208,"2022,"003D,"2264-"2265,"2260,"22C4,frak},Scale=\scale,FakeStretch=1.05\fakestretch,FakeBold=2]{CenturymodernTT-Italic.otf}
+	\setmathfont{CenturymodernTT-Italic.ttf}[range={"221E,"002F,"00B1,"0021,},Scale=\scale,FakeBold=\fakemathbold,FakeStretch=\fakestretch]%,{it/{greek}},{up/{greek}},
+	
+	\newfontfamily{\sumfont}{CenturymodernTT-Italic.otf}[]% GFSSolomos.otf,lmroman17-regular.otf,lmromanslant17-regular.otf,Theano Didot Regular V1.otf
 	\makeatletter
 	\RenewDocumentCommand{\sum@}{}{\DOTSB\baskervillesum}
 	\AtBeginDocument{%
@@ -43,7 +41,7 @@
 	}
 	\NewDocumentCommand{\baskervillesum}{}{%
 		\mathchoice
-		{\makebaskervillesum{1.9}}% displaystyle
+		{\makebaskervillesum{1.6}}% displaystyle
 		{\makebaskervillesum{1.2}}% textstyle
 		{\makebaskervillesum{1}}% scriptstyle
 		{\makebaskervillesum{0.7}}% scriptscriptstyle
@@ -51,7 +49,7 @@
 	\NewDocumentCommand{\makebaskervillesum}{m}{%
 		\vcenter{\hbox{\scalebox{#1}{\sumfont Σ}}}%
 	}
-	\newfontfamily{\prodfont}{OldStandard-Italic.otf}[FakeStretch=.9\fakestretch]%OldStandard-Italic.otf,ModernExtT-Theano.otf
+	\newfontfamily{\prodfont}{CenturymodernTT-Italic.otf}[FakeStretch=.9\fakestretch]%OldStandard-Italic.otf,ModernExtT-Theano.otf
 	\makeatletter
 	\RenewDocumentCommand{\prod@}{}{\DOTSB\baskervilleprod}
 	\AtBeginDocument{%
@@ -59,7 +57,7 @@
 	}
 	\NewDocumentCommand{\baskervilleprod}{}{%
 		\mathchoice
-		{\makebaskervilleprod{1.9}}% displaystyle
+		{\makebaskervilleprod{1.6}}% displaystyle
 		{\makebaskervilleprod{1.2}}% textstyle
 		{\makebaskervilleprod{1}}% scriptstyle
 		{\makebaskervilleprod{0.7}}% scriptscriptstyle
@@ -67,7 +65,7 @@
 	\NewDocumentCommand{\makebaskervilleprod}{m}{%
 		\vcenter{\hbox{\scalebox{#1}{\prodfont ∏}}}%
 	}
-	\newfontfamily\intfont{ModernMT-ExtendedItalic-New.otf}[FakeBold=0]% OldStandard-Italic.otf,latinmodern-math.otf,Erewhon-Math.otf
+	\newfontfamily\intfont{CenturymodernTT-Italic.otf}[FakeBold=0,FakeStretch=1.1]% OldStandard-Italic.otf,latinmodern-math.otf,Erewhon-Math.otf
 	\makeatletter
 	\NewDocumentCommand{\int@}{}{\DOTSB\baskervilleint}
 	\AtBeginDocument{%
@@ -75,22 +73,78 @@
 	}
 	\NewDocumentCommand{\baskervilleint}{}{%
 		\mathchoice
-		{\makebaskervilleint{2}}% displaystyle
-		{\makebaskervilleint{1.6}}% textstyle
+		{\makebaskervilleint{1.6}}% displaystyle
+		{\makebaskervilleint{1.2}}% textstyle
 		{\makebaskervilleint{1}}% scriptstyle
 		{\makebaskervilleint{0.7}}% scriptscriptstyle
 	}
 	\NewDocumentCommand{\makebaskervilleint}{m}{%
 		\vcenter{\hbox{\scalebox{#1}{\intfont ∫}}}%
 	}
-	\newfontfamily\titlefont{ModernMT-Extended-New.otf}[FakeBold=1,UprightFeatures={Letters=Uppercase},]
+	\newfontfamily\titlefont{CenturymodernTT-Regular.otf}[FakeBold=0,UprightFeatures={Letters=Uppercase},]
 	\defaultfontfeatures{Mapping=tex-text,Ligatures=Tex}
+	\newcommand{\wb}[2]{\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}}
+	\newcommand{\wbc}[3]{\vspace*{#1}\begin{center}
+			\wb{#2}{#2}#3\end{center}\vspace*{#1}}
+	% Fix pmatrix for custom brackets
+	\ExplSyntaxOn
+	\box_new:N \l_masum_box
+	\RenewDocumentEnvironment{pmatrix}{}
+	{ 
+		\hbox_set:Nw \l_masum_box 
+		\c_math_toggle_token
+		\begin{matrix}
+		}
+		{ 
+		\end{matrix}
+		\c_math_toggle_token
+		\hbox_set_end:
+		\scaleleftright[.8ex]{(}{\box_use:N \l_masum_box}{)}
+	}
+	
+	\box_new:N \l_masum_box_vm
+	\RenewDocumentEnvironment{vmatrix}{}
+	{ 
+		\hbox_set:Nw \l_masum_box_vm
+		\c_math_toggle_token
+		\begin{matrix}
+		}
+		{ 
+		\end{matrix}
+		\c_math_toggle_token
+		\hbox_set_end:
+		\scaleleftright[.5ex]{|}{\box_use:N \l_masum_box_vm}{|}
+	}
+	
+	\box_new:N \l_masum_box_new
+	\RenewDocumentEnvironment{cases}{}
+	{ 
+		\hbox_set:Nw \l_masum_box_new
+		\c_math_toggle_token
+		\begin{matrix}
+		}
+		{
+		\end{matrix}
+		\c_math_toggle_token
+		\hbox_set_end:
+		\scaleleftright[1.2ex]{\{}{\box_use:N \l_masum_box_new}{}
+	}
+	\ExplSyntaxOff
+	\makeatletter
+	\let\fontspec@setsansfont\setsansfont
+	\def\setsansfont{%
+		\let\Alegreya@boldstyle\AlegreyaSans@boldstyle
+		\let\setsansfont\fontspec@setsansfont
+		\setsansfont
+	}
+	\makeatother
+	\defaultfontfeatures{Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}}
 \else
 	\usepackage{pdfrender, xcolor}
 	\usepackage[T1]{fontenc}
-	\usepackage{baskervillef}
-	\usepackage[baskerville]{newtxmath}
-	\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.2pt}
+	%\usepackage{baskervillef}
+	%\usepackage[baskerville]{newtxmath}
+	\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.1pt}
 	\makeatletter\let\normalrender\PdfRender@NormalColorHook\let\PdfRender@NormalColorHook\@empty\newcommand*{\textnormalrender}[1]{\begingroup\normalrender#1\endgroup}\makeatother
 \fi
 
@@ -111,20 +165,25 @@
 \makeindex
 \makeglossaries
 
-\titleformat{\chapter}[display]{\bfseries\scshape\Huge}{}{1ex}{\centering\titlerule\vspace{1ex}\ifthenelse{\value{chapter}>0}{$\S$\thechapter\;}{}}[\vspace{1ex}\titlerule]
-\titleformat{\section}[display]{\bfseries\scshape\LARGE}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S$\thesection\;}{}}[\titlerule]
-\titleformat{\subsection}[display]{\bfseries\scshape\Large}{}{1ex}{\centering\ifthenelse{\value{section}>0}{$\S\S\S$\thesection\;}{}}[\titlerule]
+\titleformat{\chapter}[display]{\Huge}{\normalfont\large\centering\MakeUppercase\chaptername\hspace{.5em}\thechapter.}{1ex}{\centering\vspace{1ex}\ifthenelse{\value{chapter}>0}{\MakeUppercase}{}}[\vspace{1ex}]
+\titleformat{\section}[display]{\LARGE}{}{1ex}{\centering\ifthenelse{\value{section}>0}{\thesection\;}{}\vspace{.2in}}[]
 
-\newtheorem{theorem}{\textsc{\textbf{Theorem}}}[chapter]
+\newtheorem{theorem}{\textsc{\textbf{Theorem}}}
+%\numberwithin{theorem}{chapter}
+%\renewcommand{\thetheorem}{\arabic{theorem}}
 \theoremstyle{definition}
 \newenvironment{definition}[1][]{\par\medskip\noindent \textsc{\textbf{{\ifthenelse{\isempty{#1}}{Definition.}{#1.}}}} \rmfamily}{\medskip}
 
-\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\usepackage{scalerel}
+\newcommand{\floor}[1]{\ifxetex{\squarebracket{#1}}\else{\left\lfloor{#1}\right\rfloor}\fi}
 \newcommand{\ceiling}[1]{\left\lceil{#1}\right\rceil}
-\newcommand{\parenthesis}[1]{\left(#1\right)}
-\newcommand{\curlybrace}[1]{\left\{#1\right\}}
-\newcommand{\squarebracket}[1]{\left[#1\right]}
+\ifxetex\renewcommand{\binom}[2]{\scaleleftright[.8ex]{(}{\genfrac{}{}{0pt}{0}{#1}{#2}}{)}}\fi
+\newcommand{\parenthesis}[1]{\ifxetex{\scaleleftright[.8ex]{(}{#1}{)}}\else{\left(#1\right)}\fi}
+\newcommand{\curlybrace}[1]{\ifxetex{\scaleleftright[1ex]{\{}{#1}{\}}}\else{\left\{#1\right\}}\fi}
+\newcommand{\squarebracket}[1]{\ifxetex{\scaleleftright[1.4ex]{\kern 4pt[}{#1}{]\kern 4pt}}\else{\left[#1\right]}\fi}
+\newcommand{\qr}[2]{\parenthesis{\frac{#1}{#2}}}
 \newcommand{\bigo}[1]{O\parenthesis{#1}}
+\newcommand{\func}[2]{\kern3pt#1\parenthesis{#2}}
 \DeclareMathOperator{\ord}{ord}
 \newcommand{\F}[1]{\mathbb{F}_{#1}}
 \DeclareMathOperator{\rad}{rad}
